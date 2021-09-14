@@ -14,6 +14,7 @@ Restart the terminal and go on verifying the success of NVM installation with
 nvm --version
 nvm install v14.17.6
 ```
+
 ### 2. Install Yarn
 ```bash
 npm install -g yarn
@@ -22,7 +23,7 @@ npm install -g yarn
 ## How to run
 
 ### 1. Run the flask project
-Navigate to the root folder and
+Navigate to the root folder and,
 ```bash
 cd back_end
 python3 -m venv venv
