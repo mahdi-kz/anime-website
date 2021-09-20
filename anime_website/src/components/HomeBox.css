@@ -1,0 +1,24 @@
+ul {
+  padding: 0;
+  list-style-type: none;
+  text-align:center;
+  /* columns: 3;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); */
+  
+}
+li {
+  margin-right: 30px;
+  /* width: calc((100vw / 3) - 20px); */
+  display: inline-block;
+}
+li>img{
+  height: 400px;
+  width: 150px;
+}
+.top-li{
+  margin-top:100px;
+}
+.bottom-li{
+  margin-top:150px;
+}
