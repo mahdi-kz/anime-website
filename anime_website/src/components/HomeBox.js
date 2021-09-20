@@ -10,27 +10,39 @@ import image4 from '../images/4.jpeg';
 
 function HomeBox(){
 
+	const [selected, setSelected] = useState(null);
+	const [title, setTitle] = useState('Our Items');
+	
 
 	return(
 		<>
 			<ul>
-				<li className="top-li">
-				<img src={image1} alt="" />
-				<h2>Text label</h2>
+				<li className="top-li"  
+					onMouseEnter={()=>setTitle("image 1")} 
+					onMouseLeave={()=>setTitle('Our Items')}
+				>
+					<img src={image1} alt="" />
 				</li>
-				<li className="bottom-li">
-				<img src={image2} alt="" />
-				<h2>Text label</h2>
+				<li className="bottom-li" 
+					onMouseEnter={()=>setTitle("image 2")} 
+					onMouseLeave={()=>setTitle('Our Items')}
+				>
+					<img src={image2} alt="" />
 				</li>
-				<li className="top-li">
-				<img src={image3} alt="" />
-				<h2>Text label</h2>
+				<li className="top-li" 
+					onMouseEnter={()=>setTitle("image 3")} 
+					onMouseLeave={()=>setTitle('Our Items')}
+				>
+					<img src={image3} alt="" />
 				</li>
-				<li className="bottom-li">
-				<img src={image4} alt="" />
-				<h2>Text label</h2>
+				<li className="bottom-li" 
+					onMouseEnter={()=>setTitle("image 4")} 
+					onMouseLeave={()=>setTitle('Our Items')}
+				>
+					<img src={image4} alt="" />
 				</li>
 			</ul>
+			<h2 className="title">{title}</h2>
 		</>
 	)
 }
