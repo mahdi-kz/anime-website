@@ -15,7 +15,7 @@ function Navbar(){
 					<div className={click?"container menu-open":"container"} >
 					  <div>
 					    <Link to='/' className={click?'hide':'navbar-bell'}>
-								<i className="fas fa-bell" />
+								<i className="fas fa-bell fa-lg" />
 							</Link>
 					  </div>
 					  <div>

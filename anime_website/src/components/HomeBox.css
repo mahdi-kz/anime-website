@@ -38,15 +38,44 @@ li>img{
 }
 .thirdBoxHover{
   width: 150px;
-  padding-left: 0px;
 }
 .thirdBox {
   width: 100px;
-  padding-left: 0px;
 }
 .fourthBox{
   width: 100px;
 }
 .fourthBoxHover{
   width: 150px;
+}
+.thirdBox>img{
+  padding-left: 0px;
+}
+.thirdBoxHover>img{
+  padding-left: 0px;
+}
+.sound{
+  position: fixed;
+  bottom: 25px;
+  left: 20px;
+  z-index: 11;
+}
+.hideCircle{
+  opacity: 0;
+  stroke-dashoffset: -194.399;
+  stroke-dasharray: 1e-05px, 204.399px;
+}
+.drawCircle{
+  opacity: 1;
+  stroke-dashoffset: 1e-05px;
+  stroke-dasharray: none;
+}
+.DrawIcon{
+  position: absolute;
+  left: 0;
+  top: 0;
+  will-change: transform;
+}
+svg{
+  margin-left: 5px;
 }
