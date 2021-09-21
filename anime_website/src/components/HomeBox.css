@@ -8,21 +8,45 @@ ul {
   
 }
 li {
-  margin-right: 20px;
+  margin-right: 10px;
+  overflow: hidden;
   /* width: calc((100vw / 3) - 20px); */
   display: inline-block;
 }
 li>img{
   height: 400px;
-  width: 150px;
+  object-fit: cover;
 }
 .top-li{
-  margin-top:20px;
-}
-.bottom-li{
-  margin-top:50px;
+  padding:20px;
 }
 .title{
   text-align: center;
   margin-top:50px
+}
+.firstBox{
+  width: 120px;
+}
+.firstBoxHover{
+  width: 170px;
+}
+.secondBoxHover{
+  width: 150px;
+}
+.secondBox {
+  width: 100px;
+}
+.thirdBoxHover{
+  width: 150px;
+  padding-left: 0px;
+}
+.thirdBox {
+  width: 100px;
+  padding-left: 0px;
+}
+.fourthBox{
+  width: 100px;
+}
+.fourthBoxHover{
+  width: 150px;
 }
