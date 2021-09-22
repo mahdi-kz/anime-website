@@ -1,0 +1,92 @@
+ul {
+  padding: 0;
+  list-style-type: none;
+  text-align:center;
+  /* columns: 3;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); */
+  
+}
+li {
+  margin-right: 10px;
+  overflow: hidden;
+  /* width: calc((100vw / 3) - 20px); */
+  display: inline-block;
+}
+li>img{
+  height: 400px;
+  object-fit: cover;
+}
+.top-li{
+  padding:20px;
+}
+.title{
+  text-align: center;
+  margin-top:50px
+}
+.firstBox{
+  width: 120px;
+}
+.firstBoxHover{
+  width: 170px;
+}
+.secondBoxHover{
+  width: 150px;
+}
+.secondBox {
+  width: 100px;
+}
+.thirdBoxHover{
+  width: 150px;
+}
+.thirdBox {
+  width: 100px;
+}
+.fourthBox{
+  width: 100px;
+}
+.fourthBoxHover{
+  width: 150px;
+}
+.thirdBox>img{
+  padding-left: 0px;
+}
+.thirdBoxHover>img{
+  padding-left: 0px;
+}
+.sound{
+  position: relative;
+  bottom: 60px;
+  left: 20px;
+  z-index: 11;
+}
+.sound>i{
+  margin-left: 5px;
+}
+.hideCircle{
+  opacity: 0;
+  stroke-dashoffset: -194.399;
+  stroke-dasharray: 1e-05px, 204.399px;
+}
+.drawCircle{
+  opacity: 1;
+  stroke-dashoffset: 1e-05px;
+  stroke-dasharray: none;
+}
+.DrawIcon{
+  position: absolute;
+  left: 0;
+  top: 0;
+  will-change: transform;
+}
+.svg{
+  pointer-events: none;
+    width: 60px;
+    height: 50px;
+    position: absolute;
+    left: -10px;
+    bottom: -12px;
+}
+.svg:focus{
+  outline: -webkit-focus-ring-color auto 5px;
+}

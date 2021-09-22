@@ -1,34 +1,25 @@
 import React, {useState, useEffect} from 'react';
-import logo from './logo.svg';
+import {BrowserRouter as Router, Switch, Route} from 'react-router-dom'
 import './App.css';
+import Home from './screens/Home';
+import Products from './screens/Products';
+import Services from './screens/Services';
+import SignUp from './screens/SignUp';
+import Navbar from './components/Navbar';
 
 function App() {
-  const [currentTime, setCurrentTime] = useState(0);
-
-  useEffect(() => {
-    fetch('/time').then(res => res.json()).then(data => {
-      setCurrentTime(data.time);
-    });
-  }, []);
-
   return (
-    <div className="App">
-      <header >
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-        <p>The current time is {currentTime}.</p>
-      </header>
-    </div>
+    <>
+      <Router>
+				<Home />
+				<Switch>
+					<Route path='/' exact components={Home}/>
+					<Route path='/products' exact components={Products}/>
+					<Route path='/services' exact components={Services}/>
+					<Route path='/sign-up' exact components={SignUp}/>
+				</Switch>
+			</Router>
+    </>
   );
 }
 

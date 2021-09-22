@@ -1,0 +1,144 @@
+.navbar-container{
+}
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr; /* fraction*/
+}
+.navbar{
+	margin-top: -15px;
+}
+.logo{
+  z-index: 11;
+  margin-left: 40%;
+  margin-top: 30px;
+}
+.navbar-bell{
+	position: fixed;
+  top: 15px;
+  left: 20px;
+  z-index: 11;
+}
+
+.menu-open{
+	background: #000;
+	top:-10;
+	height:10vh;
+}
+
+.menu-open path {
+	fill: #b3b3b3;
+}
+
+.menu-open p {
+	color: #b3b3b3;
+	background:#000;
+}
+
+.menu-icon {
+  position: fixed;
+  top: 30px;
+  right: 25px;
+  z-index: 11;
+  cursor: pointer;
+}
+
+.menu-icon>svg {
+  width: 17px;
+  height: 28px;
+}
+
+.hide{
+	display:none
+}
+
+.menu {
+    position: fixed;
+    top: 1vh;
+    left: 0;
+    right: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-flow: column;
+    flex-flow: column;
+    background: #000;
+    z-index: 10;
+    color: #e7e5df;
+    padding-top: 72px;
+    padding-bottom: 62px;
+    font-size: 25px;
+    letter-spacing: 1.25px;
+    text-align: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    line-height: 65px;
+    will-change: transform;
+}
+
+@media (min-width: 375px)
+.menu {
+    font-size: 40px;
+    letter-spacing: 1.25px;
+    line-height: 45px;
+}
+
+@media (min-width: 768px)
+.menu {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-flow: row;
+    flex-flow: row;
+    height: auto;
+    padding-top: 162px;
+    font-size: 40px;
+    letter-spacing: 2px;
+    line-height: 45px;
+}
+
+@media (min-width: 375px)
+.menu>li {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.menu>li {
+    margin: 0 15px;
+    position: relative;
+    will-change: transform;
+}
+
+.nav-link {
+    text-decoration: none;
+}
+
+.nav-item{
+	 list-style: none;
+	 display: block;
+	 float:left;
+}
+
+
+.main{ background-color: #ddd;}
+.left {
+
+    display: table-cell;
+}
+.middle {
+
+    display: table-cell;
+    width:100%;
+}
+.right {
+
+    display: table-cell;
+}
