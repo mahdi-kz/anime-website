@@ -85,6 +85,20 @@
     will-change: transform;
 }
 
+.menu-row {
+    position: fixed;
+    left: 0;
+    right: 0;
+    background-color: #e7e5df;
+    z-index: 10;
+    color: #e7e5df;
+    padding-top: 70px;
+    padding-bottom: 30px;
+    font-size: 25px;
+    letter-spacing: 1.25px;
+    text-align: center;
+}
+
 @media (min-width: 375px)
 .menu {
     font-size: 40px;
@@ -119,6 +133,7 @@
 
 .nav-link {
     text-decoration: none;
+    color: #000000;
 }
 
 .nav-item{
