@@ -39,6 +39,7 @@
   top: 30px;
   right: 25px;
   z-index: 11;
+  cursor: pointer;
 }
 
 .menu-icon>svg {
