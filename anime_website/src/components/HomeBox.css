@@ -55,10 +55,13 @@ li>img{
   padding-left: 0px;
 }
 .sound{
-  position: fixed;
-  bottom: 25px;
+  position: relative;
+  bottom: 60px;
   left: 20px;
   z-index: 11;
+}
+.sound>i{
+  margin-left: 5px;
 }
 .hideCircle{
   opacity: 0;
@@ -77,5 +80,13 @@ li>img{
   will-change: transform;
 }
 svg{
-  margin-left: 5px;
+  pointer-events: none;
+    width: 60px;
+    height: 50px;
+    position: absolute;
+    left: -10px;
+    bottom: -12px;
+}
+svg:focus{
+  outline: -webkit-focus-ring-color auto 5px;
 }

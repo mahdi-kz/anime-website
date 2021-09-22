@@ -14,9 +14,9 @@ function Navbar(){
 				<div className="navbar-container">
 					<div className={click?"container menu-open":"container"} >
 					  <div>
-					    <Link to='/' className={click?'hide':'navbar-bell'}>
-								<i className="fas fa-bell fa-lg" />
-							</Link>
+					    <Link to='/Blog' className={click?'hide':'navbar-bell'}>
+							<i className="fas fa-bell fa-sm" />
+						</Link>
 					  </div>
 					  <div>
 					    <p className='logo'> animate </p>

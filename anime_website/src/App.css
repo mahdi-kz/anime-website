@@ -1,3 +1,13 @@
+body{
+  color: #000;
+  font-size: 22px;
+  font-family: Clearface ITC W01,Georgia,Times New Roman,Times,serif;
+  vertical-align: baseline;
+  overflow-y: scroll;
+  -webkit-tap-highlight-color: transparent;
+  min-width: 100%;
+  min-height: 100%;
+}
 .App {
   background: #000;
 }
