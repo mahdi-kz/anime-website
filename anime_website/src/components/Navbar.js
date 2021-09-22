@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 import { Link } from 'react-router-dom';
+import { Container, Row, Col } from 'react-grid-system';
 import './Navbar.css'
 
 function Navbar(){
@@ -31,20 +32,22 @@ function Navbar(){
 							</svg>
 					  </div>
 					</div>
-					<ul className={click?'menu':'hide'}>
-						<li className='nav-item'>
-							<Link to="/" className='nav-link' onClick={closeModalMenu}>Home</Link>
-						</li>
-						<li className='nav-item'>
-							<Link to="/services" className='nav-link' onClick={closeModalMenu}>Services</Link>
-						</li>
-						<li className='nav-item'>
-							<Link to="/products" className='nav-link' onClick={closeModalMenu}>Products</Link>
-						</li>
-						<li className='nav-item'>
-							<Link to="/sign-up" className='nav-link' onClick={closeModalMenu}>SignUp</Link>
-						</li>
-					</ul>
+					<Container fluid className={click?'menu':'hide'}>
+                        <Row className='menu-row'>
+                            <Col xs={12} md={6} xl={2} offset={{xl:2}} className='nav-item'>
+                                <Link to="/" className='nav-link' onClick={closeModalMenu}>Home</Link>
+                            </Col>
+                            <Col xs={12} md={6} xl={2} className='nav-item'>
+                                <Link to="/services" className='nav-link' onClick={closeModalMenu}>Services</Link>
+                            </Col>
+                            <Col xs={12} md={6} xl={2} className='nav-item'>
+                                <Link to="/products" className='nav-link' onClick={closeModalMenu}>Products</Link>
+                            </Col>
+                            <Col xs={12} md={6} xl={2} className='nav-item'>
+                                <Link to="/sign-up" className='nav-link' onClick={closeModalMenu}>SignUp</Link>
+                            </Col>
+                        </Row>
+					</Container>
 
 				</div>
 			</nav>
