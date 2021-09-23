@@ -16,7 +16,14 @@
   left: 20px;
   z-index: 11;
 }
-
+.navSvg{
+  pointer-events: none;
+  width: 60px;
+  height: 50px;
+  position: absolute;
+  left: 5px;
+  top: 5px;
+}
 .menu-open{
 	background: #000;
 	top:-10;
@@ -147,7 +154,7 @@
       -ms-flex-flow: row;
       flex-flow: row;
       height: auto;
-      padding-top: 60px;
+      /* padding-top: 60px; */
       font-size: 40px;
       letter-spacing: 2px;
       line-height: 45px;
