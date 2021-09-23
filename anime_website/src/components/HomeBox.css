@@ -17,6 +17,10 @@ li>img{
   height: 400px;
   object-fit: cover;
 }
+li>video{
+  height: 400px;
+  object-fit: cover;
+}
 .top-li{
   padding:20px;
 }
@@ -52,6 +56,12 @@ li>img{
   padding-left: 0px;
 }
 .thirdBoxHover>img{
+  padding-left: 0px;
+}
+.thirdBox>video{
+  padding-left: 0px;
+}
+.thirdBoxHover>video{
   padding-left: 0px;
 }
 .sound{
