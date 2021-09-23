@@ -40,6 +40,7 @@ function HomeBox(){
 						className="top-li" 
 						ref={vidRef} 
 						src={video1} 
+						muted={soundOff?true:false}
 						type="video/mp4">
 					</video>
 					:
@@ -57,6 +58,7 @@ function HomeBox(){
 							onMouseOut={() => vidRef2.current.pause()}
 							ref={vidRef2} 
 							src={video2} 
+							muted={soundOff?true:false}
 							type="video/mp4">
 						</video>
 						:
@@ -75,6 +77,7 @@ function HomeBox(){
 							className="top-li" 
 							ref={vidRef3} 
 							src={video3} 
+							muted={soundOff?true:false}
 							type="video/mp4">
 						</video>
 						:
@@ -92,6 +95,7 @@ function HomeBox(){
 							onMouseOut={() => vidRef4.current.pause()}
 							ref={vidRef4} 
 							src={video4} 
+							muted={soundOff?true:false}
 							type="video/mp4">
 						</video>
 						:
