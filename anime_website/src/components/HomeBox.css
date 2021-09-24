@@ -17,6 +17,10 @@ li>img{
   height: 400px;
   object-fit: cover;
 }
+li>video{
+  height: 400px;
+  object-fit: cover;
+}
 .top-li{
   padding:20px;
 }
@@ -54,9 +58,15 @@ li>img{
 .thirdBoxHover>img{
   padding-left: 0px;
 }
+.thirdBox>video{
+  padding-left: 0px;
+}
+.thirdBoxHover>video{
+  padding-left: 0px;
+}
 .sound{
   position: relative;
-  bottom: 60px;
+  bottom: 35px;
   left: 20px;
   z-index: 11;
 }
@@ -81,11 +91,11 @@ li>img{
 }
 .svg{
   pointer-events: none;
-    width: 60px;
-    height: 50px;
-    position: absolute;
-    left: -10px;
-    bottom: -12px;
+  width: 60px;
+  height: 50px;
+  position: absolute;
+  left: -10px;
+  bottom: -12px;
 }
 .svg:focus{
   outline: -webkit-focus-ring-color auto 5px;

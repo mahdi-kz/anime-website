@@ -1,12 +1,9 @@
 import React, {useState, useEffect} from 'react';
-import '../App.css';
 
 
-export default function Home(){
+export default function Services(){
 	return(
-		<>
-			<div>Sign up</div>
-		</>
+		<div>Sign up</div>
 	)
 
 }
