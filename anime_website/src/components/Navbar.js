@@ -51,7 +51,7 @@ function Navbar(){
 					
 					<Container fluid className={click?'menu':'hide'}>
                         <Row className='menu-row'>
-                            <Col xs={12} md={2} xl={2} offset={{xl:2}} className='nav-item'>
+                            <Col xs={12} md={2} xl={2} offset={{xl:2, md:2}} className='nav-item'>
                                 <Link to="/" className='nav-link' onClick={closeModalMenu}>Home</Link>
                             </Col>
                             <Col xs={12} md={2} xl={2} className='nav-item'>

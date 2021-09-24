@@ -2,56 +2,58 @@ ul {
   padding: 0;
   list-style-type: none;
   text-align:center;
-  /* columns: 3;
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); */
-  
 }
+
 li {
   margin-right: 10px;
+  margin-left: 10px;
+  margin-top:20px;
   overflow: hidden;
-  /* width: calc((100vw / 3) - 20px); */
   display: inline-block;
 }
 li>img{
   height: 400px;
   object-fit: cover;
+  padding-bottom:100px;
+  transition: all 1s ease-out;
 }
+li>img:hover{
+  height:500px;
+  padding:0px;
+}
+
 li>video{
   height: 400px;
   object-fit: cover;
+  padding-bottom:100px;
+  transition: all 1s ease-out;
+}
+li>video:hover{
+  height:500px;
+  padding:0px;
 }
 .top-li{
-  padding:20px;
+  height: 400px;
+  object-fit: cover;
+  padding-bottom:150px;
+  transition: all 1s ease-out;
 }
+.top-li:hover{
+  height:500px;
+  padding-bottom:50px;
+}
+
 .title{
   text-align: center;
   margin-top:50px
 }
-.firstBox{
-  width: 120px;
+.imageBox{
+  width: 200px;
 }
-.firstBoxHover{
-  width: 170px;
+.imageBox:hover{
+  width: 200px;
 }
-.secondBoxHover{
-  width: 150px;
-}
-.secondBox {
-  width: 100px;
-}
-.thirdBoxHover{
-  width: 150px;
-}
-.thirdBox {
-  width: 100px;
-}
-.fourthBox{
-  width: 100px;
-}
-.fourthBoxHover{
-  width: 150px;
-}
+
 .thirdBox>img{
   padding-left: 0px;
 }
