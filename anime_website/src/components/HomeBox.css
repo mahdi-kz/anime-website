@@ -91,3 +91,7 @@ li>video{
 .svg:focus{
   outline: -webkit-focus-ring-color auto 5px;
 }
+
+.box {
+  transition: width 1s, height 2s, background-color 2s, transform 2s;
+}

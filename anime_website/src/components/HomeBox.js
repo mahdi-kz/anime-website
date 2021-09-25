@@ -29,7 +29,7 @@ function HomeBox(){
 	return(
 		<>
 			<ul>
-				<li className={selectedBox1?"firstBoxHover":"firstBox"}  
+				<li className={selectedBox1?"box firstBoxHover":"firstBox"}  
 					onMouseEnter={()=>{setTitle("image 1");setSelectedBox1(true);}} 
 					onMouseLeave={()=>{setTitle('Our Items');setSelectedBox1(false);}}
 				>
@@ -48,7 +48,7 @@ function HomeBox(){
 				}
 					
 				</li>
-				<li className={selectedBox2?"secondBoxHover":"secondBox"}
+				<li className={selectedBox2?"box secondBoxHover":"secondBox"}
 					onMouseEnter={()=>{setTitle("image 2");setSelectedBox2(true)}} 
 					onMouseLeave={()=>{setTitle('Our Items');setSelectedBox2(false)}}
 				>
@@ -66,7 +66,7 @@ function HomeBox(){
 					}
 					
 				</li>
-				<li className={selectedBox3?"thirdBoxHover":"thirdBox"}
+				<li className={selectedBox3?"box thirdBoxHover":"thirdBox"}
 					onMouseEnter={()=>{setTitle("image 3");setSelectedBox3(true)}} 
 					onMouseLeave={()=>{setTitle('Our Items');setSelectedBox3(false)}}
 				>
@@ -85,7 +85,7 @@ function HomeBox(){
 					}
 					
 				</li>
-				<li className={selectedBox4?"fourthBoxHover":"fourthBox"}
+				<li className={selectedBox4?"box fourthBoxHover":"fourthBox"}
 					onMouseEnter={()=>{setTitle("image 4");setSelectedBox4(true)}} 
 					onMouseLeave={()=>{setTitle('Our Items');setSelectedBox4(false)}}
 				>
