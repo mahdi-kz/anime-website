@@ -5,7 +5,6 @@ import {BrowserRouter as Router, Switch, Route} from 'react-router-dom'
 import Products from './screens/Products';
 import Services from './screens/Services';
 import SignUp from './screens/SignUp';
-import Blog from './screens/Blog';
 
 function App() {
   return (
@@ -23,9 +22,6 @@ function App() {
 				</Route>
 				<Route path='/sign-up' >
 					<SignUp />
-				</Route>
-				<Route path='/blog' >
-					<Blog />
 				</Route>
 			</Switch>
 		</Router>

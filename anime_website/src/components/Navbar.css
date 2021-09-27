@@ -15,6 +15,7 @@
   top: 15px;
   left: 20px;
   z-index: 11;
+  cursor: pointer;
 }
 .navSvg{
   pointer-events: none;
@@ -24,6 +25,8 @@
   left: 5px;
   top: 5px;
 }
+
+
 .menu-open{
 	background: #000;
 	top:-10;
@@ -154,9 +157,38 @@
       -ms-flex-flow: row;
       flex-flow: row;
       height: auto;
-      /* padding-top: 60px; */
       font-size: 40px;
       letter-spacing: 2px;
       line-height: 45px;
+  }
+}
+
+.upAndDown{
+  animation: upAndDown 1s 1 alternate ;
+  transform-origin: center;
+  transform-box: fill-box;
+}
+
+@keyframes upAndDown {
+  from{
+    transform: translateY(-10%);
+  }
+  to{
+    transform: translateY(10%);
+  }
+}
+
+.downAndUp{
+  animation: downAndUp 1s 1 alternate ;
+  transform-origin: center;
+  transform-box: fill-box;
+}
+
+@keyframes downAndUp {
+  from{
+    transform: translateY(0%);
+  }
+  to{
+    transform: translateY(30%);
   }
 }
