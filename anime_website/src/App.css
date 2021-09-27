@@ -11,3 +11,20 @@ body{
 .App {
   background: #000;
 }
+
+.drawCircle{
+  animation: drowCircle 1s 1 forwards ;
+  transform-origin: 0px 0px;
+  stroke-dasharray: 250;
+  stroke-dashoffset: -194.399;
+  fill: none;
+  stroke:#231f20;
+  background-repeat: no-repeat;
+}
+
+@keyframes drowCircle {
+  to{
+    stroke-dashoffset:1e-05px;
+    stroke-dasharray: 500  ;
+  }
+}

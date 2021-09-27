@@ -75,16 +75,7 @@ li>video:hover{
 .sound>i{
   margin-left: 5px;
 }
-.hideCircle{
-  opacity: 0;
-  stroke-dashoffset: -194.399;
-  stroke-dasharray: 1e-05px, 204.399px;
-}
-.drawCircle{
-  opacity: 1;
-  stroke-dashoffset: 1e-05px;
-  stroke-dasharray: none;
-}
+
 .DrawIcon{
   position: absolute;
   left: 0;
@@ -101,4 +92,8 @@ li>video:hover{
 }
 .svg:focus{
   outline: -webkit-focus-ring-color auto 5px;
+}
+
+.box {
+  transition: width 1s, height 2s, background-color 2s, transform 2s;
 }
