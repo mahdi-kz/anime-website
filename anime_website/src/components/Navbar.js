@@ -1,15 +1,18 @@
-import React, {useState} from 'react';
+import React, {useState, useRef} from 'react';
 import { Link } from 'react-router-dom';
 import { Container, Row, Col } from 'react-grid-system';
 import './Navbar.css'
+import Blog from './Blog';
 
 
 function Navbar(){
 	const [click, setClick] = useState(false);
 	const [drow, setDrow] = useState(false);
 	const [menuHover, setMenuHover] = useState(false);
+	const [blogVisible, setblogVisible] = useState(false)
 
 	const handleClick = ()=>setClick(!click);
+	const changingBlogVisible = ()=>setblogVisible(!blogVisible);
 	const closeModalMenu = ()=>setClick(false);
 
 	return(
@@ -18,14 +21,14 @@ function Navbar(){
 				<div className="navbar-container">
 					<div className={click?"container menu-open":"container"} >
 					<div>
-						<Link 
-							to='/Blog' 
+						<div 
+							onClick={changingBlogVisible}
 							className={click?'hide':'navbar-bell'}
 							onMouseEnter={()=>setDrow(true)} 
 							onMouseLeave={()=>setDrow(false)}
 						>
 							<i className="fas fa-bell fa-sm" />
-						</Link>
+						</div>
 						{ drow &&
 							<svg className="navSvg" xmlns="http://www.w3.org/2000/svg" >
 								<path class="drawCircle" 
@@ -38,6 +41,9 @@ function Navbar(){
 							</svg>
 						}
 					</div>
+					{ blogVisible &&
+						<Blog changingBlogVisible={changingBlogVisible} />
+					}
 					<div>
 						<p className='logo'> animate </p>
 					</div>

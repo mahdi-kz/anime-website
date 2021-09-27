@@ -15,6 +15,7 @@
   top: 15px;
   left: 20px;
   z-index: 11;
+  cursor: pointer;
 }
 .navSvg{
   pointer-events: none;
