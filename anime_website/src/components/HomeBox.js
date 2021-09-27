@@ -29,80 +29,80 @@ function HomeBox(){
 	return(
 		<>
 			<ul>
-				<li className={selectedBox1?"box firstBoxHover":"firstBox"}  
-					onMouseEnter={()=>{setTitle("Videos");setSelectedBox1(true);}} 
-					onMouseLeave={()=>{setTitle('Services');setSelectedBox1(false);}}
+				<li className="imageBox"
+					onMouseEnter={()=>{setTitle("image 1");setSelectedBox1(true);}}
+					onMouseLeave={()=>{setTitle('Our Items');setSelectedBox1(false);}}
 				>
-				{selectedBox1?	
-					<video 
+				{selectedBox1?
+					<video
 						onMouseOver={() => vidRef.current.play()}
 						onMouseOut={() => vidRef.current.pause()}
-						className="top-li" 
-						ref={vidRef} 
-						src={video1} 
+						className="top-li"
+						ref={vidRef}
+						src={video1}
 						muted={soundOff?true:false}
 						type="video/mp4">
 					</video>
 					:
 					<img className="top-li" src={image1} alt="" />
 				}
-					
+
 				</li>
-				<li className={selectedBox2?"box secondBoxHover":"secondBox"}
-					onMouseEnter={()=>{setTitle("Social Media");setSelectedBox2(true)}} 
-					onMouseLeave={()=>{setTitle('Services');setSelectedBox2(false)}}
+				<li className="imageBox"
+					onMouseEnter={()=>{setTitle("image 2");setSelectedBox2(true)}}
+					onMouseLeave={()=>{setTitle('Our Items');setSelectedBox2(false)}}
 				>
-					{selectedBox2?	
-						<video 
+					{selectedBox2?
+						<video
 							onMouseOver={() => vidRef2.current.play()}
 							onMouseOut={() => vidRef2.current.pause()}
-							ref={vidRef2} 
-							src={video2} 
+							ref={vidRef2}
+							src={video2}
 							muted={soundOff?true:false}
 							type="video/mp4">
 						</video>
 						:
 						<img src={image2} alt="" />
 					}
-					
+
 				</li>
-				<li className={selectedBox3?"box thirdBoxHover":"thirdBox"}
-					onMouseEnter={()=>{setTitle("Graphics");setSelectedBox3(true)}} 
-					onMouseLeave={()=>{setTitle('Services');setSelectedBox3(false)}}
+				<li className="imageBox"
+					onMouseEnter={()=>{setTitle("image 3");setSelectedBox3(true)}}
+					onMouseLeave={()=>{setTitle('Our Items');setSelectedBox3(false)}}
 				>
-					{selectedBox3?	
-						<video 
+					{selectedBox3?
+						<video
 							onMouseOver={() => vidRef3.current.play()}
 							onMouseOut={() => vidRef3.current.pause()}
-							className="top-li" 
-							ref={vidRef3} 
-							src={video3} 
+							className="top-li"
+							ref={vidRef3}
+							src={video3}
 							muted={soundOff?true:false}
 							type="video/mp4">
 						</video>
 						:
 						<img className="top-li" src={image3} alt="" />
 					}
-					
+
 				</li>
-				<li className={selectedBox4?"box fourthBoxHover":"fourthBox"}
-					onMouseEnter={()=>{setTitle("Training");setSelectedBox4(true)}} 
-					onMouseLeave={()=>{setTitle('Services');setSelectedBox4(false)}}
+				<li className="imageBox"
+					onMouseEnter={()=>{setTitle("image 4");setSelectedBox4(true)}}
+					onMouseLeave={()=>{setTitle('Our Items');setSelectedBox4(false)}}
 				>
-					{selectedBox4?	
-						<video 
+					{selectedBox4?
+						<video
 							onMouseOver={() => vidRef4.current.play()}
 							onMouseOut={() => vidRef4.current.pause()}
-							ref={vidRef4} 
-							src={video4} 
+							ref={vidRef4}
+							src={video4}
 							muted={soundOff?true:false}
 							type="video/mp4">
 						</video>
 						:
 						<img src={image4} alt="" />
 					}
-					
-				</li> 
+
+				</li>
 			</ul>
 			<h2 className="title">{title}</h2>
 			<div className="sound" onClick={handleSound}
