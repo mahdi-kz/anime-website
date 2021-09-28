@@ -16,6 +16,7 @@
     color: #b3b3b3;
     overflow: auto;
     padding-right: 15px;
+    overflow-x: hidden;
 }
 .BlogSidebar{
     opacity: 1; 
@@ -40,6 +41,19 @@
     padding-bottom: 15px;
     width: 42px;
     z-index: 1;
+}
+.BlogContainer::-webkit-scrollbar {
+    background-clip: content-box;
+    background: #000;
+}
+.BlogContainer::-webkit-scrollbar-thumb {
+    background-clip: content-box;
+    background-color: hsla(0,0%,100%,.4);
+    -webkit-transition: background .2s;
+    transition: background .2s;
+    border-radius: 0;
+    border: 10px solid transparent;
+    border-left-width: 3px;
 }
 .BlogSidebar-close{
     height: 60px;
@@ -129,6 +143,7 @@
 
 .BlogSidebar-entry{
     margin-bottom: 60px;
+    border-top: 1px solid #494847;
 }
 
 .ImagePlaceholder{
@@ -167,6 +182,10 @@
     color: -webkit-link;
     cursor: pointer;
     text-decoration: underline;
+}
+
+.fa{
+    font-size: small !important;
 }
 
 @media (min-width: 576px){
