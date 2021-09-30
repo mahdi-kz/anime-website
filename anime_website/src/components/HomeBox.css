@@ -1,23 +1,19 @@
-ul {
+.homeBox {
   padding: 0;
   list-style-type: none;
   text-align:center;
-  /* columns: 3;
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); */
   
 }
-li {
+.homeBox > li {
   margin-right: 10px;
   overflow: hidden;
-  /* width: calc((100vw / 3) - 20px); */
   display: inline-block;
 }
-li>img{
+.homeBox > li > img{
   height: 400px;
   object-fit: cover;
 }
-li>video{
+.homeBox >li > video{
   height: 400px;
   object-fit: cover;
 }

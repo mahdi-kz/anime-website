@@ -75,7 +75,7 @@ function Navbar(){
                                 <Link to="/products" className='nav-link' onClick={closeModalMenu}>Products</Link>
                             </Col>
                             <Col xs={12} md={2} xl={2} className='nav-item'>
-                                <Link to="/sign-up" className='nav-link' onClick={closeModalMenu}>SignUp</Link>
+                                <Link to="/awards" className='nav-link' onClick={closeModalMenu}>Awards</Link>
                             </Col>
                         </Row>
 					</Container>

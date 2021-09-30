@@ -28,7 +28,7 @@ function HomeBox(){
 
 	return(
 		<>
-			<ul>
+			<ul className="homeBox">
 				<li className={selectedBox1?"box firstBoxHover":"firstBox"}  
 					onMouseEnter={()=>{setTitle("Videos");setSelectedBox1(true);}} 
 					onMouseLeave={()=>{setTitle('Services');setSelectedBox1(false);}}
