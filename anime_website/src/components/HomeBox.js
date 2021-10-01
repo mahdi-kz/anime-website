@@ -28,10 +28,10 @@ function HomeBox(){
 
 	return(
 		<>
-			<ul>
-				<li className="imageBox"
-					onMouseEnter={()=>{setTitle("image 1");setSelectedBox1(true);}}
-					onMouseLeave={()=>{setTitle('Our Items');setSelectedBox1(false);}}
+			<ul className="homeBox">
+				<li className={selectedBox1?"box firstBoxHover":"firstBox"}  
+					onMouseEnter={()=>{setTitle("Videos");setSelectedBox1(true);}} 
+					onMouseLeave={()=>{setTitle('Services');setSelectedBox1(false);}}
 				>
 				{selectedBox1?
 					<video
@@ -48,8 +48,8 @@ function HomeBox(){
 
 				</li>
 				<li className="imageBox"
-					onMouseEnter={()=>{setTitle("image 2");setSelectedBox2(true)}}
-					onMouseLeave={()=>{setTitle('Our Items');setSelectedBox2(false)}}
+					onMouseEnter={()=>{setTitle("Social Media");setSelectedBox2(true)}}
+					onMouseLeave={()=>{setTitle('Services');setSelectedBox2(false)}}
 				>
 					{selectedBox2?
 						<video
@@ -67,8 +67,8 @@ function HomeBox(){
 
 				</li>
 				<li className="imageBox"
-					onMouseEnter={()=>{setTitle("image 3");setSelectedBox3(true)}}
-					onMouseLeave={()=>{setTitle('Our Items');setSelectedBox3(false)}}
+					onMouseEnter={()=>{setTitle("Graphics");setSelectedBox3(true)}}
+					onMouseLeave={()=>{setTitle('Services');setSelectedBox3(false)}}
 				>
 					{selectedBox3?
 						<video
@@ -85,8 +85,8 @@ function HomeBox(){
 
 				</li>
 				<li className="imageBox"
-					onMouseEnter={()=>{setTitle("image 4");setSelectedBox4(true)}}
-					onMouseLeave={()=>{setTitle('Our Items');setSelectedBox4(false)}}
+					onMouseEnter={()=>{setTitle("Training");setSelectedBox4(true)}}
+					onMouseLeave={()=>{setTitle('Services');setSelectedBox4(false)}}
 				>
 					{selectedBox4?
 						<video

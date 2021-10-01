@@ -4,7 +4,7 @@ import Home from './screens/Home';
 import {BrowserRouter as Router, Switch, Route} from 'react-router-dom'
 import Products from './screens/Products';
 import Services from './screens/Services';
-import SignUp from './screens/SignUp';
+import Awards from './screens/Awards';
 
 function App() {
   return (
@@ -20,8 +20,8 @@ function App() {
 				<Route path='/services' >
 					<Services />
 				</Route>
-				<Route path='/sign-up' >
-					<SignUp />
+				<Route path='/awards' >
+					<Awards />
 				</Route>
 			</Switch>
 		</Router>

@@ -5,8 +5,7 @@ ul {
   text-align:center;
   height: calc(100vh - 150px);
 }
-
-li {
+.homeBox > li {
   margin-right: 10px;
   margin-left: 10px;
   margin-top:20px;
@@ -25,8 +24,7 @@ li>img:hover{
   margin-left: 10px;
   height:500px;
 }
-
-li>video{
+.homeBox >li > video{
   height: 400px;
   margin-left: 10px;
   margin-right: 10px;

@@ -1,3 +1,6 @@
+html{
+  background-color: #e7e5df;
+}
 body{
   color: #000;
   font-size: 22px;
@@ -11,7 +14,9 @@ body{
 .App {
   background: #000;
 }
-
+.hide{
+  display: none;
+}
 .drawCircle{
   animation: drowCircle 1s 1 forwards ;
   transform-origin: 0px 0px;
