@@ -1,7 +1,9 @@
 ul {
+  margin-top:50px;
   padding: 0;
   list-style-type: none;
   text-align:center;
+  height: calc(100vh - 150px);
 }
 
 li {
@@ -12,68 +14,66 @@ li {
   display: inline-block;
 }
 li>img{
+  margin-right: 10px;
+  margin-left: 10px;
   height: 400px;
   object-fit: cover;
-  padding-bottom:100px;
   transition: all 1s ease-out;
 }
 li>img:hover{
+  margin-right: 10px;
+  margin-left: 10px;
   height:500px;
-  padding:0px;
 }
 
 li>video{
   height: 400px;
-  object-fit: cover;
-  padding-bottom:100px;
+  margin-left: 10px;
+  margin-right: 10px;
+  object-fit: scale-down;
   transition: all 1s ease-out;
 }
 li>video:hover{
   height:500px;
-  padding:0px;
+  margin-left: 10px;
+  margin-right: 10px;
 }
 .top-li{
   height: 400px;
-  object-fit: cover;
-  padding-bottom:150px;
+  padding-top: 100px;
+  object-fit: scale-down;
   transition: all 1s ease-out;
 }
 .top-li:hover{
   height:500px;
-  padding-bottom:50px;
 }
 
 .title{
   text-align: center;
-  margin-top:50px
+  margin-top:50px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  position: fixed;
 }
 .imageBox{
   width: 200px;
+  height: 600px;
 }
 .imageBox:hover{
   width: 200px;
 }
 
-.thirdBox>img{
-  padding-left: 0px;
-}
-.thirdBoxHover>img{
-  padding-left: 0px;
-}
-.thirdBox>video{
-  padding-left: 0px;
-}
-.thirdBoxHover>video{
-  padding-left: 0px;
-}
 .sound{
-  position: relative;
-  bottom: 35px;
+  position: fixed;
+  bottom: 40px;
   left: 20px;
   z-index: 11;
 }
 .sound>i{
   margin-left: 5px;
+  bottom: 40px;
+  position:fixed;
 }
 
 .DrawIcon{
