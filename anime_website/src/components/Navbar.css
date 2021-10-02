@@ -29,23 +29,18 @@
   left: 5px;
   top: 5px;
 }
-
-
 .menu-open{
 	background: #000;
 	top:-10;
 	height:10vh;
 }
-
 .menu-open path {
 	fill: #b3b3b3;
 }
-
 .menu-open p {
 	color: #b3b3b3;
 	background:#000;
 }
-
 .menu-icon {
   position: fixed;
   top: 15px;
@@ -53,7 +48,6 @@
   z-index: 11;
   cursor: pointer;
 }
-
 .menu-icon>svg {
   width: 17px;
   height: 28px;
@@ -98,6 +92,8 @@
 }
 
 .menu-row {
+    margin-left: -60px !important;
+    margin-right:0px !important;
     position: fixed;
     left: 0;
     right: 0;

@@ -1,0 +1,49 @@
+.contact-us-containet{
+    padding: 70px 150px;
+}
+.contact-us-title{
+    font-size: xx-large;
+    font-weight: bold;
+    margin-bottom: 80px;
+}
+.contact-us-description{
+    font-size: larger;
+    margin-bottom: 15px;
+}
+.contact-us-address{
+    padding: 10px 15px;
+}
+.contact-us-address>i{
+    margin-right: 10px;
+}
+.contact-us-social-networks{
+    padding: 20px 15px;
+    position: relative;
+}
+.contact-us-social-networks>a{
+    padding: 0px 50px 0px 0px;
+}
+.facebookSvg{
+    pointer-events: none;
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    left: 68px;
+    bottom: 7px;
+}
+.instagramSvg{
+    pointer-events: none;
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    left: 133px;
+    bottom: 7px;
+}
+.twitterSvg{
+    pointer-events: none;
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    left: 0px;
+    bottom: 7px;
+}

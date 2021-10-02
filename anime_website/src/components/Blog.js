@@ -62,17 +62,17 @@ function Blog(props){
             <div className="BlogContainer">
                 <div className="BlogSidebar">
                     <div class="BlogSidebar-close" onClick={props.changingBlogVisible}>
-                        <i className="fa fa-times fa-sm" />
+                        <i className="fa fa-times BlogSidebar-social-fa" />
                     </div>
                     <span className="BlogSidebar-span">Animate</span>
                     <a class="BlogSidebar-social" href="#">
-                        <i className="fa fa-twitter" />
+                        <i className="fa fa-twitter BlogSidebar-social-fa" />
                     </a>
                     <a class="BlogSidebar-social" href="#">
-                        <i className="fa fa-facebook" />
+                        <i className="fa fa-facebook BlogSidebar-social-fa" />
                     </a>
                     <a class="BlogSidebar-social" href="#">
-                        <i className="fa fa-instagram" />
+                        <i className="fa fa-instagram BlogSidebar-social-fa" />
                     </a>
                 </div>
                 <div className="BlogSidebar-content">

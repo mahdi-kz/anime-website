@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react';
-import './styles.css'
+import './Awards.css'
 
 import image1 from '../images/oscar.jpg';
 import image2 from '../images/golden_globe.jpg';
