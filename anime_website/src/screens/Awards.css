@@ -50,6 +50,7 @@
     -ms-flex-flow: row;
     flex-flow: row;
     margin-bottom: -20px;
+    margin-top: 65px;
 } 
 .AwardsTemplate .AwardsTemplate-Gallery img:first-child {
     /* margin-top: 15px; */

@@ -1,6 +1,6 @@
 .container {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr; /* fraction*/
+  grid-template-columns: 1fr 1fr 1fr; /* fraction*/ 
 }
 .navbar{
 	margin-top: -15px;
@@ -8,6 +8,7 @@
 	top:0;
 	left:0;
 	right:0;
+  z-index: 99999;
 }
 .logo{
   z-index: 11;
@@ -52,11 +53,9 @@
   width: 17px;
   height: 28px;
 }
-
 .hide{
 	display:none
 }
-
 .menu {
     /* position: fixed; */
     /* top: 1vh; */
