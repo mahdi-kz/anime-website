@@ -29,84 +29,82 @@ function HomeBox(){
 	return(
 		<>
 			<ul>
-				<li className={selectedBox1?"box firstBoxHover":"firstBox"}  
-					onMouseEnter={()=>{setTitle("Videos");setSelectedBox1(true);}} 
+				<li className="imageBox"
+					onMouseEnter={()=>{setTitle("Production");setSelectedBox1(true);}}
 					onMouseLeave={()=>{setTitle('Services');setSelectedBox1(false);}}
 				>
-				{selectedBox1?	
-					<video 
+				{selectedBox1?
+					<video
 						onMouseOver={() => vidRef.current.play()}
 						onMouseOut={() => vidRef.current.pause()}
-						className="top-li" 
-						ref={vidRef} 
-						src={video1} 
+						ref={vidRef}
+						src={video1}
 						muted={soundOff?true:false}
 						type="video/mp4">
 					</video>
 					:
-					<img className="top-li" src={image1} alt="" />
+					<img src={image1} alt="" />
 				}
-					
+
 				</li>
-				<li className={selectedBox2?"box secondBoxHover":"secondBox"}
-					onMouseEnter={()=>{setTitle("Social Media");setSelectedBox2(true)}} 
+				<li className="imageBox"
+					onMouseEnter={()=>{setTitle("Social Media");setSelectedBox2(true)}}
 					onMouseLeave={()=>{setTitle('Services');setSelectedBox2(false)}}
 				>
-					{selectedBox2?	
-						<video 
+					{selectedBox2?
+						<video
 							onMouseOver={() => vidRef2.current.play()}
 							onMouseOut={() => vidRef2.current.pause()}
-							ref={vidRef2} 
-							src={video2} 
+							ref={vidRef2}
+							src={video2}
 							muted={soundOff?true:false}
 							type="video/mp4">
 						</video>
 						:
 						<img src={image2} alt="" />
 					}
-					
+
 				</li>
-				<li className={selectedBox3?"box thirdBoxHover":"thirdBox"}
-					onMouseEnter={()=>{setTitle("Graphics");setSelectedBox3(true)}} 
+				<li className="imageBox"
+					onMouseEnter={()=>{setTitle("Graphics");setSelectedBox3(true)}}
 					onMouseLeave={()=>{setTitle('Services');setSelectedBox3(false)}}
 				>
-					{selectedBox3?	
-						<video 
+					{selectedBox3?
+						<video
 							onMouseOver={() => vidRef3.current.play()}
 							onMouseOut={() => vidRef3.current.pause()}
-							className="top-li" 
-							ref={vidRef3} 
-							src={video3} 
+							ref={vidRef3}
+							src={video3}
 							muted={soundOff?true:false}
 							type="video/mp4">
 						</video>
 						:
-						<img className="top-li" src={image3} alt="" />
+						<img src={image3} alt="" />
 					}
-					
+
 				</li>
-				<li className={selectedBox4?"box fourthBoxHover":"fourthBox"}
-					onMouseEnter={()=>{setTitle("Training");setSelectedBox4(true)}} 
+				<li className="imageBox"
+					onMouseEnter={()=>{setTitle("Training");setSelectedBox4(true)}}
 					onMouseLeave={()=>{setTitle('Services');setSelectedBox4(false)}}
 				>
-					{selectedBox4?	
-						<video 
+					{selectedBox4?
+						<video
 							onMouseOver={() => vidRef4.current.play()}
 							onMouseOut={() => vidRef4.current.pause()}
-							ref={vidRef4} 
-							src={video4} 
+							ref={vidRef4}
+							src={video4}
 							muted={soundOff?true:false}
 							type="video/mp4">
 						</video>
 						:
 						<img src={image4} alt="" />
 					}
-					
-				</li> 
+
+				</li>
 			</ul>
 			<h2 className="title">{title}</h2>
 			<div className="sound" onClick={handleSound}
-				onMouseEnter={()=>setDrow(true)} 
+				onMouseEnter={()=>setDrow(true)}
 				onMouseLeave={()=>setDrow(false)}
 			>
 				{soundOff?
@@ -115,12 +113,12 @@ function HomeBox(){
 				}
 				{drow &&
 					<svg className="svg" xmlns="http://www.w3.org/2000/svg" >
-						<path class="drawCircle" 
-							d="M33.72 1.25A28.4 28.4 0 0012.43 4.7a22.6 22.6 0 00-7.77 7.75 21.33 21.33 0 00-1.81 16.69 22.75 22.75 0 0014.47 14.8 22.79 22.79 0 0020.42-3.41 22.79 22.79 0 008.89-18.7A20.86 20.86 0 0035.88 4.29C29.14.77 20.89 2 14.4 5.5 8.23 8.82 3.05 14.32 1.2 21.22a19.9 19.9 0 00-.46 2.14 15.44 15.44 0 001 8.93 19.1 19.1 0 001 1.92" 
-							fill="none" 
-							stroke="#231f20" 
-							stroke-linecap="round" 
-							stroke-linejoin="round" 
+						<path class="drawCircle"
+							d="M33.72 1.25A28.4 28.4 0 0012.43 4.7a22.6 22.6 0 00-7.77 7.75 21.33 21.33 0 00-1.81 16.69 22.75 22.75 0 0014.47 14.8 22.79 22.79 0 0020.42-3.41 22.79 22.79 0 008.89-18.7A20.86 20.86 0 0035.88 4.29C29.14.77 20.89 2 14.4 5.5 8.23 8.82 3.05 14.32 1.2 21.22a19.9 19.9 0 00-.46 2.14 15.44 15.44 0 001 8.93 19.1 19.1 0 001 1.92"
+							fill="none"
+							stroke="#231f20"
+							stroke-linecap="round"
+							stroke-linejoin="round"
 							></path>
 					</svg>
 				}

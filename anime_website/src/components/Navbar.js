@@ -1,15 +1,17 @@
-import React, {useState, useRef} from 'react';
+import React, {useState} from 'react';
 import { Link } from 'react-router-dom';
 import { Container, Row, Col } from 'react-grid-system';
 import './Navbar.css'
 import Blog from './Blog';
 
 
-function Navbar(){
+function Navbar(props){
+
 	const [click, setClick] = useState(false);
 	const [drow, setDrow] = useState(false);
 	const [menuHover, setMenuHover] = useState(false);
 	const [blogVisible, setblogVisible] = useState(false)
+	const [showLogo, setShowLogo] = useState(props.showLogo!=undefined?props.showLogo:true)
 
 	const handleClick = ()=>setClick(!click);
 	const changingBlogVisible = ()=>setblogVisible(!blogVisible);
@@ -44,9 +46,11 @@ function Navbar(){
 					{ blogVisible &&
 						<Blog changingBlogVisible={changingBlogVisible} />
 					}
-					<div>
-						<p className='logo'> animate </p>
-					</div>
+					{showLogo &&
+						<div>
+							<p className='logo'> animate </p>
+						</div>
+					}
 					<div 
 						className='menu-icon' 
 						onClick={handleClick}
@@ -65,7 +69,7 @@ function Navbar(){
 					
 					<Container fluid className={click?'menu':'hide'}>
                         <Row className='menu-row'>
-                            <Col xs={12} md={2} xl={2} offset={{xl:2}} className='nav-item'>
+                            <Col xs={12} md={2} xl={2} offset={{xl:1, md:1}} className='nav-item'>
                                 <Link to="/" className='nav-link' onClick={closeModalMenu}>Home</Link>
                             </Col>
                             <Col xs={12} md={2} xl={2} className='nav-item'>
@@ -75,11 +79,13 @@ function Navbar(){
                                 <Link to="/products" className='nav-link' onClick={closeModalMenu}>Products</Link>
                             </Col>
                             <Col xs={12} md={2} xl={2} className='nav-item'>
-                                <Link to="/sign-up" className='nav-link' onClick={closeModalMenu}>SignUp</Link>
+                                <Link to="/awards" className='nav-link' onClick={closeModalMenu}>Awards</Link>
+                            </Col>
+							<Col xs={12} md={2} xl={2} className='nav-item'>
+                                <Link to="/contact_us" className='nav-link' onClick={closeModalMenu}>Contact Us</Link>
                             </Col>
                         </Row>
 					</Container>
-
 				</div>
 			</nav>
 		</>
