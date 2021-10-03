@@ -1,6 +1,6 @@
 .container {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr; /* fraction*/
+  grid-template-columns: 1fr 1fr 1fr; /* fraction*/ 
 }
 .navbar{
 	margin-top: -15px;
@@ -8,6 +8,7 @@
 	top:0;
 	left:0;
 	right:0;
+  z-index: 99999;
 }
 .logo{
   z-index: 11;
@@ -29,23 +30,18 @@
   left: 5px;
   top: 5px;
 }
-
-
 .menu-open{
 	background: #000;
 	top:-10;
 	height:10vh;
 }
-
 .menu-open path {
 	fill: #b3b3b3;
 }
-
 .menu-open p {
 	color: #b3b3b3;
 	background:#000;
 }
-
 .menu-icon {
   position: fixed;
   top: 15px;
@@ -53,16 +49,13 @@
   z-index: 11;
   cursor: pointer;
 }
-
 .menu-icon>svg {
   width: 17px;
   height: 28px;
 }
-
 .hide{
 	display:none
 }
-
 .menu {
     /* position: fixed; */
     /* top: 1vh; */
@@ -98,6 +91,8 @@
 }
 
 .menu-row {
+    margin-left: -60px !important;
+    margin-right:0px !important;
     position: fixed;
     left: 0;
     right: 0;

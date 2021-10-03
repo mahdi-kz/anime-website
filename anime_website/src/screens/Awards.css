@@ -50,6 +50,7 @@
     -ms-flex-flow: row;
     flex-flow: row;
     margin-bottom: -20px;
+    margin-top: 65px;
 } 
 .AwardsTemplate .AwardsTemplate-Gallery img:first-child {
     /* margin-top: 15px; */
@@ -208,6 +209,19 @@ th {
     content: "";
     border-top: 1px solid #d8d5cc;
 }
+.AwardsSvg{
+    opacity: 1;
+    left: 0px;
+    position: absolute;
+    transform: translate3d(109.804px, 0px, 0px) scale(1.0001, 1);
+}
+.AwardsSvgDiv{
+    width: 100%;
+    height: 100%;
+    /* position: absolute; */
+    left: 0px;
+    top: 0px;
+}
 .hideTitle{
     opacity: 0;
     transition: visibility 0s, opacity 0.5s linear;
@@ -229,8 +243,37 @@ th {
     width: 100%;
     padding: 0 10px 60px;
     position: relative;
+    text-align: left;
 }
-
+.AwardsListModule table th.active:after {
+    position: absolute;
+    top: 4px;
+    margin-left: 3px;
+    content: "";
+    width: 0;
+    height: 0;
+    border-color: #736c5e transparent transparent;
+    border-style: solid;
+    border-width: 4px 4px 0;
+    -webkit-transition: -webkit-transform .2s;
+    transition: -webkit-transform .2s;
+    transition: transform .2s;
+    transition: transform .2s,-webkit-transform .2s;
+    -webkit-transform: rotate(-180deg);
+    transform: rotate(-180deg);
+}
+.AwardsListModule table th.active.asc:after {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+}
+.TextStyle-PageTitle {
+    line-height: 0;
+}
+.TextStyle-PageTitle>div {
+    height: 48px;
+    position: relative;
+    margin-right: 425px;
+}
 .grid-item {
     /* background-color: rgba(255, 255, 255, 0.8);
     border: 1px solid rgba(0, 0, 0, 0.8); */
@@ -248,5 +291,11 @@ th {
         width: 150px;
         height: 400x;
         margin: 0 10px;
+    }
+    .AwardsTemplate .AwardsTemplate-Gallery {
+        margin-bottom: 95px;
+    }
+    .TextStyle-PageTitle>div {
+        height: 66px;
     }
 }
