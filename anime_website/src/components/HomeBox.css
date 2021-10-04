@@ -24,12 +24,10 @@
 .imageBox{
   width: 180px;
 }
-.imageBoxHover{
+.imageBox:hover{
   width: 220px;
   padding-left: 0px;
-}
-.imageBoxHover>video{
-  padding-left: 0px;
+  transition: width 1s, height 2s, background-color 2s, transform 2s;
 }
 .sound{
   position: fixed;
@@ -58,9 +56,6 @@
 }
 .svg:focus{
   outline: -webkit-focus-ring-color auto 5px;
-}
-.box {
-  transition: width 1s, height 2s, background-color 2s, transform 2s;
 }
 .top-li{
   padding:20px 0px;

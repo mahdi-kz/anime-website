@@ -29,7 +29,7 @@ function HomeBox(){
 	return(
 		<>
 			<ul className="homeBox">
-				<li className={selectedBox1?"box imageBoxHover":"imageBox"}
+				<li className="imageBox"
 					onMouseEnter={()=>{setTitle("Production");setSelectedBox1(true);}}
 					onMouseLeave={()=>{setTitle('Services');setSelectedBox1(false);}}
 				>
@@ -48,7 +48,7 @@ function HomeBox(){
 				}
 
 				</li>
-				<li className={selectedBox2?"box imageBoxHover":"imageBox"}
+				<li className="imageBox"
 					onMouseEnter={()=>{setTitle("Social Media");setSelectedBox2(true)}}
 					onMouseLeave={()=>{setTitle('Services');setSelectedBox2(false)}}
 				>
@@ -67,7 +67,7 @@ function HomeBox(){
 					}
 
 				</li>
-				<li className={selectedBox3?"box imageBoxHover":"imageBox"}
+				<li className="imageBox"
 					onMouseEnter={()=>{setTitle("Graphics");setSelectedBox3(true)}}
 					onMouseLeave={()=>{setTitle('Services');setSelectedBox3(false)}}
 				>
@@ -86,7 +86,7 @@ function HomeBox(){
 					}
 
 				</li>
-				<li className={selectedBox4?"box imageBoxHover":"imageBox"}
+				<li className="imageBox"
 					onMouseEnter={()=>{setTitle("Training");setSelectedBox4(true)}}
 					onMouseLeave={()=>{setTitle('Services');setSelectedBox4(false)}}
 				>
