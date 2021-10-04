@@ -28,7 +28,7 @@ function HomeBox(){
 
 	return(
 		<>
-			<ul>
+			<ul className="homeBox">
 				<li className="imageBox"
 					onMouseEnter={()=>{setTitle("Production");setSelectedBox1(true);}}
 					onMouseLeave={()=>{setTitle('Services');setSelectedBox1(false);}}
@@ -37,13 +37,14 @@ function HomeBox(){
 					<video
 						onMouseOver={() => vidRef.current.play()}
 						onMouseOut={() => vidRef.current.pause()}
+						className="top-li"
 						ref={vidRef}
 						src={video1}
 						muted={soundOff?true:false}
 						type="video/mp4">
 					</video>
 					:
-					<img src={image1} alt="" />
+					<img className="top-li" src={image1} alt="" />
 				}
 
 				</li>
@@ -55,13 +56,14 @@ function HomeBox(){
 						<video
 							onMouseOver={() => vidRef2.current.play()}
 							onMouseOut={() => vidRef2.current.pause()}
+							className="down-li"
 							ref={vidRef2}
 							src={video2}
 							muted={soundOff?true:false}
 							type="video/mp4">
 						</video>
 						:
-						<img src={image2} alt="" />
+						<img className="down-li" src={image2} alt="" />
 					}
 
 				</li>
@@ -73,13 +75,14 @@ function HomeBox(){
 						<video
 							onMouseOver={() => vidRef3.current.play()}
 							onMouseOut={() => vidRef3.current.pause()}
-							ref={vidRef3}
-							src={video3}
+							className="top-li"
+							ref={vidRef3} 
+							src={video3} 
 							muted={soundOff?true:false}
 							type="video/mp4">
 						</video>
 						:
-						<img src={image3} alt="" />
+						<img className="top-li" src={image3} alt="" />
 					}
 
 				</li>
@@ -91,13 +94,14 @@ function HomeBox(){
 						<video
 							onMouseOver={() => vidRef4.current.play()}
 							onMouseOut={() => vidRef4.current.pause()}
+							className="down-li"
 							ref={vidRef4}
 							src={video4}
 							muted={soundOff?true:false}
 							type="video/mp4">
 						</video>
 						:
-						<img src={image4} alt="" />
+						<img className="down-li" src={image4} alt="" />
 					}
 
 				</li>
