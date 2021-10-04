@@ -1,41 +1,17 @@
-ul {
-  margin-top:75px;
+.homeBox {
+  margin-top:35px;
   padding: 0;
   list-style-type: none;
   text-align:center;
   height: calc(100vh - 150px);
 }
-li {
+.homeBox > li {
   margin-right: 10px;
   margin-left: 10px;
-  margin-top:20px;
+  margin-top: 20px;
   overflow: hidden;
   display: inline-block;
-}
-li>img{
-  margin-right: 10px;
-  margin-left: 10px;
-  height: 400px;
-  object-fit: cover;
-  transition: all 1s ease-out;
-}
-li>img:hover{
-  margin-right: 10px;
-  margin-left: 10px;
-  height:500px;
-}
-li > video{
-  height: 400px;
-  margin-left: 10px;
-  margin-right: 10px;
-  object-fit: scale-down;
-  transition: all 1s ease-out;
-}
-li>video:hover{
-  height:450px;
-  margin-left: 10px;
-  margin-right: 10px;
-}
+}    
 .title{
   text-align: center;
   margin-top:50px;
@@ -44,14 +20,17 @@ li>video:hover{
   right: 0;
   position: fixed;
 }
-.imageBox{
-  width: 200px;
-  height: 600px;
-}
-.imageBox:hover{
-  width: 200px;
-}
 
+.imageBox{
+  width: 180px;
+}
+.imageBoxHover{
+  width: 220px;
+  padding-left: 0px;
+}
+.imageBoxHover>video{
+  padding-left: 0px;
+}
 .sound{
   position: fixed;
   bottom: 40px;
@@ -63,7 +42,6 @@ li>video:hover{
   bottom: 40px;
   position:fixed;
 }
-
 .DrawIcon{
   position: absolute;
   left: 0;
@@ -81,7 +59,26 @@ li>video:hover{
 .svg:focus{
   outline: -webkit-focus-ring-color auto 5px;
 }
-
 .box {
   transition: width 1s, height 2s, background-color 2s, transform 2s;
+}
+.top-li{
+  padding:20px 0px;
+  width: 200px;
+  height: 450px;
+}
+.top-li:hover{
+  width: 240px;
+  height: 450px;
+  padding-left: 0px;
+}
+.down-li{
+  width: 200px;
+  height: 450px;
+  padding-left: 0px;
+}
+.down-li:hover{
+  width: 240px;
+  height: 450px;
+  padding-left: 0px;
 }
