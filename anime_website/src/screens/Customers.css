@@ -1,0 +1,56 @@
+.customerContainer{
+    width: "100%";
+    margin-top: 90px;
+}
+.customersTitle{
+    text-align: center;
+}
+.customer-row{
+    text-align: center;
+    margin-bottom: 50px;
+}
+.customer-logo-box{
+    margin-top: 65px;
+}
+.customer-name{
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transition: opacity 1000ms, visibility 1000ms;
+    transition: opacity 1000ms, visibility 1000ms;
+}
+.customer-name-show {
+    visibility: visible;
+    opacity: 1;
+}
+.customerLogo {
+    width: 90px;
+    height: 90px;
+    -webkit-animation: pulsing 2s ;
+    animation: pulsing 0.5s;
+}  
+@keyframes pulsing {
+    0% {
+        -webkit-transform: scale(0.1, 0.1);
+        transform: scale(0.1, 0.1)
+    }
+    20%{
+        -webkit-transform: scale(0.2, 0.2);
+        transform: scale(0.2, 0.2)
+    }
+    40% {
+        -webkit-transform: scale(0.4, 0.4);
+        transform: scale(0.4, 0.4);
+    }
+    60%{
+        -webkit-transform: scale(0.6, 0.6);
+        transform: scale(0.6, 0.6)
+    }
+    80%{
+        -webkit-transform: scale(0.8, 0.8);
+        transform: scale(0.8, 0.8)    
+    }
+    100% {
+        -webkit-transform: scale(1.0, 1.0);
+        transform: scale(1.0, 1.0);
+    }
+}
