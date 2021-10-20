@@ -1,0 +1,54 @@
+@font-face {
+    font-family: 'LisztFYBlack';
+    src: local('LisztFYBlack'), url(./fonts/LisztFYBlack.woff) format('woff');
+}
+
+@font-face {
+    font-family: 'LisztFYBold';
+    src: local('LisztFYBold'), url(./fonts/LisztFYBold.woff) format('woff');
+}
+
+@font-face {
+    font-family: 'LisztFYBoldItalic';
+    src: local('LisztFYBoldItalic'), url(./fonts/LisztFYBoldItalic.woff) format('woff');
+}
+
+@font-face {
+    font-family: 'LisztFYBook';
+    src: local('LisztFYBook'), url(./fonts/LisztFYBook.woff) format('woff');
+}
+
+@font-face {
+    font-family: 'LisztFYBookItalic';
+    src: local('LisztFYBookItalic'), url(./fonts/LisztFYBookItalic.woff) format('woff');
+}
+
+@font-face {
+    font-family: 'LisztFYHair';
+    src: local('LisztFYHair'), url(./fonts/LisztFYHair.woff) format('woff');
+}
+
+@font-face {
+    font-family: 'LisztFYHairItalic';
+    src: local('LisztFYHairItalic'), url(./fonts/LisztFYHairItalic.woff) format('woff');
+}
+
+@font-face {
+    font-family: 'LisztFYItalic';
+    src: local('LisztFYItalic'), url(./fonts/LisztFYItalic.woff) format('woff');
+}
+
+@font-face {
+    font-family: 'LisztFYLight';
+    src: local('LisztFYLight'), url(./fonts/LisztFYLight.woff) format('woff');
+}
+
+@font-face {
+    font-family: 'LisztFYLightItalic';
+    src: local('LisztFYLightItalic'), url(./fonts/LisztFYLightItalic.woff) format('woff');
+}
+
+@font-face {
+    font-family: 'LisztFYRegular';
+    src: local('LisztFYRegular'), url(./fonts/LisztFYRegular.woff) format('woff');
+}

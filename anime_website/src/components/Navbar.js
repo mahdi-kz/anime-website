@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import { Link } from 'react-router-dom';
 import { Container, Row, Col } from 'react-grid-system';
 import './Navbar.css'
@@ -6,7 +6,6 @@ import Blog from './Blog';
 
 
 function Navbar(props){
-
 	const [click, setClick] = useState(false);
 	const [drow, setDrow] = useState(false);
 	const [menuHover, setMenuHover] = useState(false);
@@ -46,7 +45,7 @@ function Navbar(props){
 					{ blogVisible &&
 						<Blog changingBlogVisible={changingBlogVisible} />
 					}
-					{showLogo &&
+					{showLogo || click &&
 						<div>
 							<p className='logo'> animate </p>
 						</div>

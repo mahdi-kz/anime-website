@@ -7,6 +7,7 @@ import Customers from './screens/Customers';
 import Services from './screens/Services';
 import Awards from './screens/Awards';
 import Contact_Us from './screens/Contact_Us';
+import './index.css';
 
 function App() {
   return (
