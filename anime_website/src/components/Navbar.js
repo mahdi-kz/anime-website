@@ -83,6 +83,9 @@ function Navbar(props){
 							<Col xs={12} md={2} xl={2} className='nav-item'>
                                 <Link to="/contact_us" className='nav-link' onClick={closeModalMenu}>Contact Us</Link>
                             </Col>
+							<Col xs={12} md={2} xl={2} className='nav-item'>
+                                <Link to="/about_us" className='nav-link' onClick={closeModalMenu}>About Us</Link>
+                            </Col>
                         </Row>
 					</Container>
 				</div>

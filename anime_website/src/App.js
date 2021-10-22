@@ -32,6 +32,9 @@ function App() {
 				<Route path='/contact_us' >
 					<Contact_Us />
 				</Route>
+				<Route path='/about_us' >
+					<About_Us />
+				</Route>
 			</Switch>
 		</Router>
 	</>
