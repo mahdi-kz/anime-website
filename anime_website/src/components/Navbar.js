@@ -68,7 +68,7 @@ function Navbar(props){
 					
 					<Container fluid className={click?'menu':'hide'}>
                         <Row className='menu-row'>
-                            <Col xs={12} md={2} xl={2} offset={{xl:1, md:1}} className='nav-item'>
+                            <Col xs={12} md={2} xl={2}  className='nav-item'>
                                 <Link to="/" className='nav-link' onClick={closeModalMenu}>Home</Link>
                             </Col>
                             <Col xs={12} md={2} xl={2} className='nav-item'>
@@ -85,6 +85,9 @@ function Navbar(props){
                             </Col>
 							<Col xs={12} md={2} xl={2} className='nav-item'>
                                 <Link to="/about_us" className='nav-link' onClick={closeModalMenu}>About Us</Link>
+							</Col>
+							<Col xs={12} md={2} xl={2} className='nav-item'>
+                                <Link to="/teams" className='nav-link' onClick={closeModalMenu}>Teams</Link>
                             </Col>
                         </Row>
 					</Container>

@@ -1,0 +1,16 @@
+.player-wrapper {
+    position: relative;
+    padding-top: 7% /* Player ratio: 100 / (1280 / 720) */
+}
+.teamPicture{
+    width: 150px;
+    height: 180px;
+}
+.teams-row{
+    align-items: center;
+    margin-bottom: 20px;
+}
+.team-box{
+    margin-top: 45px;
+    width: 60%;
+}
