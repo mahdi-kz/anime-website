@@ -132,6 +132,7 @@ export default function Teams(){
                 <Navbar showLogo={false}/>
             }
             <div>
+                <div className="team-title">Grei's Anatommy</div>
                 <div className='player-wrapper' onClick={handleFullscreen}>
                     <ReactPlayer
                         ref={playerRef}    
@@ -150,6 +151,7 @@ export default function Teams(){
                     />
                 </div>
                 <div>
+                    <div className="team-title">TEAM</div>
                     <Container fluid className="team-box">
                             <Row className='teams-row'>
                                 {teams.map((obj, index)=>{
@@ -167,7 +169,6 @@ export default function Teams(){
                 </div>
                 <Modal className="team-modal"
                     isOpen={showTeamModal}
-                    // onHide={this.toggleState}
                     animation={true}
                 >
                     <div className="team-modal-container">
