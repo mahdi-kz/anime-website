@@ -87,7 +87,7 @@ function Navbar(props){
                                 <Link to="/about_us" className='nav-link' onClick={closeModalMenu}>About Us</Link>
 							</Col>
 							<Col xs={12} md={3} xl={1} offset={{xl:0.5}} className='nav-item nav'>
-                                <Link to="/teams" className='nav-link' onClick={closeModalMenu}>Teams</Link>
+                                <Link to="/team" className='nav-link' onClick={closeModalMenu}>Team</Link>
                             </Col>
                         </Row>
 					</Container>
