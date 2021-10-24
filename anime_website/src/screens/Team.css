@@ -1,7 +1,3 @@
-.player-wrapper {
-    position: relative;
-    padding-top: 5% /* Player ratio: 100 / (1280 / 720) */
-}
 .team-pictures{
     width: 150px;
     height: 180px;
@@ -21,6 +17,7 @@
 .team-title{
     text-align: center;
     margin-top: 5%;
+    margin-bottom: 2%;
 }
 .team-box{
     margin-top: 55px;
@@ -28,30 +25,4 @@
 .teams-col{
     flex: 0 0 14.6667% !important; 
 }
-.team-close-modal{
-    padding: 30px;
-    position: absolute;
-    z-index: 999999;
-}
-.team-modal-picture{
-    padding: 0 !important;
-}
-.team-modal-picture > img{
-    width: 100%;
-}
-.team-modal{
-    background-color: #e7e5df;
-}
-.team-modal-descrition{
-    text-align: left;
-    margin-top: 10%;
-}
-.modal-close-svg{
-    pointer-events: none;
-    width: 60px;
-    height: 50px;
-    position: fixed;
-    left: 15px;
-    top: 20px;
-    z-index: 99999;
-  }
+

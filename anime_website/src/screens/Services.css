@@ -1,0 +1,88 @@
+.services-logo{
+    text-align: center;
+    margin-top: 5%;
+}
+.services-logo>img{
+    height: 45px;
+    width: 80px;
+}
+.services-header{
+    text-align: center;
+    margin-top: 1%;
+}
+.services-products{
+    padding: 20px 60px;
+}
+.services-title{
+    text-align: center;
+    font-size: 15px;
+    margin-top: 5px;
+    color: gray;
+}
+.services-title{
+    text-align: center;
+    font-size: 15px;
+    margin-top: 5px;
+    color: gray;
+}
+.services-title-top{
+    margin-bottom: 3%;
+}
+.services-video-container{
+    width: 100%;
+}
+.div-center{
+    text-align: -webkit-center;
+}
+.services-videos{
+    display: flex;
+    overflow-x: auto;
+    width: 89%;
+    opacity: 1;
+    cursor: pointer;
+}
+.services-image{
+    padding: 0px 10px;
+    margin-top: 20px;
+    width: 150px;
+    height: 150px;
+    cursor: pointer;
+}
+.services-video{
+    opacity: 1;
+}
+.services-video:hover{
+    opacity: 0.5;
+}
+.services-hr{
+    width: 90%;
+    /* margin-top: 3%; */
+}
+.services-pro-name{
+    font-size: 16px;
+    text-align: left;
+    color: #444444;
+    margin-left: 5px;
+    margin-top: 5px;
+}
+.services-pro-date{
+    font-size: 14px;
+    color: gray;
+    text-align: left;
+    margin-left: 5px;
+}
+.teams-row>div{
+    margin-top: 30px;
+}
+.services-videos::-webkit-scrollbar {
+    background-clip: content-box;
+}
+.services-videos::-webkit-scrollbar-thumb {
+    background-clip: content-box;
+    background-color: rgba(43, 42, 42, 0.4);
+    -webkit-transition: background .2s;
+    transition: background .2s;
+    border-radius: 0;
+    border: 10px solid transparent;
+    border-left-width: 3px;
+}
