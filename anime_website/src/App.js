@@ -7,6 +7,9 @@ import Customers from './screens/Customers';
 import Services from './screens/Services';
 import Awards from './screens/Awards';
 import Contact_Us from './screens/Contact_Us';
+import About_Us from './screens/About_Us';
+import Teams from './screens/Team';
+import './index.css';
 
 function App() {
   return (
@@ -30,6 +33,12 @@ function App() {
 				</Route>
 				<Route path='/contact_us' >
 					<Contact_Us />
+				</Route>
+				<Route path='/about_us' >
+					<About_Us />
+				</Route>
+				<Route path='/team' >
+					<Teams />
 				</Route>
 			</Switch>
 		</Router>

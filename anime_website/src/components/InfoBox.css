@@ -1,0 +1,11 @@
+.info-row{
+    margin-bottom: 55px;
+    text-align: center !important;
+    justify-content: end !important;
+}
+.info-picture{
+    padding: 0 !important;
+}
+.info-descrition{
+    text-align: left;
+}
