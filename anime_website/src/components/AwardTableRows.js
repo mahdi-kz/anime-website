@@ -14,6 +14,10 @@ export default class AwardTableRows extends Component {
     componentDidMount = () => {
         window.addEventListener('scroll', this.handleScroll);
     };
+
+    componentDidUpdate = () =>{
+        window.removeEventListener('scroll', this.handleScroll);
+    }
   
     handleScroll = (event)=>{
         // const elemHeight = input.elemHeight;

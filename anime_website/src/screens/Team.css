@@ -1,0 +1,28 @@
+.team-pictures{
+    width: 150px;
+    height: 180px;
+    border-radius: 10px;
+    opacity: 1;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+.team-pictures:hover{
+    opacity: 0.5;
+}
+.teams-row{
+    margin-bottom: 55px;
+    text-align: center !important;
+    justify-content: end !important;
+}
+.team-title{
+    text-align: center;
+    margin-top: 5%;
+    margin-bottom: 2%;
+}
+.team-box{
+    margin-top: 55px;
+}
+.teams-col{
+    flex: 0 0 14.6667% !important; 
+}
+

@@ -13,26 +13,21 @@ export default function Awards(){
     const [awards, setAwards] = useState([]);
     const [boxClasses, setBoxClasses] = useState("template GenericTemplate AwardsTemplate")
     const [boxTitleClass, setBoxTitleClass] = useState("hideTitle");
-    const [titleClass, setTitleClass] = useState("hideTitle");
     const [sortTableAscending, setSortTableAscending] = useState(true);
     const [sortClasses, setSortClasses] = useState("active");
-    const [trClasses, setTrClasses] = useState("");
 
     useEffect(()=>{
         setBoxClasses("template GenericTemplate AwardsTemplate templateInComplete") 
         setTimeout(() => {
             setBoxTitleClass("show‌‌BoxTitle")
-            setTitleClass("awardsTitle")
         }, 1000);
         getAwards();
     }, [])
 
     const sortAwards = ()=>{
-        console.log(awards)
         const newAawards = sortTableAscending?
             awards.sort((a, b) => (a.yaer > b.yaer) ? 1 : -1):
             awards.sort((a, b) => (a.yaer < b.yaer) ? 1 : -1)
-        console.log(newAawards)
         setSortClasses(sortTableAscending?"active asc":"active")
         setAwards(newAawards);
         setSortTableAscending(!sortTableAscending)
@@ -93,13 +88,121 @@ export default function Awards(){
                 winner_categiry:"Outstanding Music Composition",
                 status:"Pending",
                 status_type:"Television"
+            },
+            {
+                yaer:2021,
+                award:"EMMY Awards (News & Documentary)",
+                award_Presented_by:"National Academy of Television Arts &amp; Sciences",
+                winner:"Howard",
+                winner_categiry:"Outstanding Music Composition",
+                status:"Pending",
+                status_type:"Television"
+            },
+            {
+                yaer:2011,
+                award:"Grammy Awards",
+                award_Presented_by:"National Academy of Recording Arts & Sciences",
+                winner:"Howard",
+                winner_categiry:"Outstanding Music Composition",
+                status:"Done",
+                status_type:"Home"
+            },
+            {
+                yaer:1991,
+                award:"Family Film Awards",
+                award_Presented_by:"World Film Institute",
+                winner:"Howard",
+                winner_categiry:"Outstanding Music Composition",
+                status:"Pending",
+                status_type:"Television"
+            },
+            {
+                yaer:1921,
+                award:"EMMY Awards",
+                award_Presented_by:"National Academy of Television Arts &amp; Sciences",
+                winner:"Howard",
+                winner_categiry:"Outstanding Music Composition",
+                status:"Pending",
+                status_type:"Television"
+            },
+            {
+                yaer:2020,
+                award:"HCA Awards",
+                award_Presented_by:"Hollywood Critics Association",
+                winner:"Howard",
+                winner_categiry:"Outstanding Music Composition",
+                status:"Pending",
+                status_type:"Television"
+            },
+            {
+                yaer:2016,
+                award:"EMMY Awards",
+                award_Presented_by:"National Academy of Television Arts &amp; Sciences",
+                winner:"Howard",
+                winner_categiry:"Outstanding Music Composition",
+                status:"Pending",
+                status_type:"Television"
+            },
+            {
+                yaer:2021,
+                award:"EMMY Awards (News & Documentary)",
+                award_Presented_by:"National Academy of Television Arts &amp; Sciences",
+                winner:"Howard",
+                winner_categiry:"Outstanding Music Composition",
+                status:"Pending",
+                status_type:"Television"
+            },
+            {
+                yaer:2011,
+                award:"Grammy Awards",
+                award_Presented_by:"National Academy of Recording Arts & Sciences",
+                winner:"Howard",
+                winner_categiry:"Outstanding Music Composition",
+                status:"Done",
+                status_type:"Home"
+            },
+            {
+                yaer:1991,
+                award:"Family Film Awards",
+                award_Presented_by:"World Film Institute",
+                winner:"Howard",
+                winner_categiry:"Outstanding Music Composition",
+                status:"Pending",
+                status_type:"Television"
+            },
+            {
+                yaer:1921,
+                award:"EMMY Awards",
+                award_Presented_by:"National Academy of Television Arts &amp; Sciences",
+                winner:"Howard",
+                winner_categiry:"Outstanding Music Composition",
+                status:"Pending",
+                status_type:"Television"
+            },
+            {
+                yaer:2020,
+                award:"HCA Awards",
+                award_Presented_by:"Hollywood Critics Association",
+                winner:"Howard",
+                winner_categiry:"Outstanding Music Composition",
+                status:"Pending",
+                status_type:"Television"
+            },
+            {
+                yaer:2016,
+                award:"EMMY Awards",
+                award_Presented_by:"National Academy of Television Arts &amp; Sciences",
+                winner:"Howard",
+                winner_categiry:"Outstanding Music Composition",
+                status:"Pending",
+                status_type:"Television"
             }
         ])
     }
 
 	return(
 		<>
-            <Navbar />
+            <Navbar showLogo={false}/>
             <div className={boxClasses}>
                 <div className="AwardsTemplate-Gallery">
                     <img alt="Academy Award Statuette" className="ls-is-cached lazyloaded" data-src={image1} src={image1} />
