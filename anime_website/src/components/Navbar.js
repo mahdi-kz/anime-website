@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import { Link } from 'react-router-dom';
 import { Container, Row, Col } from 'react-grid-system';
 import './Navbar.css'
@@ -6,7 +6,6 @@ import Blog from './Blog';
 
 
 function Navbar(props){
-
 	const [click, setClick] = useState(false);
 	const [drow, setDrow] = useState(false);
 	const [menuHover, setMenuHover] = useState(false);
@@ -20,7 +19,7 @@ function Navbar(props){
 	return(
 		<>
 			<nav className="navbar">
-				<div className="navbar-container">
+				<div className={click && "navbar-container"}>
 					<div className={click?"container menu-open":"container"} >
 					<div>
 						<div 
@@ -46,8 +45,8 @@ function Navbar(props){
 					{ blogVisible &&
 						<Blog changingBlogVisible={changingBlogVisible} />
 					}
-					{showLogo &&
-						<div>
+					{(showLogo || click) &&
+						<div className="logo-div">
 							<p className='logo'> animate </p>
 						</div>
 					}
@@ -69,20 +68,26 @@ function Navbar(props){
 					
 					<Container fluid className={click?'menu':'hide'}>
                         <Row className='menu-row'>
-                            <Col xs={12} md={2} xl={2} offset={{xl:1, md:1}} className='nav-item'>
+                            <Col xs={12} md={3} xl={1} offset={{xl:0.75}} className='nav-item'>
                                 <Link to="/" className='nav-link' onClick={closeModalMenu}>Home</Link>
                             </Col>
-                            <Col xs={12} md={2} xl={2} className='nav-item'>
+                            <Col xs={12} md={3} xl={1} offset={{xl:0.5}} className='nav-item nav'>
                                 <Link to="/services" className='nav-link' onClick={closeModalMenu}>Services</Link>
                             </Col>
-                            <Col xs={12} md={2} xl={2} className='nav-item'>
+                            <Col xs={12} md={3} xl={1} offset={{xl:0.5}}className='nav-item nav'>
                                 <Link to="/customers" className='nav-link' onClick={closeModalMenu}>Customers</Link>
                             </Col>
-                            <Col xs={12} md={2} xl={2} className='nav-item'>
+                            <Col xs={12} md={3} xl={1} offset={{xl:0.5}} className='nav-item nav'>
                                 <Link to="/awards" className='nav-link' onClick={closeModalMenu}>Awards</Link>
                             </Col>
-							<Col xs={12} md={2} xl={2} className='nav-item'>
+							<Col xs={12} md={3} xl={1.2} offset={{xl:0.5}} className='nav-item nav'>
                                 <Link to="/contact_us" className='nav-link' onClick={closeModalMenu}>Contact Us</Link>
+                            </Col>
+							<Col xs={12} md={3} xl={1.1} offset={{xl:0.5}} className='nav-item nav'>
+                                <Link to="/about_us" className='nav-link' onClick={closeModalMenu}>About Us</Link>
+							</Col>
+							<Col xs={12} md={3} xl={1} offset={{xl:0.5}} className='nav-item nav'>
+                                <Link to="/team" className='nav-link' onClick={closeModalMenu}>Team</Link>
                             </Col>
                         </Row>
 					</Container>

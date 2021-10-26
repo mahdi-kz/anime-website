@@ -6,7 +6,7 @@ export default function Home(){
 	return(
 		<>
 			<div className="HomeContainer">
-				<Navbar />
+				<Navbar showLogo={true}/>
 				<HomeBox />
 			</div>
 			
