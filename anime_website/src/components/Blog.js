@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import './Blog.css'
-import blogImg from "../images/blog.webp";
+import blogImg from "../images/test/blog.webp";
 import blogVideo from "../videos/1.mp4";
 import InfiniteScroll from 'react-infinite-scroll-component';
 

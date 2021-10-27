@@ -2,11 +2,11 @@ import React, {useState, useEffect} from 'react';
 import './Services.css'
 import Navbar from '../components/Navbar';
 import MembersModal from '../components/MembersModal';
-import logo1 from '../images/logo.png';
+import logo1 from '../images/test/logo1.png';
 import GreiVideo from '../components/GreiVideo.js';
 import video1 from '../videos/big.mp4';
-import image1 from '../images/pic1.jpeg';
-import image2 from '../images/pic2.jpeg';
+import image1 from '../images/test/pic1.jpeg';
+import image2 from '../images/test/pic2.jpeg';
 import { Container, Row, Col } from 'react-grid-system';
 
 
