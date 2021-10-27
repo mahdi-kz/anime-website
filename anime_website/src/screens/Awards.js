@@ -1,10 +1,10 @@
 import React, {useState, useEffect} from 'react';
 import './Awards.css'
 
-import image1 from '../images/oscar.jpg';
-import image2 from '../images/golden_globe.jpg';
-import image3 from '../images/grammy.jpg';
-import image4 from '../images/tony.jpg';
+import image1 from '../images/test/oscar.jpg';
+import image2 from '../images/test/golden_globe.jpg';
+import image3 from '../images/test/grammy.jpg';
+import image4 from '../images/test/tony.jpg';
 import Navbar from '../components/Navbar';
 import AwardTableRows from '../components/AwardTableRows';
 
