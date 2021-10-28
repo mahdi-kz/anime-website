@@ -2,8 +2,8 @@ import React, {useState, useEffect} from 'react';
 import './Team.css'
 import Navbar from '../components/Navbar';
 import GreiVideo from '../components/GreiVideo.js';
-import image1 from '../images/test/people1.jpeg';
-import image2 from '../images/test/people2.jpeg';
+import image1 from '../images/test/people1.png';
+import image2 from '../images/test/people2.jpg';
 import { Container, Row, Col } from 'react-grid-system';
 import video1 from '../videos/big.mp4';
 import MembersModal from "../components/MembersModal";

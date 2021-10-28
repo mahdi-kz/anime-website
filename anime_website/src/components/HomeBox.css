@@ -58,7 +58,7 @@
   height: 50px;
   position: absolute;
   left: -10px;
-  bottom: -30px;
+  bottom: -20px;
 }
 .svg:focus{
   outline: -webkit-focus-ring-color auto 5px;

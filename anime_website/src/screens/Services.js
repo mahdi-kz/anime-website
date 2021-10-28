@@ -2,11 +2,14 @@ import React, {useState, useEffect} from 'react';
 import './Services.css'
 import Navbar from '../components/Navbar';
 import MembersModal from '../components/MembersModal';
-import logo1 from '../images/test/logo1.png';
 import GreiVideo from '../components/GreiVideo.js';
 import video1 from '../videos/big.mp4';
-import image1 from '../images/test/pic1.jpeg';
-import image2 from '../images/test/pic2.jpeg';
+import video2 from '../videos/main-video.mp4';
+import video3 from '../videos/center-video.webm'
+import mainImage from '../images/test/services-main.jpeg';
+import image1 from '../images/test/people2.jpg';
+import image2 from '../images/test/people1.png';
+import servicesBg from '../images/background/services-bg.webp'
 import { Container, Row, Col } from 'react-grid-system';
 
 
@@ -17,52 +20,38 @@ export default function Services(props){
 	const [videoUrl, setVideoUrl] = useState(null);
 	const [showTeamModal, setTeamShowModal] = useState(false);
 	const [personInfo, setPersonInfo] = useState([]);
+	const [pageNumber, setPageNumber] = useState(1);
+	const [currentPage, setCurrentPage] = useState(1);
 
 	useEffect(()=>{
-		console.log(props);
 		setVideoUrl(video1)
 		getVideos();
 		getProducts();
 		getMembers();
+		setPageNumber(3);
 	}, [])
 
 	const getVideos = ()=>{
 		setVideos([
 			{
-				image:image1,
+				image:mainImage,
+				videoUrl:video2
+			},
+			{
+				image:mainImage,
 				videoUrl:video1
 			},
 			{
-				image:image1,
+				image:mainImage,
+				videoUrl:video2
+			},
+			{
+				image:mainImage,
 				videoUrl:video1
 			},
 			{
-				image:image1,
-				videoUrl:video1
-			},
-			{
-				image:image1,
-				videoUrl:video1
-			},
-			{
-				image:image1,
-				videoUrl:video1
-			},
-			{
-				image:image1,
-				videoUrl:video1
-			},
-			{
-				image:image1,
-				videoUrl:video1
-			},
-			{
-				image:image1,
-				videoUrl:video1
-			},
-			{
-				image:image1,
-				videoUrl:video1
+				image:mainImage,
+				videoUrl:video2
 			}
 		])
 	}
@@ -70,76 +59,77 @@ export default function Services(props){
 	const getProducts = ()=>{
 		setProducts([
 			{
-				videoUrl:video1,
+				videoUrl:video3,
 				name:"Product name",
 				date:"2021/2/3"
 			},
 			{
-				videoUrl:video1,
+				videoUrl:video3,
 				name:"Product name",
 				date:"2021/2/3"
 			},
 			{
-				videoUrl:video1,
+				videoUrl:video3,
 				name:"Product name",
 				date:"2021/2/3"
 			},
 			{
-				videoUrl:video1,
+				videoUrl:video3,
 				name:"Product name",
 				date:"2021/2/3"
 			},
 			{
-				videoUrl:video1,
+				videoUrl:video3,
 				name:"Product name",
 				date:"2021/2/3"
 			},
 			{
-				videoUrl:video1,
+				videoUrl:video3,
 				name:"Product name",
 				date:"2021/2/3"
 			},
 			{
-				videoUrl:video1,
+				videoUrl:video3,
 				name:"Product name",
 				date:"2021/2/3"
 			},
 			{
-				videoUrl:video1,
+				videoUrl:video3,
 				name:"Product name",
 				date:"2021/2/3"
 			},
 			{
-				videoUrl:video1,
+				videoUrl:video3,
 				name:"Product name",
 				date:"2021/2/3"
 			},
 			{
-				videoUrl:video1,
+				videoUrl:video3,
 				name:"Product name",
 				date:"2021/2/3"
 			},
 			{
-				image:image1,
-				videoUrl:video1
-			},
-			{
-				videoUrl:video1,
+				videoUrl:video3,
 				name:"Product name",
 				date:"2021/2/3"
 			},
 			{
-				videoUrl:video1,
+				videoUrl:video3,
 				name:"Product name",
 				date:"2021/2/3"
 			},
 			{
-				videoUrl:video1,
+				videoUrl:video3,
 				name:"Product name",
 				date:"2021/2/3"
 			},
 			{
-				videoUrl:video1,
+				videoUrl:video3,
+				name:"Product name",
+				date:"2021/2/3"
+			},
+			{
+				videoUrl:video3	,
 				name:"Product name",
 				date:"2021/2/3"
 			}
@@ -191,11 +181,6 @@ export default function Services(props){
 		])
 	}
 
-	const changeVideo = (item)=>{
-		console.log('+++++++', item);
-		setVideoUrl(item.videoUrl)
-	}
-
 	const openTeamModal = (info) => {
         document.body.style.overflow = 'hidden';
         setPersonInfo(info);
@@ -208,53 +193,96 @@ export default function Services(props){
         setTeamShowModal(!showTeamModal);
     }
 
+	const createPages = ()=>{
+		return(
+			<div className="paging-box">
+				{Array.from(Array(pageNumber), (e, i) => {
+					return <div className={i+1==currentPage?"selected-page-number":"page-number"}
+						style={{display: 'flex',  justifyContent:'center', alignItems:'center'}}
+						onclick={()=>{
+							console.log('11111111111')
+							setCurrentPage(i+1)}}
+					>
+						<span >{i+1}</span>
+					</div>
+				})}					
+			</div>
+		)
+	}
+
 	return(
 		<>
 			{!showTeamModal &&
-				<Navbar showLogo={false} />
+				<Navbar showLogo={true} />
 			}
-			<div>
-				<div className="services-logo">
-					<img src={logo1} />
-				</div>
-				<div className="services-header">Productions</div>
-				<div className="services-title services-title-top">Story tellers through simple frames</div>
-				<GreiVideo with="100%" height="350px" url={videoUrl} autoPlay={true} />
-				<div className="div-center">
-					<div className="services-videos">
-						{videos.map((obj)=>{return(
-							<img className="services-image" src={obj.image} onClick={()=>changeVideo(obj)} />
-						)})}
+			<div className="services-container" 
+				style={{
+					backgroundImage:servicesBg, 
+					backgroundPosition: 'center',
+					backgroundSize: 'cover',
+					backgroundRepeat: 'no-repeat'
+				}}>
+				<div className="services-box">
+					<div className="services-header">Productions</div>
+					<div className="services-title services-title-top">Story tellers through simple frames</div>
+					<GreiVideo with="79%" height="460px" url={videoUrl} autoPlay={true} style={{display: 'flex',justifyContent: 'center'}}/>
+					<div className="div-center">
+						<div className="services-videos" >
+							{videos.map((obj)=>{return(
+								<div onClick={()=>setVideoUrl(obj.videoUrl)} >
+									<GreiVideo 
+										style={{padding:'20px 15px'}} 
+										url={obj.videoUrl} 
+										autoPlay={false}
+										with="150px" 
+										height="150px"
+										light={obj.image}
+										notFull={true}
+										playWithHover={true}
+									/>
+								</div>
+							)})}
+						</div>
 					</div>
-				</div>
-				<hr className="services-hr" />
-				<div className="services-title">Progect & Client</div>
-				<div className="services-products">
-					<Container fluid >
-						<Row className='teams-row'>
-							{products.map((obj)=>{return(<Col xs={6} md={3} xl={3}>
-								<GreiVideo with="100%" height="150px" url={obj.videoUrl} autoPlay={false} />
-									<div className="services-pro-name">{obj.name}</div>
-									<div className="services-pro-date">{obj.date}</div>
-							</Col>)})}
-						</Row>
-					</Container>
-				</div>
-				<hr className="services-hr" />
-				<div className="services-title">Production's Team</div> 
-				<div className="div-center">
-					<div className="services-videos">
-						{members.map((obj)=>{return(
-							<img className="services-image" src={obj.image} onClick={()=>openTeamModal(obj)} />
-						)})}
+					<hr className="services-hr" />
+					<div className="services-title">Progect & Client</div>
+					<div className="services-products-container">
+						<div className="services-products">
+							<Container fluid >
+								<Row className='teams-row'>
+									{products.map((obj)=>{return(<Col xs={6} md={3} xl={2.4}>
+										<GreiVideo 
+											with="150px" 
+											height="150px" 
+											url={obj.videoUrl} 
+											autoPlay={false} 
+											playWithHover={true}
+											light={obj.image}
+										/>
+											<div className="services-pro-name">{obj.name}</div>
+											<div className="services-pro-date">{obj.date}</div>
+									</Col>)})}
+								</Row>
+							</Container>
+						</div>
+						<div className={pageNumber>1?"page-numbers":"hide"}> {createPages()} </div>
 					</div>
+					<hr className="services-hr" />
+					<div className="services-title">Production's Team</div> 
+					<div className="div-center">
+						<div className="services-employee-box">
+							{members.map((obj)=>{return(
+								<img className="services-employee-image" src={obj.image} onClick={()=>openTeamModal(obj)} />
+							)})}
+						</div>
+					</div>
+					<div style={{height:100}} />
+					<MembersModal 
+						isShow={showTeamModal}
+						info={personInfo}
+						closeTeamModal={closeTeamModal}
+					/>
 				</div>
-				<div style={{height:100}} />
-				<MembersModal 
-                    isShow={showTeamModal}
-                    info={personInfo}
-                    closeTeamModal={closeTeamModal}
-                />
 			</div>
 		</>
 	)
