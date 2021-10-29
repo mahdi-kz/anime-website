@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react';
+import React, { useState} from 'react';
 import { Link } from 'react-router-dom';
 import { Container, Row, Col } from 'react-grid-system';
 import './Navbar.css';
@@ -12,12 +12,11 @@ function Navbar(props){
 	const [drow, setDrow] = useState(false);
 	const [menuHover, setMenuHover] = useState(false);
 	const [blogVisible, setblogVisible] = useState(false)
-	const [showLogo, setShowLogo] = useState(props.showLogo!=undefined?props.showLogo:true)
 
 	const handleClick = ()=>setClick(!click);
 	const changingBlogVisible = ()=>setblogVisible(!blogVisible);
 	const closeModalMenu = ()=>setClick(false);
-	
+	const showLogo = props.showLogo!==undefined?props.showLogo:true;
 
 	return(
 		<>
@@ -31,7 +30,7 @@ function Navbar(props){
 								onMouseEnter={()=>setDrow(true)} 
 								onMouseLeave={()=>setDrow(false)}
 							>
-								<img src={blogIcone} className="blog-icon"/>
+								<img alt="grei" src={blogIcone} className="blog-icon"/>
 							</div>
 							{ drow &&
 								<svg className="nav-svg" xmlns="http://www.w3.org/2000/svg" >
@@ -50,7 +49,7 @@ function Navbar(props){
 						}
 						{(showLogo || click) &&
 							<div className="logo-div">
-								<img src={click?wlogo:blogo} className='logo'/>
+								<img alt="grei" src={click?wlogo:blogo} className='logo'/>
 							</div>
 						}
 						<div 

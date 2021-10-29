@@ -127,6 +127,7 @@ export default function Teams(){
                                 {teams.map((obj, index)=>{
                                     return (<Col xs={6} md={3} xl={2}>
                                         <img 
+                                            alt="grei"
                                             className="team-pictures" 
                                             src={obj.image} 
                                             onClick={()=>openTeamModal(obj)}

@@ -22,6 +22,7 @@ export default function Services(props){
 	const [personInfo, setPersonInfo] = useState([]);
 	const [pageNumber, setPageNumber] = useState(1);
 	const [currentPage, setCurrentPage] = useState(1);
+	const [slideLeft, setSlideLeft] = useState(0);
 
 	useEffect(()=>{
 		setVideoUrl(video1)
@@ -141,42 +142,50 @@ export default function Services(props){
 			{
                 description:"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
                 name:"julia robinson",
-                image:image1
+                image:image1,
+				job:"Lorem ipsum dolor"
             },
             {
                 description:"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
                 name:"robert de niro",
-                image:image2
+                image:image2,
+				job:"Lorem ipsum dolor"
             },
             {
                 description:"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
                 name:"julia robinson",
-                image:image1
+                image:image1,
+				job:"Lorem ipsum dolor"
             },
             {
                 description:"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
                 name:"robert de niro",
-                image:image2
+                image:image2,
+				job:"Lorem ipsum dolor"
             },
             {
                 description:"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
                 name:"julia robinson",
-                image:image1
+                image:image1,
+				job:"Lorem ipsum dolor"
             },
             {
                 description:"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
                 name:"robert de niro",
-                image:image2
+                image:image2,
+				job:"Lorem ipsum dolor"
             },
             {
                 description:"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
                 name:"julia robinson",
-                image:image1
+                image:image1,
+				job:"Lorem ipsum dolor"
             },
 			{
                 description:"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
                 name:"robert de niro",
-                image:image2
+                image:image2,
+				job:"Lorem ipsum dolor"
             }
 		])
 	}
@@ -197,17 +206,21 @@ export default function Services(props){
 		return(
 			<div className="paging-box">
 				{Array.from(Array(pageNumber), (e, i) => {
-					return <div className={i+1==currentPage?"selected-page-number":"page-number"}
+					return <div className={i+1===currentPage?"selected-page-number":"page-number"}
 						style={{display: 'flex',  justifyContent:'center', alignItems:'center'}}
-						onclick={()=>{
-							console.log('11111111111')
-							setCurrentPage(i+1)}}
-					>
+						onClick={()=>setCurrentPage(i+1)}>
 						<span >{i+1}</span>
 					</div>
 				})}					
 			</div>
 		)
+	}
+
+	const scrollEmployee = (status)=>{
+		const el = document.getElementById(`hscroll`);
+		if(status==='next')	el.scrollLeft += 50;
+		else	el.scrollLeft -= 50;
+		console.log(status)
 	}
 
 	return(
@@ -270,10 +283,37 @@ export default function Services(props){
 					<hr className="services-hr" />
 					<div className="services-title">Production's Team</div> 
 					<div className="div-center">
-						<div className="services-employee-box">
-							{members.map((obj)=>{return(
-								<img className="services-employee-image" src={obj.image} onClick={()=>openTeamModal(obj)} />
+						<div className="paging-box arrow-left">
+								<div className="selected-page-number"
+									style={{display: 'flex',  justifyContent:'center', alignItems:'center'}}
+									onClick={()=>scrollEmployee("preve")}>
+									<i class='fas fa-chevron-left'></i>
+								</div>
+						</div>
+						<div className="services-employee-box" id={`hscroll`}>
+							{members.map((obj, index)=>{return(
+								<div className="services-employee"
+									onClick={()=>openTeamModal(obj)}
+								>
+									<img 
+										alt="grei" 
+										className="services-employee-image" 
+										style={{paddingRight:index!==members.length-1?'15px':'0px'}}
+										src={obj.image} 
+									/>
+									<div className="services-employee-info">
+										<p className="services-employee-name">{obj.name}</p>
+										<p className="services-employee-job">{obj.job}</p>
+									</div>
+								</div>
 							)})}
+						</div>
+						<div className="paging-box arrow-right">
+								<div className="selected-page-number"
+									style={{display: 'flex',  justifyContent:'center', alignItems:'center'}}
+									onClick={()=>scrollEmployee("next")}>
+									<i class='fas fa-chevron-right'></i>
+								</div>
 						</div>
 					</div>
 					<div style={{height:100}} />

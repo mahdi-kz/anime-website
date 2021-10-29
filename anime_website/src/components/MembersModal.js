@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react';
+import React, {useState} from 'react';
 import './MembersModal.css'
 import { Container, Row, Col } from 'react-grid-system';
 import Modal from "react-modal";
@@ -6,10 +6,6 @@ import Modal from "react-modal";
 
 function MembersModal(props){
     const [selectedClose, setSelectedClose] = useState(false)
-
-    useEffect(()=>{
-		console.log(props);
-    },[])
 
     const closeTeamModal = ()=>{
         setSelectedClose(false);
@@ -46,7 +42,7 @@ function MembersModal(props){
                         <Container fluid className="team-modal-box">
                             <Row className='modal-teams-row'>
                                 <Col className="team-modal-picture">
-                                    <img style={{height: window.innerHeight}} src={props.info.image}  />
+                                    <img alt="grei" style={{height: window.innerHeight}} src={props.info.image}  />
                                 </Col>
                                 <Col className="team-modal-descrition-box">
                                     <p className="team-modal-name">{props.info.name}</p>
