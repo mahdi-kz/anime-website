@@ -3,6 +3,7 @@ import './Blog.css'
 import blogImg from "../images/test/blog.webp";
 import blogVideo from "../videos/1.mp4";
 import InfiniteScroll from 'react-infinite-scroll-component';
+import config from "../configs/config";
 
 
 function Blog(props){
@@ -65,13 +66,13 @@ function Blog(props){
                         <i className="fa fa-times BlogSidebar-social-fa" />
                     </div>
                     <span className="BlogSidebar-span">Animate</span>
-                    <a class="BlogSidebar-social" href="#">
+                    <a class="BlogSidebar-social" href={config.twitter}>
                         <i className="fa fa-twitter BlogSidebar-social-fa" />
                     </a>
-                    <a class="BlogSidebar-social" href="#">
+                    <a class="BlogSidebar-social" href={config.facebook}>
                         <i className="fa fa-facebook BlogSidebar-social-fa" />
                     </a>
-                    <a class="BlogSidebar-social" href="#">
+                    <a class="BlogSidebar-social" href={config.instagram}>
                         <i className="fa fa-instagram BlogSidebar-social-fa" />
                     </a>
                 </div>
@@ -102,6 +103,7 @@ function Blog(props){
                                     <h2 className="BlogSidebar-title">{item.title}</h2>
                                     <p class="BlogSidebar-description">{item.description}</p>
                                     <a target="_blank" 
+                                        rel="noreferrer"
                                         className="BlogSidebar-cta"
                                         href={item.guideLink}>
                                     {item.guideText}

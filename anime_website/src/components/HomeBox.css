@@ -45,6 +45,7 @@
   margin-left: 5px;
   bottom: 25px;
   position:fixed;
+  font-size: 18px;
 }
 .DrawIcon{
   position: absolute;
@@ -58,7 +59,7 @@
   height: 50px;
   position: absolute;
   left: -10px;
-  bottom: -30px;
+  bottom: -1px;
 }
 .svg:focus{
   outline: -webkit-focus-ring-color auto 5px;

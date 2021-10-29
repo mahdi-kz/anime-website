@@ -3,8 +3,8 @@ html{
 }
 body{
   color: #373737;
-  font-size: 22px;
-  font-family: LisztFYBlack,Georgia,Times New Roman,Times,serif;
+  font-size: 32px;
+  font-family: LisztFYRegular,Georgia,Times New Roman,Times,serif;
   vertical-align: baseline;
   overflow-y: scroll;
   -webkit-tap-highlight-color: transparent;

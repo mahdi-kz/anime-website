@@ -1,7 +1,6 @@
 import React, {useState, useRef} from 'react';
-import { Link } from 'react-router-dom';
 import './HomeBox.css'
-
+import { Link } from 'react-router-dom';
 import image1 from '../images/home/1.webp';
 import image2 from '../images/home/2.webp';
 import image3 from '../images/home/3.webp';
@@ -34,77 +33,81 @@ function HomeBox(){
 						onMouseEnter={()=>{setTitle("Production");setSelectedBox1(true);}}
 						onMouseLeave={()=>{setTitle('Services');setSelectedBox1(false);}}
 					>
-					{selectedBox1?
-						<video
-							onMouseOver={() => vidRef.current.play()}
-							onMouseOut={() => vidRef.current.pause()}
-							className="top-li"
-							ref={vidRef}
-							src={video1}
-							muted={soundOff?true:false}
-							type="video/mp4">
-						</video>
-						:
-						<img className="top-li" src={image1} alt="" />
-					}
-
+						<Link to="/services" >
+							{selectedBox1?
+								<video
+									onMouseOver={() => vidRef.current.play()}
+									onMouseOut={() => vidRef.current.pause()}
+									className="top-li"
+									ref={vidRef}
+									src={video1}
+									muted={soundOff?true:false}
+									type="video/mp4">
+								</video>
+								:
+								<img className="top-li" src={image1} alt="" />
+							}
+						</Link>
 					</li>
 					<li className="image-box"
 						onMouseEnter={()=>{setTitle("Social Media");setSelectedBox2(true)}}
 						onMouseLeave={()=>{setTitle('Services');setSelectedBox2(false)}}
 					>
-						{selectedBox2?
-							<video
-								onMouseOver={() => vidRef2.current.play()}
-								onMouseOut={() => vidRef2.current.pause()}
-								className="down-li"
-								ref={vidRef2}
-								src={video2}
-								muted={soundOff?true:false}
-								type="video/mp4">
-							</video>
-							:
-							<img className="down-li" src={image2} alt="" />
-						}
-
+						<Link to="/services" >
+							{selectedBox2?
+								<video
+									onMouseOver={() => vidRef2.current.play()}
+									onMouseOut={() => vidRef2.current.pause()}
+									className="down-li"
+									ref={vidRef2}
+									src={video2}
+									muted={soundOff?true:false}
+									type="video/mp4">
+								</video>
+								:
+								<img className="down-li" src={image2} alt="" />
+							}
+						</Link>
 					</li>
 					<li className="image-box"
 						onMouseEnter={()=>{setTitle("Graphics");setSelectedBox3(true)}}
 						onMouseLeave={()=>{setTitle('Services');setSelectedBox3(false)}}
 					>
-						{selectedBox3?
-							<video
-								onMouseOver={() => vidRef3.current.play()}
-								onMouseOut={() => vidRef3.current.pause()}
-								className="top-li"
-								ref={vidRef3} 
-								src={video3} 
-								muted={soundOff?true:false}
-								type="video/mp4">
-							</video>
-							:
-							<img className="top-li" src={image3} alt="" />
-						}
-
+						<Link to="/services" >
+							{selectedBox3?
+								<video
+									onMouseOver={() => vidRef3.current.play()}
+									onMouseOut={() => vidRef3.current.pause()}
+									className="top-li"
+									ref={vidRef3} 
+									src={video3} 
+									muted={soundOff?true:false}
+									type="video/mp4">
+								</video>
+								:
+								<img className="top-li" src={image3} alt="" />
+							}
+						</Link>
 					</li>
 					<li className="image-box"
 						onMouseEnter={()=>{setTitle("Training");setSelectedBox4(true)}}
 						onMouseLeave={()=>{setTitle('Services');setSelectedBox4(false)}}
 					>
-						{selectedBox4?
-							<video
-								onMouseOver={() => vidRef4.current.play()}
-								onMouseOut={() => vidRef4.current.pause()}
-								className="down-li"
-								ref={vidRef4}
-								src={video4}
-								muted={soundOff?true:false}
-								type="video/mp4">
-							</video>
-							:
-							<img className="down-li" src={image4} alt="" />
-						}
-
+						<Link to="/services" >
+							{selectedBox4?
+								<video
+									onMouseOver={() => vidRef4.current.play()}
+									onMouseOut={() => vidRef4.current.pause()}
+									className="down-li"
+									ref={vidRef4}
+									src={video4}
+									muted={soundOff?true:false}
+									type="video/mp4">
+								</video>
+								:
+								<img className="down-li" src={image4} alt="" />
+							}
+						</Link>
 					</li>
 				</ul>
 			</div>
