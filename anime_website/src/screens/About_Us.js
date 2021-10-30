@@ -2,7 +2,7 @@ import React, {useState, useEffect} from 'react';
 import './About_Us.css'
 import Navbar from '../components/Navbar';
 import InfoBox from '../components/InfoBox';
-import image1 from '../images/blog.webp';
+import image1 from '../images/test/blog.webp';
 
 
 export default function About_Us(){

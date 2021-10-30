@@ -2,8 +2,8 @@ import React, {useState, useEffect} from 'react';
 import './Team.css'
 import Navbar from '../components/Navbar';
 import GreiVideo from '../components/GreiVideo.js';
-import image1 from '../images/people1.jpeg';
-import image2 from '../images/people2.jpeg';
+import image1 from '../images/test/people1.png';
+import image2 from '../images/test/people2.jpg';
 import { Container, Row, Col } from 'react-grid-system';
 import video1 from '../videos/big.mp4';
 import MembersModal from "../components/MembersModal";
@@ -127,6 +127,7 @@ export default function Teams(){
                                 {teams.map((obj, index)=>{
                                     return (<Col xs={6} md={3} xl={2}>
                                         <img 
+                                            alt="grei"
                                             className="team-pictures" 
                                             src={obj.image} 
                                             onClick={()=>openTeamModal(obj)}

@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react';
-import image1 from '../images/logo1.png';
+import image1 from '../images/test/logo1.png';
 import Navbar from '../components/Navbar';
 import './Customers.css';
 import { Container, Row, Col } from 'react-grid-system';

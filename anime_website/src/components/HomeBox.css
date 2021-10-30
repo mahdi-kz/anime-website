@@ -1,11 +1,18 @@
-.homeBox {
-  margin-top:35px;
+.home-container{
+  justify-content: center;
+  display: flex;
+  margin-top:3%;
+}
+.home-box {
+  width: 90%;
   padding: 0;
   list-style-type: none;
   text-align:center;
   height: calc(100vh - 150px);
+  /* display: flex; */
+  /* overflow-y: auto; */
 }
-.homeBox > li {
+.home-box > li {
   margin-right: 10px;
   margin-left: 10px;
   margin-top: 20px;
@@ -13,32 +20,32 @@
   display: inline-block;
 }    
 .title{
+  font-family: LisztFYRegular,Georgia,Times New Roman,Times,serif;;
   text-align: center;
-  margin-top:50px;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  position: fixed;
+  margin: 0;
+  padding: 0;
+  font-size: 29px;
 }
 
-.imageBox{
-  width: 180px;
+.image-box{
+  width: 150px;
 }
-.imageBox:hover{
+.image-box:hover{
   width: 220px;
   padding-left: 0px;
   transition: width 1s, height 2s, background-color 2s, transform 2s;
 }
 .sound{
   position: fixed;
-  bottom: 40px;
-  left: 20px;
+  /* bottom: 15px; */
+  left: 25px;
   z-index: 11;
 }
 .sound>i{
   margin-left: 5px;
-  bottom: 40px;
+  bottom: 25px;
   position:fixed;
+  font-size: 18px;
 }
 .DrawIcon{
   position: absolute;
@@ -52,7 +59,7 @@
   height: 50px;
   position: absolute;
   left: -10px;
-  bottom: -12px;
+  bottom: -1px;
 }
 .svg:focus{
   outline: -webkit-focus-ring-color auto 5px;
@@ -60,20 +67,68 @@
 .top-li{
   padding:20px 0px;
   width: 200px;
-  height: 450px;
+  height: 420px;
 }
 .top-li:hover{
   width: 240px;
-  height: 450px;
+  height: 420px;
   padding-left: 0px;
 }
 .down-li{
   width: 200px;
-  height: 450px;
+  height: 420px;
   padding-left: 0px;
 }
 .down-li:hover{
   width: 240px;
-  height: 450px;
+  height: 420px;
   padding-left: 0px;
+}
+
+@media (max-width: 375px){
+  .home-container{
+    justify-content: center;
+    display: flex;
+    margin-top:20%;
+    margin-bottom: -25px;
+  }
+  .home-container>ul{
+    display: flex;
+    width: 60% !important;
+  }
+  .title{
+    font-size: 16px !important;
+  }
+}
+
+@media (min-width: 375px) and (max-width: 770px){
+  .home-container{
+    justify-content: center;
+    display: flex;
+    margin-top:11% !important;
+    margin-bottom: -30px;
+  }
+  .home-container>ul{
+    display: flex;
+    width: 67% !important;
+  }
+  .title{
+    font-size: 20px !important;
+  }
+}
+
+@media (min-width: 770px) and (max-width: 870px){
+  .home-container{
+    justify-content: center;
+    display: flex;
+    margin-top:7% !important;
+    margin-bottom: -15px;
+  }
+  .home-container>ul{
+    width: 80% !important;
+    display: flex;
+  }
+  .title{
+    font-size: 25px !important;
+  }
 }

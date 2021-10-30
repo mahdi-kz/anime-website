@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react';
+import React from 'react';
 import './App.css';
 import Home from './screens/Home';
 import {BrowserRouter as Router, Switch, Route} from 'react-router-dom'
@@ -6,8 +6,8 @@ import Products from './screens/Products';
 import Customers from './screens/Customers';
 import Services from './screens/Services';
 import Awards from './screens/Awards';
-import Contact_Us from './screens/Contact_Us';
-import About_Us from './screens/About_Us';
+import ContactUs from './screens/Contact_Us';
+import AboutUs from './screens/About_Us';
 import Teams from './screens/Team';
 import './index.css';
 
@@ -32,10 +32,10 @@ function App() {
 					<Awards />
 				</Route>
 				<Route path='/contact_us' >
-					<Contact_Us />
+					<ContactUs />
 				</Route>
 				<Route path='/about_us' >
-					<About_Us />
+					<AboutUs />
 				</Route>
 				<Route path='/team' >
 					<Teams />

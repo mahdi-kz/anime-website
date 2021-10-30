@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react';
+import React, {useState} from 'react';
 import './MembersModal.css'
 import { Container, Row, Col } from 'react-grid-system';
 import Modal from "react-modal";
@@ -6,10 +6,6 @@ import Modal from "react-modal";
 
 function MembersModal(props){
     const [selectedClose, setSelectedClose] = useState(false)
-
-    useEffect(()=>{
-		console.log(props);
-    },[])
 
     const closeTeamModal = ()=>{
         setSelectedClose(false);
@@ -29,7 +25,7 @@ function MembersModal(props){
                         onMouseEnter={()=>setSelectedClose(true)} 
                         onMouseLeave={()=>setSelectedClose(false)}
                     >
-                        <i class="fa fa-times" aria-hidden="true"></i>
+                        <i class="fas fa-times fa-sm"></i>
                     </div>
                     { selectedClose &&
                         <svg className="modal-close-svg" xmlns="http://www.w3.org/2000/svg" >
@@ -44,13 +40,13 @@ function MembersModal(props){
                     }
                     <div className="team-modal-info">
                         <Container fluid className="team-modal-box">
-                            <Row className='teams-row'>
+                            <Row className='modal-teams-row'>
                                 <Col className="team-modal-picture">
-                                    <img style={{height: window.innerHeight}} src={props.info.image}  />
+                                    <img alt="grei" style={{height: window.innerHeight}} src={props.info.image}  />
                                 </Col>
-                                <Col className="team-modal-descrition">
-                                    <p cla>{props.info.name}</p>
-                                    <span>{props.info.description}</span>
+                                <Col className="team-modal-descrition-box">
+                                    <p className="team-modal-name">{props.info.name}</p>
+                                    <span className="team-modal-descrition">{props.info.description}</span>
                                 </Col>
                             </Row>
                         </Container>

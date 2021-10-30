@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react';
+import React, {useState} from 'react';
 import './Contact_Us.css'
 import config from "../configs/config";
 import Navbar from '../components/Navbar';
