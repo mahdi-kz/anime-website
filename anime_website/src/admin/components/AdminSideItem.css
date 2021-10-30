@@ -1,0 +1,14 @@
+.AdminSideButton{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 20px;
+    cursor: pointer;
+}
+.AdminSideButton:Hover{
+    background-color: grey;
+}
+
+.SelectedButton{
+    background-color: Window;
+    color: black;
+}

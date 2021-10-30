@@ -1,0 +1,13 @@
+.AdminSideMenu{
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    bottom: 0px;
+    width: 150px;
+    height: 100vh;
+    padding: 30px;
+    padding-right: 0;
+    margin: 0;
+    background-color: black;
+    color: white;
+}
