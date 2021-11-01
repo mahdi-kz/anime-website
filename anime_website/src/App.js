@@ -2,9 +2,11 @@ import React from 'react';
 import './App.css';
 import Home from './screens/Home';
 import {BrowserRouter as Router, Switch, Route} from 'react-router-dom'
-import Products from './screens/Products';
 import Customers from './screens/Customers';
-import Services from './screens/Services';
+import Products from './screens/services/Products';
+import Training from './screens/services/Training';
+import SocialMedia from './screens/services/Social_Media';
+import GraphicsDesign from './screens/services/Graphic_Design'
 import Awards from './screens/Awards';
 import ContactUs from './screens/Contact_Us';
 import AboutUs from './screens/About_Us';
@@ -19,14 +21,20 @@ function App() {
 				<Route path='/' exact >
 					<Home />
 				</Route>
-				<Route path='/products' >
-					<Products />
-				</Route>
 				<Route path='/customers' >
 					<Customers />
 				</Route>
-				<Route path='/services' >
-					<Services />
+				<Route path='/products' >
+					<Products />
+				</Route>
+				<Route path='/graphicsDesign' >
+					<GraphicsDesign />
+				</Route>
+				<Route path='/socialMedia' >
+					<SocialMedia />
+				</Route>
+				<Route path='/training' >
+					<Training />
 				</Route>
 				<Route path='/awards' >
 					<Awards />

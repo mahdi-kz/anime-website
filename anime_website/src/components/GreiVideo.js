@@ -27,7 +27,7 @@ function GreiVideo(props){
 	return(
 		<>
             <div 
-                className='player-wrapper' 
+                className={props.classWrapper?`player-wrapper ${props.classWrapper}`:"player-wrapper"} 
                 onClick={handleFullscreen} 
                 style={props.style}
                 onMouseEnter={()=>{setPlauVideo(true)}}
@@ -36,7 +36,7 @@ function GreiVideo(props){
                 <ReactPlayer
                     ref={playerRef}    
                     playing={play}
-                    className='react-player'
+                    className={props.classPlayer?`react-player ${props.classPlayer}`:"react-player"}
                     url={props.url}
                     loop={true}
                     seek={0}

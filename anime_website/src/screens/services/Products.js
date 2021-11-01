@@ -1,19 +1,19 @@
 import React, {useState, useEffect} from 'react';
-import './Services.css'
-import Navbar from '../components/Navbar';
-import MembersModal from '../components/MembersModal';
-import GreiVideo from '../components/GreiVideo.js';
-import video1 from '../videos/big.mp4';
-import video2 from '../videos/main-video.mp4';
-import video3 from '../videos/center-video.webm'
-import mainImage from '../images/test/services-main.jpeg';
-import image1 from '../images/test/people2.jpg';
-import image2 from '../images/test/people1.png';
-import servicesBg from '../images/background/services-bg.webp'
+import './Products.css'
+import Navbar from '../../components/Navbar';
+import MembersModal from '../../components/MembersModal';
+import GreiVideo from '../../components/GreiVideo.js';
+import video1 from '../../videos/big.mp4';
+import video2 from '../../videos/main-video.mp4';
+import video3 from '../../videos/center-video.webm'
+import mainImage from '../../images/test/services-main.jpeg';
+import image1 from '../../images/test/people2.jpg';
+import image2 from '../../images/test/people1.png';
+import servicesBg from '../../images/background/services-bg.webp'
 import { Container, Row, Col } from 'react-grid-system';
 
 
-export default function Services(props){
+export default function Products(props){
 	const [videos, setVideos] = useState([]);
 	const [products, setProducts] = useState([]);
 	const [members, setMembers] = useState([]);
@@ -23,14 +23,24 @@ export default function Services(props){
 	const [pageNumber, setPageNumber] = useState(1);
 	const [currentPage, setCurrentPage] = useState(1);
 	const [slideLeft, setSlideLeft] = useState(0);
+	const [videoSize, setVideoSides] = useState("80%");
 
 	useEffect(()=>{
+		updateSize()
 		setVideoUrl(video1)
 		getVideos();
 		getProducts();
 		getMembers();
 		setPageNumber(3);
+		window.addEventListener('resize', updateSize);
 	}, [])
+
+	const updateSize = ()=>{
+		const videoWidth = document.querySelectorAll("#top-video .react-player")[0].offsetWidth; 
+		const videosWidth = parseInt(videoWidth/5 -20);
+		console.log(videosWidth);
+		setVideoSides(videosWidth)
+	}
 
 	const getVideos = ()=>{
 		setVideos([
@@ -219,7 +229,7 @@ export default function Services(props){
 	const scrollEmployee = (status)=>{
 		const el = document.getElementById(`hscroll`);
 		if(status==='next')	el.scrollLeft += 50;
-		else	el.scrollLeft -= 50;
+		else el.scrollLeft -= 50;
 		console.log(status)
 	}
 
@@ -238,18 +248,31 @@ export default function Services(props){
 				<div className="services-box">
 					<div className="services-header">Productions</div>
 					<div className="services-title services-title-top">Story tellers through simple frames</div>
-					<GreiVideo with="79%" height="460px" url={videoUrl} autoPlay={true} style={{display: 'flex',justifyContent: 'center'}}/>
+					<div id='top-video'>
+						<GreiVideo 
+							with="79%"
+							url={videoUrl} 
+							autoPlay={true} 
+							style={{display: 'flex',justifyContent: 'center'}}
+							classPlayer="top-react-player"
+						/>
+					</div>
 					<div className="div-center">
 						<div className="services-videos" >
-							{videos.map((obj)=>{return(
+							{videos.map((obj, index)=>{return(
 								<div onClick={()=>setVideoUrl(obj.videoUrl)} >
 									<GreiVideo 
-										style={{padding:'20px 15px'}} 
+										classWrapper="main-video-wrapper"
+										classPlayer="main-react-player"
+										style={{
+											paddingTop:'20px',
+    										paddingBottom:'5px',
+											paddingRight:index==videos.length-1?'0px !important':'25px'}} 
 										url={obj.videoUrl} 
 										autoPlay={false}
-										with="150px" 
-										height="150px"
-										light={obj.image}
+										with={videoSize} 
+										height={videoSize} 
+										// light={obj.image}
 										notFull={true}
 										playWithHover={true}
 									/>
@@ -261,19 +284,22 @@ export default function Services(props){
 					<div className="services-title">Progect & Client</div>
 					<div className="services-products-container">
 						<div className="services-products">
-							<Container fluid >
-								<Row className='teams-row'>
-									{products.map((obj)=>{return(<Col xs={6} md={3} xl={2.4}>
-										<GreiVideo 
-											with="150px" 
-											height="150px" 
-											url={obj.videoUrl} 
-											autoPlay={false} 
-											playWithHover={true}
-											light={obj.image}
-										/>
+							<Container fluid  align="center">
+								<Row className='pro-teams-row' >
+									{products.map((obj)=>{return(<Col xs={4} sm={3} md={2.4} xl={2.4}>
+										<div>
+											<GreiVideo 
+												with={videoSize} 
+												height={videoSize}
+												classPlayer="pro-react-player"
+												url={obj.videoUrl} 
+												autoPlay={false} 
+												playWithHover={true}
+												light={obj.image}
+											/>
 											<div className="services-pro-name">{obj.name}</div>
 											<div className="services-pro-date">{obj.date}</div>
+										</div>
 									</Col>)})}
 								</Row>
 							</Container>
@@ -283,38 +309,48 @@ export default function Services(props){
 					<hr className="services-hr" />
 					<div className="services-title">Production's Team</div> 
 					<div className="div-center">
-						<div className="paging-box arrow-left">
-								<div className="selected-page-number"
-									style={{display: 'flex',  justifyContent:'center', alignItems:'center'}}
-									onClick={()=>scrollEmployee("preve")}>
-									<i class='fas fa-chevron-left'></i>
-								</div>
-						</div>
-						<div className="services-employee-box" id={`hscroll`}>
-							{members.map((obj, index)=>{return(
-								<div className="services-employee"
-									onClick={()=>openTeamModal(obj)}
-								>
-									<img 
-										alt="grei" 
-										className="services-employee-image" 
-										style={{paddingRight:index!==members.length-1?'15px':'0px'}}
-										src={obj.image} 
-									/>
-									<div className="services-employee-info">
-										<p className="services-employee-name">{obj.name}</p>
-										<p className="services-employee-job">{obj.job}</p>
+						<Container fluid >
+							<Row>
+							<Col xs={4} sm={4} md={4} xl={4}>
+							<div className="paging-box arrow-left">
+									<div className="selected-page-number"
+										style={{display: 'flex',  justifyContent:'center', alignItems:'center'}}
+										onClick={()=>scrollEmployee("preve")}>
+										<i class='fas fa-chevron-left'></i>
 									</div>
-								</div>
-							)})}
-						</div>
-						<div className="paging-box arrow-right">
-								<div className="selected-page-number"
-									style={{display: 'flex',  justifyContent:'center', alignItems:'center'}}
-									onClick={()=>scrollEmployee("next")}>
-									<i class='fas fa-chevron-right'></i>
-								</div>
-						</div>
+							</div>
+							</Col>
+							<Col xs={4} sm={4} md={4} xl={4}>
+							<div className="services-employee-box" id={`hscroll`}>
+								{members.map((obj, index)=>{return(
+									<div className="services-employee"
+										onClick={()=>openTeamModal(obj)}
+									>
+										<img 
+											alt="grei" 
+											className="services-employee-image" 
+											style={{paddingRight:index!==members.length-1?'15px':'0px'}}
+											src={obj.image} 
+										/>
+										<div className="services-employee-info">
+											<p className="services-employee-name">{obj.name}</p>
+											<p className="services-employee-job">{obj.job}</p>
+										</div>
+									</div>
+								)})}
+							</div>
+							</Col>
+							<Col xs={4} sm={4} md={4} xl={4}>
+							<div className="paging-box arrow-right">
+									<div className="selected-page-number"
+										style={{display: 'flex',  justifyContent:'center', alignItems:'center'}}
+										onClick={()=>scrollEmployee("next")}>
+										<i class='fas fa-chevron-right'></i>
+									</div>
+							</div>
+							</Col>
+							</Row>
+						</Container>
 					</div>
 					<div style={{height:100}} />
 					<MembersModal 
