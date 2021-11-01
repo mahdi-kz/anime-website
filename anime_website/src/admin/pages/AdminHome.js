@@ -9,16 +9,26 @@ function AdminHome(){
         <>
             <div className='AdminHome'>
                 <Row>
-                    <UploadHomeImageBox title='Products'/>
-                    <UploadHomeImageBox title='Social Media'/>
-                    <UploadHomeImageBox title='Graphics'/>
-                    <UploadHomeImageBox title='Training'/>
-                </Row>
-                <Row>
-                    <UploadHomeImageBox title='Products'/>
-                    <UploadHomeImageBox title='Social Media'/>
-                    <UploadHomeImageBox title='Graphics'/>
-                    <UploadHomeImageBox title='Training'/>
+                    <div className='eachColumn'>
+                        <span className='title'>Products</span>
+                        <UploadHomeImageBox title='Image'/>
+                        <UploadHomeImageBox title='Video'/>
+                    </div>
+                    <div className='eachColumn'>
+                        <span className='title'>Social Media</span>
+                        <UploadHomeImageBox title='Image'/>
+                        <UploadHomeImageBox title='Video'/>
+                    </div>
+                    <div className='eachColumn'>
+                        <span className='title'>Graphics</span>
+                        <UploadHomeImageBox title='Image'/>
+                        <UploadHomeImageBox title='Video'/>
+                    </div>
+                    <div className='eachColumn'>
+                        <span className='title'>Training</span>
+                        <UploadHomeImageBox title='Image'/>
+                        <UploadHomeImageBox title='Video'/>
+                    </div>
                 </Row>
             </div>
         </>

@@ -9,6 +9,7 @@ import Awards from './screens/Awards';
 import ContactUs from './screens/Contact_Us';
 import AboutUs from './screens/About_Us';
 import Teams from './screens/Team';
+import Admin from './admin/Admin'
 import './index.css';
 
 function App() {
@@ -39,6 +40,9 @@ function App() {
 				</Route>
 				<Route path='/team' >
 					<Teams />
+				</Route>
+				<Route path='/admin'>
+				    <Admin />
 				</Route>
 			</Switch>
 		</Router>

@@ -3,12 +3,15 @@
     padding-bottom: 20px;
     padding-left: 20px;
     cursor: pointer;
+    font-size:20px;
+
+    text-align: left;
 }
 .AdminSideButton:Hover{
-    background-color: grey;
+    background-color: #50BCBA;
 }
 
 .SelectedButton{
-    background-color: Window;
+    background-color: #d1d2d4;
     color: black;
 }
