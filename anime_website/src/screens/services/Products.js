@@ -9,6 +9,8 @@ import video3 from '../../videos/center-video.webm'
 import mainImage from '../../images/test/services-main.jpeg';
 import image1 from '../../images/test/people2.jpg';
 import image2 from '../../images/test/people1.png';
+// import image3 from '../../images/test/people3.png';
+import gif1 from '../../images/teams/002-Fast.gif';
 import servicesBg from '../../images/background/services-bg.webp'
 import { Container, Row, Col } from 'react-grid-system';
 
@@ -22,8 +24,8 @@ export default function Products(props){
 	const [personInfo, setPersonInfo] = useState([]);
 	const [pageNumber, setPageNumber] = useState(1);
 	const [currentPage, setCurrentPage] = useState(1);
-	const [slideLeft, setSlideLeft] = useState(0);
 	const [videoSize, setVideoSides] = useState("80%");
+	const [videoWidth, setVideoWidth] = useState(null)
 
 	useEffect(()=>{
 		updateSize()
@@ -36,8 +38,9 @@ export default function Products(props){
 	}, [])
 
 	const updateSize = ()=>{
-		const videoWidth = document.querySelectorAll("#top-video .react-player")[0].offsetWidth; 
-		const videosWidth = parseInt(videoWidth/5 -20);
+		const elWidth = document.querySelectorAll("#top-video .react-player")[0].offsetWidth; 
+		setVideoWidth(elWidth)
+		const videosWidth = parseInt(elWidth/5 -20);
 		console.log(videosWidth);
 		setVideoSides(videosWidth)
 	}
@@ -153,7 +156,8 @@ export default function Products(props){
                 description:"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
                 name:"julia robinson",
                 image:image1,
-				job:"Lorem ipsum dolor"
+				job:"Lorem ipsum dolor",
+				gif:gif1
             },
             {
                 description:"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
@@ -258,7 +262,7 @@ export default function Products(props){
 						/>
 					</div>
 					<div className="div-center">
-						<div className="services-videos" >
+						<div className="services-videos" style={{width:videoWidth}}>
 							{videos.map((obj, index)=>{return(
 								<div onClick={()=>setVideoUrl(obj.videoUrl)} >
 									<GreiVideo 
@@ -311,43 +315,43 @@ export default function Products(props){
 					<div className="div-center">
 						<Container fluid >
 							<Row>
-							<Col xs={4} sm={4} md={4} xl={4}>
-							<div className="paging-box arrow-left">
-									<div className="selected-page-number"
-										style={{display: 'flex',  justifyContent:'center', alignItems:'center'}}
-										onClick={()=>scrollEmployee("preve")}>
-										<i class='fas fa-chevron-left'></i>
-									</div>
-							</div>
-							</Col>
-							<Col xs={4} sm={4} md={4} xl={4}>
-							<div className="services-employee-box" id={`hscroll`}>
-								{members.map((obj, index)=>{return(
-									<div className="services-employee"
-										onClick={()=>openTeamModal(obj)}
-									>
-										<img 
-											alt="grei" 
-											className="services-employee-image" 
-											style={{paddingRight:index!==members.length-1?'15px':'0px'}}
-											src={obj.image} 
-										/>
-										<div className="services-employee-info">
-											<p className="services-employee-name">{obj.name}</p>
-											<p className="services-employee-job">{obj.job}</p>
+							<Col className="team-column" xs={1} sm={1} md={1} xl={1}>
+								<div className="paging-box arrow-left">
+										<div className="selected-page-number"
+											style={{display: 'flex',  justifyContent:'center', alignItems:'center'}}
+											onClick={()=>scrollEmployee("preve")}>
+											<i class='fas fa-chevron-left'></i>
 										</div>
-									</div>
-								)})}
-							</div>
+								</div>
 							</Col>
-							<Col xs={4} sm={4} md={4} xl={4}>
-							<div className="paging-box arrow-right">
-									<div className="selected-page-number"
-										style={{display: 'flex',  justifyContent:'center', alignItems:'center'}}
-										onClick={()=>scrollEmployee("next")}>
-										<i class='fas fa-chevron-right'></i>
-									</div>
-							</div>
+							<Col className="team-column" xs={9} sm={10} md={10} xl={10}>
+								<div className="services-employee-box" id={`hscroll`}>
+									{members.map((obj, index)=>{return(
+										<div className="services-employee"
+											onClick={()=>openTeamModal(obj)}
+										>
+											<img 
+												alt="grei" 
+												className="services-employee-image" 
+												style={{paddingRight:index!==members.length-1?'15px':'0px'}}
+												src={obj.image}
+											/>
+											<div className="services-employee-info">
+												<p className="services-employee-name">{obj.name}</p>
+												<p className="services-employee-job">{obj.job}</p>
+											</div>
+										</div>
+									)})}
+								</div>
+							</Col>
+							<Col className="team-column" xs={1} sm={1} md={1} xl={1}>
+								<div className="paging-box arrow-right">
+										<div className="selected-page-number"
+											style={{display: 'flex',  justifyContent:'center', alignItems:'center'}}
+											onClick={()=>scrollEmployee("next")}>
+											<i class='fas fa-chevron-right'></i>
+										</div>
+								</div>
 							</Col>
 							</Row>
 						</Container>

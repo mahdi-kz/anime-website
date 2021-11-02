@@ -20,9 +20,12 @@
 .div-center > div{
     width: 100%;
 }
+.team-column{
+    padding: 0 !important;
+}
 .div-center > div:first-child {
     position: relative;
-    margin-top: 7%;
+    padding: 0 !important;
 }
 .services-title{
     text-align: center;
@@ -100,10 +103,13 @@
     width: 150px;
     cursor: pointer;
 }
+.services-employee-image>hover{
+    transition: transform .7s ease-in-out;
+}
 .services-employee-box{
     display: flex;
     overflow: hidden;
-    width: 89%;
+    /* width: 89%; */
     opacity: 1;
     cursor: pointer;
 }
@@ -189,14 +195,14 @@
 }
 .arrow-left{
     position: absolute;
-    left: 11%;
-    margin-top: 10%;
+    left: 85%;
+    top: 45%;
     z-index: 9;
 }
 .arrow-right{
     position: absolute;
-    right: 11.5%;
-    margin-top: 10%;
+    right: 85%;
+    top: 45%;
     z-index: 9;
 }
 @media (max-width: 270px){
@@ -250,11 +256,11 @@
         margin-left:0px !important;
     }
     .arrow-left {
-        left: 21%;
+        left: -5px !important;
         margin-top: 20%;
     }
     .arrow-right {
-        right:19.5%;
+        right:-5px !important;
         margin-top: 20%;
     }
     .services-employee-image{
@@ -330,8 +336,8 @@
         margin-top: 20%;
     }
     .arrow-right {
-        right:19.5%;
-        margin-top: 20%;
+        right:19.5% !important;
+        margin-top: 20% !important; 
     }
     .services-employee-image{
         margin-top: 0px !important;
@@ -372,9 +378,9 @@
         width: 85px !important;
         height: 85px !important;
     }
-    .services-employee-box {
+    /* .services-employee-box {
         width: 100%;
-    }
+    } */
     .main-player-wrapper{
         padding-left: 0px !important;
     }
@@ -395,11 +401,11 @@
         margin-left:0px !important;
     }
     .arrow-left {
-        left: 9%;
+        left: 40%;
         margin-top: 12%;
     }
     .arrow-right {
-        right:9.5%;
+        right:40%;
         margin-top: 12%;
     }
     .services-employee-image{

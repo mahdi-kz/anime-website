@@ -54,6 +54,9 @@
   top: 0;
   will-change: transform;
 }
+.div-title{
+  text-align: center;
+}
 .svg{
   pointer-events: none;
   width: 60px;

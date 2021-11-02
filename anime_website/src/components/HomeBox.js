@@ -111,7 +111,9 @@ function HomeBox(){
 					</li>
 				</ul>
 			</div>
-			<p className="title">{title}</p>
+			<div className="div-title">
+				<span className="title">{title}</span>
+			</div>
 			<div className="sound" onClick={handleSound}
 				onMouseEnter={()=>setDrow(true)}
 				onMouseLeave={()=>setDrow(false)}

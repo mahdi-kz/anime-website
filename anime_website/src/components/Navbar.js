@@ -22,7 +22,7 @@ function GreiNavbar(props){
 
 	useEffect(()=>{
 		updateSize()
-	}, [])
+	}, [click])
 
 	const updateSize = ()=>{
 		const navHeightSize = document.querySelectorAll(".menu-row")[0].offsetHeight; 
