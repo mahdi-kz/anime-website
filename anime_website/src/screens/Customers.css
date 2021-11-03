@@ -1,30 +1,35 @@
-.customerContainer{
-    width: "100%";
-    margin-top: 90px;
+.customer-container{
+    margin-top: 10%;
+    display: flex;
+    justify-content: center;
 }
-.customersTitle{
+.customers-box{
+    width: 79% !important;
+}
+.international-container{
+    width: 100%;
+}
+.clients-title{
+    text-align: center;
+    font-size: 22px;
+    margin-top: 5px;
+    color: gray;
+}
+.customers-title{
     text-align: center;
 }
 .customer-row{
     text-align: center;
-    margin-bottom: 50px;
+}
+.customer-row >div{
+    margin-bottom: 40px;
 }
 .customer-logo-box{
     margin-top: 65px;
 }
-.customer-name{
-    opacity: 0;
-    visibility: hidden;
-    -webkit-transition: opacity 1000ms, visibility 1000ms;
-    transition: opacity 1000ms, visibility 1000ms;
-}
-.customer-name-show {
-    visibility: visible;
-    opacity: 1;
-}
 .customerLogo {
-    width: 90px;
-    height: 90px;
+    width: 80px;
+    height: 80px;
     -webkit-animation: pulsing 2s ;
     animation: pulsing 0.5s;
 }  
@@ -53,4 +58,41 @@
         -webkit-transform: scale(1.0, 1.0);
         transform: scale(1.0, 1.0);
     }
+}
+
+@media (max-width: 370px){
+    .customers-title{
+        font-size: 18px;
+    }
+    .customer-container{
+        margin-top: 32% !important;
+    }
+    .customerLogo {
+        width: 45px;
+        height: 45px;
+    }  
+    .clients-title{
+        font-size: 15px;
+    }
+}
+@media (min-width: 375px) and (max-width: 450px) {
+    .customers-title{
+        font-size: 22px;
+    }
+    .customer-container{
+        margin-top: 20% !important;
+    }
+    .customerLogo {
+        width: 50px;
+        height: 50px;
+    }  
+    .clients-title{
+        font-size: 17px;
+    }
+}
+@media (min-width:450px) and (max-width:775px){
+    .customerLogo {
+        width: 70px;
+        height: 70px;
+    }  
 }

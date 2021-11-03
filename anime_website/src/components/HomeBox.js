@@ -33,7 +33,7 @@ function HomeBox(){
 						onMouseEnter={()=>{setTitle("Production");setSelectedBox1(true);}}
 						onMouseLeave={()=>{setTitle('Services');setSelectedBox1(false);}}
 					>
-						<Link to="/services" >
+						<Link to="/products" >
 							{selectedBox1?
 								<video
 									onMouseOver={() => vidRef.current.play()}
@@ -53,7 +53,7 @@ function HomeBox(){
 						onMouseEnter={()=>{setTitle("Social Media");setSelectedBox2(true)}}
 						onMouseLeave={()=>{setTitle('Services');setSelectedBox2(false)}}
 					>
-						<Link to="/services" >
+						<Link to="/socialMedia" >
 							{selectedBox2?
 								<video
 									onMouseOver={() => vidRef2.current.play()}
@@ -73,7 +73,7 @@ function HomeBox(){
 						onMouseEnter={()=>{setTitle("Graphics");setSelectedBox3(true)}}
 						onMouseLeave={()=>{setTitle('Services');setSelectedBox3(false)}}
 					>
-						<Link to="/services" >
+						<Link to="/graphicsDesign" >
 							{selectedBox3?
 								<video
 									onMouseOver={() => vidRef3.current.play()}
@@ -93,7 +93,7 @@ function HomeBox(){
 						onMouseEnter={()=>{setTitle("Training");setSelectedBox4(true)}}
 						onMouseLeave={()=>{setTitle('Services');setSelectedBox4(false)}}
 					>
-						<Link to="/services" >
+						<Link to="/training" >
 							{selectedBox4?
 								<video
 									onMouseOver={() => vidRef4.current.play()}
@@ -111,7 +111,9 @@ function HomeBox(){
 					</li>
 				</ul>
 			</div>
-			<p className="title">{title}</p>
+			<div className="div-title">
+				<span className="title">{title}</span>
+			</div>
 			<div className="sound" onClick={handleSound}
 				onMouseEnter={()=>setDrow(true)}
 				onMouseLeave={()=>setDrow(false)}
