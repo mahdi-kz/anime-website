@@ -41,7 +41,6 @@ export default function Products(props){
 		const elWidth = document.querySelectorAll("#top-video .react-player")[0].offsetWidth; 
 		setVideoWidth(elWidth)
 		const videosWidth = parseInt(elWidth/5 -20);
-		console.log(videosWidth);
 		setVideoSides(videosWidth)
 	}
 

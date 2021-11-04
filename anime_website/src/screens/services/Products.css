@@ -139,60 +139,7 @@
     height: 5px;
     text-align: center;
 }
-.services-employee-info{
-    opacity: 0;
-    background-color: #50BCBA;
-    position:absolute;
-    bottom: 32px;
-    width: 150px;
-    line-height: 2px;
-    -webkit-transition: -webkit-transform 0.35s;
-    transition: transform 0.35s;
-    -webkit-transform: translate3d(0,100%,0);
-    transform: translate3d(0,100%,0);
-}
-.services-employee{
-    position: relative;
-}
-.services-employee-name{
-    font-size: 18px;
-    font-family: LisztFYBlack,Georgia,Times New Roman,Times,serif;
-    -webkit-transition: -webkit-transform 0.35s;
-    transition: transform 0.35s;
-    -webkit-transform: translate3d(0,200%,0);
-    transform: translate3d(0,200%,0);
-    display: inline-block;
-}
-.services-employee-job{
-    font-size: 13px;
-    color: #444444;
-    -webkit-transition: -webkit-transform 0.35s;
-    transition: transform 0.35s;
-    -webkit-transform: translate3d(0,200%,0);
-    transform: translate3d(0,200%,0);
-    display: inline-block;
-}
 
-.services-employee:hover .services-employee-info,
-.services-employee:hover .services-employee-name,
-.services-employee:hover .services-employee-job{
-    opacity: 1;
-    -webkit-transform: translate3d(0,0,0);
-    transform: translate3d(0,0,0);
-}
-
-.services-employee:hover .services-employee-name,
-.services-employee:hover .services-employee-job{
-    -webkit-transition-delay: 0.05s;
-    transition-delay: 0.05s;
-}
-
-.services-employee-job, .services-employee-name{
-    -webkit-transition: -webkit-transform 0.35s;
-    transition: transform 0.35s;
-    -webkit-transform: translate3d(0,200%,0);
-    transform: translate3d(0,200%,0);
-}
 .arrow-left{
     position: absolute;
     left: 85%;
