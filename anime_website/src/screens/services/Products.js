@@ -9,10 +9,11 @@ import video3 from '../../videos/center-video.webm'
 import mainImage from '../../images/test/services-main.jpeg';
 import image1 from '../../images/test/people2.jpg';
 import image2 from '../../images/test/people1.png';
-// import image3 from '../../images/test/people3.png';
 import gif1 from '../../images/teams/002-Fast.gif';
 import servicesBg from '../../images/background/services-bg.webp'
 import { Container, Row, Col } from 'react-grid-system';
+import Employee from '../../components/Employee';
+
 
 
 export default function Products(props){
@@ -35,6 +36,22 @@ export default function Products(props){
 		getMembers();
 		setPageNumber(3);
 		window.addEventListener('resize', updateSize);
+		document.querySelector('.arrow-right').addEventListener('click', function () {
+			const el = document.getElementById("hscroll");
+			el.scroll({
+				left: el.scrollLeft+70,
+				top: 0,
+				behavior: 'smooth'
+			})
+		});
+		document.querySelector('.arrow-left').addEventListener('click', function () {
+			const el = document.getElementById("hscroll");
+			el.scroll({
+				left: el.scrollLeft-70,
+				top: 0,
+				behavior: 'smooth'
+			})
+		});
 	}, [])
 
 	const updateSize = ()=>{
@@ -162,43 +179,50 @@ export default function Products(props){
                 description:"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
                 name:"robert de niro",
                 image:image2,
-				job:"Lorem ipsum dolor"
+				job:"Lorem ipsum dolor",
+				gif:gif1
             },
             {
                 description:"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
                 name:"julia robinson",
                 image:image1,
-				job:"Lorem ipsum dolor"
+				job:"Lorem ipsum dolor",
+				gif:gif1
             },
             {
                 description:"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
                 name:"robert de niro",
                 image:image2,
-				job:"Lorem ipsum dolor"
+				job:"Lorem ipsum dolor",
+				gif:gif1
             },
             {
                 description:"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
                 name:"julia robinson",
                 image:image1,
-				job:"Lorem ipsum dolor"
+				job:"Lorem ipsum dolor",
+				gif:gif1
             },
             {
                 description:"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
                 name:"robert de niro",
                 image:image2,
-				job:"Lorem ipsum dolor"
+				job:"Lorem ipsum dolor",
+				gif:gif1
             },
             {
                 description:"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
                 name:"julia robinson",
                 image:image1,
-				job:"Lorem ipsum dolor"
+				job:"Lorem ipsum dolor",
+				gif:gif1
             },
 			{
                 description:"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
                 name:"robert de niro",
                 image:image2,
-				job:"Lorem ipsum dolor"
+				job:"Lorem ipsum dolor",
+				gif:gif1
             }
 		])
 	}
@@ -227,13 +251,6 @@ export default function Products(props){
 				})}					
 			</div>
 		)
-	}
-
-	const scrollEmployee = (status)=>{
-		const el = document.getElementById(`hscroll`);
-		if(status==='next')	el.scrollLeft += 50;
-		else el.scrollLeft -= 50;
-		console.log(status)
 	}
 
 	return(
@@ -318,36 +335,30 @@ export default function Products(props){
 								<div className="paging-box arrow-left">
 										<div className="selected-page-number"
 											style={{display: 'flex',  justifyContent:'center', alignItems:'center'}}
-											onClick={()=>scrollEmployee("preve")}>
+											>
 											<i class='fas fa-chevron-left'></i>
 										</div>
 								</div>
 							</Col>
 							<Col className="team-column" xs={9} sm={10} md={10} xl={10}>
-								<div className="services-employee-box" id={`hscroll`}>
-									{members.map((obj, index)=>{return(
-										<div className="services-employee"
-											onClick={()=>openTeamModal(obj)}
-										>
-											<img 
-												alt="grei" 
-												className="services-employee-image" 
-												style={{paddingRight:index!==members.length-1?'15px':'0px'}}
-												src={obj.image}
-											/>
-											<div className="services-employee-info">
-												<p className="services-employee-name">{obj.name}</p>
-												<p className="services-employee-job">{obj.job}</p>
-											</div>
-										</div>
-									)})}
+								<div className="services-employee-box" id="hscroll">
+									{members.map((obj, index)=>{
+										return (<Col>
+                                            <Employee 
+                                                info={obj} 
+												// style={{marginRight:index<members.length-1?'40px':'0px'}}
+                                                openTeamModal={openTeamModal}
+                                                className="team-pictures"
+                                                infoClassName="team-info-size" />
+                                        </Col>)
+									})}
 								</div>
 							</Col>
 							<Col className="team-column" xs={1} sm={1} md={1} xl={1}>
 								<div className="paging-box arrow-right">
 										<div className="selected-page-number"
 											style={{display: 'flex',  justifyContent:'center', alignItems:'center'}}
-											onClick={()=>scrollEmployee("next")}>
+											>
 											<i class='fas fa-chevron-right'></i>
 										</div>
 								</div>

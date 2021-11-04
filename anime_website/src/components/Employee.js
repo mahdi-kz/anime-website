@@ -1,31 +1,20 @@
-import React, { useRef, useState} from 'react';
+import React, { useState } from 'react';
 import './Employee.css'
 
 function Employee(props){
     const [isHover, setIsHover] = useState(false)
 
-    const videoRef = useRef(null);
-
-    const videoStatus = ()=>{
-        videoRef.current.play();
-    }
-
 	return(
         <div 
-            className="employee-container"
+            style={props.style?props.style:{}}
             onClick={()=>props.openTeamModal(props.info)}
             onMouseEnter={()=>{setIsHover(true)}}
 		    onMouseLeave={()=>{setIsHover(false)}}
             
         >
-            <video 
-                ref={videoRef}
-                // autoplay
-                onMouseOver={() => videoRef.current.play().then(()=>videoRef.current.pause())}
-                onMouseOut={() => videoRef.current.play().then(()=>videoRef.current.pause())}
-                // alt="grei's team"
+            <img 
                 className={props.className?`employe-image ${props.className}`:"employee-image"}
-                src={isHover?props.info.gif:props.info.back}
+                src={isHover?props.info.gif:props.info.image}
             />
                
             <div className={props.infoClassName?`employee-info ${props.infoClassName}`:"employee-info"}>

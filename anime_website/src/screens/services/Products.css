@@ -3,6 +3,7 @@
 .div-center{
     display: flex;
     justify-content: center;
+    margin-top: 20px;
 }
 .services-box{
     text-align: center;
@@ -325,9 +326,6 @@
         width: 85px !important;
         height: 85px !important;
     }
-    /* .services-employee-box {
-        width: 100%;
-    } */
     .main-player-wrapper{
         padding-left: 0px !important;
     }

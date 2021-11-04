@@ -23,6 +23,7 @@
 }
 .team-pictures{
     width: 180px;
+    height: 240px;
     opacity: 1;
     cursor: pointer;
     margin-bottom: 20px;
@@ -71,7 +72,7 @@
     }
     .team-pictures{
         width: 45px;
-        height: auto;
+        height: 105px;
     }
     .team-info-size{
         width: 45px !important;
@@ -103,7 +104,7 @@
     }
     .team-pictures{
         width: 61px;
-        height: auto;
+        height: 121px;
     }
     .team-info-size{
         width: 61px !important;
@@ -129,7 +130,7 @@
     }
     .team-pictures{
         width: 100px;
-        height: auto;
+        height: 160px;
     }
     .team-info-size{
         width: 100px !important;
