@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react';
-import './Products.css'
+import './Services.css'
 import Navbar from '../../components/Navbar';
 import MembersModal from '../../components/MembersModal';
 import GreiVideo from '../../components/GreiVideo.js';
@@ -78,6 +78,14 @@ export default function Products(props){
 			{
 				image:mainImage,
 				videoUrl:video1
+			},
+			{
+				image:mainImage,
+				videoUrl:video2
+			},
+			{
+				image:mainImage,
+				videoUrl:video2
 			},
 			{
 				image:mainImage,

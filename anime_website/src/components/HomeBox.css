@@ -3,6 +3,18 @@
   display: flex;
   margin-top:3%;
 }
+.home-box::-webkit-scrollbar {
+  background-clip: content-box;
+}
+.home-box::-webkit-scrollbar-thumb {
+  background-clip: content-box;
+  background-color: hsla(0,0%,100%,.4);
+  -webkit-transition: background .2s;
+  transition: background .2s;
+  border-radius: 0;
+  border: 10px solid transparent;
+  border-left-width: 3px;
+}
 .home-box {
   margin-bottom: 10px !important;
   width: 90%;
@@ -10,8 +22,17 @@
   list-style-type: none;
   text-align:center;
   height: calc(100vh - 150px);
-  /* display: flex; */
-  /* overflow-y: auto; */
+  overflow-x: scroll;
+  overflow-y: hidden;
+  cursor: move;
+  width: 100%;
+  align-items: center;
+  cursor: move;
+  touch-action: pan-y;
+  user-select: none;
+  visibility: visible;
+  scroll-behavior: smooth;
+  white-space:nowrap;
 }
 .home-box > li {
   margin-right: 10px;
@@ -38,7 +59,6 @@
 }
 .sound{
   position: fixed;
-  /* bottom: 15px; */
   left: 25px;
   z-index: 11;
 }
@@ -61,9 +81,9 @@
   pointer-events: none;
   width: 60px;
   height: 50px;
-  position: absolute;
-  left: -10px;
-  bottom: -22px;
+  position: fixed;
+  left: 15px;
+  bottom: 10px;
 }
 .svg:focus{
   outline: -webkit-focus-ring-color auto 5px;
@@ -91,46 +111,35 @@
 
 @media (max-width: 375px){
   .home-container{
-    justify-content: center;
-    display: flex;
     margin-top:20%;
     margin-bottom: -25px;
   }
-  .home-container>ul{
-    display: flex;
-    width: 60% !important;
-  }
   .title{
     font-size: 16px !important;
+  }
+  .div-title {
+    margin-top: 10px;
   }
 }
 
 @media (min-width: 375px) and (max-width: 770px){
   .home-container{
-    justify-content: center;
-    display: flex;
-    margin-top:11% !important;
-    margin-bottom: -30px;
-  }
-  .home-container>ul{
-    display: flex;
-    width: 67% !important;
+    margin-top:6% !important;
+    margin-bottom: -15px;
   }
   .title{
     font-size: 20px !important;
   }
+  
 }
 
 @media (min-width: 770px) and (max-width: 870px){
   .home-container{
-    justify-content: center;
-    display: flex;
     margin-top:7% !important;
     margin-bottom: -15px;
   }
   .home-container>ul{
     width: 80% !important;
-    display: flex;
   }
   .title{
     font-size: 25px !important;
