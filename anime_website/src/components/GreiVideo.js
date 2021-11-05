@@ -43,8 +43,6 @@ function GreiVideo(props){
                     width={props.with}
                     height={props.height}
                     light={hasLight?props.light:''}
-                    // fullscreen={fullscreen}
-                    // controls={fullscreen}
                     config={{ file: { attributes: {
                         autoPlay: play,
                         muted: true

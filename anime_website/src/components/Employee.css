@@ -1,6 +1,7 @@
 .employee-container{
     justify-content: center;
     display: flex;
+    position: relative;
 }
 .employee-info{
     opacity: 0;
@@ -13,9 +14,6 @@
     transition: transform 0.35s;
     -webkit-transform: translate3d(0,100%,0);
     transform: translate3d(0,100%,0);
-}
-.employee-container{
-    position: relative;
 }
 .employee-name{
     font-size: 18px;
