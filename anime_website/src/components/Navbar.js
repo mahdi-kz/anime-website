@@ -21,6 +21,7 @@ function GreiNavbar(props){
 	const showLogo = props.showLogo!==undefined?props.showLogo:true;
 
 	useEffect(()=>{
+		console.log(click);
 		updateSize()
 	}, [click])
 
@@ -31,7 +32,7 @@ function GreiNavbar(props){
 
 	return(
 		<>
-			<nav className="navbar" style={{height:click?'auto':'102px'}}>
+			<nav className="navbar" style={{height:click?'auto':'120px'}}>
 				<div className={click && "navbar-container"}>
 					<div className={click?"container menu-open":"container"} >
 						<div>

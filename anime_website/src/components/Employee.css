@@ -1,0 +1,83 @@
+.employee-container{
+    justify-content: center;
+    display: flex;
+    position: relative;
+}
+.employee-info{
+    opacity: 0;
+    background-color: #50BCBA;
+    position:absolute;
+    bottom: 20px;
+    width: 100%;
+    line-height: 2px;
+    -webkit-transition: -webkit-transform 0.35s;
+    transition: transform 0.35s;
+    -webkit-transform: translate3d(0,100%,0);
+    transform: translate3d(0,100%,0);
+}
+.employee-name{
+    font-size: 18px;
+    font-family: LisztFYBlack,Georgia,Times New Roman,Times,serif;
+    -webkit-transition: -webkit-transform 0.35s;
+    transition: transform 0.35s;
+    -webkit-transform: translate3d(0,200%,0);
+    transform: translate3d(0,200%,0);
+    display: inline-block;
+}
+.employe-image{
+    object-fit: cover;
+}
+.employee-job{
+    font-size: 13px;
+    color: #444444;
+    -webkit-transition: -webkit-transform 0.35s;
+    transition: transform 0.35s;
+    -webkit-transform: translate3d(0,200%,0);
+    transform: translate3d(0,200%,0);
+    display: inline-block;
+}
+
+.employee-container:hover .employee-info,
+.employee-container:hover .employee-name,
+.employee-container:hover .employee-job{
+    opacity: 1;
+    -webkit-transform: translate3d(0,0,0);
+    transform: translate3d(0,0,0);
+}
+
+.employee-container:hover .employee-name,
+.employee-container:hover .employee-job{
+    -webkit-transition-delay: 0.05s;
+    transition-delay: 0.05s;
+}
+
+.employee-job, .employee-name{
+    -webkit-transition: -webkit-transform 0.35s;
+    transition: transform 0.35s;
+    -webkit-transform: translate3d(0,200%,0);
+    transform: translate3d(0,200%,0);
+}
+@media (max-width:375px){
+    .employee-name{
+        font-size: 6px !important;
+    }
+    .employee-job{
+        font-size: 4px !important;
+    }
+}
+@media (min-width:375px) and (max-width:575px) {
+    .employee-name{
+        font-size: 8px !important;
+    }
+    .employee-job{
+        font-size: 6px !important;
+    }
+}
+@media (min-width:575px) and (max-width:725px) {
+    .employee-name{
+        font-size: 12px !important;
+    }
+    .employee-job{
+        font-size: 10px !important;
+    }
+}
