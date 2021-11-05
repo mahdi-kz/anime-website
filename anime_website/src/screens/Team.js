@@ -165,6 +165,7 @@ export default function Teams(){
                     <div id='top-video'>
                         <GreiVideo 
                             with='95%' 
+                            height='auto'
                             url={video1} 
                             style={{display: 'flex',justifyContent: 'center'}}
                             autoPlay={true} />
