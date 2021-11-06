@@ -1,0 +1,9 @@
+.course-container{
+    overflow: hidden; 
+}
+.course-container img {
+    transition: transform .5s ease;
+}
+.course-container:hover img {
+    transform: scale(1.5);
+}
