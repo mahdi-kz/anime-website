@@ -13,7 +13,6 @@ import { Container, Row, Col } from 'react-grid-system';
 import Employee from '../../components/Employee';
 
 
-
 export default function Products(props){
 	const [products, setProducts] = useState([]);
 	const [members, setMembers] = useState([]);
@@ -238,7 +237,13 @@ export default function Products(props){
 				}}>
 				<div className="services-box">
 					<div className="services-header">Social Media</div>
-					<div className="services-title services-title-top">Story tellers through simple frames</div>
+					<div className="slideCol">
+						<div className="scroller">
+							<div className="inner services-title services-title-top">
+								<p>Story tellers through simple frames</p>
+							</div>
+						</div>
+					</div>
 					<div id='top-video'>
 						<GreiVideo 
 							with="79%"
