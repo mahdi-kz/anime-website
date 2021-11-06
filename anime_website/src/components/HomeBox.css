@@ -21,6 +21,7 @@
   padding: 0;
   list-style-type: none;
   text-align:center;
+  -webkit-overflow-scrolling: touch;
   height: calc(100vh - 150px);
   overflow-x: scroll;
   overflow-y: hidden;
