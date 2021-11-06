@@ -5,37 +5,37 @@ import MembersModal from '../../components/MembersModal';
 import GreiVideo from '../../components/GreiVideo.js';
 import video1 from '../../videos/big.mp4';
 import video3 from '../../videos/center-video.webm'
-import image1 from '../../images/test/people2.jpg';
-import image2 from '../../images/test/people1.png';
-import gif1 from '../../images/teams/002-Fast.gif';
+import image1 from '../../images/test/course2.png';
+import image2 from '../../images/test/course1.png';
 import servicesBg from '../../images/background/services-bg.webp'
 import { Container, Row, Col } from 'react-grid-system';
-import Employee from '../../components/Employee';
+import Course from '../../components/Course';
 
 
 
 export default function Products(props){
 	const [products, setProducts] = useState([]);
-	const [members, setMembers] = useState([]);
+	const [courses,setCourses] = useState([]);
 	const [videoUrl, setVideoUrl] = useState(null);
 	const [showTeamModal, setTeamShowModal] = useState(false);
 	const [personInfo, setPersonInfo] = useState([]);
 	const [pageNumber, setPageNumber] = useState(1);
 	const [currentPage, setCurrentPage] = useState(1);
 	const [videoSize, setVideoSides] = useState("80%");
-	const [videoWidth, setVideoWidth] = useState(null)
+	const [videoWidth, setVideoWidth] = useState(null);
+	const [arrowTop, setArrowTop] = useState(10)
 
 	useEffect(()=>{
 		updateSize()
 		setVideoUrl(video1)
 		getProducts();
-		getMembers();
+		getCourses();
 		setPageNumber(3);
 		window.addEventListener('resize', updateSize);
 		document.querySelector('.arrow-right').addEventListener('click', function () {
 			const el = document.getElementById("hscroll");
 			el.scroll({
-				left: el.scrollLeft+70,
+				left: el.scrollLeft+100,
 				top: 0,
 				behavior: 'smooth'
 			})
@@ -43,7 +43,7 @@ export default function Products(props){
 		document.querySelector('.arrow-left').addEventListener('click', function () {
 			const el = document.getElementById("hscroll");
 			el.scroll({
-				left: el.scrollLeft-70,
+				left: el.scrollLeft-100,
 				top: 0,
 				behavior: 'smooth'
 			})
@@ -52,9 +52,12 @@ export default function Products(props){
 
 	const updateSize = ()=>{
 		const elWidth = document.querySelectorAll("#top-video .react-player")[0].offsetWidth; 
+		const elDivArrows = document.querySelectorAll(".team-column")[0].offsetHeight;
+		console.log('elDiveArrows', elDivArrows);
 		setVideoWidth(elWidth)
 		const videosWidth = parseInt(elWidth/5 -20);
-		setVideoSides(videosWidth)
+		setVideoSides(videosWidth);
+		setArrowTop(elDivArrows/3)
 	}
 
 	const getProducts = ()=>{
@@ -137,63 +140,47 @@ export default function Products(props){
 		])
 	}
 
-	const getMembers = ()=>{
-		setMembers([
+	const getCourses = ()=>{
+		setCourses([
 			{
                 description:"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
                 name:"julia robinson",
-                image:image1,
-				job:"Lorem ipsum dolor",
-				gif:gif1
+                image:image1
             },
             {
                 description:"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
                 name:"robert de niro",
-                image:image2,
-				job:"Lorem ipsum dolor",
-				gif:gif1
+                image:image2
             },
             {
                 description:"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
                 name:"julia robinson",
-                image:image1,
-				job:"Lorem ipsum dolor",
-				gif:gif1
+                image:image1
             },
             {
                 description:"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
                 name:"robert de niro",
-                image:image2,
-				job:"Lorem ipsum dolor",
-				gif:gif1
+                image:image2
             },
             {
                 description:"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
                 name:"julia robinson",
-                image:image1,
-				job:"Lorem ipsum dolor",
-				gif:gif1
+                image:image1
             },
             {
                 description:"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
                 name:"robert de niro",
-                image:image2,
-				job:"Lorem ipsum dolor",
-				gif:gif1
+                image:image2
             },
             {
                 description:"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
                 name:"julia robinson",
-                image:image1,
-				job:"Lorem ipsum dolor",
-				gif:gif1
+                image:image1
             },
 			{
                 description:"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
                 name:"robert de niro",
-                image:image2,
-				job:"Lorem ipsum dolor",
-				gif:gif1
+                image:image2
             }
 		])
 	}
@@ -238,7 +225,13 @@ export default function Products(props){
 				}}>
 				<div className="services-box">
 					<div className="services-header">Training</div>
-					<div className="services-title services-title-top">Story tellers through simple frames</div>
+					<div className="slideCol">
+						<div className="scroller">
+							<div className="inner services-title services-title-top">
+								<p>Story tellers through simple frames</p>
+							</div>
+						</div>
+					</div>
 					<div id='top-video'>
 						<GreiVideo 
 							with="79%"
@@ -282,7 +275,7 @@ export default function Products(props){
 						<Container fluid >
 							<Row>
 							<Col className="team-column" xs={1} sm={1} md={1} xl={1}>
-								<div className="paging-box arrow-left">
+								<div className="paging-box arrow-left" style={{top:0, marginTop:arrowTop}}>
 										<div className="selected-page-number"
 											style={{display: 'flex',  justifyContent:'center', alignItems:'center'}}
 											>
@@ -291,23 +284,20 @@ export default function Products(props){
 								</div>
 							</Col>
 							<Col className="team-column" xs={9} sm={10} md={10} xl={10}>
-								<div className="services-employee-box" id="hscroll">
-									{members.map((obj, index)=>{
+								<div className="services-employee-box" id="hscroll" >
+									{courses.map((obj, index)=>{
 										return (<Col>
-                                            <Employee 
-                                                info={obj} 
-												// style={{marginRight:index<members.length-1?'40px':'0px'}}
+                                            <Course 
+                                                info={obj}
                                                 openTeamModal={openTeamModal}
-												divInfoStyle={{width:videoSize, marginRight:30, height:videoSize/3+10}}
-                                                className="team-pictures"
-												imageStyle={{width:videoSize, height:videoSize+60, marginRight:30}}
-                                                 />
+												imageStyle={{width:videoSize+40, marginRight:30}}
+                                            />
                                         </Col>)
 									})}
 								</div>
 							</Col>
 							<Col className="team-column" xs={1} sm={1} md={1} xl={1}>
-								<div className="paging-box arrow-right">
+								<div className="paging-box arrow-right" style={{top:0, marginTop:arrowTop}}>
 										<div className="selected-page-number"
 											style={{display: 'flex',  justifyContent:'center', alignItems:'center'}}
 											>
