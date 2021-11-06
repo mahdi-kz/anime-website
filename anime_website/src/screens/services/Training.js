@@ -53,16 +53,12 @@ export default function Products(props){
 	const updateSize = ()=>{
 		try{
 			let elWidth = document.querySelectorAll("#top-video .react-player"); 
-			let elDivArrows = document.querySelectorAll(".team-column");
 			if(elWidth){
 				elWidth = elWidth[0].offsetWidth
 				setVideoWidth(elWidth)
 				const videosWidth = parseInt(elWidth/5 -20);
 				setVideoSides(videosWidth);
-			}
-			if(elDivArrows){
-				elDivArrows = elDivArrows[0].offsetHeight
-				setArrowTop(elDivArrows/3)
+				setArrowTop(videosWidth/3)
 			}
 		}catch{}
 	}
