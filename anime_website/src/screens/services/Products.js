@@ -1,14 +1,16 @@
-import React, {useState, useEffect} from 'react';
+import React, {useState, useEffect, useRef} from 'react';
 import './Services.css'
 import Navbar from '../../components/Navbar';
 import MembersModal from '../../components/MembersModal';
 import GreiVideo from '../../components/GreiVideo.js';
 import video1 from '../../videos/big.mp4';
 import video2 from '../../videos/main-video.mp4';
-import video3 from '../../videos/center-video.webm'
+import video3 from '../../videos/center-video.mp4'
 import mainImage from '../../images/test/services-main.jpeg';
 import image1 from '../../images/test/people2.jpg';
 import image2 from '../../images/test/people1.png';
+import image3 from '../../images/teams/pop2.jpg';
+import image4 from '../../images/teams/pop1.jpg';
 import gif1 from '../../images/teams/002-Fast.gif';
 import servicesBg from '../../images/background/services-bg.webp'
 import { Container, Row, Col } from 'react-grid-system';
@@ -28,6 +30,8 @@ export default function Products(props){
 	const [videoSize, setVideoSides] = useState("80%");
 	const [videoWidth, setVideoWidth] = useState(null)
 
+	const scrollToVideo = useRef();
+
 	useEffect(()=>{
 		updateSize()
 		setVideoUrl(video1)
@@ -39,7 +43,7 @@ export default function Products(props){
 		document.querySelector('.arrow-right').addEventListener('click', function () {
 			const el = document.getElementById("hscroll");
 			el.scroll({
-				left: el.scrollLeft+70,
+				left: el.scrollLeft+parseInt(videoSize+50),
 				top: 0,
 				behavior: 'smooth'
 			})
@@ -47,12 +51,12 @@ export default function Products(props){
 		document.querySelector('.arrow-left').addEventListener('click', function () {
 			const el = document.getElementById("hscroll");
 			el.scroll({
-				left: el.scrollLeft-70,
+				left: el.scrollLeft-parseInt(videoSize+50),
 				top: 0,
 				behavior: 'smooth'
 			})
 		});
-	}, [])
+	}, [videoSize])
 
 	const updateSize = ()=>{
 		try{
@@ -186,56 +190,64 @@ export default function Products(props){
                 name:"julia robinson",
                 image:image1,
 				job:"Lorem ipsum dolor",
-				gif:gif1
+				gif:gif1,
+				popImg:image3
             },
             {
                 description:"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
                 name:"robert de niro",
                 image:image2,
 				job:"Lorem ipsum dolor",
-				gif:gif1
+				gif:gif1,
+				popImg:image4
             },
             {
                 description:"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
                 name:"julia robinson",
                 image:image1,
 				job:"Lorem ipsum dolor",
-				gif:gif1
+				gif:gif1,
+				popImg:image3
             },
             {
                 description:"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
                 name:"robert de niro",
                 image:image2,
 				job:"Lorem ipsum dolor",
-				gif:gif1
+				gif:gif1,
+				popImg:image4
             },
             {
                 description:"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
                 name:"julia robinson",
                 image:image1,
 				job:"Lorem ipsum dolor",
-				gif:gif1
+				gif:gif1,
+				popImg:image3
             },
             {
                 description:"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
                 name:"robert de niro",
                 image:image2,
 				job:"Lorem ipsum dolor",
-				gif:gif1
+				gif:gif1,
+				popImg:image4
             },
             {
                 description:"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
                 name:"julia robinson",
                 image:image1,
 				job:"Lorem ipsum dolor",
-				gif:gif1
+				gif:gif1,
+				popImg:image3
             },
 			{
                 description:"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
                 name:"robert de niro",
                 image:image2,
 				job:"Lorem ipsum dolor",
-				gif:gif1
+				gif:gif1,
+				popImg:image4
             }
 		])
 	}
@@ -266,6 +278,14 @@ export default function Products(props){
 		)
 	}
 
+	const clickScrollbarVideos = (url) => {
+		setVideoUrl(url);
+		scrollToVideo.current.scrollIntoView({
+			block: 'start',
+			behavior: 'smooth',
+		})
+	}
+
 	return(
 		<>
 			{!showTeamModal &&
@@ -278,7 +298,7 @@ export default function Products(props){
 					backgroundSize: 'cover',
 					backgroundRepeat: 'no-repeat'
 				}}>
-				<div className="services-box">
+				<div className="services-box" ref={scrollToVideo}>
 					<div className="services-header">Productions</div>
 					<div className="slideCol">
 						<div className="scroller">
@@ -287,7 +307,7 @@ export default function Products(props){
 							</div>
 						</div>
 					</div>
-					<div id='top-video'>
+					<div id='top-video' >
 						<GreiVideo 
 							with="79%"
 							height="auto"
@@ -300,7 +320,7 @@ export default function Products(props){
 					<div className="div-center">
 						<div className="services-videos" style={{width:videoWidth}}>
 							{videos.map((obj, index)=>{return(
-								<div onClick={()=>setVideoUrl(obj.videoUrl)} >
+								<div onClick={()=>clickScrollbarVideos(obj.videoUrl)} >
 									<GreiVideo 
 										classWrapper="main-video-wrapper"
 										classPlayer="main-react-player"
@@ -321,7 +341,7 @@ export default function Products(props){
 						</div>
 					</div>
 					<hr className="services-hr" />
-					<div className="services-title">Progect & Client</div>
+					<div className="services-section-title">Project & Client</div>
 					<div className="services-products-container">
 						<div className="services-products">
 							<Container fluid  align="center">
@@ -347,7 +367,7 @@ export default function Products(props){
 						<div className={pageNumber>1?"page-numbers":"hide"}> {createPages()} </div>
 					</div>
 					<hr className="services-hr" />
-					<div className="services-title">Production's Team</div> 
+					<div className="services-section-title services-team-title">Production's Team</div> 
 					<div className="div-center">
 						<Container fluid >
 							<Row>

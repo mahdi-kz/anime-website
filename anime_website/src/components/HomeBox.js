@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import './HomeBox.css'
 import { Link } from 'react-router-dom';
 import image1 from '../images/home/1.webp';
@@ -9,6 +9,7 @@ import video1 from '../videos/1.mp4';
 import video2 from '../videos/2.mp4';
 import video3 from '../videos/3.mp4';
 import video4 from '../videos/4.mp4';
+
 
 function HomeBox(){
 	const [drow, setDrow] = useState(false);
@@ -25,94 +26,108 @@ function HomeBox(){
 	const vidRef3 = useRef(null);
 	const vidRef4 = useRef(null);
 
+	const changeTitle = (title)=>{
+		const el = document.getElementsByClassName('title-inner')[0];
+		el.style.animation = 'none';
+		const elH = el.offsetHeight; /* trigger reflow */
+		el.style.animation = null; 
+		setTitle(title);	
+	}
+
 	return(
 		<>
 			<div className="home-container">
-				<ul className="home-box">
-					<li className="image-box"
-						onMouseEnter={()=>{setTitle("Production");setSelectedBox1(true);}}
-						onMouseLeave={()=>{setTitle('Services');setSelectedBox1(false);}}
-					>
-						<Link to="/products" >
-							{selectedBox1?
-								<video
-									onMouseOver={() => vidRef.current.play()}
-									onMouseOut={() => vidRef.current.pause()}
-									className="top-li"
-									ref={vidRef}
-									src={video1}
-									muted={soundOff?true:false}
-									type="video/mp4">
-								</video>
-								:
-								<img className="top-li" src={image1} alt="" />
-							}
-						</Link>
-					</li>
-					<li className="image-box"
-						onMouseEnter={()=>{setTitle("Social Media");setSelectedBox2(true)}}
-						onMouseLeave={()=>{setTitle('Services');setSelectedBox2(false)}}
-					>
-						<Link to="/socialMedia" >
-							{selectedBox2?
-								<video
-									onMouseOver={() => vidRef2.current.play()}
-									onMouseOut={() => vidRef2.current.pause()}
-									className="down-li"
-									ref={vidRef2}
-									src={video2}
-									muted={soundOff?true:false}
-									type="video/mp4">
-								</video>
-								:
-								<img className="down-li" src={image2} alt="" />
-							}
-						</Link>
-					</li>
-					<li className="image-box"
-						onMouseEnter={()=>{setTitle("Graphics");setSelectedBox3(true)}}
-						onMouseLeave={()=>{setTitle('Services');setSelectedBox3(false)}}
-					>
-						<Link to="/graphicsDesign" >
-							{selectedBox3?
-								<video
-									onMouseOver={() => vidRef3.current.play()}
-									onMouseOut={() => vidRef3.current.pause()}
-									className="top-li"
-									ref={vidRef3} 
-									src={video3} 
-									muted={soundOff?true:false}
-									type="video/mp4">
-								</video>
-								:
-								<img className="top-li" src={image3} alt="" />
-							}
-						</Link>
-					</li>
-					<li className="image-box"
-						onMouseEnter={()=>{setTitle("Training");setSelectedBox4(true)}}
-						onMouseLeave={()=>{setTitle('Services');setSelectedBox4(false)}}
-					>
-						<Link to="/training" >
-							{selectedBox4?
-								<video
-									onMouseOver={() => vidRef4.current.play()}
-									onMouseOut={() => vidRef4.current.pause()}
-									className="down-li"
-									ref={vidRef4}
-									src={video4}
-									muted={soundOff?true:false}
-									type="video/mp4">
-								</video>
-								:
-								<img className="down-li" src={image4} alt="" />
-							}
-						</Link>
-					</li>
-				</ul>
-			</div>
-			<div className="div-title">
-				<span className="title">{title}</span>
+				<div>
+					<ul className="home-box" >
+						<li className="image-box"
+							onMouseEnter={()=>{changeTitle("Production");setSelectedBox1(true);}}
+							onMouseLeave={()=>{changeTitle('Services');setSelectedBox1(false);}}
+						>
+							<Link to="/products" >
+								{selectedBox1?
+									<video
+										onMouseOver={() => vidRef.current.play()}
+										onMouseOut={() => vidRef.current.pause()}
+										className="top-li"
+										ref={vidRef}
+										src={video1}
+										muted={soundOff?true:false}
+										type="video/mp4">
+									</video>
+									:
+									<img className="top-li" src={image1} alt="" />
+								}
+							</Link>
+						</li>
+						<li className="image-box"
+							onMouseEnter={()=>{changeTitle("Social Media");setSelectedBox2(true)}}
+							onMouseLeave={()=>{changeTitle('Services');setSelectedBox2(false)}}
+						>
+							<Link to="/socialMedia" >
+								{selectedBox2?
+									<video
+										onMouseOver={() => vidRef2.current.play()}
+										onMouseOut={() => vidRef2.current.pause()}
+										className="down-li"
+										ref={vidRef2}
+										src={video2}
+										muted={soundOff?true:false}
+										type="video/mp4">
+									</video>
+									:
+									<img className="down-li" src={image2} alt="" />
+								}
+							</Link>
+						</li>
+						<li className="image-box"
+							onMouseEnter={()=>{changeTitle("Graphics");setSelectedBox3(true)}}
+							onMouseLeave={()=>{changeTitle('Services');setSelectedBox3(false)}}
+						>
+							<Link to="/graphicsDesign" >
+								{selectedBox3?
+									<video
+										onMouseOver={() => vidRef3.current.play()}
+										onMouseOut={() => vidRef3.current.pause()}
+										className="top-li"
+										ref={vidRef3} 
+										src={video3} 
+										muted={soundOff?true:false}
+										type="video/mp4">
+									</video>
+									:
+									<img className="top-li" src={image3} alt="" />
+								}
+							</Link>
+						</li>
+						<li className="image-box"
+							onMouseEnter={()=>{changeTitle("Training");setSelectedBox4(true)}}
+							onMouseLeave={()=>{changeTitle('Services');setSelectedBox4(false)}}
+						>
+							<Link to="/training" >
+								{selectedBox4?
+									<video
+										onMouseOver={() => vidRef4.current.play()}
+										onMouseOut={() => vidRef4.current.pause()}
+										className="down-li"
+										ref={vidRef4}
+										src={video4}
+										muted={soundOff?true:false}
+										type="video/mp4">
+									</video>
+									:
+									<img className="down-li" src={image4} alt="" />
+								}
+							</Link>
+						</li>
+					</ul>
+					<div className="title-slide-col div-title">
+						<div className="title-scroller">
+							<div className="title-inner">
+								<p className="home-box-title">{title}</p>
+							</div>
+						</div>
+					</div>
+				</div>
 			</div>
 			<div className="sound" onClick={handleSound}
 				onMouseEnter={()=>setDrow(true)}

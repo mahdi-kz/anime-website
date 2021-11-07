@@ -18,14 +18,14 @@ function MembersModal(props){
                 isOpen={props.isShow}
                 animation={true}
             >
-                <div className="team-modal-container">
+                <div className="team-modal-container" style={{height:window.innerHeight}}>
                     <div 
                         className="team-close-modal" 
                         onClick={closeTeamModal}
                         onMouseEnter={()=>setSelectedClose(true)} 
                         onMouseLeave={()=>setSelectedClose(false)}
                     >
-                        <i class="fas fa-times fa-sm"></i>
+                        <i class="fas fa-times fa-sm" style={{fontSize:"small"}}></i>
                     </div>
                     { selectedClose &&
                         <svg className="modal-close-svg" xmlns="http://www.w3.org/2000/svg" >
@@ -42,7 +42,7 @@ function MembersModal(props){
                         <Container fluid className="team-modal-box">
                             <Row className='modal-teams-row'>
                                 <Col className="team-modal-picture">
-                                    <img alt="grei" style={{height: window.innerHeight}} src={props.info.image}  />
+                                    <img alt="grei's team" style={{height: window.innerHeight}} src={props.info.popImg}  />
                                 </Col>
                                 <Col className="team-modal-descrition-box">
                                     <p className="team-modal-name">{props.info.name}</p>

@@ -4,7 +4,7 @@ import Navbar from '../../components/Navbar';
 import MembersModal from '../../components/MembersModal';
 import GreiVideo from '../../components/GreiVideo.js';
 import video1 from '../../videos/big.mp4';
-import video3 from '../../videos/center-video.webm'
+import video3 from '../../videos/center-video.mp4'
 import image1 from '../../images/test/course2.png';
 import image2 from '../../images/test/course1.png';
 import servicesBg from '../../images/background/services-bg.webp'
@@ -148,42 +148,50 @@ export default function Products(props){
 			{
                 description:"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
                 name:"julia robinson",
-                image:image1
+                image:image1,
+				popImg:image1
             },
             {
                 description:"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
                 name:"robert de niro",
-                image:image2
+                image:image2,
+				popImg:image2
             },
             {
                 description:"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
                 name:"julia robinson",
-                image:image1
+                image:image1,
+				popImg:image1
             },
             {
                 description:"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
                 name:"robert de niro",
-                image:image2
+                image:image2,
+				popImg:image2
             },
             {
                 description:"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
                 name:"julia robinson",
-                image:image1
+                image:image1,
+				popImg:image1
             },
             {
                 description:"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
                 name:"robert de niro",
-                image:image2
+                image:image2,
+				popImg:image2
             },
             {
                 description:"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
                 name:"julia robinson",
-                image:image1
+                image:image1,
+				popImg:image1
             },
 			{
                 description:"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
                 name:"robert de niro",
-                image:image2
+                image:image2,
+				popImg:image2
             }
 		])
 	}
@@ -247,7 +255,7 @@ export default function Products(props){
 					</div>
 					
 					<hr className="services-hr" />
-					<div className="services-title">Progect & Client</div>
+					<div className="services-section-title">Project & Client</div>
 					<div className="services-products-container">
 						<div className="services-products">
 							<Container fluid  align="center">
@@ -273,7 +281,7 @@ export default function Products(props){
 						<div className={pageNumber>1?"page-numbers":"hide"}> {createPages()} </div>
 					</div>
 					<hr className="services-hr" />
-					<div className="services-title">Production's Team</div> 
+					<div className="services-section-title services-team-title">Production's Team</div> 
 					<div className="div-center">
 						<Container fluid >
 							<Row>
