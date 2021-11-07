@@ -4,7 +4,7 @@ import Navbar from '../../components/Navbar';
 import MembersModal from '../../components/MembersModal';
 import GreiVideo from '../../components/GreiVideo.js';
 import video1 from '../../videos/big.mp4';
-import video3 from '../../videos/center-video.webm'
+import video3 from '../../videos/center-video.mp4'
 import image1 from '../../images/test/people2.jpg';
 import image2 from '../../images/test/people1.png';
 import gif1 from '../../images/teams/002-Fast.gif';
@@ -256,7 +256,7 @@ export default function Products(props){
 					</div>
 					
 					<hr className="services-hr" />
-					<div className="services-title">Progect & Client</div>
+					<div className="services-section-title">Project & Client</div>
 					<div className="services-products-container">
 						<div className="services-products">
 							<Container fluid  align="center">
@@ -282,7 +282,7 @@ export default function Products(props){
 						<div className={pageNumber>1?"page-numbers":"hide"}> {createPages()} </div>
 					</div>
 					<hr className="services-hr" />
-					<div className="services-title">Production's Team</div> 
+					<div className="services-section-title services-team-title">Production's Team</div> 
 					<div className="div-center">
 						<Container fluid >
 							<Row>

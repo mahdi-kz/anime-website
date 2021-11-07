@@ -21,8 +21,7 @@
   padding: 0;
   list-style-type: none;
   text-align:center;
-  -webkit-overflow-scrolling: touch;
-  height: calc(100vh - 150px);
+  /* height: calc(100vh - 150px); */
   overflow-x: scroll;
   overflow-y: hidden;
   cursor: move;
@@ -34,6 +33,7 @@
   visibility: visible;
   scroll-behavior: smooth;
   white-space:nowrap;
+  -webkit-overflow-scrolling: touch;
 }
 .home-box > li {
   margin-right: 10px;
@@ -42,21 +42,30 @@
   overflow: hidden;
   display: inline-block;
 }    
-.title{
-  font-family: LisztFYRegular,Georgia,Times New Roman,Times,serif;;
-  text-align: center;
-  margin: 0;
-  padding: 0;
-  font-size: 29px;
-}
-
 .image-box{
   width: 150px;
 }
 .image-box:hover{
   width: 220px;
   padding-left: 0px;
-  transition: width 1s, height 2s, background-color 2s, transform 2s;
+  /* transition: width 1s, height 2s, background-color 2s, transform 2s; */
+  /* animation: 4s normal running scroll;  */
+}
+.title-slide-col {
+  overflow: hidden;
+  display: block;
+  white-space: nowrap;
+}
+.title-slide-col p { margin: 0px !important; }
+.title-scroller {
+  height: 30pt;
+  overflow: hidden;
+}
+.title-scroller .title-inner { animation: 1s normal running titleScroll; }
+@keyframes titleScroll {
+  100%   {margin-top: 5px;}
+  50%  {margin-top: -30pt;}
+  0% {margin-top: -30pt;}
 }
 .sound{
   position: fixed;
@@ -77,6 +86,15 @@
 }
 .div-title{
   text-align: center;
+  margin-top: -25px;
+}
+.home-box-title{
+  width: 100%;
+  font-family: LisztFYRegular,Georgia,Times New Roman,Times,serif;;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  font-size: 29px;
 }
 .svg{
   pointer-events: none;
@@ -110,12 +128,13 @@
   padding-left: 0px;
 }
 
+
 @media (max-width: 375px){
   .home-container{
     margin-top:20%;
     margin-bottom: -25px;
   }
-  .title{
+  .home-box-title{
     font-size: 16px !important;
   }
   .div-title {
@@ -128,7 +147,7 @@
     margin-top:6% !important;
     margin-bottom: -15px;
   }
-  .title{
+  .home-box-title{
     font-size: 20px !important;
   }
   
@@ -142,7 +161,7 @@
   .home-container>ul{
     width: 80% !important;
   }
-  .title{
+  .home-box-title{
     font-size: 25px !important;
   }
 }

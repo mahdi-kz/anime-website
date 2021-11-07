@@ -5,13 +5,17 @@
     justify-content: center;
     margin-top: 20px;
 }
+#top-video{
+    margin-top: 3%;
+}
 .services-box{
     text-align: center;
     width: 95%;
 }
 .services-header{
     text-align: center;
-    margin-top: 10%;
+    margin-top: 9%;
+    margin-bottom: 2%;
 }
 .services-products > div:first-child {
     width: 81%;
@@ -52,11 +56,14 @@
 }
 .services-hr{
     width: 90%;
-    margin-bottom: 2%;
+    margin-bottom: 4%;
+}
+.services-team-title{
+    margin-bottom: 4%;
 }
 .services-pro-name{
     font-size: 16px;
-    font-family: LisztFYBlack,Georgia,Times New Roman,Times,serif;
+    font-family: LisztFYRegular,Georgia,Times New Roman,Times,serif;
     text-align: left;
     color: #444444;
     margin-left: 5px;
@@ -65,7 +72,7 @@
 .services-pro-date{
     font-size: 13px;
     color: gray;
-    font-family: LisztFYBlack,Georgia,Times New Roman,Times,serif;
+    font-family: LisztFYRegular,Georgia,Times New Roman,Times,serif;
     text-align: left;
     margin-left: 5px;
 }
@@ -136,13 +143,13 @@
     position: absolute;
     left: 85%;
     top: 45%;
-    z-index: 9;
+    /* z-index: 9; */
 }
 .arrow-right{
     position: absolute;
     right: 85%;
     top: 45%;
-    z-index: 9;
+    /* z-index: 9; */
 }
 .services-title{
     text-align: center;
@@ -150,7 +157,11 @@
     margin-top: 5px;
     color: gray;
 }
-
+.services-section-title{
+    text-align: center;
+    font-size: 22px;
+    color: gray;
+}
 .slideCol {
     overflow: hidden;
     display: block;
@@ -181,7 +192,8 @@
         font-size: 17px;
         margin-top: 53%;
     }
-    .services-title {
+    .services-title,
+    .services-section-title {
         font-size: 10px;
     }
     .services-title-top {
@@ -257,7 +269,8 @@
         font-size: 17px;
         margin-top: 53%;
     }
-    .services-title {
+    .services-title,
+    .services-section-title {
         font-size: 10px;
     }
     .services-title-top {
@@ -331,7 +344,8 @@
     .services-hr{
         width: 100%;
     }
-    .services-title {
+    .services-title,
+    .services-section-title {
         font-size: 14px;
     }
     .services-title-top {
@@ -398,7 +412,8 @@
     .services-hr{
         width: 100%;
     }
-    .services-title {
+    .services-title,
+    .services-section-title {
         font-size: 14px;
     }
     .services-title-top {
@@ -466,7 +481,8 @@
     .services-hr{
         width: 100%;
     }
-    .services-title {
+    .services-title,
+    .services-section-title {
         font-size: 14px;
     }
     .services-title-top {

@@ -6,6 +6,7 @@ function Course(props){
 	return(
         <div 
             className="course-container"
+            onClick={()=>props.openTeamModal(props.info)}
             style={props.style?props.style:{}}
         >
             <img

@@ -13,12 +13,13 @@ function Employee(props){
 		    onMouseLeave={()=>{setIsHover(false)}}
             
         >
-            <img 
-                style={props.imageStyle?props.imageStyle:{}}
-                className={props.className?`employe-image ${props.className}`:"employee-image"}
-                src={isHover?props.info.gif:props.info.image}
-            />
-               
+            <div style={{padding:10}}>
+                <img 
+                    style={props.imageStyle?props.imageStyle:{}}
+                    className={props.className?`employe-image ${props.className}`:"employee-image"}
+                    src={isHover?props.info.gif:props.info.image}
+                />
+            </div>
             <div 
                 style={props.divInfoStyle?props.divInfoStyle:{}}
                 className={props.infoClassName?`employee-info ${props.infoClassName}`:"employee-info"}>
