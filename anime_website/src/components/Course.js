@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './Course.css'
 
 function Course(props){
@@ -10,6 +10,7 @@ function Course(props){
             style={props.style?props.style:{}}
         >
             <img
+                alt="course"
                 style={props.imageStyle?props.imageStyle:{}}
                 className={props.className}
                 src={props.info.image}

@@ -56,6 +56,10 @@ export default function Products(props){
 				behavior: 'smooth'
 			})
 		});
+
+		// setTimeout(()=>{
+
+		// },2000)
 	}, [videoSize])
 
 	const updateSize = ()=>{
@@ -327,7 +331,7 @@ export default function Products(props){
 										style={{
 											paddingTop:'20px',
     										paddingBottom:'5px',
-											paddingRight:index==videos.length-1?'0px !important':'25px'}} 
+											paddingRight:index===videos.length-1?'0px !important':'25px'}} 
 										url={obj.videoUrl} 
 										autoPlay={false}
 										with={videoSize} 

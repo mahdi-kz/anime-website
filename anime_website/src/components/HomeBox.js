@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from 'react';
+import React, { useState, useRef } from 'react';
 import './HomeBox.css'
 import { Link } from 'react-router-dom';
 import image1 from '../images/home/1.webp';
