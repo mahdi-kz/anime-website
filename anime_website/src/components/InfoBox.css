@@ -9,3 +9,15 @@
 .info-descrition{
     text-align: left;
 }
+.about-us-name{
+    font-size: 32px;
+}
+.about-us-title{
+    font-size: 32px;
+    font-family: LisztFYRegular,Georgia,Times,serif;
+    color: gray;
+}
+.about-us-description{
+    font-size: 24px;
+    font-family: LisztFYRegular,Georgia,Times,serif;
+}

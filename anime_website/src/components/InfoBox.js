@@ -1,34 +1,49 @@
 import React, { useEffect} from 'react';
 import './InfoBox.css'
 import { Container, Row, Col } from 'react-grid-system';
+import Aos from "aos";
+import "aos/dist/aos.css"
 
 
 function InfoBox(props){
     
     useEffect(()=>{
-        getData()
+        Aos.init({duration:2000})
     },[])
-
-    const getData = ()=>{
-    }
 
 	return(
 		<>
             <div className="info-container">
                 <Container fluid className="info-box">
-                    <Row className='info-row'>
+                    <Row className='info-row' >
                         {props.imageStatus==="left" &&
-                            <Col className="info-picture">
-                                <img alt="grei" style={{height: window.innerHeight}} src={props.info.image}  />
+                            <Col 
+                                data-aos={props.imageStatus==="left"?"fade-right":"fade-left"} 
+                                className="info-picture" 
+                                xs={6} sm={6} md={6} xl={6}
+                                data-aos-once="true"
+                            >
+                                <img alt="grei" src={props.info.image}  />
                             </Col>
                         }
-                        <Col className="info-descrition">
-                            <p cla>{props.info.title}</p>
-                            <span>{props.info.description}</span>
+                        <Col 
+                            xs={6} sm={6} md={6} xl={6}
+                            className="info-descrition" 
+                            data-aos={props.imageStatus==="right"?"fade-right":"fade-left"}
+                            data-aos-once="true"
+                        >
+                            <p className="about-us-name">{props.info.section_name}</p>
+                            <p className="about-us-title">{props.info.title}</p>
+                            <span className="about-us-description">{props.info.description}</span>
                         </Col>
                         {props.imageStatus==="right" &&
-                            <Col className="info-picture">
-                                <img alt="grei" style={{height: window.innerHeight}} src={props.info.image}  />
+                            <Col 
+                                data-aos={props.imageStatus==="left"?"fade-right":"fade-left"} 
+                                data-aos-once="true"
+                                className="info-picture" 
+                                xs={6} sm={6} md={6} xl={6}
+                            >
+                                <img alt="grei" src={props.info.image}  />
                             </Col>
                         }
                     </Row>
