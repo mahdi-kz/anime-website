@@ -1,4 +1,4 @@
-import React, { useRef, useState} from 'react';
+import React, { useEffect, useRef, useState} from 'react';
 import './GreiVideo.css'
 import screenfull from 'screenfull'
 import ReactPlayer from 'react-player'
@@ -8,6 +8,10 @@ function GreiVideo(props){
     const [hasLight, setHasLight] = useState(props.light?true:false)
 
     const playerRef = useRef();
+
+    useEffect(()=>{
+        console.log(props.url);
+    })
 
     const setPlauVideo = (val)=>{
         if(props.playWithHover) {
