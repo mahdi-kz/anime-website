@@ -15,6 +15,7 @@ function Employee(props){
         >
             <div style={{padding:10}}>
                 <img 
+                    alt="employee"
                     style={props.imageStyle?props.imageStyle:{}}
                     className={props.className?`employe-image ${props.className}`:"employee-image"}
                     src={isHover?props.info.gif:props.info.image}

@@ -22,7 +22,7 @@ export default function Products(props){
 	const [pageNumber, setPageNumber] = useState(1);
 	const [currentPage, setCurrentPage] = useState(1);
 	const [videoSize, setVideoSides] = useState("80%");
-	const [videoWidth, setVideoWidth] = useState(null)
+	// const [videoWidth, setVideoWidth] = useState(null)
 
 	useEffect(()=>{
 		updateSize()
@@ -50,10 +50,15 @@ export default function Products(props){
 	}, [])
 
 	const updateSize = ()=>{
-		const elWidth = document.querySelectorAll("#top-video .react-player")[0].offsetWidth; 
-		setVideoWidth(elWidth)
-		const videosWidth = parseInt(elWidth/5 -20);
-		setVideoSides(videosWidth)
+		try{
+			let elWidth = document.querySelectorAll("#top-video .react-player");
+			if(elWidth){
+				elWidth = elWidth[0].offsetWidth;
+				// setVideoWidth(elWidth)
+				const videosWidth = parseInt(elWidth/5 -20);
+				setVideoSides(videosWidth);
+			}
+		}catch{}
 	}
 
 	const getProducts = ()=>{

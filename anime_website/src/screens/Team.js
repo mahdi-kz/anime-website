@@ -23,8 +23,8 @@ export default function Teams(){
 
 
     useEffect(()=>{
-        getTeamsInfo()
-        updateSize()
+        getTeamsInfo();
+        updateSize();
         window.addEventListener('resize', updateSize);
     }, [videoSize])
 

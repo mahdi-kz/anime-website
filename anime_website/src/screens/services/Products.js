@@ -17,7 +17,6 @@ import { Container, Row, Col } from 'react-grid-system';
 import Employee from '../../components/Employee';
 
 
-
 export default function Products(props){
 	const [videos, setVideos] = useState([]);
 	const [products, setProducts] = useState([]);
@@ -33,8 +32,8 @@ export default function Products(props){
 	const scrollToVideo = useRef();
 
 	useEffect(()=>{
-		updateSize()
-		setVideoUrl(video1)
+		updateSize();
+		setVideoUrl(video1);
 		getVideos();
 		getProducts();
 		getMembers();
@@ -56,6 +55,7 @@ export default function Products(props){
 				behavior: 'smooth'
 			})
 		});
+
 	}, [videoSize])
 
 	const updateSize = ()=>{
@@ -268,7 +268,7 @@ export default function Products(props){
 		return(
 			<div className="paging-box">
 				{Array.from(Array(pageNumber), (e, i) => {
-					return <div className={i+1===currentPage?"selected-page-number":"page-number"}
+					return <div className={i+1==currentPage?"selected-page-number":"page-number"}
 						style={{display: 'flex',  justifyContent:'center', alignItems:'center'}}
 						onClick={()=>setCurrentPage(i+1)}>
 						<span >{i+1}</span>
@@ -327,7 +327,7 @@ export default function Products(props){
 										style={{
 											paddingTop:'20px',
     										paddingBottom:'5px',
-											paddingRight:index==videos.length-1?'0px !important':'25px'}} 
+											paddingRight:index===videos.length-1?'0px !important':'25px'}} 
 										url={obj.videoUrl} 
 										autoPlay={false}
 										with={videoSize} 
@@ -416,7 +416,7 @@ export default function Products(props){
 					/>
 				</div>
 			</div>
+			<span>hiiii</span>
 		</>
 	)
-
 }

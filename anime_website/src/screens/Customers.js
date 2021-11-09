@@ -20,24 +20,182 @@ import image17 from '../images/clients/local_client/9.webp';
 import Navbar from '../components/Navbar';
 import './Customers.css';
 import { Container, Row, Col } from 'react-grid-system';
-
+import Aos from "aos";
+import "aos/dist/aos.css"
 
 
 export default function Awards(){
     const [internationalClints, setInternationalClints] = useState([]);
     const [localClints, setLocalClints] = useState([]);
-    const [hide, setHide] = useState(true);
 
     useEffect(()=>{
         getCustomers()
-        setTimeout(() => {
-            setHide(false)
-        }, 1000);
+        Aos.init({duration:2000})
     }, [])
 
     const getCustomers = ()=>{
         setInternationalClints([
            [{
+                name:"image1",
+                image:image1
+           },
+           {
+                name:"image2",
+                image:image2
+           },
+           {
+                name:"image3",
+                image:image3
+           },
+           {
+                name:"image4",
+                image:image4
+           },
+           {
+                name:"image5",
+                image:image5
+           },   
+           {
+                name:"image6",
+                image:image6
+           },
+           {
+                name:"  image7",
+                image:image7
+            },
+            {
+                name:"image8",
+                image:image8
+            },
+            {
+                name:"image1",
+                image:image1
+           },
+           {
+                name:"image2",
+                image:image2
+           },
+           {
+                name:"image3",
+                image:image3
+           },
+           {
+                name:"image4",
+                image:image4
+           },
+           {
+                name:"image5",
+                image:image5
+           },   
+           {
+                name:"image6",
+                image:image6
+           },
+           {
+                name:"  image7",
+                image:image7
+            },
+            {
+                name:"image8",
+                image:image8
+            },
+            {
+                name:"image1",
+                image:image1
+           },
+           {
+                name:"image2",
+                image:image2
+           },
+           {
+                name:"image3",
+                image:image3
+           },
+           {
+                name:"image4",
+                image:image4
+           },
+           {
+                name:"image5",
+                image:image5
+           },   
+           {
+                name:"image6",
+                image:image6
+           },
+           {
+                name:"  image7",
+                image:image7
+            },
+            {
+                name:"image8",
+                image:image8
+            },
+            {
+                name:"image1",
+                image:image1
+           },
+           {
+                name:"image2",
+                image:image2
+           },
+           {
+                name:"image3",
+                image:image3
+           },
+           {
+                name:"image4",
+                image:image4
+           },
+           {
+                name:"image5",
+                image:image5
+           },   
+           {
+                name:"image6",
+                image:image6
+           },
+           {
+                name:"  image7",
+                image:image7
+            },
+            {
+                name:"image8",
+                image:image8
+            },
+            {
+                name:"image1",
+                image:image1
+           },
+           {
+                name:"image2",
+                image:image2
+           },
+           {
+                name:"image3",
+                image:image3
+           },
+           {
+                name:"image4",
+                image:image4
+           },
+           {
+                name:"image5",
+                image:image5
+           },   
+           {
+                name:"image6",
+                image:image6
+           },
+           {
+                name:"  image7",
+                image:image7
+            },
+            {
+                name:"image8",
+                image:image8
+            },
+            {
                 name:"image1",
                 image:image1
            },
@@ -106,7 +264,133 @@ export default function Awards(){
              {
                  name:"image3",
                  image:image17
-             }]
+             },
+             {
+                name:"  image1",
+                image:image9
+            },
+            {
+                    name:"image2",
+                    image:image10
+            },
+            {
+                    name:"image3",
+                    image:image11
+            },
+            {
+                    name:"image4",
+                    image:image12
+            },
+            {
+                    name:"image5",
+                    image:image13
+            },   
+            {
+                    name:"image6",
+                    image:image14
+            },
+            {
+                name:"  image1",
+                image:image15
+            },
+            {
+                name:"image2",
+                image:image16
+            },
+            {
+                name:"image3",
+                image:image17
+            },{
+                name:"image6",
+                image:image14
+           },
+           {
+                name:"  image1",
+                image:image15
+            },
+            {
+                name:"image2",
+                image:image16
+            },
+            {
+                name:"image3",
+                image:image17
+            },
+            {
+               name:"  image1",
+               image:image9
+           },
+           {
+                   name:"image2",
+                   image:image10
+           },
+           {
+                   name:"image3",
+                   image:image11
+           },
+           {
+                   name:"image4",
+                   image:image12
+           },
+           {
+                   name:"image5",
+                   image:image13
+           },   
+           {
+                   name:"image6",
+                   image:image14
+           },
+           {
+               name:"  image1",
+               image:image15
+           },
+           {
+               name:"image2",
+               image:image16
+           },
+           {
+               name:"image3",
+               image:image17
+           },{
+                 name:"  image1",
+                 image:image9
+            },
+            {
+                 name:"image2",
+                 image:image10
+            },
+            {
+                 name:"image3",
+                 image:image11
+            },
+            {
+                 name:"image4",
+                 image:image12
+            },
+            {
+                 name:"image5",
+                 image:image13
+            },   
+            {
+                 name:"image6",
+                 image:image14
+            },
+            {
+                 name:"  image1",
+                 image:image15
+             },
+             {
+                 name:"image2",
+                 image:image16
+             },
+             {
+                 name:"image3",
+                 image:image17
+             },
+             {
+                name:"  image1",
+                image:image9
+            },]
          ])
     }
 
@@ -114,31 +398,40 @@ export default function Awards(){
 		<>
             <Navbar showLogo={true} />
             <div className="customer-container">
-                
                 <div className="customers-box">
+                    <div className="services-header">Who turned we geri?</div>
+					<div className="slideCol">
+						<div className="scroller">
+							<div className="inner services-title services-title-top">
+								<p>International Clients</p>
+							</div>
+						</div>
+					</div>
                     <div className="international-container">
-                        <p className="customers-title">Who turned we geri?</p>
-                        <p className="clients-title">International Clients</p>
                         <Container fluid className="customer-logo-box">
                             {internationalClints.map(obj=>
                                 <Row className='customer-row'>
                                     {obj.map(obj2=>{
                                         return (<Col xs={4} md={3} xl={2}>
-                                            <img className="customerLogo" alt="bmw" src={obj2.image} />                                    
+                                            <div data-aos="zoom-in" className="customer-logo" style={{width:"100%", marginBottom:20}}> 
+                                                <img className="customer-logo-img" alt="bmw" src={obj2.image} />   
+                                            </div>                                 
                                         </Col>)
                                     })}
                                 </Row>
                             )}
                         </Container>
                     </div>
-                    <div>
-                        <p className="clients-title">Local Clients</p>
+                    <div className="clients-title-box">
+                        <p data-aos="fade-down" className="clients-title">Local Clients</p>
                         <Container fluid className="customer-logo-box">
                             {localClints.map(obj=>
                                 <Row className='customer-row'>
                                     {obj.map(obj2=>{
                                         return (<Col xs={6} md={4} xl={2}>
-                                            <img className="customerLogo" alt="bmw" src={obj2.image} />                                    
+                                            <div data-aos="zoom-in" className="customer-logo" style={{width:"100%", marginBottom:20}}> 
+                                                <img className="customer-logo-img" alt="bmw" src={obj2.image} />   
+                                            </div>                                      
                                         </Col>)
                                     })}
                                 </Row>
