@@ -388,9 +388,10 @@ export default function Products(props){
                                                 info={obj} 
 												// style={{marginRight:index<members.length-1?'40px':'0px'}}
                                                 openTeamModal={openTeamModal}
-												divInfoStyle={{width:videoSize, marginRight:30, height:videoSize/3+10}}
+												divInfoStyle={{width:videoSize, height:videoSize/3+10}}
                                                 className="team-pictures"
-												imageStyle={{width:videoSize, height:videoSize+60, marginRight:30}}
+												infoClassName="team-info-size"
+												imageStyle={{width:videoSize, height:videoSize+60}}
                                                  />
                                         </Col>)
 									})}
@@ -416,7 +417,6 @@ export default function Products(props){
 					/>
 				</div>
 			</div>
-			<span>hiiii</span>
 		</>
 	)
 }

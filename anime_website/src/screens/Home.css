@@ -41,3 +41,15 @@
     cursor: pointer;
     margin-top: -10%;
 }
+
+.home-scroller {
+    height: 30pt;
+    overflow: hidden;
+}
+.home-scroller .home-inner { animation: 3s  infinite titleScroll; }
+@keyframes titleScroll {
+    0% {margin-top: 5pt;}
+    90%   {margin-top: 5px;}
+    50%  {margin-top: -30pt;}
+    0% {margin-top: -30pt;}
+}

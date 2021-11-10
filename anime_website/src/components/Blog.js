@@ -4,6 +4,8 @@ import blogImg from "../images/test/blog.webp";
 import blogVideo from "../videos/1.mp4";
 import InfiniteScroll from 'react-infinite-scroll-component';
 import config from "../configs/config";
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 
 function Blog(props){
@@ -11,6 +13,7 @@ function Blog(props){
     
     useEffect(()=>{
         getData()
+        Aos.init({duration:1000})
     },[])
 
     const getData = ()=>{
@@ -60,7 +63,7 @@ function Blog(props){
 
 	return(
 		<>
-            <div className="BlogContainer">
+            <div className="BlogContainer" data-aos="fade-right">
                 <div className="BlogSidebar">
                     <div class="BlogSidebar-close" onClick={props.changingBlogVisible}>
                         <i className="fa fa-times BlogSidebar-social-fa" />
