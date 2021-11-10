@@ -1,6 +1,10 @@
 .contact-us-containet{
     padding: 70px 150px;
 }
+.contact-box{
+    width: 100%;
+    max-width: none !important;
+}
 .contact-us-title{
     font-size: xx-large;
     font-weight: bold;
@@ -9,8 +13,11 @@
 .contact-us-description{
     font-size: larger;
     margin-bottom: 15px;
+    font-size: 2.5vw;
 }
 .contact-us-address{
+    font-size: 2vw;
+    font-family: LisztFYRegular,Georgia,Times,serif;
     padding: 10px 15px;
 }
 .contact-us-address>i{
@@ -30,6 +37,13 @@
     position: absolute;
     left: 68px;
     bottom: 7px;
+}
+.contact-img{
+    width: 100%;
+    position: absolute;
+    left: -5% !important;
+    top:-33% !important;
+    /* bottom: -40% !important; */
 }
 .instagramSvg{
     pointer-events: none;

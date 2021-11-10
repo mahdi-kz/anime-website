@@ -20,20 +20,22 @@ export default function Contact_Us(){
     return(
         <>
             <Navbar />
-            <div className="services-container" 
-				style={{
-					backgroundPosition: 'center',
-					backgroundSize: 'cover',
-					backgroundRepeat: 'no-repeat'
-				}}>
-				<div className="services-box">
+            <div className="services-container" style={{height:window.innerHeight}}>
+				<div className="contact-box">
 					<div className="services-header">How to become Grei</div>
                     <Container  className="contact-box">
                         <Row className='contact-row'>
-                            <Col xs={12} sm={12} md={6} xl={6}>
-                                <img alt="Grei's contact" src={image1} style={{width:'100%'}} />
+                            <Col 
+                                xs={12} sm={12} md={5} xl={5} 
+                                data-aos="fade-right"
+                                data-aos-once="true"
+                            >
+                                <img 
+                                    className="contact-img" 
+                                    alt="Grei's contact" 
+                                    src={image1} />
                             </Col>
-                            <Col xs={12} sm={12} md={6} xl={6}>
+                            <Col xs={12} sm={12} md={7} xl={7}>
                                 <div className="contact-us-description">
                                     <span>{config.description}</span>
                                 </div>

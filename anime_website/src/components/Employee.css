@@ -17,7 +17,7 @@
 }
 .employee-name{
     font-size: 1.5vw;
-    font-family: LisztFYRegular,Georgia,Times New Roman,Times,serif;
+    font-family: LisztFYRegular,Georgia,Times,serif;
     -webkit-transition: -webkit-transform 0.35s;
     transition: transform 0.35s;
     -webkit-transform: translate3d(0,200%,0);
