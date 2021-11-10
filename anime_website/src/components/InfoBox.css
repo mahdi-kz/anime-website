@@ -5,6 +5,7 @@
 }
 .info-picture{
     padding: 0 !important;
+    overflow: hidden;
 }
 .info-descrition{
     text-align: left;
