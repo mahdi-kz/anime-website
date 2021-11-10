@@ -31,6 +31,7 @@ function InfoBox(props){
                             className="info-descrition" 
                             data-aos={props.imageStatus==="right"?"fade-right":"fade-left"}
                             data-aos-once="true"
+                            style={props.imageStatus==="right"?{paddingRight:35}:{paddingLeft:35}}
                         >
                             <p className="about-us-name">{props.info.section_name}</p>
                             <p className="about-us-title">{props.info.title}</p>
