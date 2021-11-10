@@ -21,7 +21,6 @@ function GreiNavbar(props){
 	const showLogo = props.showLogo!==undefined?props.showLogo:true;
 
 	useEffect(()=>{
-		console.log(click);
 		updateSize()
 	}, [click])
 

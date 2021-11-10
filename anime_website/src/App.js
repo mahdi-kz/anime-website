@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import './App.css';
 import Home from './screens/Home';
 import {BrowserRouter as Router, Switch, Route} from 'react-router-dom'
@@ -15,47 +15,56 @@ import Admin from './admin/Admin'
 import './index.css';
 
 function App() {
-  return (
-    <>
-		<Router>
-			<Switch>
-				<Route path='/' exact >
-					<Home />
-				</Route>
-				<Route path='/customers' >
-					<Customers />
-				</Route>
-				<Route path='/products' >
-					<Products />
-				</Route>
-				<Route path='/graphicDesign' >
-					<GraphicsDesign />
-				</Route>
-				<Route path='/socialMedia' >
-					<SocialMedia />
-				</Route>
-				<Route path='/training' >
-					<Training />
-				</Route>
-				<Route path='/awards' >
-					<Awards />
-				</Route>
-				<Route path='/contact_us' >
-					<ContactUs />
-				</Route>
-				<Route path='/about_us' >
-					<AboutUs />
-				</Route>
-				<Route path='/team' >
-					<Teams />
-				</Route>
-				<Route path='/admin'>
-				    <Admin />
-				</Route>
-			</Switch>
-		</Router>
-	</>
-  );
+
+	useEffect(async()=>{
+		changeStorage();
+	}, [])
+
+	const changeStorage = async()=>{
+		Promise.all([localStorage.setItem('modal_status',"0")]);
+	}
+	
+  	return (
+		<>
+			<Router>
+				<Switch>
+					<Route path='/' exact >
+						<Home />
+					</Route>
+					<Route path='/customers' >
+						<Customers />
+					</Route>
+					<Route path='/products' >
+						<Products />
+					</Route>
+					<Route path='/graphicDesign' >
+						<GraphicsDesign />
+					</Route>
+					<Route path='/socialMedia' >
+						<SocialMedia />
+					</Route>
+					<Route path='/training' >
+						<Training />
+					</Route>
+					<Route path='/awards' >
+						<Awards />
+					</Route>
+					<Route path='/contact_us' >
+						<ContactUs />
+					</Route>
+					<Route path='/about_us' >
+						<AboutUs />
+					</Route>
+					<Route path='/team' >
+						<Teams />
+					</Route>
+					<Route path='/admin'>
+						<Admin />
+					</Route>
+				</Switch>
+			</Router>
+		</>
+  	);
 }
 
 export default App;
