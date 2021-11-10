@@ -400,13 +400,7 @@ export default function Awards(){
             <div className="customer-container">
                 <div className="customers-box">
                     <div className="services-header">Who turned we geri?</div>
-					<div className="slideCol">
-						<div className="scroller">
-							<div className="inner services-title services-title-top">
-								<p>International Clients</p>
-							</div>
-						</div>
-					</div>
+                    <div className="clients-title">International Clients</div>
                     <div className="international-container">
                         <Container fluid className="customer-logo-box">
                             {internationalClints.map(obj=>
@@ -423,7 +417,7 @@ export default function Awards(){
                         </Container>
                     </div>
                     <div className="clients-title-box">
-                        <p data-aos="fade-down" className="clients-title">Local Clients</p>
+                        <p className="clients-title">Local Clients</p>
                         <Container fluid className="customer-logo-box">
                             {localClints.map(obj=>
                                 <Row className='customer-row'>

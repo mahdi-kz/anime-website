@@ -63,7 +63,7 @@
 }
 .services-pro-name{
     font-size: 16px;
-    font-family: LisztFYRegular,Georgia,Times New Roman,Times,serif;
+    font-family: LisztFYRegular,Georgia,Times,serif;
     text-align: left;
     color: #444444;
     margin-left: 5px;
@@ -72,7 +72,7 @@
 .services-pro-date{
     font-size: 13px;
     color: gray;
-    font-family: LisztFYRegular,Georgia,Times New Roman,Times,serif;
+    font-family: LisztFYRegular,Georgia,Times,serif;
     text-align: left;
     margin-left: 5px;
 }
