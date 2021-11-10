@@ -38,6 +38,8 @@
 }
 .teams-row > div {
     padding: 0px !important;
+    display: flex !important;
+    justify-content: center !important;
 }
 .team-title{
     text-align: center;
