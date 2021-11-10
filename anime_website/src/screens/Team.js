@@ -211,6 +211,7 @@ export default function Teams(){
                                                 classWrapper="main-video-wrapper"
                                                 classPlayer="main-react-player"
                                                 style={{
+                                                    width:videoSize,
                                                     paddingTop:'20px',
                                                     paddingBottom:'5px',
                                                     // paddingRight:index==teams.length-1?'0px !important':'25px'
