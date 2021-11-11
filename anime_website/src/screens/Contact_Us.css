@@ -13,15 +13,20 @@
 .contact-us-description{
     font-size: larger;
     margin-bottom: 15px;
-    font-size: 2.5vw;
-}
-.contact-us-address{
     font-size: 2vw;
+}
+.contact-us-info{
+    font-size: 1.5vw;
     font-family: LisztFYRegular,Georgia,Times,serif;
     padding: 10px 15px;
+    cursor: pointer;
 }
-.contact-us-address>i{
+.contact-us-info:hover{
+    color: #50BCBA;
+}
+.contact-us-info>i{
     margin-right: 10px;
+    color: #50BCBA;
 }
 .contact-us-social-networks{
     padding: 20px 15px;
@@ -60,4 +65,7 @@
     position: absolute;
     left: 0px;
     bottom: 7px;
+}
+.contact-bottom-box{
+    margin-top: 3%;
 }
