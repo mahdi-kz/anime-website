@@ -1,15 +1,9 @@
 import React, { useEffect} from 'react';
 import './InfoBox.css'
 import { Container, Row, Col } from 'react-grid-system';
-import Aos from "aos";
-import "aos/dist/aos.css";
 
 
 function InfoBox(props){
-    
-    useEffect(()=>{
-        Aos.init({duration:2000})
-    },[])
 
 	return(
 		<>

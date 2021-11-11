@@ -13,11 +13,14 @@ import AboutUs from './screens/About_Us';
 import Teams from './screens/Team';
 import Admin from './admin/Admin'
 import './index.css';
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 function App() {
 
 	useEffect(async()=>{
 		changeStorage();
+		Aos.init({duration:2000})
 	}, [])
 
 	const changeStorage = async()=>{

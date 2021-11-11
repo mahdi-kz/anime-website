@@ -6,9 +6,7 @@ import { Container, Row, Col } from 'react-grid-system';
 import logo from '../images/logo/white-logo.svg';
 import handRightImage from '../images/modal/rightHand.webp';
 import handLeftImage from '../images/modal/leftHand.webp';
-import './Home.css'
-import Aos from "aos";
-import "aos/dist/aos.css"
+import './Home.css';
 
 
 export default function Home(props) {
@@ -17,7 +15,6 @@ export default function Home(props) {
 	useEffect(()=>{
 		const modal_status = localStorage.getItem('modal_status');
 		setShowFirstModal(parseInt(modal_status)?false:true);
-        Aos.init({duration:2000})
 		// setTimeout(()=>{
 		// 	let el = document.getElementsByClassName('title-inner');
 		// 	if(el){

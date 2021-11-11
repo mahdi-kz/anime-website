@@ -20,8 +20,6 @@ import image17 from '../images/clients/local_client/9.webp';
 import Navbar from '../components/Navbar';
 import './Customers.css';
 import { Container, Row, Col } from 'react-grid-system';
-import Aos from "aos";
-import "aos/dist/aos.css"
 
 
 export default function Awards(){
@@ -29,8 +27,7 @@ export default function Awards(){
     const [localClints, setLocalClints] = useState([]);
 
     useEffect(()=>{
-        getCustomers()
-        Aos.init({duration:2000})
+        getCustomers();
     }, [])
 
     const getCustomers = ()=>{

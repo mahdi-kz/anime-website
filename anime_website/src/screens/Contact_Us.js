@@ -1,28 +1,19 @@
-import React, {useState, useEffect} from 'react';
+import React from 'react';
 import './Contact_Us.css';
 import { Container, Row, Col } from 'react-grid-system';
 import config from "../configs/config";
 import Navbar from '../components/Navbar';
-import Aos from "aos";
-import "aos/dist/aos.css";
 import image1 from '../images/contact/contact.webp';
 import bgImage from '../images/contact/background.webp'
 
 export default function Contact_Us(){
-    const [twitterHover, setTwitterHover] = useState(false);
-    const [facebookHover, setFacebookHover] = useState(false);
-    const [instagramHover, setInstagramHover] = useState(false);
-
-    useEffect(()=>{
-        Aos.init({duration:2000})
-    },[])
 
     return(
         <>
             <Navbar />
             <div className="services-container" 
                 style={{
-                    height:window.innerHeight, 
+                    height:window.innerHeight-20,
                     backgroundImage:`url(${bgImage})`, 
                     backgroundPosition:'left ',
                     }}>
@@ -32,7 +23,7 @@ export default function Contact_Us(){
                         <Row className='contact-row'>
                             <Col 
                                 xs={12} sm={12} md={5} xl={5} 
-                                data-aos="fade-right"
+                                data-aos="fade-up-right"
                                 data-aos-once="true"
                             >
                                 <img 
@@ -40,7 +31,7 @@ export default function Contact_Us(){
                                     alt="Grei's contact" 
                                     src={image1} />
                             </Col>
-                            <Col xs={12} sm={12} md={7} xl={7}>
+                            <Col xs={12} sm={12} md={7} xl={7} style={{marginLeft:'-8.4vw'}}>
                                 <div className="contact-top-box">
                                     <div className="contact-us-description">
                                         <span>{config.description}</span>
