@@ -6,7 +6,7 @@ import Navbar from '../components/Navbar';
 import Aos from "aos";
 import "aos/dist/aos.css";
 import image1 from '../images/contact/contact.webp';
-
+import bgImage from '../images/contact/background.webp'
 
 export default function Contact_Us(){
     const [twitterHover, setTwitterHover] = useState(false);
@@ -20,8 +20,13 @@ export default function Contact_Us(){
     return(
         <>
             <Navbar />
-            <div className="services-container" style={{height:window.innerHeight}}>
-				<div className="contact-box">
+            <div className="services-container" 
+                style={{
+                    height:window.innerHeight, 
+                    backgroundImage:`url(${bgImage})`, 
+                    backgroundPosition:'left ',
+                    }}>
+				<div className="contact-box" style={{}}>
 					<div className="services-header">How to become Grei</div>
                     <Container  className="contact-box">
                         <Row className='contact-row'>
