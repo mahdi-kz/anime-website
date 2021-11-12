@@ -3,7 +3,7 @@ html{
 }
 body{
   color: #373737;
-  font-size: 36px;
+  font-size: 3vw;
   font-family: LisztFYBlack,Georgia,Times,serif;
   vertical-align: baseline;
   overflow-y: scroll;
@@ -30,6 +30,11 @@ body{
   left:35px;
   right:35px;
 }
+.header{
+  text-align: center;
+  margin-top: 6vw;
+  margin-bottom: 2%;
+}
 
 @keyframes drowCircle {
   to{
@@ -37,3 +42,7 @@ body{
     stroke-dasharray: 500  ;
   }
 }
+
+
+
+

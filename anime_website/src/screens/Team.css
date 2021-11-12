@@ -79,9 +79,9 @@
         width: 45px;
         height: 105px;
     }
-    .team-info-size{
+    /* .team-info-size{
         width: 45px !important;
-    }
+    } */
     /* .teams-row{
         width: 100%;
     }
@@ -111,9 +111,9 @@
         width: 61px;
         height: 121px;
     }
-    .team-info-size{
+    /* .team-info-size{
         width: 61px !important;
-    }
+    } */
 }
 @media (min-width:575px) and (max-width:720px) {
     .team-box {
@@ -137,9 +137,9 @@
         width: 100px;
         height: 160px;
     }
-    .team-info-size{
+    /* .team-info-size{
         width: 100px !important;
-    }
+    } */
     /* .teams-row{
         width: 100%;
     }

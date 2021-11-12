@@ -16,7 +16,7 @@
   opacity: 0.96;
 }
 .logo{
-  width: 80px;
+  width: 5vw;
 }
 .navbar-bell{
   position: fixed;
@@ -142,7 +142,7 @@
     display: table-cell;
 }
 .blog-icon{
-  width: 20px;
+  width: 1.75vw;
 }
 .upAndDown{
   animation: upAndDown 1s 1 alternate ;

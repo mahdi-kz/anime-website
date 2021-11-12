@@ -60,7 +60,7 @@ function Blog(props){
 
 	return(
 		<>
-            <div className="BlogContainer">
+            <div className="BlogContainer" data-aos="fade-right">
                 <div className="BlogSidebar">
                     <div class="BlogSidebar-close" onClick={props.changingBlogVisible}>
                         <i className="fa fa-times BlogSidebar-social-fa" />

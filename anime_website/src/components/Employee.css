@@ -7,17 +7,17 @@
     opacity: 0;
     background-color: #50BCBA;
     position:absolute;
-    bottom: 48px;
+    bottom: 34px;
     width: 100% !important;
-    line-height: 2px;
+    line-height: 0.2px;
     -webkit-transition: -webkit-transform 0.35s;
     transition: transform 0.35s;
     -webkit-transform: translate3d(0,100%,0);
     transform: translate3d(0,100%,0);
 }
 .employee-name{
-    font-size: 18px;
-    font-family: LisztFYRegular,Georgia,Times New Roman,Times,serif;
+    font-size: 1.5vw;
+    font-family: LisztFYRegular,Georgia,Times,serif;
     -webkit-transition: -webkit-transform 0.35s;
     transition: transform 0.35s;
     -webkit-transform: translate3d(0,200%,0);
@@ -28,7 +28,7 @@
     object-fit: cover;
 }
 .employee-job{
-    font-size: 13px;
+    font-size: 1.1vw;
     color: #444444;
     -webkit-transition: -webkit-transform 0.35s;
     transition: transform 0.35s;
@@ -56,28 +56,4 @@
     transition: transform 0.35s;
     -webkit-transform: translate3d(0,200%,0);
     transform: translate3d(0,200%,0);
-}
-@media (max-width:375px){
-    .employee-name{
-        font-size: 6px !important;
-    }
-    .employee-job{
-        font-size: 4px !important;
-    }
-}
-@media (min-width:375px) and (max-width:575px) {
-    .employee-name{
-        font-size: 8px !important;
-    }
-    .employee-job{
-        font-size: 6px !important;
-    }
-}
-@media (min-width:575px) and (max-width:725px) {
-    .employee-name{
-        font-size: 12px !important;
-    }
-    .employee-job{
-        font-size: 10px !important;
-    }
 }

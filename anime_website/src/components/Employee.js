@@ -13,7 +13,7 @@ function Employee(props){
 		    onMouseLeave={()=>{setIsHover(false)}}
             
         >
-            <div style={{padding:10}}>
+            <div>
                 <img 
                     alt="employee"
                     style={props.imageStyle?props.imageStyle:{}}
