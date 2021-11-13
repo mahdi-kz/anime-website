@@ -53,6 +53,31 @@
   /* transition: width 1s, height 2s, background-color 2s, transform 2s; */
   /* animation: 4s normal running scroll;  */
 }
+.first-image-box-show {animation: 0.2s normal running width;}
+@keyframes width {
+    100% {width: 150px}
+    0% {width: 0}
+}
+.second-image-box-show {animation: 0.4s normal running width;}
+@keyframes width {
+    100% {width: 150px}
+    50% {width: 0px}
+    0% {width: 0}
+}
+.third-image-box-show {animation: 0.6s normal running width;}
+@keyframes width {
+    100% {width: 150px}
+    67% {width: 0}
+    0% {width: 0}
+}
+.forth-image-box-show {animation: 0.8s normal running width;}
+@keyframes width {
+    100% {width: 150px}
+    75% {width: 0px}
+    0% {width: 0}
+}
+
+
 .title-slide-col {
   overflow: hidden;
   display: block;
