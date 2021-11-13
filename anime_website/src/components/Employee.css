@@ -25,7 +25,7 @@
     display: inline-block;
 }
 .employee-image{
-    object-fit: cover;
+    /*object-fit: cover;*/
 }
 .employee-job{
     font-size: 1.1vw;

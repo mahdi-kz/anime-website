@@ -19,7 +19,7 @@ export default function Teams(){
     const [personInfo, setPersonInfo] = useState([]);
     const [showTeamModal, setTeamShowModal] = useState(false);
     const [videoWidth, setVideoWidth] = useState(null)
-    const [videoSize, setVideoSides] = useState(null);
+    const [videoSize, setVideoSides] = useState("80%");
 
 
     useEffect(()=>{
@@ -210,19 +210,19 @@ export default function Teams(){
                                             <Employee 
                                                 classWrapper="main-video-wrapper"
                                                 classPlayer="main-react-player"
+                                                info={obj}
+                                                openTeamModal={openTeamModal}
+                                                divInfoStyle={{width:videoSize, height:videoSize/3+10}}
+                                                className="team-pictures"
+                                                infoClassName="team-info-size"
+                                                imageStyle={{width:videoSize, height: videoSize+60}}
                                                 style={{
                                                     width:videoSize,
                                                     paddingTop:'20px',
                                                     paddingBottom:'5px',
+                                                    height: videoSize+80
                                                     // paddingRight:index==teams.length-1?'0px !important':'25px'
-                                                }} 
-                                                imageStyle={{   
-                                                    width:videoSize
-                                                }}
-                                                info={obj} 
-                                                openTeamModal={openTeamModal}
-                                                className="team-pictures"
-                                                infoClassName="team-info-size" />
+                                                }} />
                                         </Col>)
                                     })}
                                 </Row>
