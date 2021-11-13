@@ -7,7 +7,7 @@
     opacity: 0;
     background-color: #50BCBA;
     position:absolute;
-    bottom: 34px;
+    bottom: 0px;
     width: 100% !important;
     line-height: 0.2px;
     -webkit-transition: -webkit-transform 0.35s;
@@ -24,7 +24,7 @@
     transform: translate3d(0,200%,0);
     display: inline-block;
 }
-.employe-image{
+.employee-image{
     object-fit: cover;
 }
 .employee-job{
