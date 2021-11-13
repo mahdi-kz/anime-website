@@ -22,7 +22,7 @@
   list-style-type: none;
   text-align:center;
   /* height: calc(100vh - 150px); */
-  overflow-x: scroll;
+  overflow-x: hidden;
   overflow-y: hidden;
   cursor: move;
   width: 100%;
