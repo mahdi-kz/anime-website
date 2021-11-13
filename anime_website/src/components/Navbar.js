@@ -95,16 +95,16 @@ function GreiNavbar(props){
 									</div>
 									<div className={arrowUP?"services-subsection-items":"hide"} style={{marginTop:navHeight}}>
 										<div>
-											<Link to="/products" className='nav-link' onClick={closeModalMenu}>Products</Link>
+											<Link to="/products" className='nav-link' onClick={closeModalMenu}>Production</Link>
 										</div>
 										<div>
-											<Link to="/socialMedia" className='nav-link' onClick={closeModalMenu}>Social Media</Link>
+											<Link to="/socialMedia" className='nav-link' onClick={closeModalMenu}>Digital Media </Link>
 										</div>
 										<div>
-											<Link to="/graphicDesign" className='nav-link' onClick={closeModalMenu}>Graphic Design</Link>
+											<Link to="/graphicDesign" className='nav-link' onClick={closeModalMenu}>Graphic & Branding </Link>
 										</div>
 										<div>
-											<Link to="/training" className='nav-link' onClick={closeModalMenu}>Training</Link>
+											<Link to="/training" className='nav-link' onClick={closeModalMenu}>Training Services</Link>
 										</div>
 									</div>
 								</div>

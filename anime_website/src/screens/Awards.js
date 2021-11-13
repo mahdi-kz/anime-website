@@ -209,8 +209,8 @@ export default function Awards(){
 							</div>
 						</div>
 					</div>
-                    <Container fluid  align="center">
-                        <Row className='pro-teams-row' >
+                    <Container fluid  align="center" style={{width: '70%'}}>
+                        <Row className='awards-teams-row' >
                             <Col xs={6} sm={6} md={3} xl={3}>
                                 <div className="awards-icon-box">
                                     <img 

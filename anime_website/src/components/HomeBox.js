@@ -37,7 +37,7 @@ function HomeBox(){
 	return(
 		<>
 			<div className="home-container">
-				<div>
+				<div style={{margin:'auto'}}>
 					<ul className="home-box" >
 						<li className="image-box first-image-box-show"
 							onMouseEnter={()=>{changeTitle("Production");setSelectedBox1(true);}}
@@ -60,7 +60,7 @@ function HomeBox(){
 							</Link>
 						</li>
 						<li className="image-box second-image-box-show"
-							onMouseEnter={()=>{changeTitle("Social Media");setSelectedBox2(true)}}
+							onMouseEnter={()=>{changeTitle("Digital Media");setSelectedBox2(true)}}
 							onMouseLeave={()=>{changeTitle('Services');setSelectedBox2(false)}}
 						>
 							<Link to="/socialMedia" >
@@ -80,10 +80,10 @@ function HomeBox(){
 							</Link>
 						</li>
 						<li className="image-box third-image-box-show"
-							onMouseEnter={()=>{changeTitle("Graphics");setSelectedBox3(true)}}
+							onMouseEnter={()=>{changeTitle("Graphic & Branding");setSelectedBox3(true)}}
 							onMouseLeave={()=>{changeTitle('Services');setSelectedBox3(false)}}
 						>
-							<Link to="/graphicsDesign" >
+							<Link to="/graphicDesign" >
 								{selectedBox3?
 									<video
 										onMouseOver={() => vidRef3.current.play()}
@@ -100,7 +100,7 @@ function HomeBox(){
 							</Link>
 						</li>
 						<li className="image-box forth-image-box-show"
-							onMouseEnter={()=>{changeTitle("Training");setSelectedBox4(true)}}
+							onMouseEnter={()=>{changeTitle("Training Services");setSelectedBox4(true)}}
 							onMouseLeave={()=>{changeTitle('Services');setSelectedBox4(false)}}
 						>
 							<Link to="/training" >

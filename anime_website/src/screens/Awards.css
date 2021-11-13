@@ -116,7 +116,7 @@ th {
     content: "";
     z-index: -1;
     border-top: 1px solid #d8d5cc;
-    background: #e3e1db;
+    background: #D1D2D4;
 }
 .AwardsListModule table th {
     cursor: pointer;
@@ -200,6 +200,7 @@ th {
     opacity: .5;
     font-size: 1.2vw;
     line-height: 17px;
+    margin-top: 5px;
 }
 .AwardsListModule table td div span {
     min-height: 14px;
@@ -211,7 +212,7 @@ th {
     right: 0;
     bottom: 0;
     content: "";
-    border-top: 1px solid #d8d5cc;
+    border-top: 1px solid #c5c5c5;
 }
 .AwardsSvg{
     opacity: 1;
@@ -256,7 +257,7 @@ th {
     content: "";
     width: 0;
     height: 0;
-    border-color: #736c5e transparent transparent;
+    border-color: #373737 transparent transparent;
     border-style: solid;
     border-width: 4px 4px 0;
     -webkit-transition: -webkit-transform .2s;
@@ -307,7 +308,7 @@ th {
 
 }
 .awards-icon-name{
-    font-size: 1.7vw;
+    font-size: 1.4vw;
     font-family: LisztFYBlack,Georgia,Times,serif;
     text-align: center;
     color: #373737;
@@ -315,7 +316,7 @@ th {
     margin-top: 5px;
 }
 .awards-icon{
-    width: 5vw;
+    width: 4vw;
 }
 @media (min-width: 768px){
     .AwardsListModule {
@@ -331,4 +332,8 @@ th {
     .TextStyle-PageTitle>div {
         height: 66px;
     }
+}
+.awards-teams-row{
+    margin-top: 4vw;
+    margin-bottom: 3vw;
 }
