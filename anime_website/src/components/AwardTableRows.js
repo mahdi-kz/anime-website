@@ -10,6 +10,7 @@ export default function  AwardTableRows(props) {
             data-award={props.item.award}
             data-project={props.item.winner}
             data-status={props.item.status}
+            style={{fontFamily:  'LisztFYRegular,Georgia,Times,serif'}}
         >
             <td>
                 <div> <span>{props.item.yaer}</span> </div>
