@@ -172,7 +172,7 @@
     height: 30pt;
     overflow: hidden;
 }
-.scroller .inner { animation: 4s normal running scroll; }
+.scroller .inner { animation: 1s normal running scroll; }
 @keyframes scroll {
     100%   {margin-top: 5px;}
     50%  {margin-top: -30pt;}

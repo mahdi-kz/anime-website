@@ -235,11 +235,11 @@ export default function Products(props){
 					backgroundRepeat: 'no-repeat'
 				}}>
 				<div className="services-box">
-					<div className="services-header">Training</div>
+					<div className="services-header">Training Services</div>
 					<div className="slideCol">
 						<div className="scroller">
 							<div className="inner services-title services-title-top">
-								<p>Story tellers through simple frames</p>
+								<p>Building the talent of the future</p>
 							</div>
 						</div>
 					</div>

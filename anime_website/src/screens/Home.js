@@ -15,15 +15,6 @@ export default function Home(props) {
 	useEffect(()=>{
 		const modal_status = localStorage.getItem('modal_status');
 		setShowFirstModal(parseInt(modal_status)?false:true);
-		// setTimeout(()=>{
-		// 	let el = document.getElementsByClassName('title-inner');
-		// 	if(el){
-		// 		el = el[0];
-		// 		el.style.animation = 'none';
-		// 		const elH = el.offsetHeight; /* trigger reflow */
-		// 		el.style.animation = null;
-		// 	}
-		// }, 2000)
     },[])
 
 	const closFirstModal = ()=>{
@@ -45,33 +36,30 @@ export default function Home(props) {
 					isOpen={showFirstModal}
 					animation={true}
 				>
-					<div className="first-modal-container" style={{height:window.innerHeight}}>
+					<div 
+						className="first-modal-container" 
+						style={{height:window.innerHeight}}
+						onClick={()=>closFirstModal()}
+					>
 						<Container fluid className="first-modal-box">
 							<Row className='first-modal-row'>
 								<Col xs={4.5} sm={4.5} md={4.5} xl={4.5} className="first-modal-picture">
 									<img 
 										data-aos={"fade-right"}
 										alt="Grei's first page" 
-										src={handLeftImage}  
-										// style={{marginTop:window.innerHeight/2}}
+										src={handLeftImage}
 									/>
 								</Col>
 								<Col xs={3} sm={3} md={3} xl={3} className="first-modal-descrition-box">
 									<img alt="Grei's logo" src={logo} className='first-modal-logo'/>
 									<p className="first-modal-info">It's not all black and white</p>
-									<div className="title-slide-col div-title first-modal-btn" onClick={()=>closFirstModal()}>
+									<div className="title-slide-col div-title first-modal-btn">
 										<div className="home-scroller">
 											<div className="home-inner">
 												<p className="home-box-title" >Enter</p>
 											</div>
 										</div>
 									</div>
-									{/* <div data-aos="fade-down"
-										data-aos-duration="2000"
-										data-aos-mirror="true"
-										data-aos-once="false">
-										<p className="first-modal-btn" onClick={()=>closFirstModal()}>Enter</p>
-									</div> */}
 								</Col>
 								<Col xs={4.5} sm={4.5} md={4.5} xl={4.5} className="first-modal-picture">
 									<img 
