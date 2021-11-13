@@ -7,7 +7,7 @@ function Employee(props){
 	return(
         <div 
             className="employee-container"
-            style={props.style?props.style:{}}
+            style={props.imageStyle?props.imageStyle:{}}
             onClick={()=>props.openTeamModal(props.info)}
             onMouseEnter={()=>{setIsHover(true)}}
 		    onMouseLeave={()=>{setIsHover(false)}}
@@ -21,7 +21,7 @@ function Employee(props){
                     src={isHover?props.info.gif:props.info.image}
                 />
             </div>
-            <div 
+            <div
                 style={props.divInfoStyle?props.divInfoStyle:{}}
                 className={props.infoClassName?`employee-info ${props.infoClassName}`:"employee-info"}>
                 <p className="employee-name">{props.info.name}</p>
