@@ -39,7 +39,7 @@ function HomeBox(){
 			<div className="home-container">
 				<div style={{margin:'auto'}}>
 					<ul className="home-box" >
-						<li className="image-box"
+						<li className="image-box first-image-box-show"
 							onMouseEnter={()=>{changeTitle("Production");setSelectedBox1(true);}}
 							onMouseLeave={()=>{changeTitle('Services');setSelectedBox1(false);}}
 						>
@@ -59,7 +59,7 @@ function HomeBox(){
 								}
 							</Link>
 						</li>
-						<li className="image-box"
+						<li className="image-box second-image-box-show"
 							onMouseEnter={()=>{changeTitle("Digital Media");setSelectedBox2(true)}}
 							onMouseLeave={()=>{changeTitle('Services');setSelectedBox2(false)}}
 						>
@@ -79,7 +79,7 @@ function HomeBox(){
 								}
 							</Link>
 						</li>
-						<li className="image-box"
+						<li className="image-box third-image-box-show"
 							onMouseEnter={()=>{changeTitle("Graphic & Branding");setSelectedBox3(true)}}
 							onMouseLeave={()=>{changeTitle('Services');setSelectedBox3(false)}}
 						>
@@ -99,7 +99,7 @@ function HomeBox(){
 								}
 							</Link>
 						</li>
-						<li className="image-box"
+						<li className="image-box forth-image-box-show"
 							onMouseEnter={()=>{changeTitle("Training Services");setSelectedBox4(true)}}
 							onMouseLeave={()=>{changeTitle('Services');setSelectedBox4(false)}}
 						>
