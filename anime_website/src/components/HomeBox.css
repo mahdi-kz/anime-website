@@ -41,13 +41,15 @@
   margin-top: 20px;
   overflow: hidden;
   display: inline-block;
-}    
+}
 .image-box{
   width: 150px;
+  transition: width 1s;
 }
 .image-box:hover{
   width: 220px;
   padding-left: 0px;
+  transition: width 1s;
   /* transition: width 1s, height 2s, background-color 2s, transform 2s; */
   /* animation: 4s normal running scroll;  */
 }
