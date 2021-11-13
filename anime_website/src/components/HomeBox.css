@@ -27,7 +27,7 @@
   list-style-type: none;
   text-align:center;
   /* height: calc(100vh - 150px); */
-  overflow-x: scroll;
+  overflow-x: hidden;
   overflow-y: hidden;
   cursor: move;
   width: 100%;
@@ -46,13 +46,15 @@
   margin-top: 20px;
   overflow: hidden;
   display: inline-block;
-}    
+}
 .image-box{
   width: 150px;
+  transition: width 1s;
 }
 .image-box:hover{
   width: 220px;
   padding-left: 0px;
+  transition: width 1s;
   /* transition: width 1s, height 2s, background-color 2s, transform 2s; */
   /* animation: 4s normal running scroll;  */
 }

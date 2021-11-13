@@ -241,11 +241,11 @@ export default function Products(props){
 					backgroundRepeat: 'no-repeat'
 				}}>
 				<div className="services-box">
-					<div className="services-header">Social Media</div>
+					<div className="services-header">Digital Media</div>
 					<div className="slideCol">
 						<div className="scroller">
 							<div className="inner services-title services-title-top">
-								<p>Story tellers through simple frames</p>
+								<p>Digitalizing your brand</p>
 							</div>
 						</div>
 					</div>
