@@ -17,7 +17,8 @@ export default function Contact_Us(){
                     backgroundImage:`url(${bgImage})`, 
                     backgroundPosition:'left ',
                     height:'100%',
-                    backgroundRepeat: 'round'
+                    backgroundRepeat: 'round',
+                    backgroundSize:"cover"
                     }}>
 				<div className="contact-box" style={{}}>
 					<div className="services-header">How to become Grei</div>
