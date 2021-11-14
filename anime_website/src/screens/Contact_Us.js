@@ -13,9 +13,11 @@ export default function Contact_Us(){
             <Navbar />
             <div className="services-container" 
                 style={{
-                    height:window.innerHeight-20,
+                    // height:window.innerHeight-20,
                     backgroundImage:`url(${bgImage})`, 
                     backgroundPosition:'left ',
+                    height:'100%',
+                    backgroundRepeat: 'round'
                     }}>
 				<div className="contact-box" style={{}}>
 					<div className="services-header">How to become Grei</div>
