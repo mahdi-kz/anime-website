@@ -35,7 +35,6 @@ export default function Teams(){
                 elWidth = elWidth[0].offsetWidth;
                 setVideoWidth(elWidth)
                 const videosWidth = parseInt(elWidth/5 -15);
-                console.log(videoSize);
                 setVideoSides(videosWidth);
             }
         }catch{}
@@ -214,7 +213,7 @@ export default function Teams(){
                                                 openTeamModal={openTeamModal}
                                                 divInfoStyle={{width:videoSize, height:videoSize/3+10}}
                                                 className="team-pictures"
-                                                infoClassName="team-info-size"
+                                                infoClassName="team-info-box-size   "
                                                 imageStyle={{width:videoSize, height: videoSize+60}}
                                                 style={{
                                                     width:videoSize,
