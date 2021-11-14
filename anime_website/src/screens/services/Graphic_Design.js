@@ -35,7 +35,7 @@ export default function Products(props){
 		document.querySelector('.arrow-right').addEventListener('click', function () {
 			const el = document.getElementById("hscroll");
 			el.scroll({
-				left: el.scrollLeft+70,
+				left: el.scrollLeft+parseInt(videoSize+50),
 				top: 0,
 				behavior: 'smooth'
 			})
@@ -43,7 +43,7 @@ export default function Products(props){
 		document.querySelector('.arrow-left').addEventListener('click', function () {
 			const el = document.getElementById("hscroll");
 			el.scroll({
-				left: el.scrollLeft-70,
+				left: el.scrollLeft-parseInt(videoSize+50),
 				top: 0,
 				behavior: 'smooth'
 			})
@@ -288,7 +288,7 @@ export default function Products(props){
 						<div className={pageNumber>1?"page-numbers":"hide"}> {createPages()} </div>
 					</div>
 					<hr className="services-hr" />
-					<div className="services-section-title services-team-title">Production's Team</div> 
+					<div className="services-section-title services-team-title">Graphic's Team</div> 
 					<div className="div-center">
 						<Container fluid >
 							<Row>
