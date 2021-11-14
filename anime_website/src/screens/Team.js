@@ -213,13 +213,14 @@ export default function Teams(){
                                                 openTeamModal={openTeamModal}
                                                 divInfoStyle={{width:videoSize, height:videoSize/3+10}}
                                                 className="team-pictures"
-                                                infoClassName="team-info-box-size   "
+                                                // infoClassName="team-info-box-size   "
                                                 imageStyle={{width:videoSize, height: videoSize+60}}
                                                 style={{
                                                     width:videoSize,
                                                     paddingTop:'20px',
-                                                    paddingBottom:'5px',
-                                                    height: videoSize+80
+                                                    overflow: 'hidden',
+                                                    // paddingBottom:'5px',
+                                                    height: videoSize+60
                                                     // paddingRight:index==teams.length-1?'0px !important':'25px'
                                                 }} />
                                         </Col>)
