@@ -23,7 +23,7 @@ export default function Products(props){
 	const [pageNumber, setPageNumber] = useState(1);
 	const [currentPage, setCurrentPage] = useState(1);
 	const [videoSize, setVideoSides] = useState("80%");
-	// const [videoWidth, setVideoWidth] = useState(null)
+	const [hideNavbar, setHideNavbar] = useState(false);
 
 	useEffect(()=>{
 		updateSize()
@@ -231,7 +231,7 @@ export default function Products(props){
 
 	return(
 		<>
-			{!showTeamModal &&
+			{!showTeamModal && !hideNavbar &&
 				<Navbar showLogo={true} />
 			}
 			<div className="services-container" 
@@ -252,6 +252,9 @@ export default function Products(props){
 					</div>
 					<div id='top-video'>
 						<GreiVideo 
+							hideNavbar={()=>setHideNavbar(true)}
+							showNavbar={()=>setHideNavbar(false)}
+							hasFullscreen={true}
 							with="79%"
 							height="auto"
 							url={videoUrl} 
@@ -269,7 +272,7 @@ export default function Products(props){
 								<Row className='pro-teams-row' >
 									{products.map((obj)=>{return(<Col xs={4} sm={3} md={2.4} xl={2.4}>
 										<div>
-											<GreiVideo 
+											<GreiVideo
 												with={videoSize} 
 												height={videoSize}
 												classPlayer="pro-react-player"
