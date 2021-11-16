@@ -1,10 +1,14 @@
 import React from 'react';
 import {useDropzone} from 'react-dropzone';
+import {useState} from 'react'
 import './UploadHomeImageBox.css'
-import img1 from '../../images/home/1.webp'
+//import img1 from '../../images/home/1.webp'
+import {get_image_address, get_video_address} from '../call_api'
 
 
 function UploadHomeImageBox(props){
+    const [media, setMedia] = useState("");
+    const [reload, setReload] = useState(true);
     const {getRootProps, getInputProps, open, acceptedFiles} = useDropzone({
         // Disable click and keydown behavior
         noClick: true,
@@ -15,6 +19,12 @@ function UploadHomeImageBox(props){
     const filePath = acceptedFiles.map(file => (
         file.path
     ));
+
+    function get_media(){
+        props.file_type === "image" ?
+        get_image_address(props.file_key).then(url=>{setMedia(url)}):
+        get_video_address(props.file_key).then(url=>{setMedia(url)});
+    }
 
     function handleUploadImage(ev){
         ev.preventDefault();
@@ -30,17 +40,19 @@ function UploadHomeImageBox(props){
         })
         .then((response) => {
             response.json().then((body) => {
-                console.log(body.toString())
+                get_media();
+                setReload(!reload);
             });
         });
     }
 
+    get_media()
 
     return(
         <>
             <div>
                 <div className='HomeImageBox'>
-                    <img className='uploadImage' src={img1}/>
+                    <img className='uploadImage' src={media+"?"+Date.now()}/>
                     <div className='shadow'>
                         <div {...getRootProps({className: 'dropzone'})}>
                             <input {...getInputProps()} onChange={handleUploadImage}/>
