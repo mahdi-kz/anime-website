@@ -1,7 +1,7 @@
 import React, { useState, useRef, useEffect, setLoading, fetchDefibs} from 'react';
 import './HomeBox.css'
 import { Link } from 'react-router-dom';
-import image1 from '/static/images/home_production.png';
+import image1 from '../images/home/1.webp';
 import image2 from '../images/home/2.webp';
 import image3 from '../images/home/3.webp';
 import image4 from '../images/home/4.webp';
