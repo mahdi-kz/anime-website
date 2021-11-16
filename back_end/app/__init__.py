@@ -1,19 +1,14 @@
+from . import api, models
+from . import init
+
 from os import makedirs
 from flask import (
-    Flask,
-    render_template,
+     Flask,
+     jsonify,
 )
-from settings import Config
-
-from flask_sqlalchemy import SQLAlchemy
-from flask_migrate import Migrate
-from flask_login import LoginManager
-
-import time
-
-login = LoginManager()
-db = SQLAlchemy()
-migrate = Migrate()
+from .init import db, migrate, login
+from ..settings import Config
+from .api.image_api import bp as image_api_bp
 
 
 def create_app():
@@ -30,14 +25,18 @@ def create_app():
     migrate.init_app(app, db, )
     login.init_app(app, )
     # login.anonymous_user = authentication.models.AnonymousUser
-    # app.register_blueprint(authentication.bp)
+    app.register_blueprint(image_api_bp)
 
-    @app.route('/time')
-    def get_current_time():
-        return {'time': time.time()}
+    # @app.route('/time')
+    # def get_current_time():
+    #     return {'time': time.time()}
 
     @app.route("/", methods=["GET", ])
-    def index():
-        return render_template("base.html")
+    def test():
+        return jsonify(status=200, message={'msg': 'It Works', })
 
     return app
+
+
+app = create_app()
+db.create_all(app=app)

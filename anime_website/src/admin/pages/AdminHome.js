@@ -11,22 +11,22 @@ function AdminHome(){
                 <Row>
                     <div className='eachColumn'>
                         <span className='title'>Products</span>
-                        <UploadHomeImageBox title='Image'/>
+                        <UploadHomeImageBox title='Image' file_key='home_production' file_type='image'/>
                         <UploadHomeImageBox title='Video'/>
                     </div>
                     <div className='eachColumn'>
-                        <span className='title'>Social Media</span>
-                        <UploadHomeImageBox title='Image'/>
+                        <span className='title'>Digital Media</span>
+                        <UploadHomeImageBox title='Image'file_key='home_media' file_type='image'/>
                         <UploadHomeImageBox title='Video'/>
                     </div>
                     <div className='eachColumn'>
                         <span className='title'>Graphics</span>
-                        <UploadHomeImageBox title='Image'/>
+                        <UploadHomeImageBox title='Image' file_key='home_graphics' file_type='image'/>
                         <UploadHomeImageBox title='Video'/>
                     </div>
                     <div className='eachColumn'>
                         <span className='title'>Training</span>
-                        <UploadHomeImageBox title='Image'/>
+                        <UploadHomeImageBox title='Image' file_key='home_training' file_type='image'/>
                         <UploadHomeImageBox title='Video'/>
                     </div>
                 </Row>
