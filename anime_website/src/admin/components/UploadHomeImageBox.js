@@ -16,6 +16,26 @@ function UploadHomeImageBox(props){
         file.path
     ));
 
+    function handleUploadImage(ev){
+        ev.preventDefault();
+        let data = new FormData();
+        data.append('file', ev.target.files[0]);
+        data.append('file_type', props.file_type)
+        data.append('file_key', props.file_key);
+
+        fetch('/api/upload-image', {
+            method: 'POST',
+            headers: {"Accept": "application/json"},
+            body: data,
+        })
+        .then((response) => {
+            response.json().then((body) => {
+                console.log(body.toString())
+            });
+        });
+    }
+
+
     return(
         <>
             <div>
@@ -23,7 +43,7 @@ function UploadHomeImageBox(props){
                     <img className='uploadImage' src={img1}/>
                     <div className='shadow'>
                         <div {...getRootProps({className: 'dropzone'})}>
-                            <input {...getInputProps()} />
+                            <input {...getInputProps()} onChange={handleUploadImage}/>
                             <i class="fa fa-trash-o trashIcon" aria-hidden="true"></i>
                             <i class="fa fa-pencil-square-o editIcon" aria-hidden="true" onClick={open}></i>
                         </div>
