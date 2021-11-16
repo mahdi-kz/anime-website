@@ -1,10 +1,10 @@
 import React, { useState, useRef, useEffect, setLoading, fetchDefibs} from 'react';
 import './HomeBox.css'
 import { Link } from 'react-router-dom';
-import image1 from '../images/home/1.webp';
-import image2 from '../images/home/2.webp';
-import image3 from '../images/home/3.webp';
-import image4 from '../images/home/4.webp';
+//import image1 from '../images/home/1.webp';
+//import image2 from '../images/home/2.webp';
+//import image3 from '../images/home/3.webp';
+//import image4 from '../images/home/4.webp';
 import video1 from '../videos/1.mp4';
 import video2 from '../videos/2.mp4';
 import video3 from '../videos/3.mp4';
@@ -21,10 +21,10 @@ function HomeBox(){
 	const [selectedBox3, setSelectedBox3] = useState(false);
 	const [selectedBox4, setSelectedBox4] = useState(false);
 
-//	const [image1, setImage1] = useState(false)
-//	const [image2, setImage2] = useState(false)
-//	const [image3, setImage3] = useState(false)
-//	const [image4, setImage4] = useState(false)
+	const [image1, setImage1] = useState(false)
+	const [image2, setImage2] = useState(false)
+	const [image3, setImage3] = useState(false)
+	const [image4, setImage4] = useState(false)
 
 	const handleSound = ()=>setSoundOff(!soundOff);
 	const vidRef = useRef(null);
@@ -40,13 +40,13 @@ function HomeBox(){
 		setTitle(title);	
 	}
 
-//    function image_address(key, setFunc){
-//        get_image_address(key).then(url=>{setFunc(url)});
-//    }
-//    image_address("home_production", setImage1)
-//    image_address("home_media", setImage2)
-//    image_address("home_graphics", setImage3)
-//    image_address("home_training", setImage4)
+    function image_address(key, setFunc){
+        get_image_address(key).then(url=>{setFunc(url)});
+    }
+    image_address("home_production", setImage1)
+    image_address("home_media", setImage2)
+    image_address("home_graphics", setImage3)
+    image_address("home_training", setImage4)
 
 	return(
 		<>
