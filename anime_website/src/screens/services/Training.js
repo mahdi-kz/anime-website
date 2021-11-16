@@ -22,7 +22,7 @@ export default function Products(props){
 	const [pageNumber, setPageNumber] = useState(1);
 	const [currentPage, setCurrentPage] = useState(1);
 	const [videoSize, setVideoSides] = useState("80%");
-	// const [videoWidth, setVideoWidth] = useState(null);
+	const [hideNavbar, setHideNavbar] = useState(false);
 	const [arrowTop, setArrowTop] = useState(10)
 
 	useEffect(()=>{
@@ -54,8 +54,7 @@ export default function Products(props){
 		try{
 			let elWidth = document.querySelectorAll("#top-video .react-player"); 
 			if(elWidth){
-				elWidth = elWidth[0].offsetWidth
-				// setVideoWidth(elWidth)
+				elWidth = elWidth[0].offsetWidth;
 				const videosWidth = parseInt(elWidth/5 -20);
 				setVideoSides(videosWidth);
 				setArrowTop(videosWidth/3)
@@ -224,7 +223,7 @@ export default function Products(props){
 
 	return(
 		<>
-			{!showTeamModal &&
+			{!showTeamModal && !hideNavbar &&
 				<Navbar showLogo={true} />
 			}
 			<div className="services-container" 
@@ -245,6 +244,8 @@ export default function Products(props){
 					</div>
 					<div id='top-video'>
 						<GreiVideo 
+							hideNavbar={()=>setHideNavbar(true)}
+							showNavbar={()=>setHideNavbar(false)}
 							with="79%"
 							height="auto"
 							url={videoUrl} 
@@ -263,6 +264,8 @@ export default function Products(props){
 									{products.map((obj)=>{return(<Col xs={4} sm={3} md={2.4} xl={2.4}>
 										<div>
 											<GreiVideo 
+												hideNavbar={()=>setHideNavbar(true)}
+												showNavbar={()=>setHideNavbar(false)}
 												with={videoSize} 
 												height={videoSize}
 												classPlayer="pro-react-player"
