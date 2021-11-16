@@ -15,12 +15,11 @@ import Employee from '../components/Employee';
 
 export default function Teams(){
     const [teams, setTeams] = useState([]);
-    // const [fullscreen, setFullscreen] = useState(false)
     const [personInfo, setPersonInfo] = useState([]);
     const [showTeamModal, setTeamShowModal] = useState(false);
     const [videoWidth, setVideoWidth] = useState(null)
     const [videoSize, setVideoSides] = useState("80%");
-
+    const [hideNavbar, setHideNavbar] = useState(false);
 
     useEffect(()=>{
         getTeamsInfo();
@@ -180,7 +179,7 @@ export default function Teams(){
 
     return(
         <>
-            {!showTeamModal &&
+            {!showTeamModal && !hideNavbar &&
                 <Navbar showLogo={true}/>
             }
             <div className="team-container">
@@ -195,6 +194,9 @@ export default function Teams(){
 					</div>
                     <div id='top-video'>
                         <GreiVideo 
+                            hideNavbar={()=>setHideNavbar(true)}
+							showNavbar={()=>setHideNavbar(false)}
+                            hasFullscreen={true}
                             with='95%' 
                             height='auto'
                             url={video1} 

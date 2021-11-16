@@ -27,7 +27,8 @@ export default function Products(props){
 	const [pageNumber, setPageNumber] = useState(1);
 	const [currentPage, setCurrentPage] = useState(1);
 	const [videoSize, setVideoSides] = useState("80%");
-	const [videoWidth, setVideoWidth] = useState(null)
+	const [videoWidth, setVideoWidth] = useState(null);
+	const [hideNavbar, setHideNavbar] = useState(false);
 
 	const scrollToVideo = useRef();
 
@@ -288,7 +289,7 @@ export default function Products(props){
 
 	return(
 		<>
-			{!showTeamModal &&
+			{!showTeamModal && !hideNavbar &&
 				<Navbar showLogo={true} />
 			}
 			<div className="services-container" 
@@ -298,7 +299,7 @@ export default function Products(props){
 					backgroundSize: 'cover',
 					backgroundRepeat: 'no-repeat'
 				}}>
-				<div className="services-box" ref={scrollToVideo}>
+				<div className="services-box" >
 					<div className="services-header">Productions</div>
 					<div className="slideCol">
 						<div className="scroller">
@@ -307,8 +308,11 @@ export default function Products(props){
 							</div>
 						</div>
 					</div>
-					<div id='top-video' >
+					<div id='top-video' ref={scrollToVideo}>
 						<GreiVideo 
+							hideNavbar={()=>setHideNavbar(true)}
+							showNavbar={()=>setHideNavbar(false)}
+							hasFullscreen={true}
 							with="79%"
 							height="auto"
 							url={videoUrl} 
@@ -321,7 +325,7 @@ export default function Products(props){
 						<div className="services-videos" style={{width:videoWidth}}>
 							{videos.map((obj, index)=>{return(
 								<div onClick={()=>clickScrollbarVideos(obj.videoUrl)} >
-									<GreiVideo 
+									<GreiVideo
 										classWrapper="main-video-wrapper"
 										classPlayer="main-react-player"
 										style={{
@@ -349,6 +353,9 @@ export default function Products(props){
 									{products.map((obj)=>{return(<Col xs={4} sm={3} md={2.4} xl={2.4}>
 										<div>
 											<GreiVideo 
+												hideNavbar={()=>setHideNavbar(true)}
+												showNavbar={()=>setHideNavbar(false)}
+												hasFullscreen={true}
 												with={videoSize} 
 												height={videoSize}
 												classPlayer="pro-react-player"
