@@ -8,7 +8,7 @@ from flask import (
 )
 from .init import db, migrate, login
 from ..settings import Config
-from .api.image_api import bp as image_api_bp
+from .api.init import bp as api_bp
 
 
 def create_app():
@@ -25,7 +25,7 @@ def create_app():
     migrate.init_app(app, db, )
     login.init_app(app, )
     # login.anonymous_user = authentication.models.AnonymousUser
-    app.register_blueprint(image_api_bp)
+    app.register_blueprint(api_bp)
 
     # @app.route('/time')
     # def get_current_time():
