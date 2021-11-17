@@ -14,6 +14,7 @@ import {get_image_address, get_video_address} from '../admin/call_api'
 
 function HomeBox(){
 	const [drow, setDrow] = useState(false);
+	const [loading, setLoading] = useState(true);
 	const [soundOff, setSoundOff] = useState(false);
 	const [title, setTitle] = useState('Services');
 	const [selectedBox1, setSelectedBox1] = useState(false);
@@ -43,13 +44,17 @@ function HomeBox(){
     function image_address(key, setFunc){
         get_image_address(key).then(url=>{setFunc(url)});
     }
-    image_address("home_production", setImage1)
-    image_address("home_media", setImage2)
-    image_address("home_graphics", setImage3)
-    image_address("home_training", setImage4)
+    if (loading){
+        image_address("home_production", setImage1)
+        image_address("home_media", setImage2)
+        image_address("home_graphics", setImage3)
+        image_address("home_training", setImage4)
+        setLoading(false)
+    }
 
 	return(
 		<>
+		    {!loading &&
 			<div className="home-container">
 				<div style={{margin:'auto'}}>
 					<ul className="home-box" >
@@ -143,6 +148,7 @@ function HomeBox(){
 					</div>
 				</div>
 			</div>
+			}
 			<div className="sound" onClick={handleSound}
 				onMouseEnter={()=>setDrow(true)}
 				onMouseLeave={()=>setDrow(false)}
