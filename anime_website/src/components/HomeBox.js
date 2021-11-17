@@ -41,15 +41,19 @@ function HomeBox(){
 		setTitle(title);	
 	}
 
-    function image_address(key, setFunc){
+    async function image_address(key, setFunc){
         get_image_address(key).then(url=>{setFunc(url)});
     }
     if (loading){
-        image_address("home_production", setImage1)
-        image_address("home_media", setImage2)
-        image_address("home_graphics", setImage3)
-        image_address("home_training", setImage4)
-        setLoading(false)
+        image_address("home_production", setImage1).then(()=>{
+            image_address("home_media", setImage2).then(()=>{
+                image_address("home_graphics", setImage3).then(()=>{
+                    image_address("home_training", setImage4).then(()=>{
+                        setLoading(false);
+                    })
+                })
+            })
+        })
     }
 
 	return(
