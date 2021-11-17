@@ -49,7 +49,11 @@ function HomeBox(){
     async function image_address(key, setFunc){
         get_image_address(key).then(url=>{setFunc(url)});
     }
-    if (loading){
+    async function video_address(key, setFunc){
+        get_video_address(key).then(url=>{setFunc(url)});
+    }
+
+    useEffect(()=>{
         image_address("home_production", setImage1).then(()=>{
             image_address("home_media", setImage2).then(()=>{
                 image_address("home_graphics", setImage3).then(()=>{
@@ -59,15 +63,11 @@ function HomeBox(){
                 })
             })
         })
-    }
-
-    function video_address(key, setFunc){
-        get_video_address(key).then(url=>{setFunc(url)});
-    }
-    video_address("home_production", setVideo1)
-    video_address("home_media", setVideo2)
-    video_address("home_graphics", setVideo3)
-    video_address("home_training", setVideo4)
+        video_address("home_production", setVideo1)
+        video_address("home_media", setVideo2)
+        video_address("home_graphics", setVideo3)
+        video_address("home_training", setVideo4)
+    }, [])
 
 	return(
 		<>
