@@ -27,6 +27,11 @@ function HomeBox(){
 	const [image3, setImage3] = useState(false)
 	const [image4, setImage4] = useState(false)
 
+	const [video1, setVideo1] = useState(false)
+	const [video2, setVideo2] = useState(false)
+	const [video3, setVideo3] = useState(false)
+	const [video4, setVideo4] = useState(false)
+
 	const handleSound = ()=>setSoundOff(!soundOff);
 	const vidRef = useRef(null);
 	const vidRef2 = useRef(null);
@@ -55,6 +60,14 @@ function HomeBox(){
             })
         })
     }
+
+    function video_address(key, setFunc){
+        get_video_address(key).then(url=>{setFunc(url)});
+    }
+    video_address("home_production", setVideo1)
+    video_address("home_media", setVideo2)
+    video_address("home_graphics", setVideo3)
+    video_address("home_training", setVideo4)
 
 	return(
 		<>
