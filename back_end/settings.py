@@ -22,5 +22,7 @@ class Config:
     BASE_DIR = abspath(dirname(__file__))
     SQLALCHEMY_DATABASE_URI = 'postgresql://postgres:postgres@0.0.0.0:5432/anime'
     IMAGE_FOLDER_PATH_RELATIVE = 'static/images'
+    VIDEO_FOLDER_PATH_RELATIVE = 'static/videos'
     IMAGE_UPLOAD_FOLDER = join(BASE_DIR, 'app', IMAGE_FOLDER_PATH_RELATIVE)
+    VIDEO_UPLOAD_FOLDER = join(BASE_DIR, 'app', VIDEO_FOLDER_PATH_RELATIVE)
     IMAGE_ALLOWED_EXTENSIONS = set(['png', 'jpg', 'jpeg', 'gif'])
