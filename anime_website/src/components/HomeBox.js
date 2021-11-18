@@ -16,7 +16,7 @@ function HomeBox(){
 	const [drow, setDrow] = useState(false);
 	const [loading, setLoading] = useState(true);
 	const [soundOff, setSoundOff] = useState(false);
-	const [title, setTitle] = useState('Services');
+	const [title, setTitle] = useState('SERVICES');
 	const [selectedBox1, setSelectedBox1] = useState(false);
 	const [selectedBox2, setSelectedBox2] = useState(false);
 	const [selectedBox3, setSelectedBox3] = useState(false);
@@ -76,8 +76,8 @@ function HomeBox(){
 				<div style={{margin:'auto'}}>
 					<ul className="home-box" >
 						<li className="image-box first-image-box-show"
-							onMouseEnter={()=>{changeTitle("Production");setSelectedBox1(true);}}
-							onMouseLeave={()=>{changeTitle('Services');setSelectedBox1(false);}}
+							onMouseEnter={()=>{changeTitle("PRODUCTION");setSelectedBox1(true);}}
+							onMouseLeave={()=>{changeTitle('SERVICES');setSelectedBox1(false);}}
 						>
 							<Link to="/products" >
 								{selectedBox1?
@@ -96,8 +96,8 @@ function HomeBox(){
 							</Link>
 						</li>
 						<li className="image-box second-image-box-show"
-							onMouseEnter={()=>{changeTitle("Digital Media");setSelectedBox2(true)}}
-							onMouseLeave={()=>{changeTitle('Services');setSelectedBox2(false)}}
+							onMouseEnter={()=>{changeTitle("DIGITAL MEDIA");setSelectedBox2(true)}}
+							onMouseLeave={()=>{changeTitle('SERVICES');setSelectedBox2(false)}}
 						>
 							<Link to="/socialMedia" >
 								{selectedBox2?
@@ -116,8 +116,8 @@ function HomeBox(){
 							</Link>
 						</li>
 						<li className="image-box third-image-box-show"
-							onMouseEnter={()=>{changeTitle("Graphic & Branding");setSelectedBox3(true)}}
-							onMouseLeave={()=>{changeTitle('Services');setSelectedBox3(false)}}
+							onMouseEnter={()=>{changeTitle("GRAPHIC & BRANDING");setSelectedBox3(true)}}
+							onMouseLeave={()=>{changeTitle('SERVICES');setSelectedBox3(false)}}
 						>
 							<Link to="/graphicDesign" >
 								{selectedBox3?
@@ -136,8 +136,8 @@ function HomeBox(){
 							</Link>
 						</li>
 						<li className="image-box forth-image-box-show"
-							onMouseEnter={()=>{changeTitle("Training Services");setSelectedBox4(true)}}
-							onMouseLeave={()=>{changeTitle('Services');setSelectedBox4(false)}}
+							onMouseEnter={()=>{changeTitle("TRAINING SERVICES");setSelectedBox4(true)}}
+							onMouseLeave={()=>{changeTitle('SERVICES');setSelectedBox4(false)}}
 						>
 							<Link to="/training" >
 								{selectedBox4?
