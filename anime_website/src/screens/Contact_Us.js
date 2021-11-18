@@ -13,7 +13,6 @@ export default function Contact_Us(){
             <Navbar />
             <div className="services-container" 
                 style={{
-                    // height:window.innerHeight-20,
                     backgroundImage:`url(${bgImage})`, 
                     backgroundPosition:'left ',
                     height:'100%',
@@ -21,7 +20,7 @@ export default function Contact_Us(){
                     backgroundSize:"cover"
                     }}>
 				<div className="contact-box" style={{}}>
-					<div className="services-header">How to become Grei</div>
+					<div className="services-header">How to become grei?</div>
                     <Container  className="contact-box">
                         <Row className='contact-row'>
                             <Col 
@@ -31,7 +30,7 @@ export default function Contact_Us(){
                             >
                                 <img 
                                     className="contact-img" 
-                                    alt="Grei's contact" 
+                                    alt="grei's contact" 
                                     src={image1} />
                             </Col>
                             <Col xs={12} sm={12} md={7} xl={7} style={{marginLeft:'-8.4vw'}}>

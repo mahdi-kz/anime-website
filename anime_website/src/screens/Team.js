@@ -184,7 +184,7 @@ export default function Teams(){
             }
             <div className="team-container">
                 <div className="team-box">
-                    <div className="team-header">Grei's Team</div>
+                    <div className="team-header">grei's Anatomy</div>
                     <div className="slideCol">
 						<div className="scroller">
 							<div className="inner services-title services-title-top">

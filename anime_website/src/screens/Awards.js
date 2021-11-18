@@ -205,7 +205,7 @@ export default function Awards(){
                     <div className="slideCol">
 						<div className="scroller">
 							<div className="inner services-title services-title-top">
-								<p>See the full list of award's Grei</p>
+								<p>See the full list of award's grei</p>
 							</div>
 						</div>
 					</div>

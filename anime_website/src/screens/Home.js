@@ -24,7 +24,7 @@ export default function Home(props) {
 
 	return(
 		<>
-			<div className="HomeContainer">
+			<div className="home-container">
 				{!showFirstModal && 
 					<div>
 						<Navbar showLogo={true}/>
@@ -46,17 +46,17 @@ export default function Home(props) {
 								<Col xs={4.5} sm={4.5} md={4.5} xl={4.5} className="first-modal-picture">
 									<img 
 										data-aos={"fade-right"}
-										alt="Grei's first page" 
+										alt="grei's first page" 
 										src={handLeftImage}
 									/>
 								</Col>
 								<Col xs={3} sm={3} md={3} xl={3} className="first-modal-descrition-box">
-									<img alt="Grei's logo" src={logo} className='first-modal-logo'/>
+									<img alt="grei's logo" src={logo} className='first-modal-logo'/>
 									<p className="first-modal-info">It's not all black and white</p>
 									<div className="title-slide-col div-title first-modal-btn">
 										<div className="home-scroller">
 											<div className="home-inner">
-												<p className="home-box-title" >Enter</p>
+												<p className="home-box-title" >ENTER</p>
 											</div>
 										</div>
 									</div>
@@ -64,7 +64,7 @@ export default function Home(props) {
 								<Col xs={4.5} sm={4.5} md={4.5} xl={4.5} className="first-modal-picture">
 									<img 
 										data-aos={"fade-left"}
-										alt="Grei's first page" 
+										alt="grei's first page" 
 										src={handRightImage}  
 									/>
 								</Col>

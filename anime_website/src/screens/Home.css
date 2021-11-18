@@ -1,3 +1,6 @@
+.members-modal{
+    cursor: pointer;
+}
 .first-modal-container{
     background-color: #373737;
     display: flex;
