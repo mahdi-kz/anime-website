@@ -1,6 +1,6 @@
 import React from 'react';
 import {useDropzone} from 'react-dropzone';
-import {useState} from 'react'
+import {useState, useEffect} from 'react'
 import './UploadHomeVideoBox.css'
 //import img1 from '../../images/home/1.webp'
 import {get_video_address} from '../call_api'
@@ -8,6 +8,9 @@ import {get_video_address} from '../call_api'
 
 function UploadHomeVideoBox(props){
     const [media, setMedia] = useState("");
+    const [selectedFile, setSelectedFile] = useState(false);
+    const [loading, setLoading] = useState(false);
+    const [showSave, setShowSave] = useState(false);
     const {getRootProps, getInputProps, open, acceptedFiles} = useDropzone({
         // Disable click and keydown behavior
         noClick: true,
@@ -20,13 +23,25 @@ function UploadHomeVideoBox(props){
     ));
 
     function get_media(){
-        get_video_address(props.file_key).then(url=>{setMedia(url)})
+        get_video_address(props.file_key).then(url=>{setMedia(url + '?' + Date.now())})
     }
 
     function handleUploadVideo(ev){
         ev.preventDefault();
+        setSelectedFile(ev.target.files[0]);
+        let url = URL.createObjectURL(ev.target.files[0]);
+        setMedia(url);
+        setShowSave(true);
+    }
+
+    function refreshMedia(){
+        get_media();
+        setShowSave(false);
+    }
+
+    function saveMedia(){
         let data = new FormData();
-        data.append('file', ev.target.files[0]);
+        data.append('file', selectedFile);
         data.append('file_type', props.file_type)
         data.append('file_key', props.file_key);
 
@@ -38,17 +53,18 @@ function UploadHomeVideoBox(props){
         .then((response) => {
             response.json().then((body) => {
                 get_media();
+                setShowSave(false);
             });
         });
     }
 
-    get_media()
+    useEffect(()=>{get_media();}, [])
 
     return(
         <>
             <div>
                 <div className='HomeVideoBox'>
-                    <video className='uploadVideo' src={media+"?"+Date.now()}/>
+                    <video className='uploadVideo' src={media}/>
                     <div className='shadow'>
                         <div {...getRootProps({className: 'dropzone'})}>
                             <input {...getInputProps()} onChange={handleUploadVideo}/>
@@ -56,6 +72,13 @@ function UploadHomeVideoBox(props){
                             <i class="fa fa-pencil-square-o editIcon" aria-hidden="true" onClick={open}></i>
                         </div>
                     </div>
+
+                    {showSave &&
+                    <div className='saveShadow'>
+                        <i class="fas fa-save saveIcon" aria-hidden="true" onClick={saveMedia}></i>
+                        <i class="fa fa-refresh refreshIcon" aria-hidden="true" onClick={refreshMedia}></i>
+                    </div>
+                    }
                 </div>
                 <div className='BoxTitle'>{props.title}</div>
             </div>
