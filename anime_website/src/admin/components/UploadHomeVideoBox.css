@@ -20,6 +20,14 @@
     opacity: 50%;
 }
 
+.saveShadow{
+    bottom: 100%;
+    position: sticky;
+    height: 40px;
+    background-color: yellow;
+    opacity: 50%;
+}
+
 .uploadVideo{
     object-fit: cover;
     width: 100%;
@@ -44,6 +52,31 @@
     position: absolute;
 }
 .editIcon:Hover{
+    background-color: white;
+    opacity: 100%;
+}
+
+.saveIcon{
+    left: 5px;
+    top: 5px;
+    font-size: 30px;
+    position: absolute;
+    color: green;
+    opacity: 100%;
+}
+.saveIcon:Hover{
+    background-color: white;
+    opacity: 100%;
+}
+
+.refreshIcon{
+    right: 5px;
+    top: 5px;
+    font-size: 30px;
+    position: absolute;
+    color: red;
+}
+.refreshIcon:Hover{
     background-color: white;
     opacity: 100%;
 }
