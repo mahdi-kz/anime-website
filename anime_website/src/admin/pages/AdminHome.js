@@ -12,23 +12,23 @@ function AdminHome(){
                 <Row>
                     <div className='eachColumn'>
                         <span className='title'>Products</span>
-                        <UploadHomeImageBox title='Image' file_key='home_production' file_type='image'/>
-                        <UploadHomeVideoBox title='Video' file_key='home_production' file_type='video'/>
+                        <UploadHomeImageBox title='Image' file_key='home_production' file_type='image' width='144px' height='400px'/>
+                        <UploadHomeVideoBox title='Video' file_key='home_production' file_type='video' width='144px' height='400px'/>
                     </div>
                     <div className='eachColumn'>
                         <span className='title'>Digital Media</span>
-                        <UploadHomeImageBox title='Image' file_key='home_media' file_type='image'/>
-                        <UploadHomeVideoBox title='Video' file_key='home_media' file_type='video'/>
+                        <UploadHomeImageBox title='Image' file_key='home_media' file_type='image' width='144px' height='400px'/>
+                        <UploadHomeVideoBox title='Video' file_key='home_media' file_type='video' width='144px' height='400px'/>
                     </div>
                     <div className='eachColumn'>
                         <span className='title'>Graphics</span>
-                        <UploadHomeImageBox title='Image' file_key='home_graphics' file_type='image'/>
-                        <UploadHomeVideoBox title='Video' file_key='home_graphics' file_type='video'/>
+                        <UploadHomeImageBox title='Image' file_key='home_graphics' file_type='image' width='144px' height='400px'/>
+                        <UploadHomeVideoBox title='Video' file_key='home_graphics' file_type='video' width='144px' height='400px'/>
                     </div>
                     <div className='eachColumn'>
                         <span className='title'>Training</span>
-                        <UploadHomeImageBox title='Image' file_key='home_training' file_type='image'/>
-                        <UploadHomeVideoBox title='Video' file_key='home_training' file_type='video'/>
+                        <UploadHomeImageBox title='Image' file_key='home_training' file_type='image' width='144px' height='400px'/>
+                        <UploadHomeVideoBox title='Video' file_key='home_training' file_type='video' width='144px' height='400px'/>
                     </div>
                 </Row>
             </div>

@@ -63,7 +63,7 @@ function UploadHomeImageBox(props){
     return(
         <>
             <div>
-                <div className='HomeImageBox'>
+                <div className='HomeImageBox' style={{width: props.width, height: props.height}}>
                     <img className='uploadImage' src={media}/>
                     <div className='shadow'>
                         <div {...getRootProps({className: 'dropzone'})}>
