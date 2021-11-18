@@ -63,7 +63,7 @@ function UploadHomeVideoBox(props){
     return(
         <>
             <div>
-                <div className='HomeVideoBox'>
+                <div className='HomeVideoBox' style={{width: props.width, height: props.height}}>
                     <video className='uploadVideo' src={media}/>
                     <div className='shadow'>
                         <div {...getRootProps({className: 'dropzone'})}>
