@@ -50,7 +50,7 @@ function AdminSideMenu(props){
         <>
             <div className='AdminSideMenu'>
                 <div>
-                    <img className='logo' src={logo} alt='grei'/>
+                    <img className='adminLogo' src={logo} alt='grei'/>
                     {SidebarData.map((item, index) => {
                         return (
                             <AdminSideItem

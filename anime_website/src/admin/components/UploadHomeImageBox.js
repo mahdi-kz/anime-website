@@ -3,7 +3,7 @@ import {useDropzone} from 'react-dropzone';
 import {useState, useEffect} from 'react'
 import './UploadHomeImageBox.css'
 //import img1 from '../../images/home/1.webp'
-import {get_image_address} from '../call_api'
+import {get_image_address, upload_image} from '../call_api'
 
 
 function UploadHomeImageBox(props){
@@ -40,21 +40,9 @@ function UploadHomeImageBox(props){
     }
 
     function saveMedia(){
-        let data = new FormData();
-        data.append('file', selectedFile);
-        data.append('file_type', props.file_type)
-        data.append('file_key', props.file_key);
-
-        fetch('/api/upload-image', {
-            method: 'POST',
-            headers: {"Accept": "application/json"},
-            body: data,
-        })
-        .then((response) => {
-            response.json().then((body) => {
-                get_media();
-                setShowSave(false);
-            });
+        upload_image(selectedFile, props.file_type, props.file_key).then(() => {console.log('3333333333333');
+            get_media();
+            setShowSave(false);
         });
     }
 
