@@ -16,11 +16,12 @@ def upload_image():
     if not os.path.isdir(target):
         os.mkdir(target)
     file = request.files['file']
-    filename = request.form['file_key']
-    destination = "/".join([target, filename])
+    file_key = request.form['file_key']
+    destination = "/".join([target, file_key])
     file.save(destination)
-    address = "/".join([current_app.config['IMAGE_FOLDER_PATH_RELATIVE'], filename])
-    Images.save_address(filename, address)
+    address = "/".join([current_app.config['IMAGE_FOLDER_PATH_RELATIVE'], file_key])
+
+    Images.save_address(file_key, address)
 
     return jsonify(status=200, message="Uploaded Successfully!", data={})
 

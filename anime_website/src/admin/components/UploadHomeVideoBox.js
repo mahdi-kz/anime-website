@@ -3,7 +3,7 @@ import {useDropzone} from 'react-dropzone';
 import {useState, useEffect} from 'react'
 import './UploadHomeVideoBox.css'
 //import img1 from '../../images/home/1.webp'
-import {get_video_address} from '../call_api'
+import {get_video_address, upload_video} from '../call_api'
 
 
 function UploadHomeVideoBox(props){
@@ -45,16 +45,9 @@ function UploadHomeVideoBox(props){
         data.append('file_type', props.file_type)
         data.append('file_key', props.file_key);
 
-        fetch('/api/upload-video', {
-            method: 'POST',
-            headers: {"Accept": "application/json"},
-            body: data,
-        })
-        .then((response) => {
-            response.json().then((body) => {
-                get_media();
-                setShowSave(false);
-            });
+        upload_video(selectedFile, props.file_type, props.file_key).then(() => {
+            get_media();
+            setShowSave(false);
         });
     }
 
