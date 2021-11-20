@@ -93,6 +93,7 @@ function GreiNavbar(props){
 											<i class='fas fa-caret-down'></i>
 										}	
 									</div>
+									{/* <div className={arrowUP?"services-subsection-items":"hide"} style={{marginTop:navHeight}}> */}
 									<div className={arrowUP?"services-subsection-items":"hide"} style={{marginTop:navHeight}}>
 										<div>
 											<Link to="/products" className='nav-link' onClick={closeModalMenu}>Production</Link>
@@ -109,19 +110,19 @@ function GreiNavbar(props){
 									</div>
 								</div>
                             </Col>							
-                            <Col xs={12} sm={12} md={3} xl={1} offset={{xl:0.5}}className='nav-item nav'>
+                            <Col xs={12} sm={12} md={12} xl={1} offset={{xl:0.5}}className='nav-item nav'>
                                 <Link to="/customers" className='nav-link' onClick={closeModalMenu}>Customers</Link>
                             </Col>
-							<Col xs={12} sm={12} md={3} xl={1} offset={{xl:0.5}} className='nav-item nav'>
+							<Col xs={12} sm={12} md={12} xl={1} offset={{xl:0.5}} className='nav-item nav'>
                                 <Link to="/team" className='nav-link' onClick={closeModalMenu}>Team</Link>
                             </Col>
-                            <Col xs={12}sm={12}  md={3} xl={1} offset={{xl:0.5}} className='nav-item nav'>
+                            <Col xs={12}sm={12}  md={12} xl={1} offset={{xl:0.5}} className='nav-item nav'>
                                 <Link to="/awards" className='nav-link' onClick={closeModalMenu}>Awards</Link>
                             </Col>
-							<Col xs={12} sm={12} md={3} xl={1.1} offset={{xl:0.5}} className='nav-item nav'>
+							<Col xs={12} sm={12} md={12} xl={1.1} offset={{xl:0.5}} className='nav-item nav'>
                                 <Link to="/about_us" className='nav-link' onClick={closeModalMenu}>About Us</Link>
 							</Col>
-							<Col xs={12} sm={12} md={3} xl={1.2} offset={{xl:0.5}} className='nav-item nav'>
+							<Col xs={12} sm={12} md={12} xl={1.2} offset={{xl:0.5}} className='nav-item nav'>
                                 <Link to="/contact_us" className='nav-link' onClick={closeModalMenu}>Contact Us</Link>
                             </Col>
                         </Row>
