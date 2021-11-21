@@ -73,10 +73,10 @@
     .team-box {
         width: 60%;
     }
-    .team-header {
+    /* .team-header {
         margin-top: 60%;
         font-size: 22px;
-    }
+    } */
     .team-title-top{
         font-size: 14px;
     }
@@ -105,10 +105,10 @@
     .team-box {
         width: 50%;
     }
-    .team-header {
+    /* .team-header {
         margin-top: 60%;
         font-size: 22px;
-    }
+    } */
     .team-title-top{
         font-size: 14px;
     }
@@ -131,10 +131,10 @@
     .team-box {
         width: 60% !important;
     }
-    .team-header {
+    /* .team-header {
         margin-top: 30%;
         font-size: 28px;
-    }
+    } */
     .team-title-top{
         font-size: 22px;
     }
