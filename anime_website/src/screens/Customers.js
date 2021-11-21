@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react';
-Add//import image1 from '../images/clients/international_client/1.webp';
+//import image1 from '../images/clients/international_client/1.webp';
 //import image2 from '../images/clients/international_client/2.webp';
 //import image3 from '../images/clients/international_client/3.webp';
 //import image4 from '../images/clients/international_client/4.webp';
@@ -29,387 +29,30 @@ export default function Awards(){
     const [loading, setLoading] = useState(false);
 
     useEffect(()=>{
-        getLocalClients();
         getInternationalClients();
+        getLocalClients();
     }, [])
 
-    function getLocalClients(){
+    async function getLocalClients(){
         while (localClients.length > 0){
             localClients.pop();
         }
         get_local_customers().then((res)=>{
-            res.map(cus=>{localClients.push(cus); setLoading(!loading);})
+            let list = []
+            res.map(cus=>{list.push(cus)})
+            setLocalClients(list)
         });
     }
-    function getInternationalClients(){
+    async function getInternationalClients(){
         while (internationalClients.length > 0){
             internationalClients.pop();
         }
         get_global_customers().then((res)=>{
-            res.map(cus=>{internationalClients.push(cus); setLoading(!loading);})
+            let list = []
+            res.map(cus=>{list.push(cus)})
+            setInternationalClients(list);
         });
     }
-
-//    const getCustomers = ()=>{
-//        setInternationalClints([
-//           [{
-//                name:"image1",
-//                image:image1
-//           },
-//           {
-//                name:"image2",
-//                image:image2
-//           },
-//           {
-//                name:"image3",
-//                image:image3
-//           },
-//           {
-//                name:"image4",
-//                image:image4
-//           },
-//           {
-//                name:"image5",
-//                image:image5
-//           },
-//           {
-//                name:"image6",
-//                image:image6
-//           },
-//           {
-//                name:"  image7",
-//                image:image7
-//            },
-//            {
-//                name:"image8",
-//                image:image8
-//            },
-//            {
-//                name:"image1",
-//                image:image1
-//           },
-//           {
-//                name:"image2",
-//                image:image2
-//           },
-//           {
-//                name:"image3",
-//                image:image3
-//           },
-//           {
-//                name:"image4",
-//                image:image4
-//           },
-//           {
-//                name:"image5",
-//                image:image5
-//           },
-//           {
-//                name:"image6",
-//                image:image6
-//           },
-//           {
-//                name:"  image7",
-//                image:image7
-//            },
-//            {
-//                name:"image8",
-//                image:image8
-//            },
-//            {
-//                name:"image1",
-//                image:image1
-//           },
-//           {
-//                name:"image2",
-//                image:image2
-//           },
-//           {
-//                name:"image3",
-//                image:image3
-//           },
-//           {
-//                name:"image4",
-//                image:image4
-//           },
-//           {
-//                name:"image5",
-//                image:image5
-//           },
-//           {
-//                name:"image6",
-//                image:image6
-//           },
-//           {
-//                name:"  image7",
-//                image:image7
-//            },
-//            {
-//                name:"image8",
-//                image:image8
-//            },
-//            {
-//                name:"image1",
-//                image:image1
-//           },
-//           {
-//                name:"image2",
-//                image:image2
-//           },
-//           {
-//                name:"image3",
-//                image:image3
-//           },
-//           {
-//                name:"image4",
-//                image:image4
-//           },
-//           {
-//                name:"image5",
-//                image:image5
-//           },
-//           {
-//                name:"image6",
-//                image:image6
-//           },
-//           {
-//                name:"  image7",
-//                image:image7
-//            },
-//            {
-//                name:"image8",
-//                image:image8
-//            },
-//            {
-//                name:"image1",
-//                image:image1
-//           },
-//           {
-//                name:"image2",
-//                image:image2
-//           },
-//           {
-//                name:"image3",
-//                image:image3
-//           },
-//           {
-//                name:"image4",
-//                image:image4
-//           },
-//           {
-//                name:"image5",
-//                image:image5
-//           },
-//           {
-//                name:"image6",
-//                image:image6
-//           },
-//           {
-//                name:"  image7",
-//                image:image7
-//            },
-//            {
-//                name:"image8",
-//                image:image8
-//            },
-//            {
-//                name:"image1",
-//                image:image1
-//           },
-//           {
-//                name:"image2",
-//                image:image2
-//           },
-//           {
-//                name:"image3",
-//                image:image3
-//           },
-//           {
-//                name:"image4",
-//                image:image4
-//           },
-//           {
-//                name:"image5",
-//                image:image5
-//           },
-//           {
-//                name:"image6",
-//                image:image6
-//           },
-//           {
-//                name:"  image7",
-//                image:image7
-//            },
-//            {
-//                name:"image8",
-//                image:image8
-//            }]
-//        ])
-//        setLocalClints([
-//            [{
-//                 name:"  image1",
-//                 image:image9
-//            },
-//            {
-//                 name:"image2",
-//                 image:image10
-//            },
-//            {
-//                 name:"image3",
-//                 image:image11
-//            },
-//            {
-//                 name:"image4",
-//                 image:image12
-//            },
-//            {
-//                 name:"image5",
-//                 image:image13
-//            },
-//            {
-//                 name:"image6",
-//                 image:image14
-//            },
-//            {
-//                 name:"  image1",
-//                 image:image15
-//             },
-//             {
-//                 name:"image2",
-//                 image:image16
-//             },
-//             {
-//                 name:"image3",
-//                 image:image17
-//             },
-//             {
-//                name:"  image1",
-//                image:image9
-//            },
-//            {
-//                    name:"image2",
-//                    image:image10
-//            },
-//            {
-//                    name:"image3",
-//                    image:image11
-//            },
-//            {
-//                    name:"image4",
-//                    image:image12
-//            },
-//            {
-//                    name:"image5",
-//                    image:image13
-//            },
-//            {
-//                    name:"image6",
-//                    image:image14
-//            },
-//            {
-//                name:"  image1",
-//                image:image15
-//            },
-//            {
-//                name:"image2",
-//                image:image16
-//            },
-//            {
-//                name:"image3",
-//                image:image17
-//            },{
-//                name:"image6",
-//                image:image14
-//           },
-//           {
-//                name:"  image1",
-//                image:image15
-//            },
-//            {
-//                name:"image2",
-//                image:image16
-//            },
-//            {
-//                name:"image3",
-//                image:image17
-//            },
-//            {
-//               name:"  image1",
-//               image:image9
-//           },
-//           {
-//                   name:"image2",
-//                   image:image10
-//           },
-//           {
-//                   name:"image3",
-//                   image:image11
-//           },
-//           {
-//                   name:"image4",
-//                   image:image12
-//           },
-//           {
-//                   name:"image5",
-//                   image:image13
-//           },
-//           {
-//                   name:"image6",
-//                   image:image14
-//           },
-//           {
-//               name:"  image1",
-//               image:image15
-//           },
-//           {
-//               name:"image2",
-//               image:image16
-//           },
-//           {
-//               name:"image3",
-//               image:image17
-//           },{
-//                 name:"  image1",
-//                 image:image9
-//            },
-//            {
-//                 name:"image2",
-//                 image:image10
-//            },
-//            {
-//                 name:"image3",
-//                 image:image11
-//            },
-//            {
-//                 name:"image4",
-//                 image:image12
-//            },
-//            {
-//                 name:"image5",
-//                 image:image13
-//            },
-//            {
-//                 name:"image6",
-//                 image:image14
-//            },
-//            {
-//                 name:"  image1",
-//                 image:image15
-//             },
-//             {
-//                 name:"image2",
-//                 image:image16
-//             },
-//             {
-//                 name:"image3",
-//                 image:image17
-//             },
-//             {
-//                name:"  image1",
-//                image:image9
-//            },]
-//         ])
-//    }
 
 	return(
 		<>
@@ -420,25 +63,25 @@ export default function Awards(){
                     <div className="clients-title">International Clients</div>
                     <div className="international-container">
                         <Container fluid className="customer-logo-box">
-                            {internationalClients.map(obj=>
+
                                 <Row className='customer-row'>
-                                    {obj.map(obj2=>{
+                                    {internationalClients.map(obj2=>{
                                         return (<Col xs={4} md={3} xl={2}>
                                             <div data-aos="zoom-in" className="customer-logo" style={{width:"100%", marginBottom:20}}> 
                                                 <img className="customer-logo-img" alt="bmw" src={obj2.logo_address} />
-                                            </div>                                 
+                                            </div>
                                         </Col>)
                                     })}
                                 </Row>
-                            )}
+
                         </Container>
                     </div>
                     <div className="clients-title-box">
                         <p className="clients-title">Local Clients</p>
                         <Container fluid className="customer-logo-box">
-                            {localClients.map(obj=>
+
                                 <Row className='customer-row'>
-                                    {obj.map(obj2=>{
+                                    {localClients.map(obj2=>{
                                         return (<Col xs={6} md={4} xl={2}>
                                             <div data-aos="zoom-in" className="customer-logo" style={{width:"100%", marginBottom:20}}> 
                                                 <img className="customer-logo-img" alt="bmw" src={obj2.logo_address} />
@@ -446,7 +89,7 @@ export default function Awards(){
                                         </Col>)
                                     })}
                                 </Row>
-                            )}
+
                         </Container>
                     </div>
                 </div>
