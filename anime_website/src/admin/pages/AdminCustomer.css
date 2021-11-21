@@ -17,3 +17,7 @@
 .addIcon:Hover{
     color: #50BCBA;
 }
+
+.customersList{
+    overflow-y: scroll;
+}
