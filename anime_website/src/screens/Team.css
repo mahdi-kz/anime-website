@@ -5,21 +5,27 @@
 .team-box{
     width: 79%;
     text-align: center;
+    margin-top: -50px;
     /* margin-top: 5%; */
 }
 .team-title-top{
     margin-bottom: 3%;
 }
 .team-header{
+    height: 18vh;
     text-align: center;
-    margin-top: 14%;
-    margin-bottom: 2%;
+    line-height: 175px;
+    /* margin-top: 14%; */
+    /* margin-bottom: 2%; */
 }
 .teams-row > div:first-child{
     margin-bottom: 20px !important;
 }
 .team-info-box-size{
     bottom: 25px;
+}
+.team-info-box{
+    height: 27vh;
 }
 .teams-member{
     justify-content: center;
@@ -55,11 +61,14 @@
     margin-top: 3%;
     justify-content: center;
     display: flex;
+    margin-bottom: 5%;
 }
 .teams-col{
     flex: 0 0 14.6667% !important; 
 }
-
+.slideCol{
+    height: 10vh;
+}
 @media (max-width:370px) {
     .team-box {
         width: 60%;
