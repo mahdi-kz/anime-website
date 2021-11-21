@@ -33,7 +33,7 @@ function AdminCustomer(){
                 <div className="AdminCustomerHeader">
                     <i className="fas fa-plus-circle addIcon" onClick={addNewCustomer}/>
                 </div>
-                <div className='CustomersList'>
+                <div className='customersList'>
                     {customers.map(customer=>{
                         return (<Customer id={customer.id}
                         name={customer.name}
