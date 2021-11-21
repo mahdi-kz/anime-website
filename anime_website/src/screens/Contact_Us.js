@@ -3,7 +3,7 @@ import './Contact_Us.css';
 import { Container, Row, Col } from 'react-grid-system';
 import config from "../configs/config";
 import Navbar from '../components/Navbar';
-import image1 from '../images/contact/contact.webp';
+import image1 from '../images/contact/contact2.webp';
 import bgImage from '../images/contact/background.webp'
 
 export default function Contact_Us(){

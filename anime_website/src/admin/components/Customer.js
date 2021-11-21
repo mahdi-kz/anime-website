@@ -147,7 +147,7 @@ function Customer(props){
                 :
                 <Row>
                     <div className='fas fa-caret-right customerCaretRight' onClick={clickCaret}></div>
-                    <div className='customerTitle'>{props.name}</div>
+                    <div className='customerTitleClosed'>{props.name}</div>
                 </Row>
                 }
             </div>
