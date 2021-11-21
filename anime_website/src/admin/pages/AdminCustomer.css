@@ -1,0 +1,25 @@
+.AdminCustomer{
+    width: calc(100vw - 300px);
+    right: 0;
+    position: flex;
+    padding: 10px;
+    margin: 0px;
+    margin-left: 250px;
+    overflow-y: hidden;
+    overflow-x: hidden;
+    flex: 1;
+}
+
+.addIcon{
+    color: black;
+    font-size: 40px;
+}
+.addIcon:Hover{
+    color: #50BCBA;
+}
+
+.customersList{
+    height: calc(100vh - 100px);
+    overflow-y: scroll;
+    overflow-x: hidden;
+}

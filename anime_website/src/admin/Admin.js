@@ -1,7 +1,8 @@
 import React, {useState, useEffect} from 'react';
 import './Admin.css';
 import AdminSideMenu, {SidebarData} from './components/AdminSideMenu';
-import AdminHome from './pages/AdminHome'
+import AdminHome from './pages/AdminHome';
+import AdminCustomer from './pages/AdminCustomer';
 
 
 function Admin(){
@@ -16,6 +17,9 @@ function Admin(){
 			    />
 			    {selectedMenu === 0 &&
 			        <AdminHome />
+			    }
+			    {selectedMenu === 5 &&
+			        <AdminCustomer />
 			    }
 			</div>
 		</>
