@@ -229,21 +229,23 @@ export default function Products(props){
 	}
 
 	return(
-		<div style={{
-            backgroundImage:`url(${bgImage})`, 
-            backgroundPosition:'left ',
-            height:'100%',
-            backgroundRepeat: 'round',
-            backgroundSize:"cover"
+		// <div style={{
+        //     backgroundImage:`url(${bgImage})`, 
+        //     backgroundPosition:'left ',
+        //     height:'100%',
+        //     backgroundRepeat: 'round',
+        //     backgroundSize:"cover"
 
-            }}
-        >
+        //     }}
+        // >
+		<>
             <div style={{
                 backgroundImage:`url(${backgroundImage})`, 
                 backgroundPosition:'center',
                 height:'100%',
                 backgroundRepeat: 'no-repeat',
-                backgroundSize:"cover"
+                backgroundSize:"cover",
+				backgroundAttachment: 'fixed'
                 }}
             >
 				{!showTeamModal && !hideNavbar &&
@@ -356,7 +358,7 @@ export default function Products(props){
 					</div>
 				</div>
 			</div>
-		</div>
+		</>
 	)
 
 }

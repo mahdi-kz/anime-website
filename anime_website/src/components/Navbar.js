@@ -6,6 +6,7 @@ import Blog from './Blog';
 import blogIcone from '../images/icons/blog.webp';
 import blogo from '../images/logo/black-logo.svg';
 import wlogo from '../images/logo/white-logo.svg';
+import ServicesButtonNav from '../components/ServicesButtonNav.js'
 
 function GreiNavbar(props){
 	const [click, setClick] = useState(false);
@@ -85,7 +86,9 @@ function GreiNavbar(props){
                                 <Link to="/" className='nav-link' onClick={closeModalMenu}>Home</Link>
                             </Col>
                             <Col xs={12} sm={12} md={12} xl={1} offset={{xl:0.5}} className='nav-item nav'>
-								<div className="services-subsection">
+								
+								<ServicesButtonNav closeModalMenu={closeModalMenu} click={click} />
+								{/* <div className="services-subsection">
 									<div className="services-nav" onClick={()=>setArrowUP(!arrowUP)}>
 										<span style={{color:arrowUP?"#50BCBA":"white"}}>Services</span>
 										{arrowUP? 
@@ -93,7 +96,6 @@ function GreiNavbar(props){
 											<i class='fas fa-caret-down'></i>
 										}	
 									</div>
-									{/* <div className={arrowUP?"services-subsection-items":"hide"} style={{marginTop:navHeight}}> */}
 									<div className={arrowUP?"services-subsection-items":"hide"} style={{marginTop:navHeight}}>
 										<div>
 											<Link to="/products" className='nav-link' onClick={closeModalMenu}>Production</Link>
@@ -108,7 +110,7 @@ function GreiNavbar(props){
 											<Link to="/training" className='nav-link' onClick={closeModalMenu}>Training Services</Link>
 										</div>
 									</div>
-								</div>
+								</div> */}
                             </Col>							
                             <Col xs={12} sm={12} md={12} xl={1} offset={{xl:0.5}}className='nav-item nav'>
                                 <Link to="/customers" className='nav-link' onClick={closeModalMenu}>Customers</Link>
