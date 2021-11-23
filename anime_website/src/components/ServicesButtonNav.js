@@ -4,15 +4,15 @@ import './ServicesButtonNav.css';
 
 function ServicesButtonNav(props){
     const [arrowUP, setArrowUP] = useState(false);
-    const [navHeight, setNavHeight] = useState(0);
+    const [classes, setClasses] = useState("")
 
     useEffect(()=>{
 		updateSize()
+        window.addEventListener('resize', updateSize);
 	}, [props.click])
 	
 	const updateSize = ()=>{
-		const navHeightSize = document.querySelectorAll(".menu-row")[0].offsetHeight; 
-		setNavHeight(navHeightSize)
+        if(window.innerWidth<977) setClasses("inline-nav-item");
 	}
 
 	return(
@@ -25,7 +25,7 @@ function ServicesButtonNav(props){
                         <i class='fas fa-caret-down'></i>
                     }	
                 </div>
-                <div className={arrowUP?"services-subsection-items":"hide"} style={{marginTop:navHeight}}>
+                <div className={arrowUP?`services-subsection-items ${classes}`:"hide"}>
                     <div>
                         <Link to="/products" className='nav-link' onClick={props.closeModalMenu}>Production</Link>
                     </div>

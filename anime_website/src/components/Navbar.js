@@ -13,22 +13,11 @@ function GreiNavbar(props){
 	const [drow, setDrow] = useState(false);
 	const [menuHover, setMenuHover] = useState(false);
 	const [blogVisible, setblogVisible] = useState(false);
-	const [arrowUP, setArrowUP] = useState(false);
-	const [navHeight, setNavHeight] = useState(0)
 
 	const handleClick = ()=>setClick(!click);
 	const changingBlogVisible = ()=>setblogVisible(!blogVisible);
 	const closeModalMenu = ()=>setClick(false);
 	const showLogo = props.showLogo!==undefined?props.showLogo:true;
-
-	useEffect(()=>{
-		updateSize()
-	}, [click])
-
-	const updateSize = ()=>{
-		const navHeightSize = document.querySelectorAll(".menu-row")[0].offsetHeight; 
-		setNavHeight(navHeightSize)
-	}
 
 	return(
 		<>
@@ -81,81 +70,32 @@ function GreiNavbar(props){
 					</div>
 					
 					<Container fluid className={click?'menu':'hide'}>
-                        <Row className='menu-row'>
-                            <Col xs={12} sm={12} md={12} xl={1} offset={{xl:0.75}} className='nav-item'>
+                        <Row className='menu-row' style={{width:'102%'}}>
+                            <Col xs={12} sm={12} md={12} lg={1.5} xl={1} offset={{lg:0.75, xl:0.75}} className='nav-item'>
                                 <Link to="/" className='nav-link' onClick={closeModalMenu}>Home</Link>
                             </Col>
-                            <Col xs={12} sm={12} md={12} xl={1} offset={{xl:0.5}} className='nav-item nav'>
-								
+                            <Col xs={12} sm={12} md={12} lg={1.75} xl={1.25} offset={{xl:0.5}} className='nav-item nav'>
 								<ServicesButtonNav closeModalMenu={closeModalMenu} click={click} />
-								{/* <div className="services-subsection">
-									<div className="services-nav" onClick={()=>setArrowUP(!arrowUP)}>
-										<span style={{color:arrowUP?"#50BCBA":"white"}}>Services</span>
-										{arrowUP? 
-											<i class='fas fa-caret-up' style={{color:arrowUP?"#50BCBA":"white"}}></i>:
-											<i class='fas fa-caret-down'></i>
-										}	
-									</div>
-									<div className={arrowUP?"services-subsection-items":"hide"} style={{marginTop:navHeight}}>
-										<div>
-											<Link to="/products" className='nav-link' onClick={closeModalMenu}>Production</Link>
-										</div>
-										<div>
-											<Link to="/socialMedia" className='nav-link' onClick={closeModalMenu}>Digital Media </Link>
-										</div>
-										<div>
-											<Link to="/graphicDesign" className='nav-link' onClick={closeModalMenu}>Graphic & Branding </Link>
-										</div>
-										<div>
-											<Link to="/training" className='nav-link' onClick={closeModalMenu}>Training Services</Link>
-										</div>
-									</div>
-								</div> */}
                             </Col>							
-                            <Col xs={12} sm={12} md={12} xl={1} offset={{xl:0.5}}className='nav-item nav'>
+                            <Col xs={12} sm={12} md={12} lg={1.5} xl={1} offset={{lg:0,xl:0.5}}className='nav-item nav'>
                                 <Link to="/customers" className='nav-link' onClick={closeModalMenu}>Customers</Link>
                             </Col>
-							<Col xs={12} sm={12} md={12} xl={1} offset={{xl:0.5}} className='nav-item nav'>
+							<Col xs={12} sm={12} md={12} lg={1.5} xl={1} offset={{xl:0.5}} className='nav-item nav'>
                                 <Link to="/team" className='nav-link' onClick={closeModalMenu}>Team</Link>
                             </Col>
-                            <Col xs={12}sm={12}  md={12} xl={1} offset={{xl:0.5}} className='nav-item nav'>
+                            <Col xs={12}sm={12}  md={12} lg={1.5} xl={1} offset={{xl:0.5}} className='nav-item nav'>
                                 <Link to="/awards" className='nav-link' onClick={closeModalMenu}>Awards</Link>
                             </Col>
-							<Col xs={12} sm={12} md={12} xl={1.1} offset={{xl:0.5}} className='nav-item nav'>
+							<Col xs={12} sm={12} md={12} lg={1.5} xl={1.25} offset={{xl:0.5}} className='nav-item nav'>
                                 <Link to="/about_us" className='nav-link' onClick={closeModalMenu}>About Us</Link>
 							</Col>
-							<Col xs={12} sm={12} md={12} xl={1.2} offset={{xl:0.5}} className='nav-item nav'>
+							<Col xs={12} sm={12} md={12} lg={1.75} xl={1.5} offset={{xl:0.5}} className='nav-item nav'>
                                 <Link to="/contact_us" className='nav-link' onClick={closeModalMenu}>Contact Us</Link>
                             </Col>
                         </Row>
 					</Container>
 				</div>
 			</nav>
-			{/* <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
-			<Container>
-			<Navbar.Brand href="#home">React-Bootstrap</Navbar.Brand>
-			<Navbar.Toggle aria-controls="responsive-navbar-nav" />
-			<Navbar.Collapse id="responsive-navbar-nav">
-				<Nav className="me-auto">
-				<Nav.Link href="#features">Features</Nav.Link>
-				<Nav.Link href="#pricing">Pricing</Nav.Link>
-				<NavDropdown title="Dropdown" id="collasible-nav-dropdown">
-					<NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
-					<NavDropdown.Item href="#action/3.2">Another action</NavDropdown.Item>
-					<NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
-					<NavDropdown.Divider />
-					<NavDropdown.Item href="#action/3.4">Separated link</NavDropdown.Item>
-				</NavDropdown>
-				</Nav>
-				<Nav>
-				<Nav.Link href="#deets">More deets</Nav.Link>
-				<Nav.Link eventKey={2} href="#memes">
-					Dank memes
-				</Nav.Link>
-				</Nav>
-			</Navbar.Collapse>
-			</Container>
-			</Navbar> */}
 		</>
 	)
 }
