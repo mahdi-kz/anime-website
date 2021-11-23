@@ -1,0 +1,82 @@
+.HomeImageBox{
+    /*width: 144px;*/
+    /*height: 400px;*/
+    margin:10px;
+    overflow: hidden;
+}
+
+.BoxTitle{
+    width: 144px;
+    margin:10px;
+    text-align: center;
+    font-size: 15px;
+}
+
+.shadow{
+    bottom: 0px;
+    position: sticky;
+    height: 40px;
+    background-color: grey;
+    opacity: 50%;
+}
+
+.saveShadow{
+    bottom: 100%;
+    position: sticky;
+    height: 40px;
+    background-color: yellow;
+    opacity: 50%;
+}
+
+.uploadImage{
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.trashIcon{
+    left: 5px;
+    top: 5px;
+    font-size: 30px;
+    position: absolute;
+}
+.trashIcon:Hover{
+    background-color: white;
+    opacity: 100%;
+}
+
+.editIcon{
+    right: 5px;
+    top: 5px;
+    font-size: 30px;
+    position: absolute;
+}
+.editIcon:Hover{
+    background-color: white;
+    opacity: 100%;
+}
+
+.saveIcon{
+    left: 5px;
+    top: 5px;
+    font-size: 30px;
+    position: absolute;
+    color: green;
+    opacity: 100%;
+}
+.saveIcon:Hover{
+    background-color: white;
+    opacity: 100%;
+}
+
+.refreshIcon{
+    right: 5px;
+    top: 5px;
+    font-size: 30px;
+    position: absolute;
+    color: red;
+}
+.refreshIcon:Hover{
+    background-color: white;
+    opacity: 100%;
+}

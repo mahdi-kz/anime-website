@@ -1,2 +1,10 @@
+alembic
 Flask
+Flask-Login
+Flask-Migrate
+Flask-SQLAlchemy
+marshmallow
+pandas
+psycopg2-binary==2.8.6
 python-dotenv
+SQLAlchemy

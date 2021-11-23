@@ -1,10 +1,10 @@
 html{
-  background-color: #e7e5df;
+  background-color: #D1D2D4;
 }
 body{
-  color: #000;
-  font-size: 22px;
-  font-family: LisztFYBlack,Georgia,Times New Roman,Times,serif;
+  color: #373737;
+  font-size: 3vw;
+  font-family: LisztFYBlack,Georgia,Times,serif;
   vertical-align: baseline;
   overflow-y: scroll;
   -webkit-tap-highlight-color: transparent;
@@ -12,7 +12,7 @@ body{
   min-height: 100%;
 }
 .App {
-  background: #000;
+  background: #373737;
 }
 .hide{
   display: none;
@@ -23,8 +23,17 @@ body{
   stroke-dasharray: 250;
   stroke-dashoffset: -194.399;
   fill: none;
-  stroke:#231f20;
+  stroke:#373737;
   background-repeat: no-repeat;
+}
+.container{
+  left:35px;
+  right:35px;
+}
+.header{
+  text-align: center;
+  margin-top: 6vw;
+  margin-bottom: 2%;
 }
 
 @keyframes drowCircle {
@@ -33,3 +42,50 @@ body{
     stroke-dasharray: 500  ;
   }
 }
+.ReactModal__Overlay {
+  opacity: 0;
+  
+  background-color: #D1D2D4 !important;
+}
+
+.ReactModal__Overlay--after-open {
+  opacity: 1;
+  transform: translateX(0px);
+  transition: opacity 2000ms ease-in-out;
+}
+
+.ReactModal__Overlay--before-close {
+  opacity: 0;
+  transform: translateX(-100px);
+  transition: opacity 2000ms ease-out;
+}
+.ReactModal__Content{
+  position: initial !important;
+  inset: 40px;
+  border: none !important;
+  overflow: hidden !important;
+  border-radius: 0px !important;
+  outline: none;
+  padding: 0 !important;
+  /* width: 100%; */
+}
+.close-video-modal{
+  padding: 5px 6px;
+  float: left;
+  position: absolute;
+  z-index: 99999999999;
+  top: 0;
+  background-color: #D1D2D4;
+  border-radius: 50%;
+  display: flex;
+  text-align: center;
+  margin: 10px;
+  cursor: pointer;
+  
+}
+.close-video-modal > i{
+  color: gray;
+}
+
+
+

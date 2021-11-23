@@ -1,0 +1,59 @@
+.employee-container{
+    justify-content: center;
+    display: flex;
+    position: relative;
+}
+.employee-info{
+    opacity: 0;
+    background-color: #50BCBA;
+    position:absolute;
+    bottom: 0px;
+    width: 100% !important;
+    line-height: 0.2px;
+    -webkit-transition: -webkit-transform 0.35s;
+    transition: transform 0.35s;
+    -webkit-transform: translate3d(0,100%,0);
+    transform: translate3d(0,100%,0);
+}
+.employee-name{
+    font-size: 1.5vw;
+    font-family: LisztFYRegular,Georgia,Times,serif;
+    -webkit-transition: -webkit-transform 0.35s;
+    transition: transform 0.35s;
+    -webkit-transform: translate3d(0,200%,0);
+    transform: translate3d(0,200%,0);
+    display: inline-block;
+}
+.employee-image{
+    /*object-fit: cover;*/
+}
+.employee-job{
+    font-size: 1.1vw;
+    color: #444444;
+    -webkit-transition: -webkit-transform 0.35s;
+    transition: transform 0.35s;
+    -webkit-transform: translate3d(0,200%,0);
+    transform: translate3d(0,200%,0);
+    display: inline-block;
+}
+
+.employee-container:hover .employee-info,
+.employee-container:hover .employee-name,
+.employee-container:hover .employee-job{
+    opacity: 1;
+    -webkit-transform: translate3d(0,0,0);
+    transform: translate3d(0,0,0);
+}
+
+.employee-container:hover .employee-name,
+.employee-container:hover .employee-job{
+    -webkit-transition-delay: 0.05s;
+    transition-delay: 0.05s;
+}
+
+.employee-job, .employee-name{
+    -webkit-transition: -webkit-transform 0.35s;
+    transition: transform 0.35s;
+    -webkit-transform: translate3d(0,200%,0);
+    transform: translate3d(0,200%,0);
+}

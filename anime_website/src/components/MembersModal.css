@@ -2,12 +2,16 @@
     background-color:#e7e5df;
 }
 .team-close-modal{
-    padding: 30px;
-    position: absolute;
+    padding: 15px 30px;
+    float: right;
+    position: relative;
     z-index: 999999;
 }
 .team-modal-picture{
     padding: 0 !important;
+}
+.team-modal-box{
+    padding-left: 0px !important;
 }
 .team-modal-picture > img{
     width: 100%;
@@ -15,16 +19,25 @@
 .team-modal{
     background-color: #e7e5df;
 }
-.team-modal-descrition{
+.team-modal-descrition-box{
     text-align: left;
-    margin-top: 10%;
+    margin-top: 3%;
+    margin-left: 3% !important;
+}
+.team-modal-name{
+    font-size: 16px;
+    font-family: LisztFYRegular,Georgia,Times New Roman,Times,serif;
+}
+.team-modal-descrition{
+    font-size: 14px;
+    font-family: LisztFYRegular,Georgia,Times New Roman,Times,serif;
 }
 .modal-close-svg{
     pointer-events: none;
     width: 60px;
     height: 50px;
     position: fixed;
-    left: 15px;
+    right: 0px;
     top: 20px;
     z-index: 99999;
 }

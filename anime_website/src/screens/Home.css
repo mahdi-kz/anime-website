@@ -1,0 +1,58 @@
+.members-modal{
+    cursor: pointer;
+}
+.first-modal-container{
+    background-color: #373737;
+    display: flex;
+    align-items: center;
+}
+.first-modal-row{
+    height: 100%;
+    
+}
+.first-modal-picture{
+    padding: 0 !important;
+}
+.first-modal-picture > img{
+    width: 100%;
+}
+.first-modal-box{
+    width: 100%;
+}
+.first-modal-descrition-box{
+    text-align: center;
+    
+}
+.first-modal-logo{
+    display: block;
+    position: relative;
+}
+.first-modal-info{
+    color: white;
+    font-size: 1.2vW;
+    position: absolute;
+    width: 100%;
+    top: 75%;
+    left: 69%;
+    transform: translate( -55%, -80% );
+    bottom: 0; right: 0;
+    
+}
+.first-modal-btn{
+    color: #50BCBA;
+    font-size: 2.5VW;
+    cursor: pointer;
+    margin-top: -10%;
+}
+
+.home-scroller {
+    height: 30pt;
+    overflow: hidden;
+}
+.home-scroller .home-inner { animation: 3s  infinite titleScroll; }
+@keyframes titleScroll {
+    0% {margin-top: 5pt;}
+    90%   {margin-top: 5px;}
+    50%  {margin-top: -30pt;}
+    0% {margin-top: -30pt;}
+}

@@ -1,49 +1,73 @@
-import React, {useState, useEffect} from 'react';
+import React, { useEffect } from 'react';
 import './App.css';
 import Home from './screens/Home';
 import {BrowserRouter as Router, Switch, Route} from 'react-router-dom'
-import Products from './screens/Products';
 import Customers from './screens/Customers';
-import Services from './screens/Services';
+import Products from './screens/services/Products';
+import Training from './screens/services/Training';
+import SocialMedia from './screens/services/Social_Media';
+import GraphicsDesign from './screens/services/Graphic_Design'
 import Awards from './screens/Awards';
-import Contact_Us from './screens/Contact_Us';
-import About_Us from './screens/About_Us';
+import ContactUs from './screens/Contact_Us';
+import AboutUs from './screens/About_Us';
 import Teams from './screens/Team';
+import Admin from './admin/Admin'
 import './index.css';
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 function App() {
-  return (
-    <>
-		<Router>
-			<Switch>
-				<Route path='/' exact >
-					<Home />
-				</Route>
-				<Route path='/products' >
-					<Products />
-				</Route>
-				<Route path='/customers' >
-					<Customers />
-				</Route>
-				<Route path='/services' >
-					<Services />
-				</Route>
-				<Route path='/awards' >
-					<Awards />
-				</Route>
-				<Route path='/contact_us' >
-					<Contact_Us />
-				</Route>
-				<Route path='/about_us' >
-					<About_Us />
-				</Route>
-				<Route path='/team' >
-					<Teams />
-				</Route>
-			</Switch>
-		</Router>
-	</>
-  );
+
+	useEffect(async()=>{
+		changeStorage();
+		Aos.init({duration:2000})
+	}, [])
+
+	const changeStorage = async()=>{
+		Promise.all([localStorage.setItem('modal_status',"0")]);
+	}
+	
+  	return (
+		<>
+			<Router>
+				<Switch>
+					<Route path='/' exact >
+						<Home />
+					</Route>
+					<Route path='/customers' >
+						<Customers />
+					</Route>
+					<Route path='/products' >
+						<Products />
+					</Route>
+					<Route path='/graphicDesign' >
+						<GraphicsDesign />
+					</Route>
+					<Route path='/socialMedia' >
+						<SocialMedia />
+					</Route>
+					<Route path='/training' >
+						<Training />
+					</Route>
+					<Route path='/awards' >
+						<Awards />
+					</Route>
+					<Route path='/contact_us' >
+						<ContactUs />
+					</Route>
+					<Route path='/about_us' >
+						<AboutUs />
+					</Route>
+					<Route path='/team' >
+						<Teams />
+					</Route>
+					<Route path='/admin'>
+						<Admin />
+					</Route>
+				</Switch>
+			</Router>
+		</>
+  	);
 }
 
 export default App;

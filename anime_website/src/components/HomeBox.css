@@ -1,44 +1,113 @@
-.homeBox {
-  margin-top:35px;
+.home-container{
+  justify-content: center;
+  display: flex;
+  /* margin-top:3%; */
+  position: absolute;
+  top:0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+.home-box::-webkit-scrollbar {
+  background-clip: content-box;
+}
+.home-box::-webkit-scrollbar-thumb {
+  background-clip: content-box;
+  background-color: hsla(0,0%,100%,.4);
+  -webkit-transition: background .2s;
+  transition: background .2s;
+  border-radius: 0;
+  border: 10px solid transparent;
+  border-left-width: 3px;
+}
+.home-box {
+  margin-bottom: 10px !important;
+  width: 90%;
   padding: 0;
   list-style-type: none;
   text-align:center;
-  height: calc(100vh - 150px);
+  overflow-x: hidden;
+  overflow-y: hidden;
+  cursor: move;
+  width: 100%;
+  align-items: center;
+  cursor: move;
+  touch-action: pan-y;
+  user-select: none;
+  visibility: visible;
+  scroll-behavior: smooth;
+  white-space:nowrap;
+  -webkit-overflow-scrolling: touch;
 }
-.homeBox > li {
+.home-box > li {
   margin-right: 10px;
   margin-left: 10px;
   margin-top: 20px;
   overflow: hidden;
   display: inline-block;
-}    
-.title{
-  text-align: center;
-  margin-top:50px;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  position: fixed;
+}
+.image-box{
+  width: 15vw;
+  transition: width 1s;
+}
+.image-box:hover{
+  width: 20vw;
+  padding-left: 0px;
+  transition: width 1s;
+  /* transition: width 1s, height 2s, background-color 2s, transform 2s; */
+  /* animation: 4s normal running scroll;  */
+}
+.first-image-box-show {animation: 0.2s normal running width;}
+@keyframes width {
+    100% {width: 15vw}
+    0% {width: 0}
+}
+.second-image-box-show {animation: 0.4s normal running width;}
+@keyframes width {
+    100% {width: 15vw}
+    50% {width: 0px}
+    0% {width: 0}
+}
+.third-image-box-show {animation: 0.6s normal running width;}
+@keyframes width {
+    100% {width: 15vw}
+    67% {width: 0}
+    0% {width: 0}
+}
+.forth-image-box-show {animation: 0.8s normal running width;}
+@keyframes width {
+    100% {width: 15vw}
+    75% {width: 0px}
+    0% {width: 0}
 }
 
-.imageBox{
-  width: 180px;
+
+.title-slide-col {
+  overflow: hidden;
+  display: block;
+  white-space: nowrap;
 }
-.imageBox:hover{
-  width: 220px;
-  padding-left: 0px;
-  transition: width 1s, height 2s, background-color 2s, transform 2s;
+.title-slide-col p { margin: 0px !important; }
+.title-scroller {
+  height: 30pt;
+  overflow: hidden;
+}
+.title-scroller .title-inner { animation: 1s normal running titleScroll; }
+@keyframes titleScroll {
+  100%   {margin-top: 5px;}
+  50%  {margin-top: -30pt;}
+  0% {margin-top: -30pt;}
 }
 .sound{
   position: fixed;
-  bottom: 40px;
-  left: 20px;
+  left: 25px;
   z-index: 11;
 }
 .sound>i{
   margin-left: 5px;
-  bottom: 40px;
+  bottom: 25px;
   position:fixed;
+  font-size: 18px;
 }
 .DrawIcon{
   position: absolute;
@@ -46,34 +115,84 @@
   top: 0;
   will-change: transform;
 }
+.div-title{
+  text-align: center;
+  /* margin-top: -25px; */
+}
+.home-box-title{
+  width: 100%;
+  font-family: LisztFYRegular,Georgia,Times New Roman,Times,serif;;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  font-size: 29px;
+}
 .svg{
   pointer-events: none;
   width: 60px;
   height: 50px;
-  position: absolute;
-  left: -10px;
-  bottom: -12px;
+  position: fixed;
+  left: 15px;
+  bottom: 10px;
 }
 .svg:focus{
   outline: -webkit-focus-ring-color auto 5px;
 }
 .top-li{
   padding:20px 0px;
-  width: 200px;
-  height: 450px;
+  width: 15vw;
+  height: 31vw;
 }
 .top-li:hover{
-  width: 240px;
-  height: 450px;
+  width: 20vw;
+  height: 31vw;
   padding-left: 0px;
 }
 .down-li{
-  width: 200px;
-  height: 450px;
+  width: 15vw;
+  height: 31vw;
   padding-left: 0px;
 }
 .down-li:hover{
-  width: 240px;
-  height: 450px;
+  width: 20vw;
+  height: 31vw;
   padding-left: 0px;
+}
+
+
+@media (max-width: 375px){
+  /* .home-container{
+    /* margin-top:20%; */
+    /* margin-bottom: -25px; */
+  /* } */ 
+  .home-box-title{
+    font-size: 16px !important;
+  }
+  /* .div-title {
+    margin-top: 10px;
+  } */
+}
+
+@media (min-width: 375px) and (max-width: 770px){
+  /* .home-container{ */
+    /* margin-top:6% !important; */
+    /* margin-bottom: -15px; */
+  /* } */
+  .home-box-title{
+    font-size: 20px !important;
+  }
+  
+}
+
+@media (min-width: 770px) and (max-width: 870px){
+  /* .home-container{
+    margin-top:7% !important;
+    margin-bottom: -15px;
+  } */
+  .home-container>ul{
+    width: 80% !important;
+  }
+  .home-box-title{
+    font-size: 25px !important;
+  }
 }

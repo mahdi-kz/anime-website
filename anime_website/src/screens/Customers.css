@@ -1,35 +1,52 @@
-.customerContainer{
-    width: "100%";
-    margin-top: 90px;
+.customer-container{
+    margin-top: 3%;
+    display: flex;
+    justify-content: center;
 }
-.customersTitle{
+.customers-box{
+    width: 79% !important;
+}
+.international-container{
+    width: 100%;
+}
+.clients-title{
+    text-align: center;
+    font-size: 22px;
+    margin-top: 5px;
+    color: gray;
+}
+.clients-title-box{
+    margin-top: 5%;
+}
+.customers-title{
     text-align: center;
 }
 .customer-row{
     text-align: center;
-    margin-bottom: 50px;
+}
+.customer-row >div{
+    margin-bottom: 40px;
 }
 .customer-logo-box{
     margin-top: 65px;
 }
-.customer-name{
-    opacity: 0;
-    visibility: hidden;
-    -webkit-transition: opacity 1000ms, visibility 1000ms;
-    transition: opacity 1000ms, visibility 1000ms;
-}
-.customer-name-show {
-    visibility: visible;
-    opacity: 1;
-}
-.customerLogo {
-    width: 90px;
-    height: 90px;
-    -webkit-animation: pulsing 2s ;
-    animation: pulsing 0.5s;
+.customer-logo {
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden
+    /* -webkit-animation: pulsing 2s ;
+    animation: pulsing 0.5s; */
 }  
-@keyframes pulsing {
-    0% {
+.customer-logo-img{
+    object-fit: cover;
+    flex-shrink: 0;
+    max-width: 100%;
+    max-height: 100%
+}
+/* @keyframes pulsing {
+    0%{
         -webkit-transform: scale(0.1, 0.1);
         transform: scale(0.1, 0.1)
     }
@@ -37,7 +54,7 @@
         -webkit-transform: scale(0.2, 0.2);
         transform: scale(0.2, 0.2)
     }
-    40% {
+    40%{
         -webkit-transform: scale(0.4, 0.4);
         transform: scale(0.4, 0.4);
     }
@@ -49,8 +66,42 @@
         -webkit-transform: scale(0.8, 0.8);
         transform: scale(0.8, 0.8)    
     }
-    100% {
+    100%{
         -webkit-transform: scale(1.0, 1.0);
         transform: scale(1.0, 1.0);
     }
+} */
+
+@media (max-width: 370px){
+    .customers-title{
+        font-size: 18px;
+    }
+    .customer-container{
+        margin-top: 32% !important;
+    }
+    .customer-logo {
+        height: 45px;
+    }  
+    .clients-title{
+        font-size: 15px;
+    }
+}
+@media (min-width: 375px) and (max-width: 450px) {
+    .customers-title{
+        font-size: 22px;
+    }
+    .customer-container{
+        margin-top: 20% !important;
+    }
+    .customer-logo {
+        height: 50px;
+    }  
+    .clients-title{
+        font-size: 17px;
+    }
+}
+@media (min-width:450px) and (max-width:775px){
+    .customer-logo {
+        height: 70px;
+    }  
 }
