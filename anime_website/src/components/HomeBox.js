@@ -1,14 +1,6 @@
 import React, { useState, useRef, useEffect, setLoading, fetchDefibs} from 'react';
 import './HomeBox.css'
 import { Link } from 'react-router-dom';
-//import image1 from '../images/home/1.webp';
-//import image2 from '../images/home/2.webp';
-//import image3 from '../images/home/3.webp';
-//import image4 from '../images/home/4.webp';
-import video1 from '../videos/1.mp4';
-import video2 from '../videos/2.mp4';
-import video3 from '../videos/3.mp4';
-import video4 from '../videos/4.mp4';
 import {get_image_address, get_video_address} from '../admin/call_api'
 
 

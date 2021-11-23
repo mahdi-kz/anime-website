@@ -1,6 +1,6 @@
-import React, { useEffect, useRef, useState} from 'react';
+import React, { useRef, useState} from 'react';
 import './GreiVideo.css'
-import screenfull from 'screenfull'
+// import screenfull from 'screenfull'
 import ReactPlayer from 'react-player'
 import Modal from "react-modal";
 
@@ -9,8 +9,6 @@ function GreiVideo(props){
     const [play, setPlay] = useState(props.autoPlay);
     const [hasLight, setHasLight] = useState(props.light?true:false);
     const [isShow, setIsShow] = useState(false);
-    // const [height, setHeight] = useState(props.height);
-    // const [width, setWidth] = useState(props.width);
 
     const playerRef = useRef();
 
@@ -61,7 +59,7 @@ function GreiVideo(props){
                     light={hasLight?props.light:''}
                     config={{ file: { attributes: {
                         autoPlay: play,
-                        muted: true
+                        muted: true,
                     }}}}
                 />
             </div>
@@ -78,11 +76,14 @@ function GreiVideo(props){
                         url={props.url}
                         loop={true}
                         seek={0}
+                        controls={true}
                         height='auto'
                         width='100%'
+                        
                         config={{ file: { attributes: {
                             autoPlay: true,
-                            muted: false
+                            muted: false,
+                            controlsList:"nofullscreen"
                         }}}}
                     />
                     

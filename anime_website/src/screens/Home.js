@@ -27,7 +27,7 @@ export default function Home(props) {
 			<div className="home-container">
 				{!showFirstModal && 
 					<div>
-						<Navbar showLogo={true}/>
+						<Navbar showLogo={true} classes={"navbar-fixed"}/>
 						<HomeBox />
 					</div>
 				}
