@@ -14,6 +14,7 @@ import Course from '../../components/Course';
 
 
 export default function Products(props){
+	const [showLogo, setShowLogo] = useState(true)
 	const [products, setProducts] = useState([]);
 	const [courses,setCourses] = useState([]);
 	const [videoUrl, setVideoUrl] = useState(null);
@@ -48,6 +49,9 @@ export default function Products(props){
 				behavior: 'smooth'
 			})
 		});
+		window.addEventListener('scroll',()=>{
+			setShowLogo(document.documentElement.scrollTop?false:true)
+		})
 	}, [])
 
 	const updateSize = ()=>{
@@ -224,7 +228,7 @@ export default function Products(props){
 	return(
 		<>
 			{!showTeamModal && !hideNavbar &&
-				<Navbar showLogo={true} />
+				<Navbar showLogo={showLogo} />
 			}
 			<div className="services-container" 
 				style={{

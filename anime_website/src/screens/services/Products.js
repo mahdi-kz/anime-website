@@ -18,6 +18,7 @@ import Employee from '../../components/Employee';
 
 
 export default function Products(props){
+	const [showLogo, setShowLogo] = useState(true)
 	const [videos, setVideos] = useState([]);
 	const [products, setProducts] = useState([]);
 	const [members, setMembers] = useState([]);
@@ -56,7 +57,9 @@ export default function Products(props){
 				behavior: 'smooth'
 			})
 		});
-
+		window.addEventListener('scroll',()=>{
+			setShowLogo(document.documentElement.scrollTop?false:true)
+		})
 	}, [videoSize])
 
 	const updateSize = ()=>{
@@ -290,7 +293,7 @@ export default function Products(props){
 	return(
 		<>
 			{!showTeamModal && !hideNavbar &&
-				<Navbar showLogo={true} />
+				<Navbar showLogo={showLogo} />
 			}
 			<div className="services-container" 
 				style={{
