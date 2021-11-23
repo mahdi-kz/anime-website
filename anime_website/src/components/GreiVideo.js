@@ -9,8 +9,6 @@ function GreiVideo(props){
     const [play, setPlay] = useState(props.autoPlay);
     const [hasLight, setHasLight] = useState(props.light?true:false);
     const [isShow, setIsShow] = useState(false);
-    // const [height, setHeight] = useState(props.height);
-    // const [width, setWidth] = useState(props.width);
 
     const playerRef = useRef();
 
