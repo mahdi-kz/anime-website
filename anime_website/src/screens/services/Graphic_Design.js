@@ -36,7 +36,7 @@ export default function Products(props){
 		document.querySelector('.arrow-right').addEventListener('click', function () {
 			const el = document.getElementById("hscroll");
 			el.scroll({
-				left: el.scrollLeft+parseInt(videoSize+50),
+				left: el.scrollLeft+parseInt(videoSize+150),
 				top: 0,
 				behavior: 'smooth'
 			})
@@ -44,7 +44,7 @@ export default function Products(props){
 		document.querySelector('.arrow-left').addEventListener('click', function () {
 			const el = document.getElementById("hscroll");
 			el.scroll({
-				left: el.scrollLeft-parseInt(videoSize+50),
+				left: el.scrollLeft-parseInt(videoSize+150),
 				top: 0,
 				behavior: 'smooth'
 			})
@@ -234,22 +234,23 @@ export default function Products(props){
 	}
 
 	return(
-		<div style={{
-            backgroundImage:`url(${bgImage})`, 
-            backgroundPosition:'left ',
-            height:'100%',
-            backgroundRepeat: 'round',
-            backgroundSize:"cover"
+		// <div style={{
+        //     backgroundImage:`url(${bgImage})`, 
+        //     backgroundPosition:'left ',
+        //     height:'100%',
+        //     backgroundRepeat: 'round',
+        //     backgroundSize:"cover"
 
-            }}
-        >
-            <div style={{
-                backgroundImage:`url(${backgroundImage})`, 
-                backgroundPosition:'center',
-                height:'100%',
-                backgroundRepeat: 'no-repeat',
-                backgroundSize:"cover"
-                }}
+        //     }}
+        // >
+            <div 
+				// style={{
+                // backgroundImage:`url(${backgroundImage})`, 
+                // backgroundPosition:'center',
+                // height:'100%',
+                // backgroundRepeat: 'no-repeat',
+                // backgroundSize:"cover"
+                // }}
             >
 				{!showTeamModal && !hideNavbar &&
 					<Navbar showLogo={showLogo} />
@@ -362,7 +363,7 @@ export default function Products(props){
 					</div>
 				</div>
 			</div>
-		</div>
+		// </div>
 	)
 
 }

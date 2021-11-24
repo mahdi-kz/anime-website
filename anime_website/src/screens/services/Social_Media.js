@@ -11,7 +11,6 @@ import gif1 from '../../images/teams/002-Fast.gif';
 import { Container, Row, Col } from 'react-grid-system';
 import Employee from '../../components/Employee';
 import backgroundImage from '../../images/background/media-bg.webp';
-import bgImage from '../../images/background/bg.webp';
 
 export default function Products(props){
 	const [showLogo, setShowLogo] = useState(true)
@@ -35,7 +34,7 @@ export default function Products(props){
 		document.querySelector('.arrow-right').addEventListener('click', function () {
 			const el = document.getElementById("hscroll");
 			el.scroll({
-				left: el.scrollLeft+parseInt(videoSize+70),
+				left: el.scrollLeft+parseInt(videoSize+100),
 				top: 0,
 				behavior: 'smooth'
 			})
@@ -43,7 +42,7 @@ export default function Products(props){
 		document.querySelector('.arrow-left').addEventListener('click', function () {
 			const el = document.getElementById("hscroll");
 			el.scroll({
-				left: el.scrollLeft-parseInt(videoSize+70),
+				left: el.scrollLeft-parseInt(videoSize+100),
 				top: 0,
 				behavior: 'smooth'
 			})
@@ -58,7 +57,6 @@ export default function Products(props){
 			let elWidth = document.querySelectorAll("#top-video .react-player");
 			if(elWidth){
 				elWidth = elWidth[0].offsetWidth;
-				// setVideoWidth(elWidth)
 				const videosWidth = parseInt(elWidth/5 -20);
 				setVideoSides(videosWidth);
 			}
@@ -233,15 +231,6 @@ export default function Products(props){
 	}
 
 	return(
-		// <div style={{
-        //     backgroundImage:`url(${bgImage})`, 
-        //     backgroundPosition:'left ',
-        //     height:'100%',
-        //     backgroundRepeat: 'round',
-        //     backgroundSize:"cover"
-
-        //     }}
-        // >
 		<>
             <div style={{
                 backgroundImage:`url(${backgroundImage})`, 
@@ -273,6 +262,7 @@ export default function Products(props){
 							<GreiVideo 
 								hideNavbar={()=>setHideNavbar(true)}
 								showNavbar={()=>setHideNavbar(false)}
+								hasFullscreen={true}
 								with="79%"
 								height="auto"
 								url={videoUrl} 
@@ -293,6 +283,7 @@ export default function Products(props){
 												<GreiVideo 
 													hideNavbar={()=>setHideNavbar(true)}
 													showNavbar={()=>setHideNavbar(false)}
+													hasFullscreen={true}
 													with={videoSize} 
 													height={videoSize}
 													classPlayer="pro-react-player"

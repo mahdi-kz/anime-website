@@ -36,7 +36,7 @@ export default function Products(props){
 		document.querySelector('.arrow-right').addEventListener('click', function () {
 			const el = document.getElementById("hscroll");
 			el.scroll({
-				left: el.scrollLeft+parseInt(videoSize+70),
+				left: el.scrollLeft+parseInt(videoSize+150),
 				top: 0,
 				behavior: 'smooth'
 			})
@@ -44,7 +44,7 @@ export default function Products(props){
 		document.querySelector('.arrow-left').addEventListener('click', function () {
 			const el = document.getElementById("hscroll");
 			el.scroll({
-				left: el.scrollLeft-parseInt(videoSize+70),
+				left: el.scrollLeft-parseInt(videoSize+150),
 				top: 0,
 				behavior: 'smooth'
 			})
