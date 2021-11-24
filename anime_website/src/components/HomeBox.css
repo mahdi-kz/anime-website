@@ -27,7 +27,7 @@
   list-style-type: none;
   text-align:center;
   overflow-x: hidden;
-  overflow-y: scroll;
+  overflow-y: hidden;
   cursor: move;
   width: 100%;
   align-items: center;
