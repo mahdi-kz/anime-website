@@ -10,7 +10,7 @@ import image2 from '../../images/test/course1.png';
 import servicesBg from '../../images/background/services-bg.webp'
 import { Container, Row, Col } from 'react-grid-system';
 import Course from '../../components/Course';
-
+import backgroundImage from '../../images/background/training-bg.webp';
 
 
 export default function Products(props){
@@ -36,7 +36,7 @@ export default function Products(props){
 		document.querySelector('.arrow-right').addEventListener('click', function () {
 			const el = document.getElementById("hscroll");
 			el.scroll({
-				left: el.scrollLeft+parseInt(videoSize+70),
+				left: el.scrollLeft+parseInt(videoSize+150),
 				top: 0,
 				behavior: 'smooth'
 			})
@@ -44,7 +44,7 @@ export default function Products(props){
 		document.querySelector('.arrow-left').addEventListener('click', function () {
 			const el = document.getElementById("hscroll");
 			el.scroll({
-				left: el.scrollLeft-parseInt(videoSize+70),
+				left: el.scrollLeft-parseInt(videoSize+150),
 				top: 0,
 				behavior: 'smooth'
 			})
@@ -226,7 +226,15 @@ export default function Products(props){
 	}
 
 	return(
-		<>
+		<div style={{
+			backgroundImage:`url(${backgroundImage})`, 
+			// backgroundPosition:'center',
+			height:'100%',
+			backgroundRepeat: 'no-repeat',
+			backgroundSize:"cover",
+			backgroundAttachment: 'fixed'
+			}}
+		>
 			{!showTeamModal && !hideNavbar &&
 				<Navbar showLogo={showLogo} />
 			}
@@ -334,7 +342,7 @@ export default function Products(props){
 					/>
 				</div>
 			</div>
-		</>
+		</div>
 	)
 
 }

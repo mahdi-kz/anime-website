@@ -1,4 +1,4 @@
-import React, { useRef, useState} from 'react';
+import React, { useEffect, useRef, useState} from 'react';
 import './GreiVideo.css'
 // import screenfull from 'screenfull'
 import ReactPlayer from 'react-player'
@@ -19,7 +19,12 @@ function GreiVideo(props){
         }
     }
 
+    useEffect(()=>{
+        console.log(props);
+    },[])
+
     const openFullscreen = () => {
+        console.log('11111111111')
         setIsShow(true);
         setPlay(false);
         // if(!props.notFull){ 
@@ -77,7 +82,7 @@ function GreiVideo(props){
                         loop={true}
                         seek={0}
                         controls={true}
-                        height='auto'
+                        height={window.innerHeight}
                         width='100%'
                         
                         config={{ file: { attributes: {

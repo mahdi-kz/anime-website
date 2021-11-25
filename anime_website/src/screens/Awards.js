@@ -7,6 +7,7 @@ import image2 from '../images/awards/ICON AWARDS-02.svg';
 import image3 from '../images/awards/ICON AWARDS-03.svg';
 import image4 from '../images/awards/ICON AWARDS-04.svg';
 import { Container, Row, Col } from 'react-grid-system';
+import backgroundImage from '../images/background/awards-bg.webp';
 
 
 export default function Awards(){
@@ -14,10 +15,14 @@ export default function Awards(){
     const [boxClasses, setBoxClasses] = useState("template GenericTemplate AwardsTemplate")
     const [sortTableAscending, setSortTableAscending] = useState(true);
     const [sortClasses, setSortClasses] = useState("active");
+    const [showLogo, setShowLogo] = useState(true);
 
     useEffect(()=>{
         setBoxClasses("template GenericTemplate AwardsTemplate templateInComplete")
         getAwards();
+        window.addEventListener('scroll',()=>{
+			setShowLogo(document.documentElement.scrollTop?false:true)
+		})
     }, [])
 
     const sortAwards = ()=>{
@@ -197,8 +202,17 @@ export default function Awards(){
     }
 
 	return(
-		<>
-            <Navbar showLogo={true}/>
+		<div 
+            style={{
+                backgroundImage:`url(${backgroundImage})`, 
+                // backgroundPosition:'center',
+                height:'100%',
+                backgroundRepeat: 'no-repeat',
+                backgroundSize:"cover",
+                backgroundAttachment: 'fixed'
+            }}
+        >
+            <Navbar showLogo={showLogo}/>
             <div className={boxClasses}>
                 <div className="awards-box">
                     <div className="header">Awards</div>
@@ -275,6 +289,6 @@ export default function Awards(){
                     </section>
                 </div>
             </div>
-		</>
+		</div>
 	)
 }
