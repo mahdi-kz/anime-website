@@ -21,7 +21,7 @@ export default function Products(props){
 	const [personInfo, setPersonInfo] = useState([]);
 	const [pageNumber, setPageNumber] = useState(1);
 	const [currentPage, setCurrentPage] = useState(1);
-	const [videoSize, setVideoSides] = useState("80%");
+	const [videoSize, setVideoSides] = useState(200);
 	const [hideNavbar, setHideNavbar] = useState(false);
 
 	useEffect(()=>{
@@ -34,7 +34,7 @@ export default function Products(props){
 		document.querySelector('.arrow-right').addEventListener('click', function () {
 			const el = document.getElementById("hscroll");
 			el.scroll({
-				left: el.scrollLeft+parseInt(videoSize+100),
+				left: el.scrollLeft+parseInt(videoSize+150),
 				top: 0,
 				behavior: 'smooth'
 			})
@@ -42,7 +42,7 @@ export default function Products(props){
 		document.querySelector('.arrow-left').addEventListener('click', function () {
 			const el = document.getElementById("hscroll");
 			el.scroll({
-				left: el.scrollLeft-parseInt(videoSize+100),
+				left: el.scrollLeft-parseInt(videoSize+150),
 				top: 0,
 				behavior: 'smooth'
 			})

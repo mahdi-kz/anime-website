@@ -43,8 +43,8 @@ export default function Awards(){
 		<div style={{
             backgroundImage:`url(${backgroundImage})`, 
             // backgroundPosition:'left ',
-            height:window.innerHeight,
-            backgroundRepeat: 'round',
+            height:'100%',
+            backgroundRepeat: 'no-repeat',
             backgroundSize:"cover",
             backgroundAttachment: 'fixed'
             }}

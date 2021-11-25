@@ -3,3 +3,4 @@
 /anime_website/node_modules/
 anime_website/node_modules/.cache/.eslintcache
 */pyc
+/back_end/app/static
