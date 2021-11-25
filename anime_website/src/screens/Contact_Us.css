@@ -1,9 +1,13 @@
 .contact-us-containet{
     padding: 70px 150px;
 }
+.contact-header{
+    margin-top: 18vh !important;
+}
 .contact-box{
     width: 100%;
     max-width: none !important;
+    /* margin-top: 2.3% !important; */
 }
 .contact-us-title{
     font-size: xx-large;

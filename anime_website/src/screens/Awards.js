@@ -7,6 +7,7 @@ import image2 from '../images/awards/ICON AWARDS-02.svg';
 import image3 from '../images/awards/ICON AWARDS-03.svg';
 import image4 from '../images/awards/ICON AWARDS-04.svg';
 import { Container, Row, Col } from 'react-grid-system';
+import backgroundImage from '../images/background/awards-bg.webp';
 
 
 export default function Awards(){
@@ -197,7 +198,16 @@ export default function Awards(){
     }
 
 	return(
-		<>
+		<div 
+            style={{
+                backgroundImage:`url(${backgroundImage})`, 
+                // backgroundPosition:'center',
+                height:'100%',
+                backgroundRepeat: 'no-repeat',
+                backgroundSize:"cover",
+                backgroundAttachment: 'fixed'
+            }}
+        >
             <Navbar showLogo={true}/>
             <div className={boxClasses}>
                 <div className="awards-box">
@@ -275,6 +285,6 @@ export default function Awards(){
                     </section>
                 </div>
             </div>
-		</>
+		</div>
 	)
 }

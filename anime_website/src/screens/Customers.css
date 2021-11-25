@@ -1,10 +1,10 @@
 .customer-container{
-    margin-top: 3%;
     display: flex;
     justify-content: center;
 }
 .customers-box{
     width: 79% !important;
+    margin-top: 15vh;
 }
 .international-container{
     width: 100%;
@@ -12,7 +12,7 @@
 .clients-title{
     text-align: center;
     font-size: 22px;
-    margin-top: 5px;
+    margin-top: 2vh;
     color: gray;
 }
 .clients-title-box{
@@ -27,17 +27,12 @@
 .customer-row >div{
     margin-bottom: 40px;
 }
-.customer-logo-box{
-    margin-top: 65px;
-}
 .customer-logo {
     height: 80px;
     display: flex;
     justify-content: center;
     align-items: center;
-    overflow: hidden
-    /* -webkit-animation: pulsing 2s ;
-    animation: pulsing 0.5s; */
+    overflow: hidden;
 }  
 .customer-logo-img{
     object-fit: cover;
@@ -45,53 +40,31 @@
     max-width: 100%;
     max-height: 100%
 }
-/* @keyframes pulsing {
-    0%{
-        -webkit-transform: scale(0.1, 0.1);
-        transform: scale(0.1, 0.1)
-    }
-    20%{
-        -webkit-transform: scale(0.2, 0.2);
-        transform: scale(0.2, 0.2)
-    }
-    40%{
-        -webkit-transform: scale(0.4, 0.4);
-        transform: scale(0.4, 0.4);
-    }
-    60%{
-        -webkit-transform: scale(0.6, 0.6);
-        transform: scale(0.6, 0.6)
-    }
-    80%{
-        -webkit-transform: scale(0.8, 0.8);
-        transform: scale(0.8, 0.8)    
-    }
-    100%{
-        -webkit-transform: scale(1.0, 1.0);
-        transform: scale(1.0, 1.0);
-    }
-} */
-
 @media (max-width: 370px){
     .customers-title{
-        font-size: 18px;
+        font-size: 12px !important;
+        margin-top: 25% !important;
     }
-    .customer-container{
-        margin-top: 32% !important;
+    .customer-container,
+    .customers-box,
+    .customer-logo-box{
+        margin-top: 0px !important;
     }
     .customer-logo {
         height: 45px;
     }  
     .clients-title{
-        font-size: 15px;
+        font-size: 10px;
     }
 }
 @media (min-width: 375px) and (max-width: 450px) {
     .customers-title{
         font-size: 22px;
     }
-    .customer-container{
-        margin-top: 20% !important;
+    .customer-container,
+    .customers-box,
+    .customer-logo-box{
+        margin-top: 0px !important;
     }
     .customer-logo {
         height: 50px;
@@ -104,4 +77,9 @@
     .customer-logo {
         height: 70px;
     }  
+    .customer-container,
+    .customers-box,
+    .customer-logo-box{
+        margin-top: 0px !important;
+    }
 }

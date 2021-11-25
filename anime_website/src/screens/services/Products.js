@@ -12,7 +12,7 @@ import image2 from '../../images/test/people1.png';
 import image3 from '../../images/teams/pop2.jpg';
 import image4 from '../../images/teams/pop1.jpg';
 import gif1 from '../../images/teams/002-Fast.gif';
-import servicesBg from '../../images/background/services-bg.webp'
+import backgroundImage from '../../images/background/production-bg.webp'
 import { Container, Row, Col } from 'react-grid-system';
 import Employee from '../../components/Employee';
 
@@ -291,17 +291,20 @@ export default function Products(props){
 	}
 
 	return(
-		<>
+		<div 
+			style={{
+				backgroundImage:`url(${backgroundImage})`, 
+                // backgroundPosition:'center',
+                height:'100%',
+                backgroundRepeat: 'no-repeat',
+                backgroundSize:"cover",
+				backgroundAttachment: 'fixed'
+			}}
+		>
 			{!showTeamModal && !hideNavbar &&
 				<Navbar showLogo={showLogo} />
 			}
-			<div className="services-container" 
-				style={{
-					backgroundImage:servicesBg, 
-					backgroundPosition: 'center',
-					backgroundSize: 'cover',
-					backgroundRepeat: 'no-repeat'
-				}}>
+			<div className="services-container">
 				<div className="services-box" >
 					<div className="services-header">Productions</div>
 					<div className="slideCol">
@@ -427,6 +430,6 @@ export default function Products(props){
 					/>
 				</div>
 			</div>
-		</>
+		</div>
 	)
 }
