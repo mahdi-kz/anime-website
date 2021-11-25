@@ -15,10 +15,14 @@ export default function Awards(){
     const [boxClasses, setBoxClasses] = useState("template GenericTemplate AwardsTemplate")
     const [sortTableAscending, setSortTableAscending] = useState(true);
     const [sortClasses, setSortClasses] = useState("active");
+    const [showLogo, setShowLogo] = useState(true);
 
     useEffect(()=>{
         setBoxClasses("template GenericTemplate AwardsTemplate templateInComplete")
         getAwards();
+        window.addEventListener('scroll',()=>{
+			setShowLogo(document.documentElement.scrollTop?false:true)
+		})
     }, [])
 
     const sortAwards = ()=>{
@@ -208,7 +212,7 @@ export default function Awards(){
                 backgroundAttachment: 'fixed'
             }}
         >
-            <Navbar showLogo={true}/>
+            <Navbar showLogo={showLogo}/>
             <div className={boxClasses}>
                 <div className="awards-box">
                     <div className="header">Awards</div>
