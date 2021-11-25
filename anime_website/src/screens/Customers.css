@@ -8,6 +8,7 @@
 }
 .international-container{
     width: 100%;
+    margin-top: 6vh;
 }
 .clients-title{
     text-align: center;
@@ -17,6 +18,9 @@
 }
 .clients-title-box{
     margin-top: 5%;
+}
+.customer-logo-box{
+    margin-top: 6vh;
 }
 .customers-title{
     text-align: center;

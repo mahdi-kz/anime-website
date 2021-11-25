@@ -22,7 +22,7 @@ export default function Products(props){
 	const [personInfo, setPersonInfo] = useState([]);
 	const [pageNumber, setPageNumber] = useState(1);
 	const [currentPage, setCurrentPage] = useState(1);
-	const [videoSize, setVideoSides] = useState("80%");
+	const [videoSize, setVideoSides] = useState(200);
 	const [hideNavbar, setHideNavbar] = useState(false);
 	const [arrowTop, setArrowTop] = useState(10)
 
