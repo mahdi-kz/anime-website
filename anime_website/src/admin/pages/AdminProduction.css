@@ -1,0 +1,34 @@
+.AdminProduction{
+    width: calc(100vw - 300px);
+    right: 0;
+    position: flex;
+    padding: 10px;
+    margin: 0px;
+    margin-left: 250px;
+    overflow-y: hidden;
+    overflow-x: hidden;
+    flex: 1;
+}
+
+.AdminProductionTab{
+    left: 0x;
+    font-size: 20px;
+    width: 120px;;
+    padding: 20px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.AdminProductionTabSelected{
+    border-bottom: 4px solid #50BCBA;
+}
+
+.AdminProductionHeader{
+    margin: 20px;
+}
+
+.AdminProductionVideosContainer{
+    height: calc(100vh - 250px);
+    overflow-y: scroll;
+    overflow-x: hidden;
+}

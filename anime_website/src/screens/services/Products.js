@@ -15,6 +15,7 @@ import gif1 from '../../images/teams/002-Fast.gif';
 import backgroundImage from '../../images/background/production-bg.webp'
 import { Container, Row, Col } from 'react-grid-system';
 import Employee from '../../components/Employee';
+import {get_service_videos} from '../../admin/call_api';
 
 
 export default function Products(props){
@@ -35,11 +36,9 @@ export default function Products(props){
 
 	useEffect(()=>{
 		updateSize();
-		setVideoUrl(video1);
 		getVideos();
 		getProducts();
 		getMembers();
-		setPageNumber(3);
 		window.addEventListener('resize', updateSize);
 		document.querySelector('.arrow-right').addEventListener('click', function () {
 			const el = document.getElementById("hscroll");
@@ -74,118 +73,141 @@ export default function Products(props){
 		}catch{}
 	}
 
-	const getVideos = ()=>{
-		setVideos([
-			{
-				image:mainImage,
-				videoUrl:video2
-			},
-			{
-				image:mainImage,
-				videoUrl:video1
-			},
-			{
-				image:mainImage,
-				videoUrl:video2
-			},
-			{
-				image:mainImage,
-				videoUrl:video1
-			},
-			{
-				image:mainImage,
-				videoUrl:video2
-			},
-			{
-				image:mainImage,
-				videoUrl:video2
-			},
-			{
-				image:mainImage,
-				videoUrl:video2
-			}
-		])
-	}
+    async function getVideos(){
+        while (videos.length > 0){
+            videos.pop();
+        }
+        get_service_videos('production', true).then((res)=>{
+            let list = []
+            res.map(video=>{list.push(video)})
+            setVideos(list);
+            setVideoUrl(list[0].video_address)
+        });
+    }
 
-	const getProducts = ()=>{
-		setProducts([
-			{
-				videoUrl:video3,
-				name:"Product name",
-				date:"2021/2/3"
-			},
-			{
-				videoUrl:video3,
-				name:"Product name",
-				date:"2021/2/3"
-			},
-			{
-				videoUrl:video3,
-				name:"Product name",
-				date:"2021/2/3"
-			},
-			{
-				videoUrl:video3,
-				name:"Product name",
-				date:"2021/2/3"
-			},
-			{
-				videoUrl:video3,
-				name:"Product name",
-				date:"2021/2/3"
-			},
-			{
-				videoUrl:video3,
-				name:"Product name",
-				date:"2021/2/3"
-			},
-			{
-				videoUrl:video3,
-				name:"Product name",
-				date:"2021/2/3"
-			},
-			{
-				videoUrl:video3,
-				name:"Product name",
-				date:"2021/2/3"
-			},
-			{
-				videoUrl:video3,
-				name:"Product name",
-				date:"2021/2/3"
-			},
-			{
-				videoUrl:video3,
-				name:"Product name",
-				date:"2021/2/3"
-			},
-			{
-				videoUrl:video3,
-				name:"Product name",
-				date:"2021/2/3"
-			},
-			{
-				videoUrl:video3,
-				name:"Product name",
-				date:"2021/2/3"
-			},
-			{
-				videoUrl:video3,
-				name:"Product name",
-				date:"2021/2/3"
-			},
-			{
-				videoUrl:video3,
-				name:"Product name",
-				date:"2021/2/3"
-			},
-			{
-				videoUrl:video3	,
-				name:"Product name",
-				date:"2021/2/3"
-			}
-		])
-	}
+    async function getProducts(){
+        while (products.length > 0){
+            products.pop();
+        }
+        get_service_videos('production', false).then((res)=>{
+            let list = []
+            res.map(video=>{list.push(video)})
+            setProducts(list);
+            setPageNumber(~~(list.length / 15) + (list.length % 15 > 0 ? 1: 0));
+        });
+    }
+//	const getVideos = ()=>{
+//		setVideos([
+//			{
+//				image:mainImage,
+//				videoUrl:video2
+//			},
+//			{
+//				image:mainImage,
+//				videoUrl:video1
+//			},
+//			{
+//				image:mainImage,
+//				videoUrl:video2
+//			},
+//			{
+//				image:mainImage,
+//				videoUrl:video1
+//			},
+//			{
+//				image:mainImage,
+//				videoUrl:video2
+//			},
+//			{
+//				image:mainImage,
+//				videoUrl:video2
+//			},
+//			{
+//				image:mainImage,
+//				videoUrl:video2
+//			}
+//		])
+//	}
+
+//	const getProducts = ()=>{
+//		setProducts([
+//			{
+//				videoUrl:video3,
+//				name:"Product name",
+//				date:"2021/2/3"
+//			},
+//			{
+//				videoUrl:video3,
+//				name:"Product name",
+//				date:"2021/2/3"
+//			},
+//			{
+//				videoUrl:video3,
+//				name:"Product name",
+//				date:"2021/2/3"
+//			},
+//			{
+//				videoUrl:video3,
+//				name:"Product name",
+//				date:"2021/2/3"
+//			},
+//			{
+//				videoUrl:video3,
+//				name:"Product name",
+//				date:"2021/2/3"
+//			},
+//			{
+//				videoUrl:video3,
+//				name:"Product name",
+//				date:"2021/2/3"
+//			},
+//			{
+//				videoUrl:video3,
+//				name:"Product name",
+//				date:"2021/2/3"
+//			},
+//			{
+//				videoUrl:video3,
+//				name:"Product name",
+//				date:"2021/2/3"
+//			},
+//			{
+//				videoUrl:video3,
+//				name:"Product name",
+//				date:"2021/2/3"
+//			},
+//			{
+//				videoUrl:video3,
+//				name:"Product name",
+//				date:"2021/2/3"
+//			},
+//			{
+//				videoUrl:video3,
+//				name:"Product name",
+//				date:"2021/2/3"
+//			},
+//			{
+//				videoUrl:video3,
+//				name:"Product name",
+//				date:"2021/2/3"
+//			},
+//			{
+//				videoUrl:video3,
+//				name:"Product name",
+//				date:"2021/2/3"
+//			},
+//			{
+//				videoUrl:video3,
+//				name:"Product name",
+//				date:"2021/2/3"
+//			},
+//			{
+//				videoUrl:video3	,
+//				name:"Product name",
+//				date:"2021/2/3"
+//			}
+//		])
+//	}
 
 	const getMembers = ()=>{
 		setMembers([
@@ -330,7 +352,7 @@ export default function Products(props){
 					<div className="div-center">
 						<div className="services-videos" style={{width:videoWidth}}>
 							{videos.map((obj, index)=>{return(
-								<div onClick={()=>clickScrollbarVideos(obj.videoUrl)} >
+								<div onClick={()=>clickScrollbarVideos(obj.video_address)} >
 									<GreiVideo
 										classWrapper="main-video-wrapper"
 										classPlayer="main-react-player"
@@ -338,7 +360,7 @@ export default function Products(props){
 											paddingTop:'20px',
     										paddingBottom:'5px',
 											paddingRight:index===videos.length-1?'0px !important':'25px'}} 
-										url={obj.videoUrl} 
+										url={obj.video_address}
 										autoPlay={false}
 										with={videoSize} 
 										height={videoSize} 
@@ -365,7 +387,7 @@ export default function Products(props){
 												with={videoSize} 
 												height={videoSize}
 												classPlayer="pro-react-player"
-												url={obj.videoUrl} 
+												url={obj.video_address}
 												autoPlay={false} 
 												playWithHover={true}
 												light={obj.image}
