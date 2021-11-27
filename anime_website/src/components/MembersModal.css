@@ -6,6 +6,7 @@
     float: right;
     position: relative;
     z-index: 999999;
+    position: fixed;
 }
 .team-modal-picture{
     padding: 0 !important;
