@@ -26,9 +26,9 @@
 .div-center > div{
     width: 100%;
 }
-.team-column{
+/* .team-column{
     padding: 0 !important;
-}
+} */
 .div-center > div:first-child {
     position: relative;
     padding: 0 !important;
@@ -124,8 +124,8 @@
     padding: 10px;
     color: white;
     background-color: #50BCBA;
-    width: 5px;
-    height: 5px;
+    width: 2vw;
+    height: 2vw;
     text-align: center;
 }
 .page-numbers{
@@ -181,6 +181,14 @@
 }
 
 @media (max-width: 270px){
+    .team-arrow{
+        padding-left: 0px !important;
+        padding-right: 0px !important;
+    }
+    .services-employee-box>div{
+        padding-left: 3px !important;
+        padding-right: 3px !important;
+    }
     .main-video-wrapper{
         padding-top: 10px !important;
         padding-bottom: 0px !important;
@@ -236,12 +244,13 @@
         margin-left:0px !important;
     }
     .arrow-left {
-        left: -5px !important;
-        margin-top: 20%;
+        left: 10px !important;
+        /* margin-top: 1%; */
+        top: 25% !important;
     }
     .arrow-right {
-        right:-5px !important;
-        margin-top: 20%;
+        right:-7px !important;
+        top: 25% !important;
     }
     .services-employee-image{
         margin-top: 0px !important;
@@ -263,8 +272,20 @@
     .pro-teams-row > div {
         margin-top: 10px
     }
+    .team-employees{
+        padding-left: 0px !important;
+        padding-right: 0px !important;
+    }
 }
 @media (min-width: 270px) and (max-width: 375px){
+    .services-employee-box>div{
+        padding-left: 5px !important;
+        padding-right: 5px !important;
+    }
+    .team-employees{
+        padding-left: 0px !important;
+        padding-right: 0px !important;
+    }
     .main-video-wrapper{
         padding-top: 10px !important;
         padding-bottom: 0px !important;
@@ -321,12 +342,12 @@
     }
     .arrow-left {
         left: 21%;
-        margin-top: 20%;
+        top: 15%;
         z-index: 1;
     }
     .arrow-right {
         right:19.5% !important;
-        margin-top: 20% !important; 
+        top: 15% !important; 
     }
     .services-employee-image{
         margin-top: 0px !important;
@@ -386,7 +407,7 @@
     .services-products > div:first-child {
         width: auto !important;
         padding-right: 0px !important;
-        /* padding-left: 0px !important; */
+        padding-left: 0px !important;
     }
     .services-pro-date{
         font-size: 8px;
@@ -396,12 +417,12 @@
         margin-left:0px !important;
     }
     .arrow-left {
-        left: 40%;
-        margin-top: 12%;
+        left: 70%;
+        top: 12%;
     }
     .arrow-right {
-        right:40%;
-        margin-top: 12%;
+        right: -100%;
+        top: 12%;
     }
     .services-employee-image{
         margin-top: 0px !important;
@@ -416,6 +437,13 @@
     }
     .services-employee-job{
         font-size: 7px;
+    }
+    .services-employee-box>div{
+        padding-left: 3px !important;
+        padding-right: 3px !important;
+    }
+    .services-employee-box{
+        width: 125% !important;
     }
 }
 @media (min-width: 500px) and (max-width: 675px){
@@ -506,9 +534,6 @@
     .slideCol {
         height: 6vh !important;
     }
-    .services-products > div:first-child{
-        padding-left: 0px !important;
-    }
     .services-hr{
         width: 100%;
     }
@@ -537,7 +562,7 @@
     .services-products > div:first-child {
         width: auto !important;
         padding-right: 0px !important;
-        /* padding-left: 0px !important; */
+        padding-left: 0px !important;
     }
     .services-pro-date{
         font-size: 8px;

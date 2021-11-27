@@ -300,16 +300,16 @@ export default function Products(props){
 					<div className="div-center">
 						<Container fluid >
 							<Row>
-							<Col className="team-column" xs={1} sm={1} md={1} xl={1}>
+							<Col className="team-column" xs={0.75} sm={1} md={1} xl={1}>
 								<div className="paging-box arrow-left" style={{top:0, marginTop:arrowTop}}>
 										<div className="selected-page-number"
-											style={{display: 'flex',  justifyContent:'center', alignItems:'center'}}
+											style={{display: 'flex',  justifyContent:'center', alignItems:'center', zIndex:showTeamModal?-1:10}}
 											>
 											<i class='fas fa-chevron-left'></i>
 										</div>
 								</div>
 							</Col>
-							<Col className="team-column" xs={9} sm={10} md={10} xl={10}>
+							<Col className="team-column team-employees" xs={8} sm={10} md={10} xl={10}>
 								<div className="services-employee-box" id="hscroll" >
 									{courses.map((obj, index)=>{
 										return (<Col>
@@ -322,10 +322,10 @@ export default function Products(props){
 									})}
 								</div>
 							</Col>
-							<Col className="team-column" xs={1} sm={1} md={1} xl={1}>
+							<Col className="team-column team-arrow" xs={0.75} sm={1} md={1} xl={1}>
 								<div className="paging-box arrow-right" style={{top:0, marginTop:arrowTop}}>
-										<div className="selected-page-number"
-											style={{display: 'flex',  justifyContent:'center', alignItems:'center'}}
+										<div className="selected-page-number selected-arrow"
+											style={{display: 'flex',  justifyContent:'center', alignItems:'center', zIndex:showTeamModal?-1:10}}
 											>
 											<i class='fas fa-chevron-right'></i>
 										</div>
