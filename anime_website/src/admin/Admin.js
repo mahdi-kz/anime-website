@@ -3,6 +3,7 @@ import './Admin.css';
 import AdminSideMenu, {SidebarData} from './components/AdminSideMenu';
 import AdminHome from './pages/AdminHome';
 import AdminCustomer from './pages/AdminCustomer';
+import AdminProduction from './pages/AdminProduction';
 
 
 function Admin(){
@@ -20,6 +21,9 @@ function Admin(){
 			    }
 			    {selectedMenu === 5 &&
 			        <AdminCustomer />
+			    }
+			    {selectedMenu === 1 &&
+			        <AdminProduction />
 			    }
 			</div>
 		</>

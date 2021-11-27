@@ -7,6 +7,9 @@ const save_customer_url = '/api/save-customer';
 const get_customer_url = '/api/get-customer';
 const get_local_customers_url = '/api/get-local-customers';
 const get_global_customers_url = '/api/get-global-customers';
+const get_service_videos_url = '/api/get-service-videos';
+const get_service_video_url = '/api/get-service-video';
+const save_service_video_url = '/api/save-service-video';
 
 
 function call_json_api(url, data){
@@ -100,4 +103,26 @@ export async function get_local_customers(){
 export async function get_global_customers(){
     let res = await call_json_api(get_global_customers_url, {});
     return res;
+}
+
+export async function get_service_videos(department, top){
+    let res = await call_json_api(get_service_videos_url, {'department': department, 'top': top});
+    return res;
+}
+
+export async function get_service_video(id){
+    let res = await call_json_api(get_service_video_url, {'id': id});
+    return res;
+}
+
+export async function save_service_video(id, name, sequence, top, department, file){
+    let data = new FormData();
+    data.append('file', file);
+    data.append('id', id)
+    data.append('name', name);
+    data.append('sequence', sequence);
+    data.append('top', top);
+    data.append('department', department);
+    let res = await call_form_api(save_service_video_url, data);
+    return res['id'];
 }
