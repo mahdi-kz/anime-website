@@ -73,7 +73,7 @@ export default function Awards(){
 
                                 <Row className='customer-row'>
                                     {localClients.map(obj2=>{
-                                        return (<Col xs={6} md={4} xl={2}>
+                                        return (<Col xs={4} md={3} xl={2}>
                                             <div data-aos="zoom-in" className="customer-logo" style={{width:"100%", marginBottom:20}}> 
                                                 <img className="customer-logo-img" alt="bmw" src={obj2.logo_address} />
                                             </div>                                      

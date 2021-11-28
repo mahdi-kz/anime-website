@@ -234,7 +234,7 @@ export default function Teams(){
                         <Container fluid className="team-grid-box">
                                 <Row className='teams-row'>
                                     {teams.map((obj, index)=>{
-                                        return (<Col>
+                                        return (<Col xs={4} sm={3} md={2.4} xl={2.4}>
                                             <Employee 
                                                 classWrapper="main-video-wrapper"
                                                 classPlayer="main-react-player"

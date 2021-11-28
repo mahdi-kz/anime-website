@@ -96,7 +96,7 @@
 }
 .AwardsListModule table {
     margin: 0 auto;
-    width: 100%;
+    width: 80%;
     max-width: 1140px;
     vertical-align: top;
     border-collapse: collapse;
@@ -183,7 +183,7 @@ th {
     min-height: 100%;
 }
 .AwardsListModule table td div span:first-child {
-    font-size: 16px;
+    font-size: 1.5vw;
     font-weight: 700;
     line-height: 19px;
     width: calc(100% - 102px);
@@ -336,4 +336,10 @@ th {
 .awards-teams-row{
     margin-top: 4vw;
     margin-bottom: 3vw;
+}
+
+@media (min-width: 1200px){
+    .AwardsListModule table{
+        width: 100% !important;
+    }
 }
