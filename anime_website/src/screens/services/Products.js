@@ -344,7 +344,7 @@ export default function Products(props){
 							with="79%"
 							height="auto"
 							url={videoUrl} 
-							autoPlay={true} 
+							autoPlay={true}
 							style={{display: 'flex',justifyContent: 'center'}}
 							classPlayer="top-react-player"
 						/>
