@@ -76,3 +76,11 @@
 .contact-bottom-box{
     margin-top: 3%;
 }
+@media (max-width:753px){
+    /* .contact-box-info{
+        margin-left: 0px !important;
+    } */
+    .contact-header{
+        margin-top: 20vw !important;
+    }
+}

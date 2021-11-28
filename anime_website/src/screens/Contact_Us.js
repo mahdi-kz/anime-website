@@ -20,7 +20,7 @@ export default function Contact_Us(){
                 backgroundImage:`url(${backgroundImage})`, 
                 // backgroundPosition:'left ',
                 height:'100%',
-                backgroundRepeat: 'round',
+                backgroundRepeat: 'no-repeat',
                 backgroundSize:"cover",
                 backgroundAttachment: 'fixed'
             }}
@@ -32,7 +32,7 @@ export default function Contact_Us(){
                     <Container  className="contact-box">
                         <Row className='contact-row'>
                             <Col 
-                                xs={12} sm={12} md={5} xl={5} 
+                                xs={6} sm={5} md={5} xl={5} 
                                 data-aos="fade-up-right"
                                 data-aos-once="true"
                             >
@@ -41,7 +41,7 @@ export default function Contact_Us(){
                                     alt="grei's contact" 
                                     src={image1} />
                             </Col>
-                            <Col xs={12} sm={12} md={7} xl={7} style={{marginLeft:'-9vw',marginTop: "5%"}}>
+                            <Col className="contact-box-info" xs={6} sm={7} md={7} xl={7} style={{marginLeft:'-9vw',marginTop: "5%"}}>
                                 <div className="contact-top-box">
                                     <div className="contact-us-description">
                                         <span>{config.description}</span>

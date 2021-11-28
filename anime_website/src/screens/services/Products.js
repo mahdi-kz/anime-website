@@ -3,10 +3,10 @@ import './Services.css'
 import Navbar from '../../components/Navbar';
 import MembersModal from '../../components/MembersModal';
 import GreiVideo from '../../components/GreiVideo.js';
-import video1 from '../../videos/big.mp4';
-import video2 from '../../videos/main-video.mp4';
-import video3 from '../../videos/center-video.mp4'
-import mainImage from '../../images/test/services-main.jpeg';
+// import video1 from '../../videos/big.mp4';
+// import video2 from '../../videos/main-video.mp4';
+// import video3 from '../../videos/center-video.mp4'
+// import mainImage from '../../images/test/services-main.jpeg';
 import image1 from '../../images/test/people2.jpg';
 import image2 from '../../images/test/people1.png';
 import image3 from '../../images/teams/pop2.jpg';
