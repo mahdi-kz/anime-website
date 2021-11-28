@@ -4,6 +4,10 @@
     width: 80%;
 }
 
+.disable-components{
+    pointer-events: none;
+}
+
 .serviceVideoBox{
     width: 300px;
     height: 300px;
@@ -87,4 +91,12 @@
 }
 .serviceVideoRefreshIcon:Hover{
     background-color: white;
+}
+
+.loading-gif{
+    bottom: 0px;
+    position: sticky;
+    height: 100%;
+    background-color: grey;
+    opacity: 50%;
 }
