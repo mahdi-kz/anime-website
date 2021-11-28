@@ -4,6 +4,7 @@ import {useDropzone} from 'react-dropzone';
 import {Row} from 'react-grid-system';
 import './AdminServiceVideo.css';
 import {get_service_video, save_service_video} from '../call_api';
+import loading_gif from '../static/loading.gif';
 
 
 function AdminServiceVideo(props){
@@ -55,9 +56,11 @@ function AdminServiceVideo(props){
     }
     function saveVideo(){
         if (name.trim()!=""){
-            save_service_video(ID || 0, name, sequence, top, 'production', selectedFile).then((id) => {
+            setLoading(true);
+            save_service_video(ID || 0, name, sequence, top, props.department, selectedFile).then((id) => {
                 setID(id);
                 get_video(id).then(()=>{setShowSave(false);})
+                setLoading(false);
             });
         }
     }
@@ -88,10 +91,11 @@ function AdminServiceVideo(props){
 
     return(
         <>
-            <div className='serviceVideoContainer'>
+            <div className={'serviceVideoContainer' + (loading? ' disable-components': '')}>
                 <Row>
                     <div className='serviceVideoBox'>
                         <video className='serviceVideo' src={video} alt=""/>
+                        {loading && <img className='loading-gif' src={loading_gif} alt="Loading!"/>}
                         <div className='shadow'>
                             <div {...getRootProps({className: 'dropzone'})}>
                                 <input {...getInputProps()} onChange={handleUploadVideo}/>
