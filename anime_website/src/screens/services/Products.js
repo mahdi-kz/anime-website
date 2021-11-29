@@ -74,10 +74,13 @@ export default function Products(props){
             videos.pop();
         }
         get_service_videos('production', true).then((res)=>{
-            let list = []
-            res.map(video=>{list.push(video)})
-            setVideos(list);
-            setVideoUrl(list[0].video_address)
+			console.log(res);
+            let list = [];
+			if(res.length){
+				res.map(video=>{list.push(video)})
+				setVideos(list);
+				setVideoUrl(list[0].video_address)
+			}
         });
     }
 
@@ -308,10 +311,10 @@ export default function Products(props){
                                                 info={obj} 
 												// style={{marginRight:index<members.length-1?'40px':'0px'}}
                                                 openTeamModal={openTeamModal}
-												divInfoStyle={{width:videoSize, height:videoSize/3+10}}
+												// divInfoStyle={{width:videoSize, height:videoSize/3+10}}
                                                 className="team-pictures"
 												infoClassName="team-info-size"
-												imageStyle={{width:videoSize, height:videoSize+60}}
+												// imageStyle={{width:videoSize, height:videoSize+60}}
                                                  />
                                         </Col>)
 									})}
