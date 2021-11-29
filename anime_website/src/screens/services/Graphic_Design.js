@@ -236,7 +236,7 @@ export default function Products(props){
 		<div 
 			style={{
 				backgroundImage:`url(${backgroundImage})`, 
-				// backgroundPosition:'top',
+				backgroundPosition:'center',
 				height:'100%',
 				backgroundRepeat: 'no-repeat',
 				backgroundSize:"cover",

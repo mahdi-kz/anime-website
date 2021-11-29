@@ -120,7 +120,7 @@
     cursor: pointer;
 }
 .selected-page-number{
-    font-size: 17px;
+    font-size: 22px;
     padding: 10px;
     color: white;
     background-color: #50BCBA;
@@ -139,18 +139,15 @@
     height: 5px;
     text-align: center;
 }
-
 .arrow-left{
     position: absolute;
-    left: 85%;
-    top: 45%;
-    /* z-index: 9; */
+    left: 100%;
+    top: 40%;
 }
 .arrow-right{
     position: absolute;
-    right: 85%;
-    top: 45%;
-    /* z-index: 9; */
+    right: 100%;
+    top: 40%;
 }
 .services-title{
     text-align: center;
@@ -181,6 +178,10 @@
 }
 
 @media (max-width: 270px){
+    .selected-page-number {
+        padding: 5px !important;
+        font-size: 12px !important;
+    }
     .team-arrow{
         padding-left: 0px !important;
         padding-right: 0px !important;
@@ -244,13 +245,12 @@
         margin-left:0px !important;
     }
     .arrow-left {
-        left: 10px !important;
-        /* margin-top: 1%; */
-        top: 25% !important;
+        left: 20px !important;
+        top: 40% !important;
     }
     .arrow-right {
-        right:-7px !important;
-        top: 25% !important;
+        right:1px !important;
+        top: 40% !important;
     }
     .services-employee-image{
         margin-top: 0px !important;
@@ -278,6 +278,10 @@
     }
 }
 @media (min-width: 270px) and (max-width: 375px){
+    .selected-page-number {
+        padding: 5px !important;
+        font-size: 12px !important; 
+    }
     .services-employee-box>div{
         padding-left: 5px !important;
         padding-right: 5px !important;
@@ -341,13 +345,13 @@
         margin-left:0px !important;
     }
     .arrow-left {
-        left: 21%;
-        top: 15%;
+        left: 20px !important;
+        top: 40%;
         z-index: 1;
     }
     .arrow-right {
-        right:19.5% !important;
-        top: 15% !important; 
+        right:20px !important;
+        top: 40% !important; 
     }
     .services-employee-image{
         margin-top: 0px !important;
@@ -368,6 +372,10 @@
     }
 }
 @media (min-width: 375px) and (max-width: 500px){
+    .selected-page-number {
+        padding: 5px !important;
+        font-size: 12px !important;
+    }
     .services-box{
         width: 75% !important;
         margin-top: 0px !important;
@@ -417,12 +425,12 @@
         margin-left:0px !important;
     }
     .arrow-left {
-        left: 70%;
-        top: 12%;
+        left: 100%;
+        top: 40%;
     }
     .arrow-right {
-        right: -100%;
-        top: 12%;
+        right: -15px;
+        top: 40%;
     }
     .services-employee-image{
         margin-top: 0px !important;
@@ -446,7 +454,24 @@
         width: 125% !important;
     }
 }
+@media (min-width: 500px) and (max-width: 550px){
+    .services-employee-box{
+        width: 130% !important;
+    }
+    .arrow-right {
+        right:-130%;
+        top: 37%;
+    }
+}
+
 @media (min-width: 500px) and (max-width: 675px){
+    .selected-page-number {
+        padding: 5px !important;
+        font-size: 12px !important;
+    }
+    .team-employees{
+        overflow: hidden;
+    }
     .services-products > div:first-child{
         padding-left: 0px !important;
     }
@@ -499,12 +524,12 @@
         margin-left:0px !important;
     }
     .arrow-left {
-        left: 40%;
-        margin-top: 12%;
+        left: 100%;
+        top: 37%;
     }
     .arrow-right {
-        right:40%;
-        margin-top: 12%;
+        right:100%;
+        top: 37%;
     }
     .services-employee-image{
         margin-top: 0px !important;
@@ -523,6 +548,10 @@
 }
 
 @media (min-width: 675px) and (max-width: 820px){
+    .selected-page-number {
+        padding: 5px !important;
+        font-size: 12px !important;
+    }
     .services-box{
         width: 75% !important;
         margin-top: 0px !important;
@@ -572,12 +601,12 @@
         margin-left:0px !important;
     }
     .arrow-left {
-        left: 40%;
-        margin-top: 12%;
+        left: 100%;
+        top: 38%;
     }
     .arrow-right {
-        right:40%;
-        margin-top: 12%;
+        right:100%;
+        top: 38%;
     }
     .services-employee-image{
         margin-top: 0px !important;
