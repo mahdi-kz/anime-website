@@ -1,0 +1,56 @@
+.team-employee-container{
+    justify-content: center;
+    display: flex;
+    position: relative;
+}
+.team-employee-info{
+    opacity: 0;
+    background-color: #50BCBA;
+    position:absolute;
+    bottom: 0px;
+    /* width: 100% !important; */
+    line-height: 0.2px;
+    -webkit-transition: -webkit-transform 0.35s;
+    transition: transform 0.35s;
+    -webkit-transform: translate3d(0,100%,0);
+    transform: translate3d(0,100%,0);
+}
+.team-employee-name{
+    font-size: 1.5vw;
+    font-family: LisztFYRegular,Georgia,Times,serif;
+    -webkit-transition: -webkit-transform 0.35s;
+    transition: transform 0.35s;
+    -webkit-transform: translate3d(0,200%,0);
+    transform: translate3d(0,200%,0);
+    display: inline-block;
+}
+.team-employee-job{
+    font-size: 1.1vw;
+    color: #444444;
+    -webkit-transition: -webkit-transform 0.35s;
+    transition: transform 0.35s;
+    -webkit-transform: translate3d(0,200%,0);
+    transform: translate3d(0,200%,0);
+    display: inline-block;
+}
+
+.team-employee-container:hover .team-employee-info,
+.team-employee-container:hover .team-employee-name,
+.team-employee-container:hover .team-employee-job{
+    opacity: 1;
+    -webkit-transform: translate3d(0,0,0);
+    transform: translate3d(0,0,0);
+}
+
+.team-employee-container:hover .team-employee-name,
+.team-employee-container:hover .team-employee-job{
+    -webkit-transition-delay: 0.05s;
+    transition-delay: 0.05s;
+}
+
+.team-employee-job, .team-employee-name{
+    -webkit-transition: -webkit-transform 0.35s;
+    transition: transform 0.35s;
+    -webkit-transform: translate3d(0,200%,0);
+    transform: translate3d(0,200%,0);
+}

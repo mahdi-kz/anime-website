@@ -92,7 +92,6 @@
 .serviceVideoRefreshIcon:Hover{
     background-color: white;
 }
-
 .serviceVideoDeleteIcon{
     font-size: 40px;
     color: red;
@@ -102,7 +101,6 @@
 .serviceVideoDeleteIcon:Hover{
     background-color: white;
 }
-
 .loading-gif{
     bottom: 0px;
     position: sticky;
@@ -110,13 +108,11 @@
     background-color: grey;
     opacity: 50%;
 }
-
 .serviceVideoCaret{
     font-size: 32px;
     margin-top: 0px;
     margin-right: 10px;
 }
-
 .serviceVideoNameClosed{
     margin-left: 20px;
     width: 150px;
