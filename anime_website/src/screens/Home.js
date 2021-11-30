@@ -27,7 +27,7 @@ export default function Home(props) {
 			className="home-container"
 			style={{
 				backgroundImage:`url(${backgroundImage})`, 
-				// backgroundPosition:'center',
+				backgroundPosition:'center',
 				height:'100%',
 				backgroundRepeat: 'no-repeat',
 				backgroundSize:"cover",

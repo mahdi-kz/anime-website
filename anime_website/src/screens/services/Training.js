@@ -3,14 +3,13 @@ import './Services.css'
 import Navbar from '../../components/Navbar';
 import MembersModal from '../../components/MembersModal';
 import GreiVideo from '../../components/GreiVideo.js';
-import video1 from '../../videos/big.mp4';
-import video3 from '../../videos/center-video.mp4'
 import image1 from '../../images/test/course2.png';
 import image2 from '../../images/test/course1.png';
 import servicesBg from '../../images/background/services-bg.webp'
 import { Container, Row, Col } from 'react-grid-system';
 import Course from '../../components/Course';
 import backgroundImage from '../../images/background/training-bg.webp';
+import {get_service_videos} from '../../admin/call_api';
 
 
 export default function Products(props){
@@ -28,10 +27,9 @@ export default function Products(props){
 
 	useEffect(()=>{
 		updateSize();
-		setVideoUrl(video1);
+		getVideo();
 		getProducts();
 		getCourses();
-		setPageNumber(3);
 		window.addEventListener('resize', updateSize);
 		document.querySelector('.arrow-right').addEventListener('click', function () {
 			const el = document.getElementById("hscroll");
@@ -66,85 +64,18 @@ export default function Products(props){
 		}catch{}
 	}
 
-	const getProducts = ()=>{
-		setProducts([
-			{
-				videoUrl:video3,
-				name:"Product name",
-				date:"2021/2/3"
-			},
-			{
-				videoUrl:video3,
-				name:"Product name",
-				date:"2021/2/3"
-			},
-			{
-				videoUrl:video3,
-				name:"Product name",
-				date:"2021/2/3"
-			},
-			{
-				videoUrl:video3,
-				name:"Product name",
-				date:"2021/2/3"
-			},
-			{
-				videoUrl:video3,
-				name:"Product name",
-				date:"2021/2/3"
-			},
-			{
-				videoUrl:video3,
-				name:"Product name",
-				date:"2021/2/3"
-			},
-			{
-				videoUrl:video3,
-				name:"Product name",
-				date:"2021/2/3"
-			},
-			{
-				videoUrl:video3,
-				name:"Product name",
-				date:"2021/2/3"
-			},
-			{
-				videoUrl:video3,
-				name:"Product name",
-				date:"2021/2/3"
-			},
-			{
-				videoUrl:video3,
-				name:"Product name",
-				date:"2021/2/3"
-			},
-			{
-				videoUrl:video3,
-				name:"Product name",
-				date:"2021/2/3"
-			},
-			{
-				videoUrl:video3,
-				name:"Product name",
-				date:"2021/2/3"
-			},
-			{
-				videoUrl:video3,
-				name:"Product name",
-				date:"2021/2/3"
-			},
-			{
-				videoUrl:video3,
-				name:"Product name",
-				date:"2021/2/3"
-			},
-			{
-				videoUrl:video3	,
-				name:"Product name",
-				date:"2021/2/3"
-			}
-		])
-	}
+	async function getVideo(){
+        get_service_videos('training', true).then((res)=>setVideoUrl(res[0].video_address))
+    }
+	async function getProducts(){
+        while (products.length > 0){
+            products.pop();
+        }
+        get_service_videos('training', false).then((res)=>{
+            setProducts(res);
+            setPageNumber(~~(res.length / 15) + (res.length % 15 > 0 ? 1: 0));
+        });
+    }
 
 	const getCourses = ()=>{
 		setCourses([
@@ -228,7 +159,7 @@ export default function Products(props){
 	return(
 		<div style={{
 			backgroundImage:`url(${backgroundImage})`, 
-			// backgroundPosition:'center',
+			backgroundPosition:'center',
 			height:'100%',
 			backgroundRepeat: 'no-repeat',
 			backgroundSize:"cover",
@@ -273,7 +204,7 @@ export default function Products(props){
 						<div className="services-products">
 							<Container fluid  align="center">
 								<Row className='pro-teams-row' >
-									{products.map((obj)=>{return(<Col xs={4} sm={3} md={2.4} xl={2.4}>
+									{products.slice((currentPage-1)*15, currentPage*15).map((obj)=>{return(<Col xs={4} sm={3} md={2.4} xl={2.4}>
 										<div>
 											<GreiVideo 
 												hideNavbar={()=>setHideNavbar(true)}
@@ -281,7 +212,7 @@ export default function Products(props){
 												with={videoSize} 
 												height={videoSize}
 												classPlayer="pro-react-player"
-												url={obj.videoUrl} 
+												url={obj.video_address}
 												autoPlay={false} 
 												playWithHover={true}
 												light={obj.image}

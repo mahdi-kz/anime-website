@@ -65,7 +65,9 @@ function AdminProduction(){
                         sequence={video.sequence}
                         top={true}
                         department='production'
-                        video_address={video.video_address} />)
+                        video_address={video.video_address}
+                        deletable={true}
+                        closed={true} />)
                     })
                     }
                     {selectedTab === 2 &&
@@ -75,7 +77,9 @@ function AdminProduction(){
                         sequence={video.sequence}
                         top={false}
                         department='production'
-                        video_address={video.video_address} />)
+                        video_address={video.video_address}
+                        deletable={true}
+                        closed={true} />)
                     })
                     }
                 </div>

@@ -10,7 +10,7 @@ import gif1 from '../images/teams/002-Fast.gif';
 import { Container, Row, Col } from 'react-grid-system';
 import video1 from '../videos/big.mp4';
 import MembersModal from "../components/MembersModal";
-import Employee from '../components/Employee';
+import TeamMembers from '../components/TeamMembers';
 import backgroundImage from '../images/background/team-bg.webp';
 
 
@@ -188,7 +188,7 @@ export default function Teams(){
     return(
         <div style={{
             backgroundImage:`url(${backgroundImage})`, 
-            // backgroundPosition:'center',
+            backgroundPosition:'center',
             height:'100%',
             backgroundRepeat: 'no-repeat',
             backgroundSize:"cover",
@@ -235,22 +235,18 @@ export default function Teams(){
                                 <Row className='teams-row'>
                                     {teams.map((obj, index)=>{
                                         return (<Col xs={4} sm={3} md={2.4} xl={2.4}>
-                                            <Employee 
+                                            <TeamMembers 
                                                 classWrapper="main-video-wrapper"
                                                 classPlayer="main-react-player"
                                                 info={obj}
                                                 openTeamModal={openTeamModal}
-                                                divInfoStyle={{width:videoSize, height:videoSize/3+10}}
+                                                divInfoStyle={{height:videoSize/3+10}}
                                                 className="team-pictures"
-                                                // infoClassName="team-info-box-size   "
-                                                imageStyle={{width:videoSize, height: videoSize+60}}
+                                                imageStyle={{height: videoSize+60}}
                                                 style={{
-                                                    width:videoSize,
                                                     paddingTop:'20px',
                                                     overflow: 'hidden',
-                                                    // paddingBottom:'5px',
                                                     height: videoSize+60
-                                                    // paddingRight:index==teams.length-1?'0px !important':'25px'
                                                 }} />
                                         </Col>)
                                     })}

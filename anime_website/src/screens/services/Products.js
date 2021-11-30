@@ -3,10 +3,6 @@ import './Services.css'
 import Navbar from '../../components/Navbar';
 import MembersModal from '../../components/MembersModal';
 import GreiVideo from '../../components/GreiVideo.js';
-// import video1 from '../../videos/big.mp4';
-// import video2 from '../../videos/main-video.mp4';
-// import video3 from '../../videos/center-video.mp4'
-// import mainImage from '../../images/test/services-main.jpeg';
 import image1 from '../../images/test/people2.jpg';
 import image2 from '../../images/test/people1.png';
 import image3 from '../../images/teams/pop2.jpg';
@@ -78,10 +74,10 @@ export default function Products(props){
             videos.pop();
         }
         get_service_videos('production', true).then((res)=>{
-            let list = []
-            res.map(video=>{list.push(video)})
-            setVideos(list);
-            setVideoUrl(list[0].video_address)
+            setVideos(res);
+            if (res.length){
+                setVideoUrl(res[0].video_address)
+            }
         });
     }
 
@@ -90,124 +86,11 @@ export default function Products(props){
             products.pop();
         }
         get_service_videos('production', false).then((res)=>{
-            let list = []
-            res.map(video=>{list.push(video)})
-            setProducts(list);
-            setPageNumber(~~(list.length / 15) + (list.length % 15 > 0 ? 1: 0));
+            setProducts(res);
+            setPageNumber(~~(res.length / 15) + (res.length % 15 > 0 ? 1: 0));
         });
     }
-//	const getVideos = ()=>{
-//		setVideos([
-//			{
-//				image:mainImage,
-//				videoUrl:video2
-//			},
-//			{
-//				image:mainImage,
-//				videoUrl:video1
-//			},
-//			{
-//				image:mainImage,
-//				videoUrl:video2
-//			},
-//			{
-//				image:mainImage,
-//				videoUrl:video1
-//			},
-//			{
-//				image:mainImage,
-//				videoUrl:video2
-//			},
-//			{
-//				image:mainImage,
-//				videoUrl:video2
-//			},
-//			{
-//				image:mainImage,
-//				videoUrl:video2
-//			}
-//		])
-//	}
 
-//	const getProducts = ()=>{
-//		setProducts([
-//			{
-//				videoUrl:video3,
-//				name:"Product name",
-//				date:"2021/2/3"
-//			},
-//			{
-//				videoUrl:video3,
-//				name:"Product name",
-//				date:"2021/2/3"
-//			},
-//			{
-//				videoUrl:video3,
-//				name:"Product name",
-//				date:"2021/2/3"
-//			},
-//			{
-//				videoUrl:video3,
-//				name:"Product name",
-//				date:"2021/2/3"
-//			},
-//			{
-//				videoUrl:video3,
-//				name:"Product name",
-//				date:"2021/2/3"
-//			},
-//			{
-//				videoUrl:video3,
-//				name:"Product name",
-//				date:"2021/2/3"
-//			},
-//			{
-//				videoUrl:video3,
-//				name:"Product name",
-//				date:"2021/2/3"
-//			},
-//			{
-//				videoUrl:video3,
-//				name:"Product name",
-//				date:"2021/2/3"
-//			},
-//			{
-//				videoUrl:video3,
-//				name:"Product name",
-//				date:"2021/2/3"
-//			},
-//			{
-//				videoUrl:video3,
-//				name:"Product name",
-//				date:"2021/2/3"
-//			},
-//			{
-//				videoUrl:video3,
-//				name:"Product name",
-//				date:"2021/2/3"
-//			},
-//			{
-//				videoUrl:video3,
-//				name:"Product name",
-//				date:"2021/2/3"
-//			},
-//			{
-//				videoUrl:video3,
-//				name:"Product name",
-//				date:"2021/2/3"
-//			},
-//			{
-//				videoUrl:video3,
-//				name:"Product name",
-//				date:"2021/2/3"
-//			},
-//			{
-//				videoUrl:video3	,
-//				name:"Product name",
-//				date:"2021/2/3"
-//			}
-//		])
-//	}
 
 	const getMembers = ()=>{
 		setMembers([
@@ -316,7 +199,7 @@ export default function Products(props){
 		<div 
 			style={{
 				backgroundImage:`url(${backgroundImage})`, 
-                // backgroundPosition:'center',
+                backgroundPosition:'center',
                 height:'100%',
                 backgroundRepeat: 'no-repeat',
                 backgroundSize:"cover",
@@ -344,7 +227,7 @@ export default function Products(props){
 							with="79%"
 							height="auto"
 							url={videoUrl} 
-							autoPlay={true} 
+							autoPlay={true}
 							style={{display: 'flex',justifyContent: 'center'}}
 							classPlayer="top-react-player"
 						/>
@@ -378,7 +261,7 @@ export default function Products(props){
 						<div className="services-products">
 							<Container fluid  align="center">
 								<Row className='pro-teams-row' >
-									{products.map((obj)=>{return(<Col xs={4} sm={3} md={2.4} xl={2.4}>
+									{products.slice((currentPage-1)*15, currentPage*15).map((obj)=>{return(<Col xs={4} sm={3} md={2.4} xl={2.4}>
 										<div>
 											<GreiVideo 
 												hideNavbar={()=>setHideNavbar(true)}
@@ -423,10 +306,10 @@ export default function Products(props){
                                                 info={obj} 
 												// style={{marginRight:index<members.length-1?'40px':'0px'}}
                                                 openTeamModal={openTeamModal}
-												divInfoStyle={{width:videoSize, height:videoSize/3+10}}
+												// divInfoStyle={{width:videoSize, height:videoSize/3+10}}
                                                 className="team-pictures"
 												infoClassName="team-info-size"
-												imageStyle={{width:videoSize, height:videoSize+60}}
+												// imageStyle={{width:videoSize, height:videoSize+60}}
                                                  />
                                         </Col>)
 									})}

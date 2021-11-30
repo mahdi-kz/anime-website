@@ -53,7 +53,7 @@ function GreiVideo(props){
 			    onMouseLeave={()=>{setPlayVideo(false)}}
             >
                 <ReactPlayer
-                    ref={playerRef}    
+                    ref={playerRef}
                     playing={play}
                     className={props.classPlayer?`react-player ${props.classPlayer}`:"react-player"}
                     url={props.url}
