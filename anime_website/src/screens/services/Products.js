@@ -75,7 +75,7 @@ export default function Products(props){
         }
         get_service_videos('production', true).then((res)=>{
             setVideos(res);
-            if (res.count){
+            if (res.length){
                 setVideoUrl(res[0].video_address)
             }
         });
