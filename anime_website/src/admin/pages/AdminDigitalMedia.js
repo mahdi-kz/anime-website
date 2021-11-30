@@ -49,7 +49,9 @@ function AdminDigitalMedia(){
                     name={topVideo.name}
                     top={true}
                     department='digital_media'
-                    video_address={topVideo.video_address} />
+                    video_address={topVideo.video_address}
+                    deletable={false}
+                    closed={false} />
 
                 <span
                     className='admin-digital-media-tab'>
@@ -65,7 +67,9 @@ function AdminDigitalMedia(){
                         sequence={video.sequence}
                         top={false}
                         department='digital_media'
-                        video_address={video.video_address} />)
+                        video_address={video.video_address}
+                        deletable={true}
+                        closed={true} />)
                     })}
                 </div>
             </div>

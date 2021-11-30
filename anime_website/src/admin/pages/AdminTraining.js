@@ -49,7 +49,9 @@ function AdminTraining(){
                     name={topVideo.name}
                     top={true}
                     department='training'
-                    video_address={topVideo.video_address} />
+                    video_address={topVideo.video_address}
+                    deletable={false}
+                    closed={false} />
 
                 <span
                     className='admin-training-tab'>
@@ -65,7 +67,9 @@ function AdminTraining(){
                         sequence={video.sequence}
                         top={false}
                         department='training'
-                        video_address={video.video_address} />)
+                        video_address={video.video_address}
+                        deletable={true}
+                        closed={true} />)
                     })}
                 </div>
             </div>

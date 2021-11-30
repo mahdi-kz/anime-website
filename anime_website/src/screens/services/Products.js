@@ -74,13 +74,10 @@ export default function Products(props){
             videos.pop();
         }
         get_service_videos('production', true).then((res)=>{
-			console.log(res);
-            let list = [];
-			if(res.length){
-				res.map(video=>{list.push(video)})
-				setVideos(list);
-				setVideoUrl(list[0].video_address)
-			}
+            setVideos(res);
+            if (res.count){
+                setVideoUrl(res[0].video_address)
+            }
         });
     }
 
@@ -89,10 +86,8 @@ export default function Products(props){
             products.pop();
         }
         get_service_videos('production', false).then((res)=>{
-            let list = []
-            res.map(video=>{list.push(video)})
-            setProducts(list);
-            setPageNumber(~~(list.length / 15) + (list.length % 15 > 0 ? 1: 0));
+            setProducts(res);
+            setPageNumber(~~(res.length / 15) + (res.length % 15 > 0 ? 1: 0));
         });
     }
 

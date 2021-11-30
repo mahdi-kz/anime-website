@@ -93,10 +93,33 @@
     background-color: white;
 }
 
+.serviceVideoDeleteIcon{
+    font-size: 40px;
+    color: red;
+    margin-right:20px;
+    margin-top: 120px;
+}
+.serviceVideoDeleteIcon:Hover{
+    background-color: white;
+}
+
 .loading-gif{
     bottom: 0px;
     position: sticky;
     height: 100%;
     background-color: grey;
     opacity: 50%;
+}
+
+.serviceVideoCaret{
+    font-size: 32px;
+    margin-top: 0px;
+    margin-right: 10px;
+}
+
+.serviceVideoNameClosed{
+    margin-left: 20px;
+    width: 150px;
+    height: 25px;
+    font-size: 18px;
 }
