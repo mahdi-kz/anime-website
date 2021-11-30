@@ -1,9 +1,9 @@
 import React from 'react';
-import {useState, useEffect} from 'react';
+import {useState, useEffect, useRef} from 'react';
 import {useDropzone} from 'react-dropzone';
 import {Row} from 'react-grid-system';
 import './AdminServiceVideo.css';
-import {get_service_video, save_service_video} from '../call_api';
+import {get_service_video, save_service_video, delete_service_video} from '../call_api';
 import loading_gif from '../static/loading.gif';
 
 
@@ -15,13 +15,16 @@ function AdminServiceVideo(props){
     const [video, setVideo] = useState("");
     const [selectedFile, setSelectedFile] = useState(false);
     const [loading, setLoading] = useState(false);
+    const [deleted, setDeleted] = useState(false);
     const [showSave, setShowSave] = useState(false);
+    const [closed,setClosed] = useState(props.closed);
     const {getRootProps, getInputProps, open, acceptedFiles} = useDropzone({
         // Disable click and keydown behavior
         noClick: true,
         noKeyboard: true,
         multiple: false,
     });
+    const vidRef = useRef(null);
 
     async function get_video(id){
         get_service_video(id).then(data=>{
@@ -69,6 +72,17 @@ function AdminServiceVideo(props){
             if (ID){setShowSave(false);}
         })
     }
+    function removeVideo(){
+        if (!ID){setDeleted(true)}
+        else{
+            delete_service_video(ID).then((res)=>{
+                if (res.status === 200){setDeleted(true)}
+            })
+        }
+    }
+    function clickCaret(){
+        setClosed(!closed);
+    }
 
     useEffect(()=>{
         if (ID){get_video(ID);}
@@ -82,6 +96,7 @@ function AdminServiceVideo(props){
 
         if (!props.id){
             setShowSave(true);
+            setClosed(false);
         }
         else{
             setShowSave(false);
@@ -89,12 +104,20 @@ function AdminServiceVideo(props){
         }
     }, []);
 
-    return(
-        <>
+    return(!deleted &&
+        (<>
             <div className={'serviceVideoContainer' + (loading? ' disable-components': '')}>
+                {!closed ?
                 <Row>
+                    <div className='fas fa-caret-down serviceVideoCaret' onClick={clickCaret}></div>
                     <div className='serviceVideoBox'>
-                        <video className='serviceVideo' src={video} alt=""/>
+                        <video
+                            className='serviceVideo'
+                            onMouseOver={() => {vidRef.current.currentSrc && vidRef.current.play()}}
+                            onMouseOut={() => vidRef.current.pause()}
+                            src={video}
+                            alt=""
+                            ref={vidRef}/>
                         {loading && <img className='loading-gif' src={loading_gif} alt="Loading!"/>}
                         <div className='shadow'>
                             <div {...getRootProps({className: 'dropzone'})}>
@@ -119,12 +142,22 @@ function AdminServiceVideo(props){
                     <div className='serviceVideoColumns'>
                         <div className='serviceVideoTitles'>Name</div>
                         <input type='text' className='serviceVideoName' value={name} onChange={onChangeName}/>
-                    </div>
-                    <div>
+                        {props.deletable &&
+                        <div>
+                            <i class="fa fa-trash-o serviceVideoDeleteIcon" aria-hidden="true" onClick={removeVideo}></i>
+                        </div>
+                        }
                     </div>
                 </Row>
+                :
+                <Row>
+                    <div className='fas fa-caret-right serviceVideoCaret' onClick={clickCaret}>
+                        <span className='serviceVideoNameClosed'>{name}</span>
+                    </div>
+                </Row>
+                }
             </div>
-        </>
+        </>)
     )
 }
 

@@ -10,6 +10,7 @@ const get_global_customers_url = '/api/get-global-customers';
 const get_service_videos_url = '/api/get-service-videos';
 const get_service_video_url = '/api/get-service-video';
 const save_service_video_url = '/api/save-service-video';
+const delete_service_video_url = '/api/delete-service-video';
 
 
 function call_json_api(url, data){
@@ -125,4 +126,9 @@ export async function save_service_video(id, name, sequence, top, department, fi
     data.append('department', department);
     let res = await call_form_api(save_service_video_url, data);
     return res['id'];
+}
+
+export async function delete_service_video(id){
+    let res = await call_json_api(delete_service_video_url, {'id': id});
+    return res;
 }

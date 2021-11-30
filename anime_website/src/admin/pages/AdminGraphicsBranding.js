@@ -49,7 +49,9 @@ function AdminGraphicsBranding(){
                     name={topVideo.name}
                     top={true}
                     department='graphics_branding'
-                    video_address={topVideo.video_address} />
+                    video_address={topVideo.video_address}
+                    deletable={false}
+                    closed={false} />
 
                 <span
                     className='admin-graphics-branding-tab'>
@@ -65,7 +67,9 @@ function AdminGraphicsBranding(){
                         sequence={video.sequence}
                         top={false}
                         department='graphics_branding'
-                        video_address={video.video_address} />)
+                        video_address={video.video_address}
+                        deletable={true}
+                        closed={true} />)
                     })}
                 </div>
             </div>

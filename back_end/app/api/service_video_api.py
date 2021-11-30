@@ -18,7 +18,7 @@ def get_service_videos():
         return jsonify(status=500, message="Department not found!", data={}), 500
 
     videos = ServiceVideo.query.filter_by(department=department, top=top).all()
-    videos = ServiceVideoSchema().dump(videos, many=True)
+    videos = sorted(ServiceVideoSchema().dump(videos, many=True), key=lambda x: x['sequence'])
 
     return jsonify(status=200, message="Address found!", data=videos)
 
@@ -73,3 +73,21 @@ def save_service_video():
     db.session.commit()
 
     return jsonify(status=200, message='Video Updated', data={'id': video.id}), 200
+
+
+@bp.route("/delete-service-video", methods=["POST"])
+def delete_service_video():
+    v_id = request.get_json()['id']
+    video = ServiceVideo.query.get(v_id)
+
+    if not video:
+        return jsonify(status=500, message="ID not found!", data={'status': 500}), 500
+
+    target = current_app.config['VIDEO_UPLOAD_FOLDER']
+    destination = "/".join([target, 'service_video_' + str(video.id)])
+    os.remove(destination)
+
+    db.session.delete(video)
+    db.session.commit()
+
+    return jsonify(status=200, message="Video deleted!", data={'status': 200}), 200
