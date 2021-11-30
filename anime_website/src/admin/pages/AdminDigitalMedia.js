@@ -52,7 +52,6 @@ function AdminDigitalMedia(){
                     video_address={topVideo.video_address}
                     deletable={false}
                     closed={false} />
-
                 <span
                     className='admin-digital-media-tab'>
                     Videos
