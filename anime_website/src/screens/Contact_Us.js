@@ -18,7 +18,7 @@ export default function Contact_Us(){
     return(
         <div style={{
                 backgroundImage:`url(${backgroundImage})`, 
-                // backgroundPosition:'left ',
+                backgroundPosition:'center',
                 height:'100%',
                 backgroundRepeat: 'no-repeat',
                 backgroundSize:"cover",
