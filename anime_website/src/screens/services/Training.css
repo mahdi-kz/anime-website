@@ -1,0 +1,73 @@
+.training-arrow-right{
+    position: absolute;
+    right: 70%;
+    top: 35%;
+}
+.training-arrow-left{
+    position: absolute;
+    left: 85%;
+    top: 35%;
+}
+
+@media (max-width: 270px){
+    .training-arrow-left{
+        left: 22px !important;
+        top: 27% !important;
+    }
+    .training-arrow-right{
+        right:-1px !important;
+        top: 27% !important;
+    }
+}
+@media (min-width: 270px) and (max-width: 360px){
+    .training-arrow-left{
+        left: 22px !important;
+        top: 30% !important;
+    }
+    .training-services-employee-box{
+        width: 107%;
+    }
+    .training-arrow-right{
+        right:10px !important;
+        top: 30% !important;
+    }
+}
+
+@media (min-width: 360px) and (max-width: 500px){
+    .training-arrow-left{
+        left: 35px !important;
+        top: 32% !important;
+    }
+    .training-arrow-right{
+        right:-47px !important;
+        top: 32% !important;
+    }
+}
+@media (min-width: 550px) and (max-width: 575px){
+    .training-column{
+        overflow: initial !important;
+        max-width: 85% !important;
+    }
+    .training-arrow-left{
+        left: 22px !important;
+        top: 34% !important;
+    }
+    .training-arrow-right{
+        right:0px !important;
+        top: 34% !important;
+    }
+}
+@media (min-width: 550px) and (max-width: 675px){
+
+    .training-column{
+        overflow: initial !important;
+    }
+    .training-arrow-left{
+        left: 22px !important;
+        top: 34% !important;
+    }
+    .training-arrow-right{
+        right:-60px !important;
+        top: 34% !important;
+    }
+}

@@ -1,5 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import './Services.css'
+import './Training.css'
 import Navbar from '../../components/Navbar';
 import MembersModal from '../../components/MembersModal';
 import GreiVideo from '../../components/GreiVideo.js';
@@ -31,7 +32,7 @@ export default function Products(props){
 		getProducts();
 		getCourses();
 		window.addEventListener('resize', updateSize);
-		document.querySelector('.arrow-right').addEventListener('click', function () {
+		document.querySelector('.training-arrow-right').addEventListener('click', function () {
 			const el = document.getElementById("hscroll");
 			el.scroll({
 				left: el.scrollLeft+parseInt(videoSize+150),
@@ -39,7 +40,7 @@ export default function Products(props){
 				behavior: 'smooth'
 			})
 		});
-		document.querySelector('.arrow-left').addEventListener('click', function () {
+		document.querySelector('.training-arrow-left').addEventListener('click', function () {
 			const el = document.getElementById("hscroll");
 			el.scroll({
 				left: el.scrollLeft-parseInt(videoSize+150),
@@ -65,15 +66,19 @@ export default function Products(props){
 	}
 
 	async function getVideo(){
-        get_service_videos('training', true).then((res)=>setVideoUrl(res[0].video_address))
+        get_service_videos('training', true).then((res)=>{
+            if (res.length) setVideoUrl(res[0].video_address)
+        })
     }
 	async function getProducts(){
         while (products.length > 0){
             products.pop();
         }
         get_service_videos('training', false).then((res)=>{
-            setProducts(res);
-            setPageNumber(~~(res.length / 15) + (res.length % 15 > 0 ? 1: 0));
+            if (res.length){
+                setProducts(res);
+                setPageNumber(~~(res.length / 15) + (res.length % 15 > 0 ? 1: 0));
+            }
         });
     }
 
@@ -231,33 +236,43 @@ export default function Products(props){
 					<div className="div-center">
 						<Container fluid >
 							<Row>
-							<Col className="team-column" xs={0.75} sm={1} md={1} xl={1}>
-								<div className="paging-box arrow-left" style={{top:0, marginTop:arrowTop}}>
+							<Col className="training-column" xs={0.75} sm={1} md={1} xl={1}>
+								<div className="paging-box training-arrow-left">
 										<div className="selected-page-number"
-											style={{display: 'flex',  justifyContent:'center', alignItems:'center', zIndex:showTeamModal?-1:10}}
-											>
+											style={{
+											    display: 'flex',
+											    justifyContent:'center',
+											    alignItems:'center',
+											    zIndex:showTeamModal || hideNavbar?-1:10
+											}}
+										>
 											<i class='fas fa-chevron-left'></i>
 										</div>
 								</div>
 							</Col>
-							<Col className="team-column team-employees" xs={8} sm={10} md={10} xl={10}>
-								<div className="services-employee-box" id="hscroll" >
+							<Col className="training-column team-employees" xs={7.5} sm={10} md={10} xl={10}>
+								<div className="services-employee-box training-services-employee-box" id="hscroll" >
 									{courses.map((obj, index)=>{
 										return (<Col>
                                             <Course 
                                                 info={obj}
                                                 openTeamModal={openTeamModal}
-												imageStyle={{width:videoSize+40, marginRight:30}}
+//												imageStyle={{width:videoSize+40}}
                                             />
                                         </Col>)
 									})}
 								</div>
 							</Col>
-							<Col className="team-column team-arrow" xs={0.75} sm={1} md={1} xl={1}>
-								<div className="paging-box arrow-right" style={{top:0, marginTop:arrowTop}}>
+							<Col className="training-column team-arrow" xs={0.75} sm={1} md={1} xl={1}>
+								<div className="paging-box training-arrow-right">
 										<div className="selected-page-number selected-arrow"
-											style={{display: 'flex',  justifyContent:'center', alignItems:'center', zIndex:showTeamModal?-1:10}}
-											>
+											style={{
+											    display: 'flex',
+											    justifyContent:'center',
+											    alignItems:'center',
+											    zIndex:showTeamModal || hideNavbar?-1:10
+											}}
+										>
 											<i class='fas fa-chevron-right'></i>
 										</div>
 								</div>
