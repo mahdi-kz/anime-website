@@ -60,6 +60,11 @@ function HomeBox(){
         video_address("home_graphics", setVideo3)
         video_address("home_training", setVideo4)
     }, [])
+    useEffect(()=>{
+        if(!loading){
+            document.querySelectorAll('.image-box').forEach((item)=>item.addEventListener('contextmenu', function(e){e.preventDefault()}))
+        }
+    }, [loading])
 
 	return(
 		<>
@@ -69,11 +74,14 @@ function HomeBox(){
 					<ul className="home-box" >
 						<li className="image-box first-image-box-show"
 							onMouseEnter={()=>{changeTitle("PRODUCTION");setSelectedBox1(true);}}
+							onTouchStart={()=>{changeTitle("PRODUCTION");setSelectedBox1(true);}}
 							onMouseLeave={()=>{changeTitle('SERVICES');setSelectedBox1(false);}}
 						>
 							<Link to="/products" >
 								{selectedBox1?
 									<video
+									    onTouchStart={()=>vidRef.current.play()}
+									    onTouchEnd={()=>vidRef.current.pause()}
 										onMouseOver={() => vidRef.current.play()}
 										onMouseOut={() => vidRef.current.pause()}
 										className="top-li"
@@ -89,11 +97,14 @@ function HomeBox(){
 						</li>
 						<li className="image-box second-image-box-show"
 							onMouseEnter={()=>{changeTitle("DIGITAL MEDIA");setSelectedBox2(true)}}
+							onTouchStart={()=>{changeTitle("DIGITAL MEDIA");setSelectedBox2(true)}}
 							onMouseLeave={()=>{changeTitle('SERVICES');setSelectedBox2(false)}}
 						>
 							<Link to="/socialMedia" >
 								{selectedBox2?
 									<video
+									    onTouchStart={()=>vidRef2.current.play()}
+									    onTouchEnd={()=>vidRef2.current.pause()}
 										onMouseOver={() => vidRef2.current.play()}
 										onMouseOut={() => vidRef2.current.pause()}
 										className="down-li"
@@ -109,11 +120,14 @@ function HomeBox(){
 						</li>
 						<li className="image-box third-image-box-show"
 							onMouseEnter={()=>{changeTitle("GRAPHIC & BRANDING");setSelectedBox3(true)}}
+							onTouchStart={()=>{changeTitle("GRAPHIC & BRANDING");setSelectedBox3(true)}}
 							onMouseLeave={()=>{changeTitle('SERVICES');setSelectedBox3(false)}}
 						>
 							<Link to="/graphicDesign" >
 								{selectedBox3?
 									<video
+									    onTouchStart={()=>vidRef3.current.play()}
+									    onTouchEnd={()=>vidRef3.current.pause()}
 										onMouseOver={() => vidRef3.current.play()}
 										onMouseOut={() => vidRef3.current.pause()}
 										className="top-li"
@@ -129,11 +143,14 @@ function HomeBox(){
 						</li>
 						<li className="image-box forth-image-box-show"
 							onMouseEnter={()=>{changeTitle("TRAINING SERVICES");setSelectedBox4(true)}}
+							onTouchStart={()=>{changeTitle("TRAINING SERVICES");setSelectedBox4(true)}}
 							onMouseLeave={()=>{changeTitle('SERVICES');setSelectedBox4(false)}}
 						>
 							<Link to="/training" >
 								{selectedBox4?
 									<video
+									    onTouchStart={()=>vidRef4.current.play()}
+									    onTouchEnd={()=>vidRef4.current.pause()}
 										onMouseOver={() => vidRef4.current.play()}
 										onMouseOut={() => vidRef4.current.pause()}
 										className="down-li"
