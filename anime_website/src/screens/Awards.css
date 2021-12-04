@@ -343,3 +343,26 @@ th {
         width: 100% !important;
     }
 }
+@media (max-width:800px){
+    .awards-icon-name{
+        font-size:14px;
+    }
+    .awards-icon-box > img{
+        width: 45px !important;
+    }
+
+    .AwardsListModule th {
+        font-size: 10px;
+    }
+    .AwardsListModule table td div span:first-child {
+        font-size: 12px;
+    }
+    .AwardsListModule table td div span:nth-child(2) {
+        margin-top:10px;
+        font-size: 10px
+    }
+    .AwardsListModule table td div span:nth-child(3) {
+        margin-top:5px;
+        font-size: 10px
+    }
+}
