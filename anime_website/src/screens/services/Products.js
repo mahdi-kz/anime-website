@@ -5,8 +5,8 @@ import MembersModal from '../../components/MembersModal';
 import GreiVideo from '../../components/GreiVideo.js';
 import image1 from '../../images/test/people2.jpg';
 import image2 from '../../images/test/people1.png';
-import image3 from '../../images/teams/pop2.jpg';
-import image4 from '../../images/teams/pop1.jpg';
+import image3 from '../../images/teams/1.webp';
+import image4 from '../../images/teams/1.webp';
 import gif1 from '../../images/teams/002-Fast.gif';
 import backgroundImage from '../../images/background/production-bg.webp'
 import { Container, Row, Col } from 'react-grid-system';

@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import './MembersModal.css'
 import { Container, Row, Col } from 'react-grid-system';
 import Modal from "react-modal";
-
+import backgroundImage from "../images/background/membersModal-bg.webp";
 
 function MembersModal(props){
     const [selectedClose, setSelectedClose] = useState(false)
@@ -18,7 +18,7 @@ function MembersModal(props){
                 isOpen={props.isShow}
                 animation={true}
             >
-                <div className="team-modal-container" style={{height:window.innerHeight, overflow:'scroll'}}>
+                <div className="team-modal-container" style={{height:window.innerHeight}}>
                     <div 
                         className="team-close-modal" 
                         onClick={closeTeamModal}
@@ -41,10 +41,20 @@ function MembersModal(props){
                     <div className="team-modal-info">
                         <Container fluid className="team-modal-box">
                             <Row className='modal-teams-row'>
-                                <Col className="team-modal-picture" xs={12} sm={12} md={6} xl={6}>
-                                        <img className='team-modal-picture-tag' alt="grei's team" style={{height: window.innerHeight}} src={props.info.popImg}  />
+                                <Col className="team-modal-picture">
+                                    <img alt="grei's team" style={{height: window.innerHeight}} src={props.info.popImg}  />
                                 </Col>
-                                <Col xs={12} sm={12} md={6} xl={6} className="team-modal-descrition-box" >
+                                <Col 
+                                    className="team-modal-descrition-box"
+                                    style={{
+                                        backgroundImage:`url(${backgroundImage})`, 
+                                        backgroundPosition:'center',
+                                        // height:'100%',
+                                        backgroundRepeat: 'no-repeat',
+                                        backgroundSize:"cover",
+                                        // backgroundAttachment: 'fixed'
+                                    }}
+                                >
                                     <p className="team-modal-name">{props.info.name}</p>
                                     <span className="team-modal-descrition">{props.info.description}</span>
                                 </Col>
