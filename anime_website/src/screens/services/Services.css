@@ -26,9 +26,6 @@
 .div-center > div{
     width: 100%;
 }
-/* .team-column{
-    padding: 0 !important;
-} */
 .div-center > div:first-child {
     position: relative;
     padding: 0 !important;
@@ -340,7 +337,6 @@
         padding-left: 0px !important;
         padding-right: 0px !important;
     }
-    
     .pro-teams-row{
         margin-left:0px !important;
     }
@@ -451,7 +447,7 @@
         padding-right: 3px !important;
     }
     .services-employee-box{
-        width: 125% !important;
+        width: 137% !important;
     }
 }
 @media (min-width: 500px) and (max-width: 550px){
@@ -465,6 +461,7 @@
 }
 
 @media (min-width: 500px) and (max-width: 675px){
+
     .selected-page-number {
         padding: 5px !important;
         font-size: 12px !important;

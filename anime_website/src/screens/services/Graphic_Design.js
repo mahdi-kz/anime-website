@@ -64,15 +64,19 @@ export default function Products(props){
 	}
 
 	async function getVideo(){
-        get_service_videos('graphics_branding', true).then((res)=>setVideoUrl(res[0].video_address))
+        get_service_videos('graphics_branding', true).then((res)=>{
+            if (res.length) setVideoUrl(res[0].video_address)
+        })
     }
 	async function getProducts(){
         while (products.length > 0){
             products.pop();
         }
         get_service_videos('graphics_branding', false).then((res)=>{
-            setProducts(res);
-            setPageNumber(~~(res.length / 15) + (res.length % 15 > 0 ? 1: 0));
+            if (res.length){
+                setProducts(res);
+                setPageNumber(~~(res.length / 15) + (res.length % 15 > 0 ? 1: 0));
+            }
         });
     }
 
@@ -241,8 +245,13 @@ export default function Products(props){
 							<Col className="team-column" xs={0.75} sm={1} md={1} xl={1}>
 								<div className="paging-box arrow-left">
 										<div className="selected-page-number"
-											style={{display: 'flex',  justifyContent:'center', alignItems:'center', zIndex:showTeamModal?-1:10}}
-											>
+											style={{
+											    display: 'flex',
+											    justifyContent:'center',
+											    alignItems:'center',
+											    zIndex:showTeamModal || hideNavbar?-1:10
+											}}
+										>
 											<i class='fas fa-chevron-left'></i>
 										</div>
 								</div>
@@ -253,13 +262,10 @@ export default function Products(props){
 										return (<Col>
 											<Employee 
 												info={obj} 
-												// style={{marginRight:index<members.length-1?'40px':'0px'}}
 												openTeamModal={openTeamModal}
-												// divInfoStyle={{width:videoSize, height:videoSize/3+10}}
 												className="team-pictures"
 												infoClassName="team-info-size"
-												// imageStyle={{width:videoSize, height:videoSize+60}}
-												/>
+											/>
 										</Col>)
 									})}
 								</div>
@@ -267,8 +273,13 @@ export default function Products(props){
 							<Col className="team-column team-arrow" xs={0.75} sm={1} md={1} xl={1}>
 								<div className="paging-box arrow-right">
 										<div className="selected-page-number selected-arrow"
-											style={{display: 'flex',  justifyContent:'center', alignItems:'center', zIndex:showTeamModal?-1:10}}
-											>
+											style={{
+                                                display: 'flex',
+                                                justifyContent:'center',
+                                                alignItems:'center',
+                                                zIndex:showTeamModal || hideNavbar?-1:10
+									        }}
+										>
 											<i class='fas fa-chevron-right'></i>
 										</div>
 								</div>

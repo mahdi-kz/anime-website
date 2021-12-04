@@ -17,6 +17,7 @@ export default function Contact_Us(){
 
     return(
         <div style={{
+
                 backgroundImage:`url(${backgroundImage})`, 
                 backgroundPosition:'center',
                 height:'100%',
@@ -29,19 +30,21 @@ export default function Contact_Us(){
             <div className="services-container">
 				<div className="contact-box">
 					<div className="services-header contact-header">How to become grei?</div>
-                    <Container  className="contact-box">
+                    <Container  className="contact-box" style={{height:window.innerHeight-100}}>
                         <Row className='contact-row'>
-                            <Col 
-                                xs={6} sm={5} md={5} xl={5} 
-                                data-aos="fade-up-right"
-                                data-aos-once="true"
-                            >
-                                <img 
-                                    className="contact-img" 
-                                    alt="grei's contact" 
-                                    src={image1} />
-                            </Col>
-                            <Col className="contact-box-info" xs={6} sm={7} md={7} xl={7} style={{marginLeft:'-9vw',marginTop: "5%"}}>
+                            {window.innerWidth>575 &&
+                                <Col
+                                    xs={12} sm={6} md={5} xl={5}
+                                    data-aos="fade-up-right"
+                                    data-aos-once="true"
+                                >
+                                    <img
+                                        className="contact-img"
+                                        alt="grei's contact"
+                                        src={image1} />
+                                </Col>
+                            }
+                            <Col className="contact-box-info" xs={12} sm={6} md={7} xl={7} style={{marginTop: "5%"}}>
                                 <div className="contact-top-box">
                                     <div className="contact-us-description">
                                         <span>{config.description}</span>
@@ -79,6 +82,18 @@ export default function Contact_Us(){
                                     </div>
                                 </div>
                             </Col>
+                            {window.innerWidth<575 &&
+                                <Col
+                                    xs={12} sm={5} md={5} xl={5}
+                                    data-aos="fade-up-right"
+                                    data-aos-once="true"
+                                >
+                                    <img
+                                        className="contact-img"
+                                        alt="grei's contact"
+                                        src={image1} />
+                                </Col>
+                            }
                         </Row>
                     </Container>
                 </div>

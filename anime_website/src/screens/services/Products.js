@@ -5,8 +5,8 @@ import MembersModal from '../../components/MembersModal';
 import GreiVideo from '../../components/GreiVideo.js';
 import image1 from '../../images/test/people2.jpg';
 import image2 from '../../images/test/people1.png';
-import image3 from '../../images/teams/1.webp';
-import image4 from '../../images/teams/1.webp';
+import image3 from '../../images/teams/pop1.webp';
+import image4 from '../../images/teams/pop1.webp';
 import gif1 from '../../images/teams/002-Fast.gif';
 import backgroundImage from '../../images/background/production-bg.webp'
 import { Container, Row, Col } from 'react-grid-system';
@@ -74,8 +74,8 @@ export default function Products(props){
             videos.pop();
         }
         get_service_videos('production', true).then((res)=>{
-            setVideos(res);
             if (res.length){
+				setVideos(res);
                 setVideoUrl(res[0].video_address)
             }
         });
@@ -86,8 +86,10 @@ export default function Products(props){
             products.pop();
         }
         get_service_videos('production', false).then((res)=>{
-            setProducts(res);
-            setPageNumber(~~(res.length / 15) + (res.length % 15 > 0 ? 1: 0));
+            if (res.length){
+				setProducts(res);
+				setPageNumber(~~(res.length / 15) + (res.length % 15 > 0 ? 1: 0));
+			}
         });
     }
 
@@ -292,8 +294,13 @@ export default function Products(props){
 							<Col className="team-column" xs={0.75} sm={1} md={1} xl={1}>
 								<div className="paging-box arrow-left">
 										<div className="selected-page-number"
-											style={{display: 'flex',  justifyContent:'center', alignItems:'center', zIndex:showTeamModal?-1:10}}
-											>
+											style={{
+											    display: 'flex',
+											    justifyContent:'center',
+											    alignItems:'center',
+											    zIndex:showTeamModal || hideNavbar?-1:10
+											}}
+										>
 											<i class='fas fa-chevron-left'></i>
 										</div>
 								</div>
@@ -315,8 +322,13 @@ export default function Products(props){
 							<Col className="team-column team-arrow" xs={0.75} sm={1} md={1} xl={1}>
 								<div className="paging-box arrow-right">
 										<div className="selected-page-number selected-arrow"
-											style={{display: 'flex',  justifyContent:'center', alignItems:'center', zIndex:showTeamModal?-1:10}}
-											>
+											style={{
+											    display: 'flex',
+											    justifyContent:'center',
+											    alignItems:'center',
+											    zIndex:showTeamModal || hideNavbar?-1:10
+											}}
+										>
 											<i class='fas fa-chevron-right'></i>
 										</div>
 								</div>
