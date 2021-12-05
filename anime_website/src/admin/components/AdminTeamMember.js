@@ -13,12 +13,12 @@ function AdminTeamMember(props){
     const [ID, setID] = useState(props.id);
     const [sequence, setSequence] = useState(props.sequence);
     const [name, setName] = useState(props.name);
-    const [backImage, setBackImage] = useState("");
-    const [gif, setGif] = useState("");
-    const [image, setImage] = useState("");
-    const [position, setPosition] = useState("");
-    const [description, setDescription] = useState("...");
-    const [departments, setDepartments] = useState([]);
+    const [backImage, setBackImage] = useState(props.backImage + '?' + Date.now());
+    const [gif, setGif] = useState(props.gif + '?' + Date.now());
+    const [image, setImage] = useState(props.image + '?' + Date.now());
+    const [position, setPosition] = useState(props.position);
+    const [description, setDescription] = useState(props.description);
+    const [departments, setDepartments] = useState(props.departments);
     const [selectedBackImage, setSelectedBackImage] = useState(false);
     const [selectedImage, setSelectedImage] = useState(false);
     const [selectedGif, setSelectedGif] = useState(false);
@@ -41,10 +41,11 @@ function AdminTeamMember(props){
             setPosition(data['position']);
             setDescription(data['description']);
             setSequence(data['sequence']);
-            setBackImage(data['back_image'] + '?' + Date.now())
-            setGif(data['gif'] + '?' + Date.now())
-            setImage(data['image'] + '?' + Date.now())
-            setDepartments(data['departments'])
+            setBackImage(data['back_image_address'] + '?' + Date.now())
+            setGif(data['gif_address'] + '?' + Date.now())
+            setImage(data['image_address'] + '?' + Date.now())
+            setDepartments(data['departments'].map(dep => dep['name']))
+            console.log(departments)
         })
     }
     function sequenceUp(){
@@ -86,7 +87,9 @@ function AdminTeamMember(props){
     }
     function handleUploadMedia(ev){
         ev.preventDefault();
-        setSelectedBackImage(ev.target.files[0]);
+        if (dropzoneState === 'back_image'){setSelectedBackImage(ev.target.files[0]);}
+        else if (dropzoneState === 'gif'){setSelectedGif(ev.target.files[0]);}
+        else if (dropzoneState === 'image'){setSelectedImage(ev.target.files[0]);}
         let url = URL.createObjectURL(ev.target.files[0]);
         if (dropzoneState === 'back_image'){setBackImage(url)}
         else if (dropzoneState === 'gif'){setGif(url)}
@@ -96,7 +99,7 @@ function AdminTeamMember(props){
     function saveMember(){
         if (name.trim()!=""){
             setLoading(true);
-            save_member(ID || 0, name, description, position, sequence, departments, selectedBackImage, selectedImage, selectedGif).then((id) => {
+            save_member(ID || 0, name, description, position, sequence, departments, selectedBackImage, selectedGif, selectedImage).then((id) => {
                 setID(id);
                 getMember(id).then(()=>{setShowSave(false);})
                 setLoading(false);

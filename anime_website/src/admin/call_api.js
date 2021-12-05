@@ -146,10 +146,10 @@ export async function get_member(id){
     return res;
 }
 
-export async function save_member(id, name, description, position, sequence, departments, back_image_file, git_file, image_file){
+export async function save_member(id, name, description, position, sequence, departments, back_image_file, gif_file, image_file){
     let data = new FormData();
     data.append('back_image_file', back_image_file);
-    data.append('gif_file', git_file);
+    data.append('gif_file', gif_file);
     data.append('image_file', image_file);
     data.append('id', id)
     data.append('name', name);

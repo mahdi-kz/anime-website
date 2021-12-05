@@ -67,7 +67,16 @@ function AdminTeam(){
                     {members.map(member=>{
                         return (
                             <AdminTeamMember
-                                departments={member.departments}/>
+                                id={member.id}
+                                name={member.name}
+                                position={member.position}
+                                description={member.description}
+                                departments={member.departments}
+                                backImage={member.back_image_address}
+                                gif={member.gif_address}
+                                image={member.image_address}
+                                closed={true}
+                                />
                         )
                     })}
                 </div>

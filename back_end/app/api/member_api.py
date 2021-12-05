@@ -40,7 +40,7 @@ def save_member():
     departments_names = departments_names.split(',') if departments_names else []
     departments = [Department.query.filter_by(name=department).first() for department in departments_names]
 
-    member = pandas.notnull(m_id) and Member.query.get(m_id)
+    member = m_id and pandas.notnull(m_id) and Member.query.get(m_id)
     if not member:
         member = Member()
 
@@ -52,28 +52,28 @@ def save_member():
     db.session.add(member)
     db.session.commit()
 
-    media = request.files and request.files['back_image_file']
+    media = request.files and request.files.get('back_image_file', False)
     if media:
         target = current_app.config['IMAGE_UPLOAD_FOLDER']
         destination = "/".join([target, 'member_back_image_' + str(member.id)])
         media.save(destination)
-        address = "/".join([current_app.config['ImAGE_FOLDER_PATH_RELATIVE'], 'member_back_image_' + str(member.id)])
+        address = "/".join([current_app.config['IMAGE_FOLDER_PATH_RELATIVE'], 'member_back_image_' + str(member.id)])
         member.back_image_address = address
 
-    media = request.files and request.files['gif_file']
+    media = request.files and request.files.get('gif_file', False)
     if media:
         target = current_app.config['IMAGE_UPLOAD_FOLDER']
         destination = "/".join([target, 'member_gif_' + str(member.id)])
         media.save(destination)
-        address = "/".join([current_app.config['ImAGE_FOLDER_PATH_RELATIVE'], 'member_gif_' + str(member.id)])
+        address = "/".join([current_app.config['IMAGE_FOLDER_PATH_RELATIVE'], 'member_gif_' + str(member.id)])
         member.gif_address = address
 
-    media = request.files and request.files['image_file']
+    media = request.files and request.files.get('image_file', False)
     if media:
         target = current_app.config['IMAGE_UPLOAD_FOLDER']
         destination = "/".join([target, 'member_image_' + str(member.id)])
         media.save(destination)
-        address = "/".join([current_app.config['ImAGE_FOLDER_PATH_RELATIVE'], 'member_image_' + str(member.id)])
+        address = "/".join([current_app.config['IMAGE_FOLDER_PATH_RELATIVE'], 'member_image_' + str(member.id)])
         member.image_address = address
 
     db.session.add(member)
