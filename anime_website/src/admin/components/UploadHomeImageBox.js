@@ -40,7 +40,7 @@ function UploadHomeImageBox(props){
     }
 
     function saveMedia(){
-        upload_image(selectedFile, props.file_type, props.file_key).then(() => {console.log('3333333333333');
+        upload_image(selectedFile, props.file_type, props.file_key).then(() => {
             get_media();
             setShowSave(false);
         });
