@@ -21,6 +21,7 @@ function App() {
 	useEffect(async()=>{
 		changeStorage();
 		Aos.init({duration:2000})
+		
 	}, [])
 
 	const changeStorage = async()=>{

@@ -5,8 +5,8 @@
 .team-box{
     width: 79%;
     text-align: center;
-    margin-top: -50px;
-    /* margin-top: 5%; */
+    /* margin-top: -50px; */
+    margin-top: 4%;
 }
 .team-title-top{
     margin-bottom: 3%;
@@ -18,9 +18,9 @@
     /* margin-top: 14%; */
     /* margin-bottom: 2%; */
 }
-.teams-row > div:first-child{
+/* .teams-row > div:first-child{
     margin-bottom: 20px !important;
-}
+} */
 .team-info-box-size{
     bottom: 25px;
 }
@@ -71,12 +71,14 @@
 }
 @media (max-width:370px) {
     .team-box {
-        width: 60%;
+        margin-top: -6%;
     }
-    /* .team-header {
-        margin-top: 60%;
-        font-size: 22px;
-    } */
+    .team-header {
+        height: 15vh;
+    }
+    .team-info-box {
+        height: 20vh;
+    }
     .team-title-top{
         font-size: 14px;
     }
@@ -84,31 +86,24 @@
         height: auto !important;
     }
     .team-grid-box {
-        margin-top: 20px !important;
+        margin-top: 10px !important;
         padding: 0px !important;
     }
     .team-pictures{
         width: 45px;
         height: 105px;
     }
-    /* .team-info-size{
-        width: 45px !important;
-    } */
-    /* .teams-row{
-        width: 100%;
-    }
-    .teams-row > div {
-        padding: 0px !important;
-    } */
 }
 @media (min-width:370px) and (max-width:575px) {
     .team-box {
-        width: 50%;
+        margin-top: -4%;
     }
-    /* .team-header {
-        margin-top: 60%;
-        font-size: 22px;
-    } */
+    .team-header {
+        height: 15vh;
+    }
+    .team-info-box {
+        height: 21vh;
+    }
     .team-title-top{
         font-size: 14px;
     }
@@ -119,22 +114,17 @@
         margin-top: 20px !important;
         padding: 0px !important;
     }
-    .team-pictures{
-        width: 61px;
-        height: 121px;
-    }
-    /* .team-info-size{
-        width: 61px !important;
-    } */
 }
 @media (min-width:575px) and (max-width:720px) {
     .team-box {
-        width: 60% !important;
+        margin-top: 0%;
     }
-    /* .team-header {
-        margin-top: 30%;
-        font-size: 28px;
-    } */
+    .team-header {
+        height: 15vh;
+    }
+    .team-info-box {
+        height: 21vh;
+    }
     .team-title-top{
         font-size: 22px;
     }
@@ -149,13 +139,4 @@
         width: 100px;
         height: 160px;
     }
-    /* .team-info-size{
-        width: 100px !important;
-    } */
-    /* .teams-row{
-        width: 100%;
-    }
-    .teams-row > div {
-        padding: 0px !important;
-    } */
 }

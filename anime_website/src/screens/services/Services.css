@@ -11,6 +11,7 @@
 .services-box{
     text-align: center;
     width: 95%;
+    margin-top: 15vh;
 }
 .services-header{
     text-align: center;
@@ -24,9 +25,6 @@
 }
 .div-center > div{
     width: 100%;
-}
-.team-column{
-    padding: 0 !important;
 }
 .div-center > div:first-child {
     position: relative;
@@ -119,12 +117,12 @@
     cursor: pointer;
 }
 .selected-page-number{
-    font-size: 17px;
+    font-size: 22px;
     padding: 10px;
     color: white;
     background-color: #50BCBA;
-    width: 5px;
-    height: 5px;
+    width: 2vw;
+    height: 2vw;
     text-align: center;
 }
 .page-numbers{
@@ -138,18 +136,15 @@
     height: 5px;
     text-align: center;
 }
-
 .arrow-left{
     position: absolute;
-    left: 85%;
-    top: 45%;
-    /* z-index: 9; */
+    left: 100%;
+    top: 40%;
 }
 .arrow-right{
     position: absolute;
-    right: 85%;
-    top: 45%;
-    /* z-index: 9; */
+    right: 100%;
+    top: 40%;
 }
 .services-title{
     text-align: center;
@@ -180,17 +175,33 @@
 }
 
 @media (max-width: 270px){
+    .selected-page-number {
+        padding: 5px !important;
+        font-size: 12px !important;
+    }
+    .team-arrow{
+        padding-left: 0px !important;
+        padding-right: 0px !important;
+    }
+    .services-employee-box>div{
+        padding-left: 3px !important;
+        padding-right: 3px !important;
+    }
     .main-video-wrapper{
         padding-top: 10px !important;
         padding-bottom: 0px !important;
         padding-right: 15px !important;
     }
+    .slideCol {
+        height: 4vh !important;
+    }
     .services-box{
         width: 55% !important;
+        margin-top: 0px !important;
     }
     .services-header {
         font-size: 17px;
-        margin-top: 53%;
+        margin-top: 50%;
     }
     .services-title,
     .services-section-title {
@@ -231,12 +242,12 @@
         margin-left:0px !important;
     }
     .arrow-left {
-        left: -5px !important;
-        margin-top: 20%;
+        left: 20px !important;
+        top: 40% !important;
     }
     .arrow-right {
-        right:-5px !important;
-        margin-top: 20%;
+        right:1px !important;
+        top: 40% !important;
     }
     .services-employee-image{
         margin-top: 0px !important;
@@ -255,8 +266,27 @@
     .services-hr{
         width: 100%;
     }
+    .pro-teams-row > div {
+        margin-top: 10px
+    }
+    .team-employees{
+        padding-left: 0px !important;
+        padding-right: 0px !important;
+    }
 }
 @media (min-width: 270px) and (max-width: 375px){
+    .selected-page-number {
+        padding: 5px !important;
+        font-size: 12px !important; 
+    }
+    .services-employee-box>div{
+        padding-left: 5px !important;
+        padding-right: 5px !important;
+    }
+    .team-employees{
+        padding-left: 0px !important;
+        padding-right: 0px !important;
+    }
     .main-video-wrapper{
         padding-top: 10px !important;
         padding-bottom: 0px !important;
@@ -264,10 +294,14 @@
     }
     .services-box{
         width: 55% !important;
+        margin-top: 0px !important;
+    }
+    .slideCol {
+        height: 4vh !important;
     }
     .services-header {
         font-size: 17px;
-        margin-top: 53%;
+        margin-top: 35%;
     }
     .services-title,
     .services-section-title {
@@ -303,17 +337,17 @@
         padding-left: 0px !important;
         padding-right: 0px !important;
     }
-    
     .pro-teams-row{
         margin-left:0px !important;
     }
     .arrow-left {
-        left: 21%;
-        margin-top: 20%;
+        left: 20px !important;
+        top: 40%;
+        z-index: 1;
     }
     .arrow-right {
-        right:19.5% !important;
-        margin-top: 20% !important; 
+        right:20px !important;
+        top: 40% !important; 
     }
     .services-employee-image{
         margin-top: 0px !important;
@@ -334,12 +368,20 @@
     }
 }
 @media (min-width: 375px) and (max-width: 500px){
+    .selected-page-number {
+        padding: 5px !important;
+        font-size: 12px !important;
+    }
     .services-box{
         width: 75% !important;
+        margin-top: 0px !important;
     }
     .services-header {
         font-size: 20px;
-        margin-top: 30%;
+        margin-top: 20%;
+    }
+    .slideCol {
+        height: 6vh !important;
     }
     .services-hr{
         width: 100%;
@@ -369,7 +411,7 @@
     .services-products > div:first-child {
         width: auto !important;
         padding-right: 0px !important;
-        /* padding-left: 0px !important; */
+        padding-left: 0px !important;
     }
     .services-pro-date{
         font-size: 8px;
@@ -379,12 +421,12 @@
         margin-left:0px !important;
     }
     .arrow-left {
-        left: 40%;
-        margin-top: 12%;
+        left: 100%;
+        top: 40%;
     }
     .arrow-right {
-        right:40%;
-        margin-top: 12%;
+        right: -15px;
+        top: 40%;
     }
     .services-employee-image{
         margin-top: 0px !important;
@@ -400,14 +442,46 @@
     .services-employee-job{
         font-size: 7px;
     }
+    .services-employee-box>div{
+        padding-left: 3px !important;
+        padding-right: 3px !important;
+    }
+    .services-employee-box{
+        width: 137% !important;
+    }
 }
+@media (min-width: 500px) and (max-width: 550px){
+    .services-employee-box{
+        width: 130% !important;
+    }
+    .arrow-right {
+        right:-130%;
+        top: 37%;
+    }
+}
+
 @media (min-width: 500px) and (max-width: 675px){
+
+    .selected-page-number {
+        padding: 5px !important;
+        font-size: 12px !important;
+    }
+    .team-employees{
+        overflow: hidden;
+    }
+    .services-products > div:first-child{
+        padding-left: 0px !important;
+    }
     .services-box{
         width: 75% !important;
+        margin-top: 0px !important;
     }
     .services-header {
         font-size: 20px;
-        margin-top: 22%;
+        margin-top: 15%;
+    }
+    .slideCol {
+        height: 6vh !important;
     }
     .services-hr{
         width: 100%;
@@ -447,12 +521,12 @@
         margin-left:0px !important;
     }
     .arrow-left {
-        left: 40%;
-        margin-top: 12%;
+        left: 100%;
+        top: 37%;
     }
     .arrow-right {
-        right:40%;
-        margin-top: 12%;
+        right:100%;
+        top: 37%;
     }
     .services-employee-image{
         margin-top: 0px !important;
@@ -471,12 +545,20 @@
 }
 
 @media (min-width: 675px) and (max-width: 820px){
+    .selected-page-number {
+        padding: 5px !important;
+        font-size: 12px !important;
+    }
     .services-box{
         width: 75% !important;
+        margin-top: 0px !important;
     }
     .services-header {
         font-size: 20px;
-        margin-top: 18%;
+        margin-top: 15%;
+    }
+    .slideCol {
+        height: 6vh !important;
     }
     .services-hr{
         width: 100%;
@@ -506,7 +588,7 @@
     .services-products > div:first-child {
         width: auto !important;
         padding-right: 0px !important;
-        /* padding-left: 0px !important; */
+        padding-left: 0px !important;
     }
     .services-pro-date{
         font-size: 8px;
@@ -516,12 +598,12 @@
         margin-left:0px !important;
     }
     .arrow-left {
-        left: 40%;
-        margin-top: 12%;
+        left: 100%;
+        top: 38%;
     }
     .arrow-right {
-        right:40%;
-        margin-top: 12%;
+        right:100%;
+        top: 38%;
     }
     .services-employee-image{
         margin-top: 0px !important;
@@ -538,3 +620,4 @@
         font-size: 7px;
     }
 }
+

@@ -1,0 +1,121 @@
+.serviceVideoContainer{
+    border-top: 1px solid #888888;
+    padding: 20px;
+    width: 80%;
+}
+
+.disable-components{
+    pointer-events: none;
+}
+
+.serviceVideoBox{
+    width: 300px;
+    height: 300px;
+    border: 1px solid grey;
+    overflow: hidden;
+}
+
+.serviceVideo{
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.shadow{
+    bottom: 0px;
+    position: sticky;
+    height: 40px;
+    background-color: grey;
+    opacity: 50%;
+}
+
+.serviceVideoEditIcon{
+    right: 5px;
+    top: 5px;
+    font-size: 30px;
+    position: absolute;
+}
+.serviceVideoEditIcon:Hover{
+    background-color: white;
+}
+
+.serviceVideoTrashIcon{
+    left: 5px;
+    top: 5px;
+    font-size: 30px;
+    position: absolute;
+}
+.serviceVideoTrashIcon:Hover{
+    background-color: white;
+}
+
+.serviceVideoTitles{
+    font-size: 15px;
+    margin-top: 20px;
+}
+
+.serviceVideoSequence{
+    font-size: 18px;
+    margin-top: 40px;
+    text-align: center;
+}
+
+.serviceVideoCarets{
+    font-size: 20px;
+    margin-left: 20px;
+}
+
+.serviceVideoColumns{
+    margin-left: 80px;
+}
+
+.serviceVideoName{
+    width: 150px;
+    height: 25px;
+    font-size: 15px;
+}
+
+.serviceVideoSaveIcon{
+    font-size: 40px;
+    color: green;
+    margin-right:20px;
+    margin-top: 60px;
+}
+.serviceVideoSaveIcon:Hover{
+    background-color: white;
+}
+
+.serviceVideoRefreshIcon{
+    font-size: 40px;
+    color: red;
+}
+.serviceVideoRefreshIcon:Hover{
+    background-color: white;
+}
+.serviceVideoDeleteIcon{
+    font-size: 40px;
+    color: red;
+    margin-right:20px;
+    margin-top: 120px;
+}
+.serviceVideoDeleteIcon:Hover{
+    background-color: white;
+}
+.loading-gif{
+    bottom: 0px;
+    position: sticky;
+    height: 100%;
+    background-color: grey;
+    opacity: 50%;
+}
+.serviceVideoCaret{
+    font-size: 32px;
+    margin-top: 0px;
+    margin-right: 10px;
+}
+.serviceVideoNameClosed{
+    margin-left: 20px;
+    width: 150px;
+    height: 25px;
+    font-size: 18px;
+}

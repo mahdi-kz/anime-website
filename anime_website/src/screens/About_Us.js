@@ -5,12 +5,17 @@ import InfoBox from '../components/InfoBox';
 import image1 from '../images/aboutUs/1.jpg';
 import image2 from '../images/aboutUs/2.jpg';
 import image3 from '../images/aboutUs/3.jpg';
+import backgroundImage from '../images/background/about-bg.webp';
 
 export default function About_Us(){
     const [info, setInfo] = useState([]);
+    const [showLogo, setShowLogo] = useState(true)
 
     useEffect(()=>{
         getInfo();
+        window.addEventListener('scroll',()=>{
+			setShowLogo(document.documentElement.scrollTop?false:true)
+		})
     },[])
 
     const getInfo = ()=>{
@@ -38,8 +43,16 @@ export default function About_Us(){
     }
 
     return(
-        <>
-            <Navbar showLogo={true}/>
+        <div style={{
+            backgroundImage:`url(${backgroundImage})`, 
+            backgroundPosition:'center',
+            height:'100%',
+            backgroundRepeat: 'no-repeat',
+            backgroundSize:"cover",
+            backgroundAttachment: 'fixed'
+            }}
+        >
+            <Navbar showLogo={showLogo}/>
             <div className="services-container" 
 				style={{
 					backgroundPosition: 'center',
@@ -53,6 +66,6 @@ export default function About_Us(){
                     </div>
                 </div>
             </div>
-        </>
+        </div>
     )
 }

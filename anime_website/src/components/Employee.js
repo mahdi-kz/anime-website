@@ -16,13 +16,13 @@ function Employee(props){
             <div>
                 <img 
                     alt="employee"
-                    style={props.imageStyle?props.imageStyle:{}}
+                    // style={props.imageStyle?props.imageStyle:{}}
                     className={props.className?`employee-image ${props.className}`:"employee-image"}
                     src={isHover?props.info.gif:props.info.image}
                 />
             </div>
             <div
-                style={props.divInfoStyle?props.divInfoStyle:{}}
+                // style={props.divInfoStyle?props.divInfoStyle:{}}
                 className={props.infoClassName?`employee-info ${props.infoClassName}`:"employee-info"}>
                 <p className="employee-name">{props.info.name}</p>
                 <p className="employee-job">{props.info.job}</p>

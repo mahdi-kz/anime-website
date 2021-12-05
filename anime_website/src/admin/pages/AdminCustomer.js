@@ -8,8 +8,7 @@ import {get_customers} from '../call_api';
 
 function AdminCustomer(){
     const [addNew, setAddNew] = useState(false);
-    const [customers, setCustomers] = useState([
-    ]);
+    const [customers, setCustomers] = useState([]);
 
     function addNewCustomer(){
         customers.push({'name': ''});

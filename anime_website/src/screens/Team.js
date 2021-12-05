@@ -4,16 +4,14 @@ import Navbar from '../components/Navbar';
 import GreiVideo from '../components/GreiVideo.js';
 import image1 from '../images/test/people1.png';
 import image2 from '../images/test/people2.jpg';
-import image3 from '../images/teams/pop2.jpg';
-import image4 from '../images/teams/pop1.jpg';
+import image3 from '../images/teams/pop1.webp';
+import image4 from '../images/teams/pop1.webp';
 import gif1 from '../images/teams/002-Fast.gif';
 import { Container, Row, Col } from 'react-grid-system';
 import video1 from '../videos/big.mp4';
 import MembersModal from "../components/MembersModal";
-import Employee from '../components/Employee';
-import bgBody from '../images/background/team/team-body-bg.webp';
-import headerImage from '../images/background/team/team-header-bg.webp';
-import bgImage from '../images/background/bg.webp';
+import TeamMembers from '../components/TeamMembers';
+import backgroundImage from '../images/background/team-bg.webp';
 
 
 export default function Teams(){
@@ -23,6 +21,13 @@ export default function Teams(){
     const [videoWidth, setVideoWidth] = useState(null)
     const [videoSize, setVideoSides] = useState("80%");
     const [hideNavbar, setHideNavbar] = useState(false);
+    const [showLogo, setShowLogo] = useState(true);
+
+    useEffect(()=>{
+        window.addEventListener('scroll',()=>{
+			setShowLogo(document.documentElement.scrollTop?false:true)
+		})
+    },[])
 
     useEffect(()=>{
         getTeamsInfo();
@@ -182,90 +187,78 @@ export default function Teams(){
 
     return(
         <div style={{
-            backgroundImage:`url(${bgImage})`, 
-            backgroundPosition:'left ',
+            backgroundImage:`url(${backgroundImage})`, 
+            backgroundPosition:'center',
             height:'100%',
-            backgroundRepeat: 'round',
-            backgroundSize:"cover"
-
+            backgroundRepeat: 'no-repeat',
+            backgroundSize:"cover",
+            backgroundAttachment: 'fixed'
             }}
         >
-            <div style={{
-                backgroundImage:`url(${bgBody})`, 
-                backgroundPosition:'center',
-                height:'100%',
-                backgroundRepeat: 'no-repeat',
-                backgroundSize:"cover"
-                }}
-            >
-                {!showTeamModal && !hideNavbar &&
-                    <Navbar showLogo={true}/>
-                }
-                <div className="team-container">
-                    <div className="team-box">
-                        <div className="team-info-box" style={{
-                                backgroundImage:`url(${headerImage})`,
-                                backgroundPosition:'top ',
-                                backgroundSize:"contain",
-                                backgroundRepeat:"no-repeat"
-                            }}
-                        >
-                            <div className="team-header">
-                                <span>grei's Anatomy</span>
-                            </div>
-                            <div className="slideCol">
-                                <div className="scroller">
-                                    <div className="inner services-title services-title-top">
-                                        <p>Story tellers through simple frames</p>
-                                    </div>
+            {!showTeamModal && !hideNavbar &&
+                <Navbar showLogo={showLogo}/>
+            }
+            <div className="team-container">
+                <div className="team-box">
+                    <div className="team-info-box" 
+                        // style={{
+                        //     backgroundImage:`url(${headerImage})`,
+                        //     backgroundPosition:'top ',
+                        //     backgroundSize:"contain",
+                        //     backgroundRepeat:"no-repeat"
+                        // }}
+                    >
+                        <div className="team-header">
+                            <span>grei's Anatomy</span>
+                        </div>
+                        <div className="slideCol">
+                            <div className="scroller">
+                                <div className="inner services-title services-title-top">
+                                    <p>Story tellers through simple frames</p>
                                 </div>
                             </div>
                         </div>
-                        <div id='team-top-video'>
-                            <GreiVideo 
-                                hideNavbar={()=>setHideNavbar(true)}
-                                showNavbar={()=>setHideNavbar(false)}
-                                hasFullscreen={true}
-                                with='95%' 
-                                height='auto'
-                                url={video1} 
-                                style={{display: 'flex',justifyContent: 'center'}}
-                                autoPlay={true} />
-                        </div>
-                        <div className="teams-member" style={{width:`${videoWidth}px`}}>
-                            <Container fluid className="team-grid-box">
-                                    <Row className='teams-row'>
-                                        {teams.map((obj, index)=>{
-                                            return (<Col>
-                                                <Employee 
-                                                    classWrapper="main-video-wrapper"
-                                                    classPlayer="main-react-player"
-                                                    info={obj}
-                                                    openTeamModal={openTeamModal}
-                                                    divInfoStyle={{width:videoSize, height:videoSize/3+10}}
-                                                    className="team-pictures"
-                                                    // infoClassName="team-info-box-size   "
-                                                    imageStyle={{width:videoSize, height: videoSize+60}}
-                                                    style={{
-                                                        width:videoSize,
-                                                        paddingTop:'20px',
-                                                        overflow: 'hidden',
-                                                        // paddingBottom:'5px',
-                                                        height: videoSize+60
-                                                        // paddingRight:index==teams.length-1?'0px !important':'25px'
-                                                    }} />
-                                            </Col>)
-                                        })}
-                                    </Row>
-
-                            </Container>
-                        </div>
-                        <MembersModal
-                            isShow={showTeamModal}
-                            info={personInfo}
-                            closeTeamModal={closeTeamModal}
-                        />
                     </div>
+                    <div id='team-top-video'>
+                        <GreiVideo 
+                            hideNavbar={()=>setHideNavbar(true)}
+                            showNavbar={()=>setHideNavbar(false)}
+                            hasFullscreen={true}
+                            with='95%' 
+                            height='auto'
+                            url={video1} 
+                            style={{display: 'flex',justifyContent: 'center'}}
+                            autoPlay={true} />
+                    </div>
+                    <div className="teams-member" style={{width:`${videoWidth}px`}}>
+                        <Container fluid className="team-grid-box">
+                                <Row className='teams-row'>
+                                    {teams.map((obj, index)=>{
+                                        return (<Col xs={4} sm={3} md={2.4} xl={2.4}>
+                                            <TeamMembers 
+                                                classWrapper="main-video-wrapper"
+                                                classPlayer="main-react-player"
+                                                info={obj}
+                                                openTeamModal={openTeamModal}
+                                                divInfoStyle={{height:videoSize/3+10}}
+                                                className="team-pictures"
+                                                imageStyle={{height: videoSize+60}}
+                                                style={{
+                                                    paddingTop:'20px',
+                                                    overflow: 'hidden',
+                                                    height: videoSize+60
+                                                }} />
+                                        </Col>)
+                                    })}
+                                </Row>
+
+                        </Container>
+                    </div>
+                    <MembersModal
+                        isShow={showTeamModal}
+                        info={personInfo}
+                        closeTeamModal={closeTeamModal}
+                    />
                 </div>
             </div>
         </div>

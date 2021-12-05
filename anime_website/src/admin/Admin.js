@@ -3,6 +3,10 @@ import './Admin.css';
 import AdminSideMenu, {SidebarData} from './components/AdminSideMenu';
 import AdminHome from './pages/AdminHome';
 import AdminCustomer from './pages/AdminCustomer';
+import AdminProduction from './pages/AdminProduction';
+import AdminDigitalMedia from './pages/AdminDigitalMedia';
+import AdminGraphicsBranding from './pages/AdminGraphicsBranding';
+import AdminTraining from './pages/AdminTraining';
 
 
 function Admin(){
@@ -17,6 +21,18 @@ function Admin(){
 			    />
 			    {selectedMenu === 0 &&
 			        <AdminHome />
+			    }
+			    {selectedMenu === 1 &&
+			        <AdminProduction />
+			    }
+			    {selectedMenu === 2 &&
+			        <AdminDigitalMedia />
+			    }
+			    {selectedMenu === 3 &&
+			        <AdminGraphicsBranding />
+			    }
+			    {selectedMenu === 4 &&
+			        <AdminTraining />
 			    }
 			    {selectedMenu === 5 &&
 			        <AdminCustomer />

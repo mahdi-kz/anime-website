@@ -21,7 +21,8 @@
 }
 .first-modal-descrition-box{
     text-align: center;
-    
+    padding-left: 3px !important;
+    padding-right: 3px !important;
 }
 .first-modal-logo{
     display: block;
@@ -29,11 +30,11 @@
 }
 .first-modal-info{
     color: white;
-    font-size: 1.2vW;
+    font-size: 1.5vW;
     position: absolute;
     width: 100%;
-    top: 75%;
-    left: 69%;
+    top: 73%;
+    left: 75%;
     transform: translate( -55%, -80% );
     bottom: 0; right: 0;
     
@@ -55,4 +56,38 @@
     90%   {margin-top: 5px;}
     50%  {margin-top: -30pt;}
     0% {margin-top: -30pt;}
+}
+
+@media (max-width: 270px){
+    .first-modal-info{
+        top: 62%;
+        left: 78%;
+    }
+    .home-box-title {
+        font-size: 15px !important;
+    }
+}
+@media (min-width: 270px) and (max-width: 375px){
+    .first-modal-info{
+        top: 65% !important;
+        left: 78%;
+    }
+}
+@media (min-width: 375px) and (max-width: 500px){
+    .first-modal-info{
+        top: 68% !important;
+    }
+}
+@media (min-width: 500px) and (max-width: 675px){
+    .first-modal-info{
+        top: 71% !important;
+    }
+}
+
+@media (min-width: 675px) and (max-width: 820px){
+    .first-modal-info{
+        top: 71% !important;
+        left: 75% !important;
+        font-size: 1.5vW !important;
+    }
 }

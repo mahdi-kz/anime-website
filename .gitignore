@@ -2,3 +2,7 @@
 /back_end/venv/lib64/
 /anime_website/node_modules/
 anime_website/node_modules/.cache/.eslintcache
+*.pyc
+/back_end/app/static
+/back_end/app/static/images/
+/back_end/app/static/videos/

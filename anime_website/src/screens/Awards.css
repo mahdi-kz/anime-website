@@ -96,7 +96,7 @@
 }
 .AwardsListModule table {
     margin: 0 auto;
-    width: 100%;
+    width: 80%;
     max-width: 1140px;
     vertical-align: top;
     border-collapse: collapse;
@@ -183,7 +183,7 @@ th {
     min-height: 100%;
 }
 .AwardsListModule table td div span:first-child {
-    font-size: 16px;
+    font-size: 1.5vw;
     font-weight: 700;
     line-height: 19px;
     width: calc(100% - 102px);
@@ -336,4 +336,33 @@ th {
 .awards-teams-row{
     margin-top: 4vw;
     margin-bottom: 3vw;
+}
+
+@media (min-width: 1200px){
+    .AwardsListModule table{
+        width: 100% !important;
+    }
+}
+@media (max-width:800px){
+    .awards-icon-name{
+        font-size:14px;
+    }
+    .awards-icon-box > img{
+        width: 45px !important;
+    }
+
+    .AwardsListModule th {
+        font-size: 10px;
+    }
+    .AwardsListModule table td div span:first-child {
+        font-size: 12px;
+    }
+    .AwardsListModule table td div span:nth-child(2) {
+        margin-top:10px;
+        font-size: 10px
+    }
+    .AwardsListModule table td div span:nth-child(3) {
+        margin-top:5px;
+        font-size: 10px
+    }
 }

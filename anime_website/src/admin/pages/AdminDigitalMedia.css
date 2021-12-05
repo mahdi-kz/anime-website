@@ -1,0 +1,31 @@
+.admin-digital-media-container{
+    width: calc(100vw - 300px);
+    right: 0;
+    position: flex;
+    padding: 10px;
+    margin: 0px;
+    margin-left: 250px;
+    overflow-y: hidden;
+    overflow-x: hidden;
+    flex: 1;
+}
+
+.admin-digital-media-tab{
+    left: 0x;
+    font-size: 20px;
+    width: 120px;;
+    padding: 14px;
+    margin-left: 0px;
+    cursor: pointer;
+    border-bottom: 4px solid #50BCBA;
+}
+
+.admin-digital-media-plus{
+    margin: 20px;
+}
+
+.admin-digital-media-videos{
+    height: calc(100vh - 250px);
+    overflow-y: scroll;
+    overflow-x: hidden;
+}

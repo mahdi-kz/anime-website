@@ -10,9 +10,14 @@
     margin: 0;
     background-color: #373737;
     color: white;
+    overflow-y: auto;
+    direction: rtl;
+}
+.AdminSideMenu::-webkit-scrollbar{
+    display: none;
 }
 
 .adminLogo{
     width: 100px;
-    margin-left: 20px;
+    margin-right: 50px;
 }
