@@ -261,7 +261,7 @@ export default function Products(props){
                                 })}
                             </div>
                         </div>
-                        <div className="training-column team-arrow" xs={0.75} sm={1} md={1} xl={1}>
+                        <div className="training-column team-arrow" >
                             <div className="paging-box training-arrow-right">
                                     <div className="selected-page-number selected-arrow"
                                         style={{
