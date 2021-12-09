@@ -94,15 +94,21 @@
         justify-content: center;
     }
     .contact-us-description {
-        font-size: 14px;
+        font-size: 15px;
     }
     .contact-us-info{
-        font-size: 11px
+        font-size: 13px
     }
 }
 @media (min-width:575px) and (max-width:900px){
     .contact-header{
         margin-top: 14vh !important;
+    }
+    .contact-us-description {
+        font-size: 16px;
+    }
+    .contact-us-info{
+        font-size: 15px
     }
 }
 @media (min-width:1200px){

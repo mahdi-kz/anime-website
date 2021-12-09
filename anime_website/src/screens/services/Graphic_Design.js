@@ -1,5 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import './Services.css'
+import './Training.css'
 import Navbar from '../../components/Navbar';
 import MembersModal from '../../components/MembersModal';
 import GreiVideo from '../../components/GreiVideo.js';
@@ -30,7 +31,7 @@ export default function Products(props){
 		getProducts();
 		getMembers();
 		window.addEventListener('resize', updateSize);
-		document.querySelector('.arrow-right').addEventListener('click', function () {
+		document.querySelector('.training-arrow-right').addEventListener('click', function () {
 			const el = document.getElementById("hscroll");
 			el.scroll({
 				left: el.scrollLeft+parseInt(videoSize+150),
@@ -38,7 +39,7 @@ export default function Products(props){
 				behavior: 'smooth'
 			})
 		});
-		document.querySelector('.arrow-left').addEventListener('click', function () {
+		document.querySelector('.training-arrow-left').addEventListener('click', function () {
 			const el = document.getElementById("hscroll");
 			el.scroll({
 				left: el.scrollLeft-parseInt(videoSize+150),
@@ -49,14 +50,13 @@ export default function Products(props){
 		window.addEventListener('scroll',()=>{
 			setShowLogo(document.documentElement.scrollTop?false:true)
 		})
-	}, [])
+	}, [videoSize])
 
 	const updateSize = ()=>{
 		try{
 			let elWidth = document.querySelectorAll("#top-video .react-player");
 			if(elWidth){
-				elWidth = elWidth[0].offsetWidth;
-				// setVideoWidth(elWidth)
+				elWidth = elWidth[0].offsetWidth; 
 				const videosWidth = parseInt(elWidth/5 -20);
 				setVideoSides(videosWidth);
 			}
@@ -239,53 +239,49 @@ export default function Products(props){
 					</div>
 					<hr className="services-hr" />
 					<div className="services-section-title services-team-title">Graphic's Team</div> 
-					<div className="div-center">
-						<Container fluid >
-							<Row>
-							<Col className="team-column" xs={0.75} sm={1} md={1} xl={1}>
-								<div className="paging-box arrow-left">
-										<div className="selected-page-number"
-											style={{
-											    display: 'flex',
-											    justifyContent:'center',
-											    alignItems:'center',
-											    zIndex:showTeamModal || hideNavbar?-1:10
-											}}
-										>
-											<i class='fas fa-chevron-left'></i>
-										</div>
-								</div>
-							</Col>
-							<Col className="team-column team-employees" xs={8} sm={10} md={10} xl={10}>
-								<div className="services-employee-box" id="hscroll">
-									{members.map((obj, index)=>{
-										return (<Col>
-											<Employee 
-												info={obj} 
-												openTeamModal={openTeamModal}
-												className="team-pictures"
-												infoClassName="team-info-size"
-											/>
-										</Col>)
-									})}
-								</div>
-							</Col>
-							<Col className="team-column team-arrow" xs={0.75} sm={1} md={1} xl={1}>
-								<div className="paging-box arrow-right">
-										<div className="selected-page-number selected-arrow"
-											style={{
-                                                display: 'flex',
-                                                justifyContent:'center',
-                                                alignItems:'center',
-                                                zIndex:showTeamModal || hideNavbar?-1:10
-									        }}
-										>
-											<i class='fas fa-chevron-right'></i>
-										</div>
-								</div>
-							</Col>
-							</Row>
-						</Container>
+					<div className="course-main-box">
+						<div className="training-column" >
+                            <div className="training-arrow-left">
+                                    <div className="selected-page-number"
+                                        style={{
+                                            display: 'flex',
+                                            justifyContent:'center',
+                                            alignItems:'center',
+                                            zIndex:showTeamModal || hideNavbar?-1:10
+                                        }}
+                                    >
+                                        <i class='fas fa-chevron-left'></i>
+                                    </div>
+                            </div>
+                        </div>
+                        <div className="training-column-second training-column" >
+                            <div className="training-employee-box" id="hscroll">
+                                {members.map((obj, index)=>{
+                                    return (<Col>
+                                        <Employee
+                                            info={obj}
+                                            openTeamModal={openTeamModal}
+                                            className="team-pictures"
+                                            infoClassName="team-info-size"
+                                        />
+                                    </Col>)
+                                })}
+                            </div>
+                        </div>
+                        <div className="training-column team-arrow">
+                            <div className="paging-box training-arrow-right">
+                                    <div className="selected-page-number selected-arrow"
+                                        style={{
+                                            display: 'flex',
+                                            justifyContent:'center',
+                                            alignItems:'center',
+                                            zIndex:showTeamModal || hideNavbar?-1:10
+                                        }}
+                                    >
+                                        <i class='fas fa-chevron-right'></i>
+                                    </div>
+                            </div>
+                        </div>
 					</div>
 					<div style={{height:100}} />
 					<MembersModal 

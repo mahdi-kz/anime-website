@@ -136,7 +136,7 @@
     height: 5px;
     text-align: center;
 }
-.arrow-left{
+/*.arrow-left{
     position: absolute;
     left: 100%;
     top: 40%;
@@ -145,7 +145,7 @@
     position: absolute;
     right: 100%;
     top: 40%;
-}
+}*/
 .services-title{
     text-align: center;
     font-size: 22px;
@@ -179,10 +179,10 @@
         padding: 5px !important;
         font-size: 12px !important;
     }
-    .team-arrow{
+    /*.team-arrow{
         padding-left: 0px !important;
         padding-right: 0px !important;
-    }
+    }*/
     .services-employee-box>div{
         padding-left: 3px !important;
         padding-right: 3px !important;
@@ -241,14 +241,14 @@
     .pro-teams-row{
         margin-left:0px !important;
     }
-    .arrow-left {
+    /*.arrow-left {
         left: 20px !important;
         top: 40% !important;
     }
     .arrow-right {
         right:1px !important;
         top: 40% !important;
-    }
+    }*/
     .services-employee-image{
         margin-top: 0px !important;
         width: 100px !important;
@@ -340,7 +340,7 @@
     .pro-teams-row{
         margin-left:0px !important;
     }
-    .arrow-left {
+    /*.arrow-left {
         left: 20px !important;
         top: 40%;
         z-index: 1;
@@ -348,7 +348,7 @@
     .arrow-right {
         right:20px !important;
         top: 40% !important; 
-    }
+    }*/
     .services-employee-image{
         margin-top: 0px !important;
         width: 100px !important;
@@ -420,14 +420,14 @@
     .pro-teams-row{
         margin-left:0px !important;
     }
-    .arrow-left {
+    /*.arrow-left {
         left: 100%;
         top: 40%;
     }
     .arrow-right {
         right: -15px;
         top: 40%;
-    }
+    }*/
     .services-employee-image{
         margin-top: 0px !important;
         width: 100px !important;
@@ -454,10 +454,10 @@
     .services-employee-box{
         width: 130% !important;
     }
-    .arrow-right {
+    /*.arrow-right {
         right:-130%;
         top: 37%;
-    }
+    }*/
 }
 
 @media (min-width: 500px) and (max-width: 675px){
@@ -520,14 +520,14 @@
     .pro-teams-row{
         margin-left:0px !important;
     }
-    .arrow-left {
+    /*.arrow-left {
         left: 100%;
         top: 37%;
     }
     .arrow-right {
         right:100%;
         top: 37%;
-    }
+    }*/
     .services-employee-image{
         margin-top: 0px !important;
         width: 100px !important;
@@ -597,14 +597,14 @@
     .pro-teams-row{
         margin-left:0px !important;
     }
-    .arrow-left {
+    /*.arrow-left {
         left: 100%;
         top: 38%;
     }
     .arrow-right {
         right:100%;
         top: 38%;
-    }
+    }*/
     .services-employee-image{
         margin-top: 0px !important;
         width: 100px !important;
