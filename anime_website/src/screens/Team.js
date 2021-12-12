@@ -33,7 +33,7 @@ export default function Teams(){
 
     useEffect(()=>{
         getTeamsInfo();
-//        getVideo();
+        getVideo();
         updateSize();
         window.addEventListener('resize', updateSize);
     }, [videoSize])
@@ -246,7 +246,7 @@ export default function Teams(){
                             hasFullscreen={true}
                             with='95%' 
                             height='auto'
-                            url={video1}
+                            url={videoURL}
                             style={{display: 'flex',justifyContent: 'center'}}
                             autoPlay={true} />
                     </div>

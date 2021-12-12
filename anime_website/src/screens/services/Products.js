@@ -12,7 +12,7 @@ import gif1 from '../../images/teams/002-Fast.gif';
 import backgroundImage from '../../images/background/production-bg.webp'
 import { Container, Row, Col } from 'react-grid-system';
 import Employee from '../../components/Employee';
-import {get_service_videos} from '../../admin/call_api';
+import {get_service_videos, get_department_members} from '../../admin/call_api';
 
 
 export default function Products(props){
@@ -94,6 +94,16 @@ export default function Products(props){
         });
     }
 
+    async function getDepartmentMembers(){
+        while (members.length > 0){
+            members.pop();
+        }
+        get_department_members('production').then((res)=>{
+            if (res.length){
+				setMembers(res);
+            }
+        });
+    }
 
 	const getMembers = ()=>{
 		setMembers([

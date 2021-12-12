@@ -9,10 +9,10 @@ function TeamMembers(props){
         const baseSize = 12
         var fontSize;
         if (textLength >= baseSize) {
-            fontSize = baseSize / textLength * 1.5;
+            fontSize = baseSize / textLength * 1.3;
         }
         else{
-            fontSize= 1.5;
+            fontSize = 1.3;
         }
         return `${fontSize}vw`
         }

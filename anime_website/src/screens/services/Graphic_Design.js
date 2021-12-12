@@ -11,7 +11,7 @@ import servicesBg from '../../images/background/services-bg.webp'
 import { Container, Row, Col } from 'react-grid-system';
 import Employee from '../../components/Employee';
 import backgroundImage from '../../images/background/graphic-bg.webp';
-import {get_service_videos} from '../../admin/call_api';
+import {get_service_videos, get_department_members} from '../../admin/call_api';
 
 export default function Products(props){
 	const [showLogo, setShowLogo] = useState(true)
@@ -76,6 +76,16 @@ export default function Products(props){
             if (res.length){
                 setProducts(res);
                 setPageNumber(~~(res.length / 15) + (res.length % 15 > 0 ? 1: 0));
+            }
+        });
+    }
+    async function getDepartmentMembers(){
+        while (members.length > 0){
+            members.pop();
+        }
+        get_department_members('graphics_branding').then((res)=>{
+            if (res.length){
+				setMembers(res);
             }
         });
     }

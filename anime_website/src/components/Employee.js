@@ -1,8 +1,28 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './Employee.css'
 
 function Employee(props){
     const [isHover, setIsHover] = useState(false)
+
+    useEffect(()=>{
+        const getFontSize = (textLength) => {
+        const baseSize = 12
+        var fontSize;
+        if (textLength >= baseSize) {
+            fontSize = baseSize / textLength * 1.3;
+        }
+        else{
+            fontSize = 1.3;
+        }
+        return `${fontSize}vw`
+        }
+
+        const texts = document.querySelectorAll('.font-adjust')
+
+        texts.forEach(text => {
+            text.style.fontSize = getFontSize(text.textContent.length)
+        })
+    }, [])
 
 	return(
         <div 
@@ -24,8 +44,8 @@ function Employee(props){
             <div
                 // style={props.divInfoStyle?props.divInfoStyle:{}}
                 className={props.infoClassName?`employee-info ${props.infoClassName}`:"employee-info"}>
-                <p className="employee-name">{props.info.name}</p>
-                <p className="employee-job">{props.info.job}</p>
+                <p className="font-adjust employee-name">{props.info.name}</p>
+                <p className="font-adjust employee-job">{props.info.job}</p>
             </div>
         </div>
 	)
