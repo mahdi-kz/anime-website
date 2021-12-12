@@ -20,11 +20,10 @@ function GreiVideo(props){
     }
 
     useEffect(()=>{
-        console.log(props);
+
     },[])
 
     const openFullscreen = () => {
-        console.log('11111111111')
         setIsShow(true);
         setPlay(false);
         // if(!props.notFull){ 

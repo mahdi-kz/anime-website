@@ -7,6 +7,7 @@ import AdminProduction from './pages/AdminProduction';
 import AdminDigitalMedia from './pages/AdminDigitalMedia';
 import AdminGraphicsBranding from './pages/AdminGraphicsBranding';
 import AdminTraining from './pages/AdminTraining';
+import AdminTeam from './pages/AdminTeam';
 
 
 function Admin(){
@@ -36,6 +37,9 @@ function Admin(){
 			    }
 			    {selectedMenu === 5 &&
 			        <AdminCustomer />
+			    }
+			    {selectedMenu === 6 &&
+			        <AdminTeam />
 			    }
 			</div>
 		</>

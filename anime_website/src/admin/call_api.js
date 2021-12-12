@@ -11,6 +11,10 @@ const get_service_videos_url = '/api/get-service-videos';
 const get_service_video_url = '/api/get-service-video';
 const save_service_video_url = '/api/save-service-video';
 const delete_service_video_url = '/api/delete-service-video';
+const get_members_url = '/api/get-members';
+const get_member_url = '/api/get-member';
+const save_member_url = '/api/save-member';
+const delete_member_url = '/api/delete-member';
 
 
 function call_json_api(url, data){
@@ -86,7 +90,6 @@ export async function save_customer(id, name, international, sequence, file){
     data.append('name', name);
     data.append('international', international)
     data.append('sequence', sequence)
-    console.log(data, name)
     let res = await call_form_api(save_customer_url, data);
     return res['id'];
 }
@@ -130,5 +133,35 @@ export async function save_service_video(id, name, sequence, top, department, fi
 
 export async function delete_service_video(id){
     let res = await call_json_api(delete_service_video_url, {'id': id});
+    return res;
+}
+
+export async function get_members(){
+    let res = await call_json_api(get_members_url, {});
+    return res;
+}
+
+export async function get_member(id){
+    let res = await call_json_api(get_member_url, {'id': id});
+    return res;
+}
+
+export async function save_member(id, name, description, position, sequence, departments, back_image_file, gif_file, image_file){
+    let data = new FormData();
+    data.append('back_image_file', back_image_file);
+    data.append('gif_file', gif_file);
+    data.append('image_file', image_file);
+    data.append('id', id)
+    data.append('name', name);
+    data.append('description', description);
+    data.append('position', position);
+    data.append('sequence', sequence);
+    data.append('departments', departments);
+    let res = await call_form_api(save_member_url, data);
+    return res['id'];
+}
+
+export async function delete_member(id){
+    let res = await call_json_api(delete_member_url, {'id': id});
     return res;
 }

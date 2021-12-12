@@ -3,6 +3,26 @@ import './TeamMembers.css'
 
 function TeamMembers(props){
     const [isHover, setIsHover] = useState(false)
+
+    useEffect(()=>{
+        const getFontSize = (textLength) => {
+        const baseSize = 12
+        var fontSize;
+        if (textLength >= baseSize) {
+            fontSize = baseSize / textLength * 1.5;
+        }
+        else{
+            fontSize= 1.5;
+        }
+        return `${fontSize}vw`
+        }
+
+        const texts = document.querySelectorAll('.font-adjust')
+
+        texts.forEach(text => {
+            text.style.fontSize = getFontSize(text.textContent.length)
+        })
+    }, [])
     
 	return(
         <div 
@@ -24,8 +44,8 @@ function TeamMembers(props){
             <div
                 style={props.divInfoStyle?props.divInfoStyle:{}}
                 className={props.infoClassName?`team-employee-info ${props.infoClassName}`:"team-employee-info"}>
-                <p className="team-employee-name">{props.info.name}</p>
-                <p className="team-employee-job">{props.info.job}</p>
+                <p className="font-adjust team-employee-name">{props.info.name}</p>
+                <p className="font-adjust team-employee-job">{props.info.job}</p>
             </div>
             </div>
         </div>

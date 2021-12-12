@@ -14,9 +14,9 @@
     transition: transform 0.35s;
     -webkit-transform: translate3d(0,100%,0);
     transform: translate3d(0,100%,0);
+    width: 100%;
 }
 .team-employee-name{
-    font-size: 1.5vw;
     font-family: LisztFYRegular,Georgia,Times,serif;
     -webkit-transition: -webkit-transform 0.35s;
     transition: transform 0.35s;
@@ -53,4 +53,5 @@
     transition: transform 0.35s;
     -webkit-transform: translate3d(0,200%,0);
     transform: translate3d(0,200%,0);
+    width: 100%;
 }

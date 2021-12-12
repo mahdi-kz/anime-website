@@ -28,7 +28,12 @@ function AdminServiceVideo(props){
 
     async function get_video(id){
         get_service_video(id).then(data=>{
-            setVideo(data['video_address'] + '?' + Date.now());
+            if (data['video_address'] !== null){
+                setVideo(data['video_address'] + '?' + Date.now());
+            }
+            else{
+                setVideo(false);
+            }
             setName(data['name']);
             setSequence(data['sequence']);
             setTop(data['top']);
@@ -92,6 +97,7 @@ function AdminServiceVideo(props){
             setSequence(0)
             setSelectedFile(false)
             setTop(props.top)
+            setVideo(false)
         }
 
         if (!props.id){

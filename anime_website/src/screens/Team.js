@@ -12,6 +12,7 @@ import video1 from '../videos/big.mp4';
 import MembersModal from "../components/MembersModal";
 import TeamMembers from '../components/TeamMembers';
 import backgroundImage from '../images/background/team-bg.webp';
+import {get_members, get_service_videos} from '../admin/call_api';
 
 
 export default function Teams(){
@@ -22,6 +23,7 @@ export default function Teams(){
     const [videoSize, setVideoSides] = useState("80%");
     const [hideNavbar, setHideNavbar] = useState(false);
     const [showLogo, setShowLogo] = useState(true);
+    const [videoURL, setVideoURL] = useState(null);
 
     useEffect(()=>{
         window.addEventListener('scroll',()=>{
@@ -31,6 +33,7 @@ export default function Teams(){
 
     useEffect(()=>{
         getTeamsInfo();
+//        getVideo();
         updateSize();
         window.addEventListener('resize', updateSize);
     }, [videoSize])
@@ -51,9 +54,9 @@ export default function Teams(){
         const teamsInfo = [
             {
                 description:"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
-                name:"julia robinson",
+                name:"Mahtab Karbasi fatah fard",
                 image:image1,
-                job:"Lorem ipsum dolor",
+                job:"very long position name",
                 gif:gif1,
 				popImg:image3
             },
@@ -185,6 +188,23 @@ export default function Teams(){
         setTeamShowModal(!showTeamModal);
     }
 
+    async function getMembers(){
+        while (teams.length > 0){
+            teams.pop();
+        }
+        get_members().then((res)=>{
+            if (res.length){
+				setTeams(res);
+            }
+        });
+    }
+
+    async function getVideo(){
+        get_service_videos('team', true).then((res)=>{
+            if (res.length) setVideoURL(res[0].video_address)
+        })
+    }
+
     return(
         <div style={{
             backgroundImage:`url(${backgroundImage})`, 
@@ -226,7 +246,7 @@ export default function Teams(){
                             hasFullscreen={true}
                             with='95%' 
                             height='auto'
-                            url={video1} 
+                            url={video1}
                             style={{display: 'flex',justifyContent: 'center'}}
                             autoPlay={true} />
                     </div>

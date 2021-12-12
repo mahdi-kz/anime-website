@@ -11,3 +11,8 @@ class Department(db.Model):
         'ServiceVideo',
         back_populates='department'
     )
+    members = db.relationship(
+        'Member',
+        secondary="MemberDepartment",
+        lazy='dynamic',
+    )
