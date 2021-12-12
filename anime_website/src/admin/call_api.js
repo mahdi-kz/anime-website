@@ -15,6 +15,7 @@ const get_members_url = '/api/get-members';
 const get_member_url = '/api/get-member';
 const save_member_url = '/api/save-member';
 const delete_member_url = '/api/delete-member';
+const get_department_members_url = '/api/get-department-member'
 
 
 function call_json_api(url, data){
@@ -163,5 +164,10 @@ export async function save_member(id, name, description, position, sequence, dep
 
 export async function delete_member(id){
     let res = await call_json_api(delete_member_url, {'id': id});
+    return res;
+}
+
+export async function get_department_members(department_name){
+    let res = await call_json_api(get_department_members_url, {'department': department_name})
     return res;
 }
