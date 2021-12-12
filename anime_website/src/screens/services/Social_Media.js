@@ -10,7 +10,7 @@ import gif1 from '../../images/teams/002-Fast.gif';
 import { Container, Row, Col } from 'react-grid-system';
 import Employee from '../../components/Employee';
 import backgroundImage from '../../images/background/media-bg.webp';
-import {get_service_videos} from '../../admin/call_api';
+import {get_service_videos, get_department_members} from '../../admin/call_api';
 
 export default function Products(props){
 	const [showLogo, setShowLogo] = useState(true)
@@ -28,7 +28,7 @@ export default function Products(props){
 		updateSize()
 		getVideo();
 		getProducts();
-		getMembers();
+		getDepartmentMembers();
 		window.addEventListener('resize', updateSize);
 		document.querySelector('.training-arrow-right').addEventListener('click', function () {
 			const el = document.getElementById("hscroll");
@@ -80,7 +80,18 @@ export default function Products(props){
         });
     }
 
-	const getMembers = ()=>{
+    async function getDepartmentMembers(){
+        while (members.length > 0){
+            members.pop();
+        }
+        get_department_members('digital_media').then((res)=>{
+            if (res.length){
+				setMembers(res);
+            }
+        });
+    }
+
+	/*const getMembers = ()=>{
 		setMembers([
 			{
                 description:"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
@@ -139,7 +150,7 @@ export default function Products(props){
 				gif:gif1
             }
 		])
-	}
+	}*/
 
 	const openTeamModal = (info) => {
         document.body.style.overflow = 'hidden';
