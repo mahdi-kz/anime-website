@@ -107,7 +107,7 @@ def delete_member():
 @bp.route("/get-department-member", methods=["POST"])
 def get_department_member():
     department_name = request.get_json()['department']
-    department = Department.query.filter_by(name=department_name)
+    department = Department.query.filter_by(name=department_name).first()
 
     if not department:
         return jsonify(status=500, message="Department not found!", data={}), 500
