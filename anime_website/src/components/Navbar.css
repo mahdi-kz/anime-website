@@ -200,3 +200,8 @@
     margin-top:3vh;
   }
 }
+@media (max-width: 975px){
+  .menu {
+    margin-top:8vh;
+  }
+}

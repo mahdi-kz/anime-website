@@ -1,12 +1,13 @@
 import React, {useState, useEffect, useRef} from 'react';
 import './Services.css'
+import './Training.css'
 import Navbar from '../../components/Navbar';
 import MembersModal from '../../components/MembersModal';
 import GreiVideo from '../../components/GreiVideo.js';
 import image1 from '../../images/test/people2.jpg';
 import image2 from '../../images/test/people1.png';
-import image3 from '../../images/teams/pop2.jpg';
-import image4 from '../../images/teams/pop1.jpg';
+import image3 from '../../images/teams/pop1.webp';
+import image4 from '../../images/teams/pop1.webp';
 import gif1 from '../../images/teams/002-Fast.gif';
 import backgroundImage from '../../images/background/production-bg.webp'
 import { Container, Row, Col } from 'react-grid-system';
@@ -36,18 +37,18 @@ export default function Products(props){
 		getProducts();
 		getMembers();
 		window.addEventListener('resize', updateSize);
-		document.querySelector('.arrow-right').addEventListener('click', function () {
+		document.querySelector('.training-arrow-right').addEventListener('click', function () {
 			const el = document.getElementById("hscroll");
 			el.scroll({
-				left: el.scrollLeft+parseInt(videoSize+50),
+				left: el.scrollLeft+parseInt(videoSize+150),
 				top: 0,
 				behavior: 'smooth'
 			})
 		});
-		document.querySelector('.arrow-left').addEventListener('click', function () {
+		document.querySelector('.training-arrow-left').addEventListener('click', function () {
 			const el = document.getElementById("hscroll");
 			el.scroll({
-				left: el.scrollLeft-parseInt(videoSize+50),
+				left: el.scrollLeft-parseInt(videoSize+150),
 				top: 0,
 				behavior: 'smooth'
 			})
@@ -74,8 +75,8 @@ export default function Products(props){
             videos.pop();
         }
         get_service_videos('production', true).then((res)=>{
-            setVideos(res);
             if (res.length){
+				setVideos(res);
                 setVideoUrl(res[0].video_address)
             }
         });
@@ -86,8 +87,10 @@ export default function Products(props){
             products.pop();
         }
         get_service_videos('production', false).then((res)=>{
-            setProducts(res);
-            setPageNumber(~~(res.length / 15) + (res.length % 15 > 0 ? 1: 0));
+            if (res.length){
+				setProducts(res);
+				setPageNumber(~~(res.length / 15) + (res.length % 15 > 0 ? 1: 0));
+			}
         });
     }
 
@@ -286,46 +289,49 @@ export default function Products(props){
 					</div>
 					<hr className="services-hr" />
 					<div className="services-section-title services-team-title">Production's Team</div> 
-					<div className="div-center">
-						<Container fluid >
-							<Row>
-							<Col className="team-column" xs={0.75} sm={1} md={1} xl={1}>
-								<div className="paging-box arrow-left">
-										<div className="selected-page-number"
-											style={{display: 'flex',  justifyContent:'center', alignItems:'center', zIndex:showTeamModal?-1:10}}
-											>
-											<i class='fas fa-chevron-left'></i>
-										</div>
-								</div>
-							</Col>
-							<Col className="team-column team-employees" xs={8} sm={10} md={10} xl={10}>
-								<div className="services-employee-box" id="hscroll">
-									{members.map((obj, index)=>{
-										return (<Col>
-                                            <Employee 
-                                                info={obj} 
-												// style={{marginRight:index<members.length-1?'40px':'0px'}}
-                                                openTeamModal={openTeamModal}
-												// divInfoStyle={{width:videoSize, height:videoSize/3+10}}
-                                                className="team-pictures"
-												infoClassName="team-info-size"
-												// imageStyle={{width:videoSize, height:videoSize+60}}
-                                                 />
-                                        </Col>)
-									})}
-								</div>
-							</Col>
-							<Col className="team-column team-arrow" xs={0.75} sm={1} md={1} xl={1}>
-								<div className="paging-box arrow-right">
-										<div className="selected-page-number selected-arrow"
-											style={{display: 'flex',  justifyContent:'center', alignItems:'center', zIndex:showTeamModal?-1:10}}
-											>
-											<i class='fas fa-chevron-right'></i>
-										</div>
-								</div>
-							</Col>
-							</Row>
-						</Container>
+					<div className="course-main-box">
+                        <div className="training-column" >
+                            <div className="training-arrow-left">
+                                    <div className="selected-page-number"
+                                        style={{
+                                            display: 'flex',
+                                            justifyContent:'center',
+                                            alignItems:'center',
+                                            zIndex:showTeamModal || hideNavbar?-1:10
+                                        }}
+                                    >
+                                        <i class='fas fa-chevron-left'></i>
+                                    </div>
+                            </div>
+                        </div>
+                        <div className="training-column-second training-column team-employees" >
+                            <div className="training-employee-box" id="hscroll">
+                                {members.map((obj, index)=>{
+                                    return (<Col>
+                                        <Employee
+                                            info={obj}
+                                            openTeamModal={openTeamModal}
+                                            className="team-pictures"
+                                            infoClassName="team-info-size"
+                                             />
+                                    </Col>)
+                                })}
+                            </div>
+                        </div>
+                        <div className="training-column team-arrow">
+                            <div className="paging-box training-arrow-right">
+                                    <div className="selected-page-number selected-arrow"
+                                        style={{
+                                            display: 'flex',
+                                            justifyContent:'center',
+                                            alignItems:'center',
+                                            zIndex:showTeamModal || hideNavbar?-1:10
+                                        }}
+                                    >
+                                        <i class='fas fa-chevron-right'></i>
+                                    </div>
+                            </div>
+                        </div>
 					</div>
 					<div style={{height:100}} />
 					<MembersModal 
@@ -337,4 +343,5 @@ export default function Products(props){
 			</div>
 		</div>
 	)
+
 }
