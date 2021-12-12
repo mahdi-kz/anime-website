@@ -32,7 +32,7 @@ export default function Teams(){
     },[])
 
     useEffect(()=>{
-        getMembers();
+        getTeamsInfo();
         getVideo();
         updateSize();
         window.addEventListener('resize', updateSize);
@@ -50,7 +50,7 @@ export default function Teams(){
         }catch{}
 	}
 
-    /*const getTeamsInfo = ()=>{
+    const getTeamsInfo = ()=>{
         const teamsInfo = [
             {
                 description:"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
@@ -174,7 +174,7 @@ export default function Teams(){
             },
         ]
         setTeams(teamsInfo);    
-    }*/
+    }
 
     const openTeamModal = (info) => {
         document.body.style.overflow = 'hidden';
