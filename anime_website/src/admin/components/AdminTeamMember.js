@@ -38,12 +38,12 @@ function AdminTeamMember(props){
     async function getMember(id){
         get_member(id).then(data=>{
             setName(data['name']);
-            setPosition(data['position']);
+            setPosition(data['job']);
             setDescription(data['description']);
             setSequence(data['sequence']);
-            setBackImage(data['back_image_address'] + '?' + Date.now())
-            setGif(data['gif_address'] + '?' + Date.now())
-            setImage(data['image_address'] + '?' + Date.now())
+            setBackImage(data['image'] + '?' + Date.now())
+            setGif(data['gif'] + '?' + Date.now())
+            setImage(data['popImg'] + '?' + Date.now())
             setDepartments(data['departments'].map(dep => dep['name']))
             console.log(departments)
         })

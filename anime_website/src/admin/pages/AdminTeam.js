@@ -69,12 +69,12 @@ function AdminTeam(){
                             <AdminTeamMember
                                 id={member.id}
                                 name={member.name}
-                                position={member.position}
+                                position={member.job}
                                 description={member.description}
                                 departments={member.departments}
-                                backImage={member.back_image_address}
-                                gif={member.gif_address}
-                                image={member.image_address}
+                                backImage={member.image}
+                                gif={member.gif}
+                                image={member.popImg}
                                 closed={true}
                                 />
                         )

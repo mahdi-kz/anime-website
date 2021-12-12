@@ -38,7 +38,7 @@ class MemberSchema(Schema):
     job = fields.String(attribute='position')
     description = fields.String()
     sequence = fields.Integer()
-    image = fields.String(attirbute='back_image_address')
+    image = fields.String(attribute='back_image_address')
     gif = fields.String(attribute='gif_address')
     popImg = fields.String(attribute='image_address')
     departments = fields.List(fields.Nested("DepartmentSchema"))
