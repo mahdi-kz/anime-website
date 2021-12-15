@@ -195,6 +195,22 @@
   width: 100%;
   border-bottom: 1px solid #50BCBA;
 }
+@media (max-width:320px){
+    .menu-icon{
+        right: 0px !important;
+    }
+    .navbar-bell{
+        left:10px !important;
+    }
+}
+@media (min-width:320px) and (max-width:820px){
+    .menu-icon{
+        right: 0px !important;
+    }
+    .navbar-bell{
+        left:15px !important;
+    }
+}
 @media (max-width: 820px){
   .logo-div {
     margin-top:3vh;

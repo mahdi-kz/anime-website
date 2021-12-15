@@ -35,7 +35,7 @@
         right: 1vw !important;
     }
     .training-arrow-left{
-        right: 1vw !important;
+        left: 0vw !important;
     }
 }
 @media (min-width:300px) and (max-width:450px){

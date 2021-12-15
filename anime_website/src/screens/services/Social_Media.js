@@ -252,13 +252,12 @@ export default function Products(props){
 					<div className="services-section-title services-team-title">Digital Media's Team</div> 
 					<div className="course-main-box">
 					    <div className="team-column" xs={0.75} sm={1} md={1} xl={1}>
-                            <div className="training-arrow-left">
+                            <div className={showTeamModal?"hide":"training-arrow-left"}>
                                     <div className="selected-page-number"
                                         style={{
                                             display: 'flex',
                                             justifyContent:'center',
-                                            alignItems:'center',
-                                            zIndex:showTeamModal || hideNavbar?-1:10
+                                            alignItems:'center'
                                         }}
                                     >
                                         <i class='fas fa-chevron-left'></i>
@@ -280,13 +279,12 @@ export default function Products(props){
                             </div>
                         </div>
                         <div className="training-column team-arrow">
-                            <div className="paging-box training-arrow-right">
+                            <div className={showTeamModal?"hide":"paging-box training-arrow-right"}>
                                     <div className="selected-page-number selected-arrow"
                                         style={{
                                             display: 'flex',
                                             justifyContent:'center',
-                                            alignItems:'center',
-                                            zIndex:showTeamModal || hideNavbar?-1:10
+                                            alignItems:'center'
                                         }}
                                     >
                                         <i class='fas fa-chevron-right'></i>

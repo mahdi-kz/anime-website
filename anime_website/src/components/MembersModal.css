@@ -25,13 +25,14 @@
     right: 0;
 }
 .team-modal-picture{
-    padding: 0 !important;
+    padding: 1px !important;
 }
 .team-modal-box{
     padding-left: 0px !important;
 }
 .team-modal-picture > img{
     width: 100%;
+    object-fit: cover;
 }
 .team-modal{
     background-color: #e7e5df;

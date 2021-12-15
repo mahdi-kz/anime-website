@@ -246,7 +246,9 @@ export default function Products(props){
 						/>
 					</div>
 					<div className="div-center">
-						<div className="services-videos" style={{width:videoWidth}}>
+						<div className="services-videos"
+						    style={{width:videoWidth}}
+						    >
 							{videos.map((obj, index)=>{return(
 								<div onClick={()=>clickScrollbarVideos(obj.video_address)} >
 									<GreiVideo
@@ -274,7 +276,7 @@ export default function Products(props){
 						<div className="services-products">
 							<Container fluid  align="center">
 								<Row className='pro-teams-row' >
-									{products.slice((currentPage-1)*15, currentPage*15).map((obj)=>{return(<Col xs={4} sm={3} md={2.4} xl={2.4}>
+									{products.slice((currentPage-1)*15, currentPage*15).map((obj)=>{return(<Col xs={window.innerWidth>270?3:4} sm={2.4} md={2.4} xl={2.4}>
 										<div>
 											<GreiVideo 
 												hideNavbar={()=>setHideNavbar(true)}
@@ -301,13 +303,12 @@ export default function Products(props){
 					<div className="services-section-title services-team-title">Production's Team</div> 
 					<div className="course-main-box">
                         <div className="training-column" >
-                            <div className="training-arrow-left">
+                            <div className={showTeamModal?"hide":"training-arrow-left"}>
                                     <div className="selected-page-number"
                                         style={{
                                             display: 'flex',
                                             justifyContent:'center',
-                                            alignItems:'center',
-                                            zIndex:showTeamModal || hideNavbar?-1:10
+                                            alignItems:'center'
                                         }}
                                     >
                                         <i class='fas fa-chevron-left'></i>
@@ -329,13 +330,12 @@ export default function Products(props){
                             </div>
                         </div>
                         <div className="training-column team-arrow">
-                            <div className="paging-box training-arrow-right">
+                            <div className={showTeamModal?"hide":"paging-box training-arrow-right"}>
                                     <div className="selected-page-number selected-arrow"
                                         style={{
                                             display: 'flex',
                                             justifyContent:'center',
-                                            alignItems:'center',
-                                            zIndex:showTeamModal || hideNavbar?-1:10
+                                            alignItems:'center'
                                         }}
                                     >
                                         <i class='fas fa-chevron-right'></i>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="938e82aa-8abc-498a-b154-b128933bcbf9" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/anime_website/node_modules/.cache/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/anime_website/node_modules/.cache/.eslintcache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/anime_website/src/admin/call_api.js" beforeDir="false" afterPath="$PROJECT_DIR$/anime_website/src/admin/call_api.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/anime_website/src/admin/components/AdminSideMenu.js" beforeDir="false" afterPath="$PROJECT_DIR$/anime_website/src/admin/components/AdminSideMenu.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/anime_website/src/components/Employee.js" beforeDir="false" afterPath="$PROJECT_DIR$/anime_website/src/components/Employee.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/anime_website/src/components/TeamMembers.css" beforeDir="false" afterPath="$PROJECT_DIR$/anime_website/src/components/TeamMembers.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/anime_website/src/components/TeamMembers.js" beforeDir="false" afterPath="$PROJECT_DIR$/anime_website/src/components/TeamMembers.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/anime_website/src/screens/Team.js" beforeDir="false" afterPath="$PROJECT_DIR$/anime_website/src/screens/Team.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/anime_website/src/screens/services/Graphic_Design.js" beforeDir="false" afterPath="$PROJECT_DIR$/anime_website/src/screens/services/Graphic_Design.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/anime_website/src/screens/services/Products.js" beforeDir="false" afterPath="$PROJECT_DIR$/anime_website/src/screens/services/Products.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/anime_website/src/screens/services/Social_Media.js" beforeDir="false" afterPath="$PROJECT_DIR$/anime_website/src/screens/services/Social_Media.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/back_end/app/api/member_api.py" beforeDir="false" afterPath="$PROJECT_DIR$/back_end/app/api/member_api.py" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="21urUb10Ub7AvWEvhHUsBhwyxup" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="938e82aa-8abc-498a-b154-b128933bcbf9" name="Changes" comment="" />
+      <created>1638801829611</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1638801829611</updated>
+    </task>
+    <servers />
+  </component>
+</project>
