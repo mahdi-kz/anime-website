@@ -3,10 +3,8 @@
     justify-content: center;
 }
 .team-box{
-    width: 79%;
+    width: 90%;
     text-align: center;
-    /* margin-top: -50px; */
-    margin-top: 4%;
 }
 .team-title-top{
     margin-bottom: 3%;
@@ -25,7 +23,7 @@
     bottom: 25px;
 }
 .team-info-box{
-    height: 27vh;
+    height: 12vh;
 }
 .teams-member{
     justify-content: center;
@@ -74,10 +72,11 @@
         margin-top: -6%;
     }
     .team-header {
-        height: 15vh;
+        /*height: 15vh;*/
+        font-size: 17px;
     }
     .team-info-box {
-        height: 20vh;
+        height: 10vh;
     }
     .team-title-top{
         font-size: 14px;
@@ -102,7 +101,7 @@
         height: 15vh;
     }
     .team-info-box {
-        height: 21vh;
+        height: 13vh;
     }
     .team-title-top{
         font-size: 14px;
@@ -123,7 +122,7 @@
         height: 15vh;
     }
     .team-info-box {
-        height: 21vh;
+        height: 15vh;
     }
     .team-title-top{
         font-size: 22px;

@@ -15,8 +15,8 @@
 }
 .services-header{
     text-align: center;
-    /* margin-top: 9%; */
     margin-bottom: 1%;
+    margin-top:3%
 }
 .services-products > div:first-child {
     width: 81%;
@@ -196,12 +196,12 @@
         height: 4vh !important;
     }
     .services-box{
-        width: 55% !important;
+        width: 70% !important;
         margin-top: 0px !important;
     }
     .services-header {
         font-size: 17px;
-        margin-top: 50%;
+        margin-top: 35%;
     }
     .services-title,
     .services-section-title {
@@ -225,15 +225,17 @@
         padding-left: 0px !important;
     }
     .services-pro-name{
+        width: 35px !important;
         font-size: 10px;
         margin: 0;
     }
     .services-pro-date{
+        width: 35px !important;
         font-size: 8px;
         margin: 0px;
     }
     .services-products > div:first-child {
-        width: auto !important;
+        width: 100% !important;
         padding-left: 0px !important;
         padding-right: 0px !important;
     }
@@ -241,14 +243,6 @@
     .pro-teams-row{
         margin-left:0px !important;
     }
-    /*.arrow-left {
-        left: 20px !important;
-        top: 40% !important;
-    }
-    .arrow-right {
-        right:1px !important;
-        top: 40% !important;
-    }*/
     .services-employee-image{
         margin-top: 0px !important;
         width: 100px !important;
@@ -293,7 +287,7 @@
         padding-right: 15px !important;
     }
     .services-box{
-        width: 55% !important;
+        width: 79% !important;
         margin-top: 0px !important;
     }
     .slideCol {
@@ -301,7 +295,7 @@
     }
     .services-header {
         font-size: 17px;
-        margin-top: 35%;
+        margin-top: 25%;
     }
     .services-title,
     .services-section-title {
@@ -325,30 +319,23 @@
         padding-left: 0px !important;
     }
     .services-pro-name{
+        width: 45px !important;
         font-size: 10px;
         margin: 0;
     }
     .services-pro-date{
+        width: 45px !important;
         font-size: 8px;
         margin: 0px;
     }
     .services-products > div:first-child {
-        width: auto !important;
+        width: 100% !important;
         padding-left: 0px !important;
         padding-right: 0px !important;
     }
     .pro-teams-row{
         margin-left:0px !important;
     }
-    /*.arrow-left {
-        left: 20px !important;
-        top: 40%;
-        z-index: 1;
-    }
-    .arrow-right {
-        right:20px !important;
-        top: 40% !important; 
-    }*/
     .services-employee-image{
         margin-top: 0px !important;
         width: 100px !important;
@@ -367,13 +354,25 @@
         width: 100%;
     }
 }
+@media (min-width: 375px) and (max-width: 420px){
+    .pro-react-player{
+        width: 75px !important;
+        height: 75px !important;
+    }
+}
+@media (min-width: 420px) and (max-width: 500px){
+    .pro-react-player{
+        width: 85px !important;
+        height: 85px !important;
+    }
+}
 @media (min-width: 375px) and (max-width: 500px){
     .selected-page-number {
         padding: 5px !important;
         font-size: 12px !important;
     }
     .services-box{
-        width: 75% !important;
+        width: 80% !important;
         margin-top: 0px !important;
     }
     .services-header {
@@ -397,23 +396,25 @@
         width: auto !important;
         height: auto !important;
     }
-    .pro-react-player{
+    /*.pro-react-player{
         width: 85px !important;
         height: 85px !important;
-    }
+    }*/
     .main-player-wrapper{
         padding-left: 0px !important;
     }
     .services-pro-name{
+        width: 85px !important;
         font-size: 10px;
         margin: 0;
     }
     .services-products > div:first-child {
-        width: auto !important;
+        width: 100% !important;
         padding-right: 0px !important;
         padding-left: 0px !important;
     }
     .services-pro-date{
+        width: 85px !important;
         font-size: 8px;
         margin: 0px;
     }
@@ -459,6 +460,18 @@
         top: 37%;
     }*/
 }
+@media (min-width: 500px) and (max-width: 575px){
+    .services-header {
+        font-size: 20px;
+        margin-top: 20%;
+    }
+}
+@media (min-width: 575px) and (max-width: 675px){
+    .services-header {
+        font-size: 20px;
+        margin-top: 15%;
+    }
+}
 
 @media (min-width: 500px) and (max-width: 675px){
 
@@ -473,12 +486,8 @@
         padding-left: 0px !important;
     }
     .services-box{
-        width: 75% !important;
+        width: 84% !important;
         margin-top: 0px !important;
-    }
-    .services-header {
-        font-size: 20px;
-        margin-top: 15%;
     }
     .slideCol {
         height: 6vh !important;
@@ -505,15 +514,17 @@
         padding-left: 0px !important;
     }
     .services-pro-name{
+        width: 85px !important;
         font-size: 10px;
         margin: 0;
     }
     .services-products > div:first-child {
-        width: auto !important;
+        width: 100% !important;
         padding-right: 0px !important;
         /* padding-left: 0px !important; */
     }
     .services-pro-date{
+        width: 85px !important;
         font-size: 8px;
         margin: 0px;
     }
@@ -550,12 +561,12 @@
         font-size: 12px !important;
     }
     .services-box{
-        width: 75% !important;
+        width: 87% !important;
         margin-top: 0px !important;
     }
     .services-header {
         font-size: 20px;
-        margin-top: 15%;
+        margin-top: 13%;
     }
     .slideCol {
         height: 6vh !important;
@@ -582,15 +593,17 @@
         padding-left: 0px !important;
     }
     .services-pro-name{
+        width: 85px !important;
         font-size: 10px;
         margin: 0;
     }
     .services-products > div:first-child {
-        width: auto !important;
+        width: 100% !important;
         padding-right: 0px !important;
         padding-left: 0px !important;
     }
     .services-pro-date{
+        width: 85px !important;
         font-size: 8px;
         margin: 0px;
     }

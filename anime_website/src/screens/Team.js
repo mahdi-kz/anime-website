@@ -52,118 +52,7 @@ export default function Teams(){
 
     const getTeamsInfo = ()=>{
         const teamsInfo = [
-            {
-                description:"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
-                name:"Mahtab Karbasi fatah fard",
-                image:image1,
-                job:"very long position name",
-                gif:gif1,
-				popImg:image3
-            },
-            {
-                description:"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
-                name:"robert de niro",
-                image:image2,
-                job:"Lorem ipsum dolor",
-                gif:gif1,
-				popImg:image4
-            },
-            {
-                description:"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
-                name:"julia robinson",
-                image:image1,
-                job:"Lorem ipsum dolor",
-                gif:gif1,
-				popImg:image3
-            },
-            {
-                description:"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
-                name:"robert de niro",
-                image:image2,
-                job:"Lorem ipsum dolor",
-                gif:gif1,
-				popImg:image4
-            },
-            {
-                description:"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
-                name:"julia robinson",
-                image:image1,
-                job:"Lorem ipsum dolor",
-                gif:gif1,
-				popImg:image3
-            },
-            {
-                description:"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
-                name:"robert de niro",
-                image:image2,
-                job:"Lorem ipsum dolor",
-                gif:gif1,
-				popImg:image4
-            },
-            {
-                description:"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
-                name:"julia robinson",
-                image:image1,
-                job:"Lorem ipsum dolor",
-                gif:gif1,
-				popImg:image3
-            },
-            {
-                description:"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
-                name:"robert de niro",
-                image:image2,
-                job:"Lorem ipsum dolor",
-                gif:gif1,
-				popImg:image4
-            },
-            {
-                description:"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
-                name:"julia robinson",
-                image:image1,
-                job:"Lorem ipsum dolor",
-                gif:gif1,
-				popImg:image3
-            },
-            {
-                description:"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
-                name:"robert de niro",
-                image:image2,
-                job:"Lorem ipsum dolor",
-                gif:gif1,
-				popImg:image4
-            },
-            {
-                description:"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
-                name:"julia robinson",
-                image:image1,
-                job:"Lorem ipsum dolor",
-                gif:gif1,
-				popImg:image3
-            },
-            {
-                description:"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
-                name:"robert de niro",
-                image:image2,
-                job:"Lorem ipsum dolor",
-                gif:gif1,
-				popImg:image4
-            },
-            {
-                description:"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
-                name:"julia robinson",
-                image:image1,
-                job:"Lorem ipsum dolor",
-                gif:gif1,
-				popImg:image3
-            },
-            {
-                description:"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
-                name:"robert de niro",
-                image:image2,
-                job:"Lorem ipsum dolor",
-                gif:gif1,
-				popImg:image4
-            },
+            
             {
                 description:"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
                 name:"julia robinson",
@@ -220,17 +109,12 @@ export default function Teams(){
             }
             <div className="team-container">
                 <div className="team-box">
-                    <div className="team-info-box" 
-                        // style={{
-                        //     backgroundImage:`url(${headerImage})`,
-                        //     backgroundPosition:'top ',
-                        //     backgroundSize:"contain",
-                        //     backgroundRepeat:"no-repeat"
-                        // }}
+                    <div className="team-info-box"
+                        style={
+                            window.innerWidth>820?{marginTop: '12%', height:'16vh'}:{}
+                        }
                     >
-                        <div className="team-header">
-                            <span>grei's Anatomy</span>
-                        </div>
+                        <div className="tem-header services-header"> grei's Anatomy </div>
                         <div className="slideCol">
                             <div className="scroller">
                                 <div className="inner services-title services-title-top">
@@ -264,7 +148,7 @@ export default function Teams(){
                                                 className="team-pictures"
                                                 imageStyle={{height: videoSize+60}}
                                                 style={{
-                                                    paddingTop:'20px',
+                                                    paddingTop:window.innerWidth<1000?'20px':'40px',
                                                     overflow: 'hidden',
                                                     height: videoSize+60
                                                 }} />

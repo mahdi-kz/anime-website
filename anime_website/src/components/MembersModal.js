@@ -51,7 +51,9 @@ function MembersModal(props){
                         <Container fluid className="team-modal-box">
                             <Row className='modal-teams-row'>
                                 <Col className="team-modal-picture">
-                                    <img alt="grei's team" style={{height: window.innerHeight}} src={props.info.popImg}  />
+                                    <img alt="grei's team"
+                                         style={{height: window.innerWidth>769?window.innerHeight:"auto"}}
+                                         src={props.info.popImg}  />
                                 </Col>
                                 <Col
                                     xs={12} sm={12} md={6} xl={6}
