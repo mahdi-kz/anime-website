@@ -1,4 +1,5 @@
 import React, {useState, useEffect} from 'react';
+import {Link} from 'react-router-dom';
 import { Container, Row, Col } from 'react-grid-system';
 import './AdminSideMenu.css'
 import AdminSideItem from './AdminSideItem'
@@ -50,7 +51,9 @@ function AdminSideMenu(props){
         <>
             <div className='AdminSideMenu'>
                 <div>
-                    <img className='adminLogo' src={logo} alt='grei'/>
+                    <Link to="/">
+                        <img className='adminLogo' src={logo} alt='grei'/>
+                    </Link>
                     {SidebarData.map((item, index) => {
                         return (
                             <AdminSideItem
