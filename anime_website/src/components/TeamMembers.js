@@ -7,7 +7,7 @@ function TeamMembers(props){
     useEffect(()=>{
         const getFontSize = (textLength) => {
         const baseSize = 12
-        var fontSize;
+        let fontSize;
         if (textLength >= baseSize) {
             fontSize = baseSize / textLength * 1.3;
         }
@@ -18,7 +18,6 @@ function TeamMembers(props){
         }
 
         const texts = document.querySelectorAll('.font-adjust')
-
         texts.forEach(text => {
             text.style.fontSize = getFontSize(text.textContent.length)
         })

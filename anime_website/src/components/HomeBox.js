@@ -2,6 +2,8 @@ import React, { useState, useRef, useEffect, setLoading, fetchDefibs} from 'reac
 import './HomeBox.css'
 import { Link } from 'react-router-dom';
 import {get_image_address, get_video_address} from '../admin/call_api'
+import voiceIcon from '../images/home/voice.webp';
+import muteIcon from '../images/home/mute.webp';
 
 
 function HomeBox(){
@@ -180,8 +182,8 @@ function HomeBox(){
 				onMouseLeave={()=>setDrow(false)}
 			>
 				{soundOff?
-					<i class="fas fa-volume-mute fa-sm"></i>:
-					<i class="fas fa-volume-up fa-sm"></i>
+				    <img alt="grei" src={muteIcon} className="blog-icon"/>:
+				    <img alt="grei" src={voiceIcon} className="blog-icon"/>
 				}
 				{drow &&
 					<svg className="svg" xmlns="http://www.w3.org/2000/svg" >

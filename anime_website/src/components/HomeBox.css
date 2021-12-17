@@ -103,13 +103,13 @@
 }
 .sound{
   position: fixed;
-  left: 25px;
+  /*left:25px;*/
+  left: 1.4vw;
+  bottom: 2.7vw;
   z-index: 11;
 }
-.sound>i{
-  margin-left: 5px;
-  bottom: 25px;
-  position:fixed;
+.sound>img{
+
   font-size: 18px;
 }
 .DrawIcon{
