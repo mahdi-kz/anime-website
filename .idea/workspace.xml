@@ -2,17 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="938e82aa-8abc-498a-b154-b128933bcbf9" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/anime_website/node_modules/.cache/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/anime_website/node_modules/.cache/.eslintcache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/anime_website/src/admin/call_api.js" beforeDir="false" afterPath="$PROJECT_DIR$/anime_website/src/admin/call_api.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/anime_website/src/admin/components/AdminSideMenu.js" beforeDir="false" afterPath="$PROJECT_DIR$/anime_website/src/admin/components/AdminSideMenu.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/anime_website/src/components/Employee.js" beforeDir="false" afterPath="$PROJECT_DIR$/anime_website/src/components/Employee.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/anime_website/src/components/TeamMembers.css" beforeDir="false" afterPath="$PROJECT_DIR$/anime_website/src/components/TeamMembers.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/anime_website/src/components/TeamMembers.js" beforeDir="false" afterPath="$PROJECT_DIR$/anime_website/src/components/TeamMembers.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/anime_website/src/screens/Team.js" beforeDir="false" afterPath="$PROJECT_DIR$/anime_website/src/screens/Team.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/anime_website/src/screens/services/Graphic_Design.js" beforeDir="false" afterPath="$PROJECT_DIR$/anime_website/src/screens/services/Graphic_Design.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/anime_website/src/screens/services/Products.js" beforeDir="false" afterPath="$PROJECT_DIR$/anime_website/src/screens/services/Products.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/anime_website/src/screens/services/Social_Media.js" beforeDir="false" afterPath="$PROJECT_DIR$/anime_website/src/screens/services/Social_Media.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/back_end/app/api/member_api.py" beforeDir="false" afterPath="$PROJECT_DIR$/back_end/app/api/member_api.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/anime_website/src/components/HomeBox.css" beforeDir="false" afterPath="$PROJECT_DIR$/anime_website/src/components/HomeBox.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/anime_website/src/components/HomeBox.js" beforeDir="false" afterPath="$PROJECT_DIR$/anime_website/src/components/HomeBox.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/anime_website/src/components/InfoBox.js" beforeDir="false" afterPath="$PROJECT_DIR$/anime_website/src/components/InfoBox.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/anime_website/src/components/Navbar.css" beforeDir="false" afterPath="$PROJECT_DIR$/anime_website/src/components/Navbar.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/anime_website/src/components/Navbar.js" beforeDir="false" afterPath="$PROJECT_DIR$/anime_website/src/components/Navbar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/anime_website/src/screens/About_Us.css" beforeDir="false" afterPath="$PROJECT_DIR$/anime_website/src/screens/About_Us.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/anime_website/src/screens/Awards.css" beforeDir="false" afterPath="$PROJECT_DIR$/anime_website/src/screens/Awards.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/anime_website/src/screens/Contact_Us.css" beforeDir="false" afterPath="$PROJECT_DIR$/anime_website/src/screens/Contact_Us.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/anime_website/src/screens/Home.css" beforeDir="false" afterPath="$PROJECT_DIR$/anime_website/src/screens/Home.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/anime_website/src/screens/Home.js" beforeDir="false" afterPath="$PROJECT_DIR$/anime_website/src/screens/Home.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

@@ -63,11 +63,7 @@ export default function Home(props) {
 								<img alt="grei's logo" src={logo} className='first-modal-logo'/>
 								<p className="first-modal-info">It's not all black and white</p>
 								<div className="title-slide-col div-title first-modal-btn">
-									<div className="home-scroller">
-										<div className="home-inner">
-											<p className="home-box-title" >ENTER</p>
-										</div>
-									</div>
+                                    <div className="animate-flicker" >ENTER</div>
 								</div>
 							</Col>
 							<Col xs={4.5} sm={4.5} md={4.5} xl={4.5} className="first-modal-picture">

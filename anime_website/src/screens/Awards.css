@@ -366,3 +366,82 @@ th {
         font-size: 10px
     }
 }
+@media (max-width: 576px){
+    .AwardsListModule table thead tr {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+        -ms-flex-flow: row;
+        flex-flow: row;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+    }
+    .AwardsListModule table tr {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-flow: column;
+        flex-flow: column;
+    }
+    .AwardsListModule table td:first-child {
+        margin-top: 20px;
+    }
+    .AwardsListModule table td {
+        height: auto;
+    }
+    .AwardsListModule table td div {
+        padding-top: 0;
+        padding-bottom: 0;
+        padding-right: 0;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+        -ms-flex-flow: row;
+        flex-flow: row;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        text-align: left;
+        margin-bottom: 20px;
+    }
+
+    .AwardsListModule table td div:before {
+        -ms-flex-negative: 0;
+        flex-shrink: 0;
+        opacity: 1;
+        font-size: 10px;
+        color: #554d3d;
+        letter-spacing: 1px;
+        line-height: 17px;
+        width: 102px;
+        text-transform: uppercase;
+    }
+    .AwardsListModule table td:first-child div:before {
+        content: "Year: ";
+    }
+    .AwardsListModule table td:nth-child(2) div:before {
+        content: "Award: ";
+    }
+    .AwardsListModule table td:nth-child(3) div:before {
+        content: "Project: ";
+    }
+    .AwardsListModule table td:nth-child(4) div:before {
+        content: "Song: ";
+    }
+    .AwardsListModule table td:nth-child(5) div:before {
+        content: "Status: ";
+    }
+    .AwardsListModule table td div span:nth-child(2) {
+        margin-top: 3px;
+        width: 102px;
+    }
+    .AwardsListModule table td div span:nth-child(3) {
+        margin-top: 3px;
+    }
+}
