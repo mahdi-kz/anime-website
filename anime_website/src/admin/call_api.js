@@ -15,7 +15,11 @@ const get_members_url = '/api/get-members';
 const get_member_url = '/api/get-member';
 const save_member_url = '/api/save-member';
 const delete_member_url = '/api/delete-member';
-const get_department_members_url = '/api/get-department-member'
+const get_department_members_url = '/api/get-department-member';
+const get_courses_url = '/api/get-courses';
+const get_course_url = '/api/get-course';
+const save_course_url = '/api/save-course';
+const delete_course_url = '/api/delete-course';
 
 
 function call_json_api(url, data){
@@ -169,5 +173,31 @@ export async function delete_member(id){
 
 export async function get_department_members(department_name){
     let res = await call_json_api(get_department_members_url, {'department': department_name})
+    return res;
+}
+
+export async function get_courses(){
+    let res = await call_json_api(get_courses_url, {});
+    return res;
+}
+
+export async function get_course(id){
+    let res = await call_json_api(get_course_url, {'id': id});
+    return res;
+}
+
+export async function save_course(id, name, description, sequence, image_file){
+    let data = new FormData();
+    data.append('image_file', image_file);
+    data.append('id', id)
+    data.append('name', name);
+    data.append('description', description);
+    data.append('sequence', sequence);
+    let res = await call_form_api(save_course_url, data);
+    return res['id'];
+}
+
+export async function delete_course(id){
+    let res = await call_json_api(delete_course_url, {'id': id});
     return res;
 }
