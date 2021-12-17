@@ -97,7 +97,7 @@
 .AwardsListModule table {
     margin: 0 auto;
     width: 80%;
-    max-width: 1140px;
+    /*max-width: 1140px;*/
     vertical-align: top;
     border-collapse: collapse;
 }
@@ -137,31 +137,9 @@ th {
     line-height: 14px;
     text-transform: uppercase;
 }
-/* .AwardsTemplate .AwardsListModule table tbody tr.transitioned-in { */
-    /* -webkit-transform: translateY(0); */
-    /* transform: translateY(0); */
-    /* opacity: 1; */
-/* } */
-/* .AwardsTemplate .AwardsListModule table tbody tr { */
-    /* opacity: 0; */
-    /* -webkit-transform: translateY(100px); */
-    /* transform: translateY(100px); */
-    /* -webkit-transition: opacity .5s,-webkit-transform .65s cubic-bezier(.39,.575,.565,1); */
-    /* transition: opacity .5s,-webkit-transform .65s cubic-bezier(.39,.575,.565,1);
-    transition: opacity .5s,transform .65s cubic-bezier(.39,.575,.565,1);
-    transition: opacity .5s,transform .65s cubic-bezier(.39,.575,.565,1),-webkit-transform .65s cubic-bezier(.39,.575,.565,1); */
-/* } */
 .AwardsListModule table tr:first-child {
     vertical-align: top!important;
 }
-/* .show‌‌BoxTitle{
-    opacity: 1;
-    transition: visibility 0s, opacity 0.5s linear;
-    display: grid;
-    grid-template-columns: auto auto auto auto;
-    position: absolute;
-    margin-top: 400px;
-}  */
 .AwardsListModule table td {
     vertical-align: top;
     letter-spacing: 0;
@@ -185,7 +163,7 @@ th {
 .AwardsListModule table td div span:first-child {
     font-size: 1.5vw;
     font-weight: 700;
-    line-height: 19px;
+    /*line-height: 19px;*/
     width: calc(100% - 102px);
     margin-bottom: auto;
 }
@@ -194,12 +172,12 @@ th {
     opacity: .5;
     font-weight: 700;
     font-size: 1.2vw;
-    line-height: 17px;
+    /*line-height: 17px;*/
 }
 .AwardsListModule table td div span:nth-child(3) {
     opacity: .5;
     font-size: 1.2vw;
-    line-height: 17px;
+    /*line-height: 17px;*/
     margin-top: 5px;
 }
 .AwardsListModule table td div span {
@@ -338,11 +316,11 @@ th {
     margin-bottom: 3vw;
 }
 
-@media (min-width: 1200px){
+/*@media (min-width: 1200px){
     .AwardsListModule table{
         width: 100% !important;
     }
-}
+}*/
 @media (max-width:800px){
     .awards-icon-name{
         font-size:14px;
