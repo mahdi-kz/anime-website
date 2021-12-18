@@ -24,18 +24,16 @@
 }
 .navbar-bell{
   position: fixed;
-  top: 1.4vw;
-  left: 1.4vw;
+  top: 1.6vw;
+  left: 1.6vw;
   z-index: 11;
   cursor: pointer;
-  width:10px;
-  height:12px;
 }
 .nav-svg{
   position: fixed;
   pointer-events: none;
-  left: 0.5vw;
-  top: 0.5vw;
+  left: 0.2vw;
+  top: 0.2vw;
 }
 /*.navbar-bell{
   position: fixed;
@@ -78,7 +76,7 @@
   cursor: pointer;
 }
 .menu-icon>svg {
-  height: 1.8vw;
+  height: 25px;
 }
 .hide{
 	display:none
@@ -162,7 +160,7 @@
     display: table-cell;
 }
 .blog-icon{
-  width: 1.8vw;
+  width: 25px;
   position: fixed;
 }
 .upAndDown{
@@ -234,4 +232,15 @@
   .menu {
     margin-top:8vh;
   }
+  .menu-icon{
+    top: 1.5vw !important;
+  }
+}
+@media (min-width:1200px){
+    .blog-icon{
+      width: 2vw;
+    }
+    .menu-icon>svg {
+        height: 2vw;
+    }
 }

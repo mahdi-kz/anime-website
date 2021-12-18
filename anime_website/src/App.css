@@ -18,7 +18,7 @@ body{
   display: none;
 }
 .drawCircle{
-  animation: drowCircle 1s 1 forwards ;
+  animation: drewCircle 1s 1 forwards ;
   transform-origin: 0px 0px;
   stroke-dasharray: 250;
   stroke-dashoffset: -194.399;
@@ -36,7 +36,7 @@ body{
   margin-bottom: 2%;
 }
 
-@keyframes drowCircle {
+@keyframes drewCircle {
   to{
     stroke-dashoffset:1e-05px;
     stroke-dasharray: 500  ;
