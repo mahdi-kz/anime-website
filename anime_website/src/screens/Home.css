@@ -33,15 +33,14 @@
     font-size: 1.5vW;
     position: absolute;
     width: 100%;
-    top: 73%;
-    left: 75%;
     transform: translate( -55%, -80% );
     bottom: 0; right: 0;
-    
+    top: 71% !important;
+    left: 80% !important;
 }
 .first-modal-btn{
     color: #50BCBA;
-    font-size: 4VW;
+    font-size: 4.8VW;
     cursor: pointer;
     margin-top: -10%;
 }
@@ -66,41 +65,20 @@
   100% { opacity:1; }
 }
 .animate-flicker {
+    justify-content: flex-end;
+    display: flex;
    -webkit-animation: flickerAnimation 3s infinite;
    -moz-animation: flickerAnimation 3s infinite;
    -o-animation: flickerAnimation 3s infinite;
     animation: flickerAnimation 3s infinite;
 }
 @media (max-width: 270px){
-    .first-modal-info{
-        top: 62%;
-        left: 78%;
-    }
     .home-box-title {
         font-size: 15px !important;
     }
 }
-@media (min-width: 270px) and (max-width: 375px){
-    .first-modal-info{
-        top: 65% !important;
-        left: 78%;
-    }
-}
-@media (min-width: 375px) and (max-width: 500px){
-    .first-modal-info{
-        top: 68% !important;
-    }
-}
-@media (min-width: 500px) and (max-width: 675px){
-    .first-modal-info{
-        top: 71% !important;
-    }
-}
-
 @media (min-width: 675px) and (max-width: 820px){
     .first-modal-info{
-        top: 71% !important;
-        left: 75% !important;
         font-size: 1.5vW !important;
     }
 }
