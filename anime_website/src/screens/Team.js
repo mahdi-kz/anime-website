@@ -62,7 +62,7 @@ export default function Teams(){
 				popImg:image3
             },
         ]
-        setTeams(teamsInfo);    
+        setTeams(Array(15).fill(teamsInfo[0]));
     }
 
     const openTeamModal = (info) => {
