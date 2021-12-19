@@ -136,12 +136,12 @@
 .nav-link {
     text-decoration: none;
     color: #e7e5df;
+    font-size:1.3vw;
 }
 .nav-item{
 	 list-style: none;
 	 display: block;
 	 float:left;
-   /* padding-left: 40px; */
 }
 .main { 
   background-color: #D1D2D4;
@@ -199,29 +199,19 @@
   position: absolute;
   /* margin-top: 69%; */
   background: #373737;
-  width: 190px;
+  width: 18vw;
   margin-left: -4vw;
   border-top: 5px solid #50BCBA;
+  line-height:2.5;
 }
 .services-subsection-items>div{
   width: 100%;
   border-bottom: 1px solid #50BCBA;
 }
-@media (max-width:320px){
-    /*.menu-icon{
-        right: 0px !important;
-    }*/
-    /*.navbar-bell{
-        left:10px !important;
-    }*/
-}
-@media (min-width:320px) and (max-width:820px){
-    /*.menu-icon{
-        right: 0px !important;
-    }*/
-    /*.navbar-bell{
-        left:15px !important;
-    }*/
+@media (max-width:650px){
+    .nav-link{
+        font-size: 2.3vw;
+    }
 }
 @media (max-width: 820px){
   .logo-div {

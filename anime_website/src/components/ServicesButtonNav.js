@@ -21,7 +21,7 @@ function ServicesButtonNav(props){
                 <div className="services-nav" onClick={()=>setArrowUP(!arrowUP)}>
                     <span style={{color:arrowUP?"#50BCBA":"white"}}>Services</span>
                     {arrowUP? 
-                        <i class='fas fa-caret-up' style={{color:arrowUP?"#50BCBA":"white"}}></i>:
+                        <i class='fas fa-caret-up' style={{color:arrowUP?"#50BCBA":"white", fontSize:"1.3vw"}}></i>:
                         <i class='fas fa-caret-down'></i>
                     }	
                 </div>

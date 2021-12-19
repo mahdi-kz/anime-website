@@ -3,15 +3,9 @@
     margin: 0 auto;
     margin-top: 5%;
 }
-.about-us-name{
-    margin-top: 0px;
-}
 @media (max-width:375px){
     .info-picture > img{
         width:150px;
-    }
-    .about-us-name{
-        font-size:20px !important;
     }
     .about-us-title{
         font-size:20px !important;
@@ -28,9 +22,6 @@
 @media (min-width:375px) and (max-width:670px){
     .info-picture > img{
         width:100% !important;
-    }
-    .about-us-name{
-        font-size:22px !important;
     }
     .about-us-title{
         font-size:22px !important;
