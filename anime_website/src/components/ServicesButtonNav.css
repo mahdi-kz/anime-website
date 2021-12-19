@@ -1,3 +1,18 @@
 .inline-nav-item{
     display: contents;
 }
+.services-nav>i{
+    font-size:1.1vw;
+}
+.services-nav>span{
+    font-size:1.3vw;
+}
+
+@media (max-width:650px){
+    .services-nav>i{
+        font-size:2.2vw;
+    }
+    .services-nav>span{
+        font-size:2.2vw;
+    }
+}
