@@ -1,7 +1,6 @@
 .home-container{
   justify-content: center;
   display: flex;
-  /* margin-top:3%; */
   position: absolute;
   top:0;
   bottom: 0;
@@ -83,8 +82,6 @@
     75% {width: 0px}
     0% {width: 0}
 }
-
-
 .title-slide-col {
   overflow: hidden;
   display: block;
@@ -103,14 +100,21 @@
 }
 .sound{
   position: fixed;
-  /*left:25px;*/
-  left: 1.4vw;
-  bottom: 2.7vw;
+  left: 1.6vw;
+  bottom: 5vw;
   z-index: 11;
+  cursor: pointer;
 }
 .sound>img{
-
-  font-size: 18px;
+    margin-top: 1.3vw;
+}
+.svg{
+  pointer-events: none;
+  position: fixed;
+  left: 0.8vw;
+}
+.svg:focus{
+  outline: -webkit-focus-ring-color auto 5px;
 }
 .DrawIcon{
   position: absolute;
@@ -120,7 +124,6 @@
 }
 .div-title{
   text-align: center;
-  /* margin-top: -25px; */
 }
 .home-box-title{
   width: 100%;
@@ -133,17 +136,7 @@
    -moz-animation: flickerAnimation 3s infinite;
    -o-animation: flickerAnimation 3s infinite;
 }
-.svg{
-  pointer-events: none;
-  width: 60px;
-  height: 50px;
-  position: fixed;
-  left: 15px;
-  bottom: 10px;
-}
-.svg:focus{
-  outline: -webkit-focus-ring-color auto 5px;
-}
+
 .top-li{
   padding:20px 0px;
   width: 15vw;
@@ -169,7 +162,12 @@
   height: 31vw;
   padding-left: 0px;
 }
-
+.home-animate-flicker {
+   -webkit-animation: flickerAnimation 3s infinite;
+   -moz-animation: flickerAnimation 3s infinite;
+   -o-animation: flickerAnimation 3s infinite;
+    animation: flickerAnimation 3s infinite;
+}
 
 @media (max-width: 375px){
   /* .home-container{

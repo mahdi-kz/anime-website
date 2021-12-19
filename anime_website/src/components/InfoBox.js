@@ -17,7 +17,7 @@ function InfoBox(props){
                                 xs={12} sm={12} md={6} xl={6}
                                 data-aos-once="true"
                             >
-                                <img alt="grei" src={props.info.image}  />
+                                <img className="info-box-image" alt="grei" src={props.info.image}  />
                             </Col>
                         }
                         <Col 
@@ -40,7 +40,7 @@ function InfoBox(props){
                                 className="info-picture" 
                                 xs={12} sm={12} md={6} xl={6}
                             >
-                                <img alt="grei" src={props.info.image}  />
+                                <img className="info-box-image" alt="grei" src={props.info.image}  />
                             </Col>
                         }
                     </Row>

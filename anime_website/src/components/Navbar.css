@@ -24,18 +24,16 @@
 }
 .navbar-bell{
   position: fixed;
-  top: 1.4vw;
-  left: 1.4vw;
+  top: 1.6vw;
+  left: 1.6vw;
   z-index: 11;
   cursor: pointer;
-  width:10px;
-  height:12px;
 }
 .nav-svg{
   position: fixed;
   pointer-events: none;
-  left: 0.5vw;
-  top: 0.5vw;
+  left: 0.2vw;
+  top: 0.2vw;
 }
 /*.navbar-bell{
   position: fixed;
@@ -78,7 +76,7 @@
   cursor: pointer;
 }
 .menu-icon>svg {
-  height: 1.8vw;
+  height: 25px;
 }
 .hide{
 	display:none
@@ -138,12 +136,12 @@
 .nav-link {
     text-decoration: none;
     color: #e7e5df;
+    font-size:1.3vw;
 }
 .nav-item{
 	 list-style: none;
 	 display: block;
 	 float:left;
-   /* padding-left: 40px; */
 }
 .main { 
   background-color: #D1D2D4;
@@ -162,7 +160,7 @@
     display: table-cell;
 }
 .blog-icon{
-  width: 1.8vw;
+  width: 25px;
   position: fixed;
 }
 .upAndDown{
@@ -201,29 +199,19 @@
   position: absolute;
   /* margin-top: 69%; */
   background: #373737;
-  width: 190px;
+  width: 18vw;
   margin-left: -4vw;
   border-top: 5px solid #50BCBA;
+  line-height:2.5;
 }
 .services-subsection-items>div{
   width: 100%;
   border-bottom: 1px solid #50BCBA;
 }
-@media (max-width:320px){
-    /*.menu-icon{
-        right: 0px !important;
-    }*/
-    /*.navbar-bell{
-        left:10px !important;
-    }*/
-}
-@media (min-width:320px) and (max-width:820px){
-    /*.menu-icon{
-        right: 0px !important;
-    }*/
-    /*.navbar-bell{
-        left:15px !important;
-    }*/
+@media (max-width:650px){
+    .nav-link{
+        font-size: 2.3vw;
+    }
 }
 @media (max-width: 820px){
   .logo-div {
@@ -234,4 +222,15 @@
   .menu {
     margin-top:8vh;
   }
+  .menu-icon{
+    top: 1.5vw !important;
+  }
+}
+@media (min-width:1200px){
+    .blog-icon{
+      width: 2vw;
+    }
+    .menu-icon>svg {
+        height: 2vw;
+    }
 }
