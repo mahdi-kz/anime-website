@@ -148,13 +148,13 @@
 }*/
 .services-title{
     text-align: center;
-    font-size: 22px;
+    font-size: 1.5vw;
     margin-top: 5px;
     color: gray;
 }
 .services-section-title{
     text-align: center;
-    font-size: 22px;
+    font-size: 1.5vw;
     color: gray;
 }
 .slideCol {
@@ -164,7 +164,7 @@
 }
 .slideCol p { margin: 0px !important; }
 .scroller {
-    height: 30pt;
+    height: 2.5vw;
     overflow: hidden;
 }
 .scroller .inner { animation: 1s normal running scroll; }
