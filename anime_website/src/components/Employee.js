@@ -9,12 +9,12 @@ function Employee(props){
         const baseSize = 12
         var fontSize;
         if (textLength >= baseSize) {
-            fontSize = baseSize / textLength * 1.3;
+            fontSize = baseSize / textLength * 24;
         }
         else{
-            fontSize = 1.3;
+            fontSize = 24;
         }
-        return `${fontSize}vw`
+        return `${fontSize}px`
         }
 
         const texts = document.querySelectorAll('.font-adjust')
