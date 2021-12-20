@@ -8,26 +8,32 @@
         width:150px;
     }
     .about-us-title{
-        font-size:20px !important;
+        font-size:16px !important;
     }
     .about-us-description{
-        font-size:16px !important;
+        font-size:14px !important;
     }
     .info-descrition{
         padding-left: 0px !important;
         padding-right: 0px !important;
         margin-bottom: 5px;
     }
+    .about-us-name{
+        font-size: 18px !important;
+    }
 }
 @media (min-width:375px) and (max-width:670px){
+    .about-us-name{
+        font-size: 22px !important;
+    }
     .info-picture > img{
         width:100% !important;
     }
     .about-us-title{
-        font-size:22px !important;
+        font-size:20px !important;
     }
     .about-us-description{
-        font-size:18px !important;
+        font-size:16px !important;
     }
     .info-descrition{
         padding-left: 0px !important;

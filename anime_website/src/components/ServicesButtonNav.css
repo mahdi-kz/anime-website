@@ -8,11 +8,27 @@
     font-size:1.3vw;
 }
 
-@media (max-width:650px){
+@media (max-width:370px){
+    .services-nav>span,
     .services-nav>i{
-        font-size:2.2vw;
+        font-size:4vw;
     }
+}
+@media (min-width:370px) and (max-width:470px){
+    .services-nav>i,
     .services-nav>span{
-        font-size:2.2vw;
+        font-size:3.4vw;
+    }
+}
+@media (min-width:470px) and (max-width:650px){
+    .services-nav>i,
+    .services-nav>span{
+        font-size:3vw;
+    }
+}
+@media (min-width:650px) and (max-width:950px){
+    .services-nav>i,
+    .services-nav>span{
+        font-size:2vw;
     }
 }

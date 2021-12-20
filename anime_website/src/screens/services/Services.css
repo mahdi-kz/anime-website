@@ -164,7 +164,7 @@
 }
 .slideCol p { margin: 0px !important; }
 .scroller {
-    height: 2.5vw;
+    height: 30pt;
     overflow: hidden;
 }
 .scroller .inner { animation: 1s normal running scroll; }

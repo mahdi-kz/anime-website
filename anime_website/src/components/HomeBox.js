@@ -62,6 +62,7 @@ function HomeBox(){
         video_address("home_graphics", setVideo3)
         video_address("home_training", setVideo4)
     }, [])
+
     useEffect(()=>{
         if(!loading){
             document.querySelectorAll('.image-box').forEach((item)=>item.addEventListener('contextmenu', function(e){e.preventDefault()}))
@@ -133,8 +134,8 @@ function HomeBox(){
 										onMouseOver={() => vidRef3.current.play()}
 										onMouseOut={() => vidRef3.current.pause()}
 										className="top-li"
-										ref={vidRef3} 
-										src={video3} 
+										ref={vidRef3}
+										src={video3}
 										muted={soundOff?true:false}
 										type="video/mp4">
 									</video>

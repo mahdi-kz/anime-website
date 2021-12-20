@@ -6,8 +6,8 @@
     width: 60px;
     height: 50px;
     position: fixed;
-    left: 10px;
-    top: 10px;
+    left: 19px;
+    top: 19px;
     z-index: 99999;
 }
 .team-close-modal{
@@ -43,14 +43,22 @@
     margin-bottom: 20px;
 }
 .team-modal-name{
-    font-size: 1vw;
+    font-size: 2vw;
     font-family: LisztFYRegular,Georgia,Times New Roman,Times,serif;
 }
 .team-modal-descrition{
-    font-size: 0.9vw;
+    font-size: 1.5vw;
     font-family: LisztFYRegular,Georgia,Times New Roman,Times,serif;
 }
 
 .team-modal-picture-tag{
     object-fit: cover;
+}
+@media (max-width:767px){
+    .team-modal-name{
+        font-size:3.2vw;
+    }
+    .team-modal-descrition{
+        font-size:2.8vw;
+    }
 }
