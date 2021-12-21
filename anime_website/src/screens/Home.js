@@ -26,15 +26,15 @@ export default function Home(props) {
 		<div 
 			className="home-container"
 			style={{
-				backgroundImage:`url(${backgroundImage})`, 
+				backgroundImage:`url(${backgroundImage})`,
 				backgroundPosition:'center',
 				height:'100%',
 				backgroundRepeat: 'no-repeat',
 				backgroundSize:"cover",
 				backgroundAttachment: 'fixed'
-			}}	
+			}}
 		>
-			{!showFirstModal && 
+			{!showFirstModal &&
 				<div>
 					<Navbar showLogo={true} classes={"navbar-fixed"}/>
 					<HomeBox />
@@ -45,17 +45,17 @@ export default function Home(props) {
 				isOpen={showFirstModal}
 				animation={true}
 			>
-				<div 
-					className="first-modal-container" 
+				<div
+					className="first-modal-container"
 					style={{height:window.innerHeight}}
 					onClick={()=>closFirstModal()}
 				>
 					<Container fluid className="first-modal-box">
 						<Row className='first-modal-row'>
 							<Col xs={4.5} sm={4.5} md={4.5} xl={4.5} className="first-modal-picture">
-								<img 
+								<img
 									data-aos={"fade-right"}
-									alt="grei's first page" 
+									alt="grei's first page"
 									src={handLeftImage}
 								/>
 							</Col>
@@ -67,15 +67,15 @@ export default function Home(props) {
 								</div>
 							</Col>
 							<Col xs={4.5} sm={4.5} md={4.5} xl={4.5} className="first-modal-picture">
-								<img 
+								<img
 									data-aos={"fade-left"}
-									alt="grei's first page" 
-									src={handRightImage}  
+									alt="grei's first page"
+									src={handRightImage}
 								/>
 							</Col>
 						</Row>
 					</Container>
-					
+
 				</div>
 			</Modal>
 		</div>			

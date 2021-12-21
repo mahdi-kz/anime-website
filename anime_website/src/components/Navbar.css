@@ -208,9 +208,24 @@
   width: 100%;
   border-bottom: 1px solid #50BCBA;
 }
-@media (max-width:650px){
+@media (max-width:370px){
     .nav-link{
-        font-size: 2.3vw;
+        font-size: 4vw;
+    }
+}
+@media (min-width:370px) and (max-width:470px){
+    .nav-link{
+        font-size: 3.4vw;
+    }
+}
+@media (min-width:470px) and (max-width:650px){
+    .nav-link{
+        font-size: 3vw;
+    }
+}
+@media (min-width:650px) and (max-width:950px){
+    .nav-link{
+        font-size: 2vw;
     }
 }
 @media (max-width: 820px){
@@ -224,6 +239,7 @@
   }
   .menu-icon{
     top: 1.5vw !important;
+    right: 9vw;
   }
 }
 @media (min-width:1200px){
