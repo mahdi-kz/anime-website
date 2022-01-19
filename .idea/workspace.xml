@@ -1,7 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="938e82aa-8abc-498a-b154-b128933bcbf9" name="Changes" comment="" />
+    <list default="true" id="938e82aa-8abc-498a-b154-b128933bcbf9" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/anime_website/node_modules/.cache/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/anime_website/node_modules/.cache/.eslintcache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/anime_website/src/components/InfoBox.css" beforeDir="false" afterPath="$PROJECT_DIR$/anime_website/src/components/InfoBox.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/anime_website/src/components/InfoBox.js" beforeDir="false" afterPath="$PROJECT_DIR$/anime_website/src/components/InfoBox.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/anime_website/src/components/Navbar.css" beforeDir="false" afterPath="$PROJECT_DIR$/anime_website/src/components/Navbar.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/anime_website/src/screens/About_Us.js" beforeDir="false" afterPath="$PROJECT_DIR$/anime_website/src/screens/About_Us.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/anime_website/src/screens/Awards.css" beforeDir="false" afterPath="$PROJECT_DIR$/anime_website/src/screens/Awards.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/anime_website/src/screens/Contact_Us.js" beforeDir="false" afterPath="$PROJECT_DIR$/anime_website/src/screens/Contact_Us.js" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
