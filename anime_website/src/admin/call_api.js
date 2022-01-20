@@ -20,6 +20,10 @@ const get_courses_url = '/api/get-courses';
 const get_course_url = '/api/get-course';
 const save_course_url = '/api/save-course';
 const delete_course_url = '/api/delete-course';
+const get_awards_url = '/api/get-awards';
+const get_award_url = '/api/get-award';
+const save_award_url = '/api/save-award';
+const delete_award_url = '/api/delete-award';
 
 
 function call_json_api(url, data){
@@ -199,5 +203,34 @@ export async function save_course(id, name, description, sequence, image_file){
 
 export async function delete_course(id){
     let res = await call_json_api(delete_course_url, {'id': id});
+    return res;
+}
+
+export async function get_awards(){
+    let res = await call_json_api(get_awards_url, {});
+    return res;
+}
+
+export async function get_award(id){
+    let res = await call_json_api(get_award_url, {'id': id});
+    return res;
+}
+
+export async function save_award(id, year, award, presenter, winner, winner_category, status, status_type){
+    let data = {}
+    data.append('id', id);
+    data.append('year', year);
+    data.append('award', award);
+    data.append('presenter', presenter);
+    data.append('winner', winner);
+    data.append('winner_category', winner_category);
+    data.append('status', status);
+    data.append('status_type', status_type);
+    let res = await call_json_api(save_award_url, data);
+    return res['id'];
+}
+
+export async function delete_award(id){
+    let res = await call_json_api(delete_award_url, {'id': id});
     return res;
 }
