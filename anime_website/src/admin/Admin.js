@@ -8,6 +8,7 @@ import AdminDigitalMedia from './pages/AdminDigitalMedia';
 import AdminGraphicsBranding from './pages/AdminGraphicsBranding';
 import AdminTraining from './pages/AdminTraining';
 import AdminTeam from './pages/AdminTeam';
+import AdminAward from './pages/AdminAward';
 
 
 function Admin(){
@@ -40,6 +41,9 @@ function Admin(){
 			    }
 			    {selectedMenu === 6 &&
 			        <AdminTeam />
+			    }
+			    {selectedMenu === 7 &&
+			        <AdminAward />
 			    }
 			</div>
 		</>

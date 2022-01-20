@@ -27,6 +27,7 @@
 .first-modal-logo{
     display: block;
     position: relative;
+    width: 100%;
 }
 .first-modal-info{
     color: white;
@@ -65,7 +66,7 @@
   100% { opacity:1; }
 }
 .animate-flicker {
-    justify-content: flex-end;
+    justify-content: center;
     display: flex;
    -webkit-animation: flickerAnimation 3s infinite;
    -moz-animation: flickerAnimation 3s infinite;

@@ -3,7 +3,7 @@ import Navbar from '../components/Navbar';
 import HomeBox from '../components/HomeBox';
 import Modal from "react-modal";
 import { Container, Row, Col } from 'react-grid-system';
-import logo from '../images/logo/white-logo.svg';
+import logo from '../images/logo/white-logo-tagline.png';
 import handRightImage from '../images/modal/rightHand.webp';
 import handLeftImage from '../images/modal/leftHand.webp';
 import './Home.css';
@@ -61,7 +61,6 @@ export default function Home(props) {
 							</Col>
 							<Col xs={3} sm={3} md={3} xl={3} className="first-modal-descrition-box">
 								<img alt="grei's logo" src={logo} className='first-modal-logo'/>
-								<p className="first-modal-info">It's not all black and white</p>
 								<div className="title-slide-col div-title first-modal-btn">
                                     <div className="animate-flicker" >ENTER</div>
 								</div>
