@@ -44,7 +44,7 @@ export default function About_Us(){
 
     return(
         <div style={{
-            backgroundImage:`url(${backgroundImage})`, 
+            backgroundImage:`url(${backgroundImage})`,
             backgroundPosition:'center',
             height:'100%',
             backgroundRepeat: 'no-repeat',
@@ -53,7 +53,7 @@ export default function About_Us(){
             }}
         >
             <Navbar showLogo={showLogo}/>
-            <div className="services-container" 
+            <div className="services-container"
 				style={{
 					backgroundPosition: 'center',
 					backgroundSize: 'cover',

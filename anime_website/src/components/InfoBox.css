@@ -2,12 +2,13 @@
     margin-bottom: 55px;
     text-align: center !important;
     justify-content: end !important;
+    overflow-x: hidden;
 }
 .info-picture{
     padding: 0 !important;
     overflow: hidden;
 }
-.info-descrition{
+.info-description{
     text-align: left;
 }
 .about-us-name{
