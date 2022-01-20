@@ -25,11 +25,16 @@
 }
 .training-employee-box{
     display: flex;
-    overflow: hidden;
+    overflow: auto;
     width :90%;
     opacity: 1;
     cursor: pointer;
+    scrollbar-width: none;
 }
+.training-employee-box::-webkit-scrollbar {
+    display: none;
+}
+
 @media (max-width:300px){
     .training-arrow-right{
         right: 1vw !important;
