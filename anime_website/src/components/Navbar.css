@@ -213,6 +213,11 @@
         font-size: 4vw;
     }
 }
+@media (max-width:670px){
+    .navbar{
+        margin-top: -22px;
+    }
+}
 @media (min-width:370px) and (max-width:470px){
     .nav-link{
         font-size: 3.4vw;
