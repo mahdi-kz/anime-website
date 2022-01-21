@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react';
+import React, {useState, useEffect, useRef} from 'react';
 import './Services.css'
 import './Training.css'
 import Navbar from '../../components/Navbar';
@@ -25,6 +25,8 @@ export default function Products(props){
 	const [videoSize, setVideoSides] = useState(200);
 	const [hideNavbar, setHideNavbar] = useState(false);
 	const [arrowTop, setArrowTop] = useState(10)
+
+	const scrollToVideo = useRef();
 
 	useEffect(()=>{
 		updateSize();
@@ -161,6 +163,14 @@ export default function Products(props){
 		)
 	}
 
+	const clickScrollbarVideos = (url) => {
+		setVideoUrl(url);
+		scrollToVideo.current.scrollIntoView({
+			block: 'start',
+			behavior: 'smooth',
+		})
+	}
+
 	return(
 		<div style={{
 			backgroundImage:`url(${backgroundImage})`, 
@@ -190,7 +200,7 @@ export default function Products(props){
 							</div>
 						</div>
 					</div>
-					<div id='top-video'>
+					<div id='top-video' ref={scrollToVideo}>
 						<GreiVideo 
 							hideNavbar={()=>setHideNavbar(true)}
 							showNavbar={()=>setHideNavbar(false)}
@@ -210,7 +220,7 @@ export default function Products(props){
 							<Container fluid  align="center">
 								<Row className='pro-teams-row' >
 									{products.slice((currentPage-1)*15, currentPage*15).map((obj)=>{return(<Col xs={4} sm={3} md={2.4} xl={2.4}>
-										<div>
+										<div onClick={()=>clickScrollbarVideos(obj.video_address)}>
 											<GreiVideo 
 												hideNavbar={()=>setHideNavbar(true)}
 												showNavbar={()=>setHideNavbar(false)}
@@ -221,6 +231,7 @@ export default function Products(props){
 												autoPlay={false} 
 												playWithHover={true}
 												light={obj.image}
+												hasFullscreen={false}
 											/>
 											<div className="services-pro-name">{obj.name}</div>
 											<div className="services-pro-date">{obj.date}</div>
