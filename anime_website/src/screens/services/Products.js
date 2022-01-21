@@ -245,23 +245,24 @@ export default function Products(props){
 							classPlayer="top-react-player"
 						/>
 					</div>
+					{false &&
 					<div className="div-center">
 						<div className="services-videos"
 						    style={{width:videoWidth}}
 						    >
 							{videos.map((obj, index)=>{return(
-								<div onClick={()=>clickScrollbarVideos(obj.video_address)} >
+								<div onClick={()=>clickScrollbarVideos(obj.video_address)}>
 									<GreiVideo
 										classWrapper="main-video-wrapper"
 										classPlayer="main-react-player"
 										style={{
 											paddingTop:'20px',
     										paddingBottom:'5px',
-											paddingRight:index===videos.length-1?'0px !important':'25px'}} 
+											paddingRight:index===videos.length-1?'0px !important':'25px'}}
 										url={obj.video_address}
 										autoPlay={false}
-										with={videoSize} 
-										height={videoSize} 
+										with={videoSize}
+										height={videoSize}
 										// light={obj.image}
 										notFull={true}
 										playWithHover={true}
@@ -270,6 +271,7 @@ export default function Products(props){
 							)})}
 						</div>
 					</div>
+					}
 					<hr className="services-hr" />
 					<div className="services-section-title">Project & Client</div>
 					<div className="services-products-container">
@@ -277,16 +279,16 @@ export default function Products(props){
 							<Container fluid  align="center">
 								<Row className='pro-teams-row' >
 									{products.slice((currentPage-1)*15, currentPage*15).map((obj)=>{return(<Col xs={window.innerWidth>270?3:4} sm={2.4} md={2.4} xl={2.4}>
-										<div>
-											<GreiVideo 
+										<div onClick={()=>clickScrollbarVideos(obj.video_address)}>
+											<GreiVideo
 												hideNavbar={()=>setHideNavbar(true)}
 												showNavbar={()=>setHideNavbar(false)}
-												hasFullscreen={true}
-												with={videoSize} 
+												hasFullscreen={false}
+												with={videoSize}
 												height={videoSize}
 												classPlayer="pro-react-player"
 												url={obj.video_address}
-												autoPlay={false} 
+												autoPlay={false}
 												playWithHover={true}
 												light={obj.image}
 											/>
