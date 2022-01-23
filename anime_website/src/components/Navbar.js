@@ -53,7 +53,7 @@ function GreiNavbar(props){
 						}
 						{(showLogo || click) &&
 							<div className="logo-div">
-								<img alt="grei" src={click?w_logo:b_logo} className='logo'/>
+								<img alt="grei" src={click?w_logo:b_logo} className={props.logoFadeUp ? 'logo logo-fade-up' : 'logo'}/>
 							</div>
 						}
 						<div 

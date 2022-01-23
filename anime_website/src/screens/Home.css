@@ -1,6 +1,18 @@
+.home-container{
+    overflow: hidden;
+}
 .members-modal{
     cursor: pointer;
 }
+
+.home-modal{
+    cursor: pointer;
+}
+.modal-container-fade{
+    opacity: 0;
+    transition: opacity 1.5s;
+}
+
 .first-modal-container{
     background-color: #373737;
     display: flex;
@@ -8,7 +20,6 @@
 }
 .first-modal-row{
     height: 100%;
-    
 }
 .first-modal-picture{
     padding: 0 !important;
@@ -82,4 +93,8 @@
     .first-modal-info{
         font-size: 1.5vW !important;
     }
+}
+
+.left-hand-out{
+    width: 50%;
 }

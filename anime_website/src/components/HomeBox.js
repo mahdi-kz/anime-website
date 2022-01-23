@@ -76,6 +76,9 @@ function HomeBox(){
 				<div style={{margin:'auto'}}>
 					<ul className="home-box" >
 						<li className="image-box first-image-box-show"
+						    data-aos={"fade-up"}
+						    data-aos-duration="500"
+						    data-aos-delay="500"
 							onMouseEnter={()=>{changeTitle("PRODUCTION");setSelectedBox1(true);}}
 							onTouchStart={()=>{changeTitle("PRODUCTION");setSelectedBox1(true);}}
 							onMouseLeave={()=>{changeTitle('SERVICES');setSelectedBox1(false);}}
@@ -99,6 +102,9 @@ function HomeBox(){
 							</Link>
 						</li>
 						<li className="image-box second-image-box-show"
+						    data-aos={"fade-up"}
+						    data-aos-duration="500"
+						    data-aos-delay="750"
 							onMouseEnter={()=>{changeTitle("DIGITAL MEDIA");setSelectedBox2(true)}}
 							onTouchStart={()=>{changeTitle("DIGITAL MEDIA");setSelectedBox2(true)}}
 							onMouseLeave={()=>{changeTitle('SERVICES');setSelectedBox2(false)}}
@@ -122,6 +128,9 @@ function HomeBox(){
 							</Link>
 						</li>
 						<li className="image-box third-image-box-show"
+						    data-aos={"fade-up"}
+						    data-aos-duration="500"
+						    data-aos-delay="1000"
 							onMouseEnter={()=>{changeTitle("GRAPHIC & BRANDING");setSelectedBox3(true)}}
 							onTouchStart={()=>{changeTitle("GRAPHIC & BRANDING");setSelectedBox3(true)}}
 							onMouseLeave={()=>{changeTitle('SERVICES');setSelectedBox3(false)}}
@@ -145,6 +154,9 @@ function HomeBox(){
 							</Link>
 						</li>
 						<li className="image-box forth-image-box-show"
+						    data-aos={"fade-up"}
+						    data-aos-duration="500"
+						    data-aos-delay="1250"
 							onMouseEnter={()=>{changeTitle("TRAINING SERVICES");setSelectedBox4(true)}}
 							onTouchStart={()=>{changeTitle("TRAINING SERVICES");setSelectedBox4(true)}}
 							onMouseLeave={()=>{changeTitle('SERVICES');setSelectedBox4(false)}}
@@ -176,25 +188,25 @@ function HomeBox(){
 				</div>
 			</div>
 			}
-                <div className="sound" onClick={handleSound}
-                    onMouseEnter={()=>setDrew(true)}
-                    onMouseLeave={()=>setDrew(false)}
-                >
-                    {soundOff?
-                        <img alt="grei" src={muteIcon} className="blog-icon"/>:
-                        <img alt="grei" src={voiceIcon} className="blog-icon"/>
-                    }
-                    {(drew && window.innerWidth>1200 ) &&
-                        <svg className="svg" viewBox='0 -5 1200 1200' >
-                            <path class="drawCircle"
-                                d="M33.72 1.25A28.4 28.4 0 0012.43 4.7a22.6 22.6 0 00-7.77 7.75 21.33 21.33 0 00-1.81 16.69 22.75 22.75 0 0014.47 14.8 22.79 22.79 0 0020.42-3.41 22.79 22.79 0 008.89-18.7A20.86 20.86 0 0035.88 4.29C29.14.77 20.89 2 14.4 5.5 8.23 8.82 3.05 14.32 1.2 21.22a19.9 19.9 0 00-.46 2.14 15.44 15.44 0 001 8.93 19.1 19.1 0 001 1.92"
-                                fill="none"
-                                stroke="#231f20"
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                                ></path>
-                        </svg>
-                    }
+            <div className="sound" onClick={handleSound}
+                onMouseEnter={()=>setDrew(true)}
+                onMouseLeave={()=>setDrew(false)}
+            >
+                {soundOff?
+                    <img alt="grei" src={muteIcon} className="blog-icon"/>:
+                    <img alt="grei" src={voiceIcon} className="blog-icon"/>
+                }
+                {(drew && window.innerWidth>1200 ) &&
+                    <svg className="svg" viewBox='0 -5 1200 1200' >
+                        <path class="drawCircle"
+                            d="M33.72 1.25A28.4 28.4 0 0012.43 4.7a22.6 22.6 0 00-7.77 7.75 21.33 21.33 0 00-1.81 16.69 22.75 22.75 0 0014.47 14.8 22.79 22.79 0 0020.42-3.41 22.79 22.79 0 008.89-18.7A20.86 20.86 0 0035.88 4.29C29.14.77 20.89 2 14.4 5.5 8.23 8.82 3.05 14.32 1.2 21.22a19.9 19.9 0 00-.46 2.14 15.44 15.44 0 001 8.93 19.1 19.1 0 001 1.92"
+                            fill="none"
+                            stroke="#231f20"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            ></path>
+                    </svg>
+                }
             </div>
 		</>
 	)
