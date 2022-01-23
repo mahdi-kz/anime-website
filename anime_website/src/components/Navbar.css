@@ -254,3 +254,11 @@
         height: 2vw;
     }
 }
+
+.logo-fade-up {
+    animation: 1s normal running marginTop;
+}
+@keyframes marginTop {
+    100% {margin-top: 0px}
+    0% {margin-top: 30vh}
+}
