@@ -181,9 +181,7 @@ function HomeBox(){
 						</li>
 					</ul>
 					<div className="title-slide-col div-title">
-
-								<p className="home-box-title">{title}</p>
-
+					    <p className="home-box-title">{title}</p>
 					</div>
 				</div>
 			</div>

@@ -35,7 +35,6 @@
   user-select: none;
   visibility: visible;
   scroll-behavior: smooth;
-  white-space:nowrap;
   -webkit-overflow-scrolling: touch;
 }
 .home-box > li {
@@ -56,30 +55,20 @@
 }
 /*.first-image-box-show {animation: 10s normal running first-box-animation;}
 @keyframes first-box-animation {
-    *//*100% {width: 15vw}
-    0% {width: 0}*//*
-    100% {margin-top: 0px; margin-bottom: 0}
-    50% {margin-top: 0px; margin-bottom: 50vh}
-    0% {margin-top: 50vh;}
+    100% {width: 15vw}
+    0% {width: 0}
 }
 .second-image-box-show {animation: 10s normal running second-box-animation;}
 @keyframes second-box-animation {
-    *//*100% {width: 15vw}
+    100% {width: 15vw}
     50% {width: 0px}
-    0% {width: 0}*//*
-    100% {margin-top: 0px;}
-    50% {margin-top: calc(50vh-40px)}
-    0% {margin-top: calc(50vh-40px)}
-}*/
-/*.third-image-box-show {animation: 4s normal running third-box-animation;}
+    0% {width: 0}
+}
+.third-image-box-show {animation: 4s normal running third-box-animation;}
 @keyframes third-box-animation {
-    *//*100% {width: 15vw}
+    100% {width: 15vw}
     67% {width: 0}
-    0% {width: 0}*//*
-    100% {margin-top: 0; margin-bottom: 100px}
-    75% {margin-top: 0; margin-bottom: 100px}
-    50% {margin-top: 100px}
-    0% {margin-top: 100px}
+    0% {width: 0}
 }
 .forth-image-box-show {animation: 4s normal running forth-box-animation;}
 @keyframes forth-box-animation {
@@ -198,4 +187,37 @@
   .home-box-title{
     font-size: 25px !important;
   }
+}
+
+@media (max-width: 480px){
+    .image-box{
+        width: 80vw;
+        height: 12vh;
+    }
+    .image-box:hover{
+        width: 80vw;
+        height: 16vh;
+        transition: height 1s;
+    }
+
+    .top-li{
+        padding: 0px;
+        width: 80vw;
+        height: 12vh;
+    }
+    .top-li:hover{
+        width: 80vw;
+        height: 16vh;
+        padding-left: 0px;
+    }
+    .down-li{
+        width: 80vw;
+        height: 12vh;
+        padding-left: 0px;
+    }
+    .down-li:hover{
+        width: 80vw;
+        height: 16vh;
+        padding-left: 0px;
+    }
 }
