@@ -23,7 +23,7 @@ function GreiNavbar(props){
 		<>
 			<nav className={`navbar ${props.classes}`} style={{height:click?'auto':'120px'}}>
 				<div className={click && "navbar-container"}>
-					<div className={click?"container menu-open":"container"} >
+					<div className={click?"container menu-open":"container"}>
 						<div>
 							<div 
 								onClick={changingBlogVisible}
@@ -72,14 +72,14 @@ function GreiNavbar(props){
 						</div>
 					</div>
 					
-					<Container fluid className={click?'menu':'hide'}>
+					<Container fluid className={click?'menu':'menu menu-hide'}>
                         <Row className='menu-row' style={{width:'102%'}}>
                             <Col xs={12} sm={12} md={12} lg={1.5} xl={1} offset={{lg:0.75, xl:0.75}} className='nav-item'>
                                 <Link to="/" className='nav-link' onClick={closeModalMenu}>Home</Link>
                             </Col>
                             <Col xs={12} sm={12} md={12} lg={1.75} xl={1.25} offset={{xl:0.5}} className='nav-item nav'>
 								<ServicesButtonNav closeModalMenu={closeModalMenu} click={click} />
-                            </Col>							
+                            </Col>
                             <Col xs={12} sm={12} md={12} lg={1.5} xl={1} offset={{lg:0,xl:0.5}}className='nav-item nav'>
                                 <Link to="/customers" className='nav-link' onClick={closeModalMenu}>Customers</Link>
                             </Col>
