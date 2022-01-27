@@ -32,3 +32,9 @@
         font-size:2vw;
     }
 }
+
+@media (max-width: 480px){
+    .submenu-nav-link{
+        margin-left: 10vw;
+    }
+}
