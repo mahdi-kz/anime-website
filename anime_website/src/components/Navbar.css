@@ -145,6 +145,7 @@
 	 list-style: none;
 	 display: block;
 	 float:left;
+	 text-align: left;
 }
 .main { 
   background-color: #D1D2D4;
