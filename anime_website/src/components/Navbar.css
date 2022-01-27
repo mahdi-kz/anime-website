@@ -94,7 +94,7 @@
     z-index: 10;
     color: #e7e5df;
     /* padding-top: 40vh; */
-    font-size: 25px;
+    font-size: 23px;
     letter-spacing: 1.25px;
     text-align: center;
     -webkit-box-align: center;
@@ -111,7 +111,7 @@
     will-change: transform;
     margin-top: 0vh;
     height: auto;
-    overflow: hidden;
+
     transition: all 0.3s linear;
 }
 
