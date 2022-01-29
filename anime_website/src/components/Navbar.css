@@ -141,12 +141,23 @@
     color: #e7e5df;
     font-size:1.3vw;
 }
-.nav-item{
-	 list-style: none;
-	 display: block;
-	 float:left;
-	 text-align: left;
+@media (min-width: 481px){
+    .nav-item{
+        list-style: none;
+	    display: block;
+	    float:left;
+	    text-align: center;
+    }
 }
+@media (max-width: 480px){
+    .nav-item{
+        list-style: none;
+	    display: block;
+	    float:left;
+	    text-align: left;
+    }
+}
+
 .main { 
   background-color: #D1D2D4;
 }
