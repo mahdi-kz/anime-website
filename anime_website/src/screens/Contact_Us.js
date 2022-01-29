@@ -27,19 +27,20 @@ export default function Contact_Us(){
 
                 backgroundImage:`url(${backgroundImage})`, 
                 backgroundPosition:'center',
-                height:'100%',
+                height:'95%',
+                overflow: 'hidden',
                 backgroundRepeat: 'no-repeat',
                 backgroundSize:"cover",
-                backgroundAttachment: 'fixed'
+                backgroundAttachment: 'fixed',
             }}
         >
             <Navbar showLogo={showLogo}/>
-            <div className="services-container">
+            <div className="contact-container">
 				<div className="contact-box">
-					<div className="services-header contact-header">How to become grei?</div>
-                    <Container  className="contact-box" style={{height:window.innerHeight-100}}>
+					<div className="contact-header">How to become grei?</div>
+                    <div className="contact-box" style={{height:window.innerHeight-100}}>
                         <Row className='contact-row'>
-                            {window.innerWidth>575 &&
+                            {window.innerWidth>5575 &&
                                 <Col
                                     xs={12} sm={6} md={5} xl={5}
                                     data-aos="fade-up-right"
@@ -51,14 +52,13 @@ export default function Contact_Us(){
                                         src={image1} />
                                 </Col>
                             }
-                            <Col className="contact-box-info" xs={12} sm={6} md={7} xl={7} style={{marginTop: "5%"}}>
+                            <Col className="contact-box-info" xs={12} sm={6} md={7} xl={7} style={{marginTop: "3%"}}>
                                 <div className="contact-top-box">
                                     <div  className="contact-us-description">
                                         <span id="top-info">{config.description}</span>
                                     </div>
                                     <div style={{
-                                        textAlign:window.innerWidth<576?"left":"",
-                                        marginLeft:window.innerWidth<576?offsetVal:""
+                                        textAlign:'left'
                                     }}>
                                         <div className="contact-us-info"
                                             onClick={()=>window.open(config.map_address, "_blank")}>
@@ -78,8 +78,7 @@ export default function Contact_Us(){
                                 </div>
                                 <div className="contact-bottom-box"
                                      style={{
-                                        textAlign:window.innerWidth<576?"left":"",
-                                        marginLeft:window.innerWidth<576?offsetVal:""
+                                        textAlign:"left"
                                     }}>
                                     <div className="contact-us-info"
                                         onClick={()=>window.open(config.web_address, "_blank")}>
@@ -98,10 +97,10 @@ export default function Contact_Us(){
                                     </div>
                                 </div>
                             </Col>
-                            {window.innerWidth<575 &&
+                            {window.innerWidth<5575 &&
                                 <Col
                                     xs={12} sm={5} md={5} xl={5}
-                                    data-aos="fade-up-right"
+                                    data-aos="fade-up-left"
                                     data-aos-once="true"
                                 >
                                     <img
@@ -111,7 +110,7 @@ export default function Contact_Us(){
                                 </Col>
                             }
                         </Row>
-                    </Container>
+                    </div>
                 </div>
             </div>
         </div>
