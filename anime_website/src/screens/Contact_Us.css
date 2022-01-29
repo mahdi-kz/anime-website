@@ -1,15 +1,27 @@
+.contact-container{
+
+    justify-content: left;
+    overflow:hidden;
+}
 .contact-header{
     margin-top: 18vh !important;
+    text-align: left;
+    margin-bottom: 1%;
+    margin-top:3%;
+    padding-left: 3vw;
 }
 .contact-box{
     width: 100%;
     max-width: none !important;
+    padding-left: 3vw;
 }
 
 .contact-row{
     display: flex;
-    justify-content: center;
+    display-items:flex-top;
+    justify-content: left;
     height: 100%;
+    margin-left: 2vw;
 }
 .aos-animate{
     padding-left:0px !important;
@@ -23,12 +35,11 @@
     font-size: larger;
     margin-bottom: 15px;
     font-size: 2vw;
-    margin-left: 1vw;
 }
 .contact-us-info{
     font-size: 1.5vw;
     font-family: LisztFYRegular,Georgia,Times,serif;
-    padding: 10px 15px;
+    padding: 10px 0px;
     cursor: pointer;
 }
 .contact-us-info:hover{
@@ -79,19 +90,20 @@
 .contact-bottom-box{
     margin-top: 3%;
 }
+
+.contact-box-info{
+    text-align: left;
+    margin-left:0;
+    padding-left: 0;
+}
+
 @media (max-width:575px){
-    .contact-box-info{
-        text-align: center;
-    }
     .contact-header {
         margin-top: 13vh !important;
     }
     .contact-img{
         width:50%;
-    }
-    .contact-row{
-        display: flex;
-        justify-content: center;
+        margin-left:50%;
     }
     .contact-us-description {
         font-size: 15px;
