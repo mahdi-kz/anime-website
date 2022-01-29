@@ -24,7 +24,7 @@
 }
 .navbar-bell{
   position: fixed;
-  top: 1.6vw;
+  top: 2vh;
   left: 1.6vw;
   z-index: 11;
   cursor: pointer;
@@ -70,13 +70,13 @@
 }
 .menu-icon {
   position:fixed;
-  top: 0.5vw;
+  top: 1.5vh;
   right: 2vw;
   z-index: 11;
   cursor: pointer;
 }
 .menu-icon>svg {
-  height: 25px;
+  height: 40px;
 }
 .menu.menu-hide{
     margin-top: -8vh;
@@ -258,7 +258,7 @@
     margin-top:8vh;
   }
   .menu-icon{
-    top: 1.5vw !important;
+    top: 1.5vh !important;
   }
 }
 @media (min-width:1200px){
@@ -267,6 +267,11 @@
     }
     .menu-icon>svg {
         height: 2vw;
+    }
+}
+@media (max-width:5500px){
+    .menu-icon>svg {
+        height: 3vh;
     }
 }
 
