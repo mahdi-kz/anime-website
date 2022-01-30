@@ -80,8 +80,9 @@
 }
 .menu.menu-hide{
     margin-top: -8vh;
-    height: 0px;
+    display: none;
     overflow: hidden;
+    height: 0;
 }
 .menu {
     left: 0;
@@ -111,7 +112,6 @@
     will-change: transform;
     margin-top: 0vh;
     height: auto;
-
     transition: all 0.3s linear;
 }
 
@@ -130,6 +130,7 @@
     font-size: 16px;
     letter-spacing: 1.25px;
     text-align: center;
+    padding-left: 10px;
 }
 .menu>li {
     margin: 0 15px;
@@ -146,7 +147,7 @@
         list-style: none;
 	    display: block;
 	    float:left;
-	    text-align: center;
+	    text-align: left;
     }
 }
 @media (max-width: 480px){
@@ -155,6 +156,7 @@
 	    display: block;
 	    float:left;
 	    text-align: left;
+	    margin-left: 10%;
     }
 }
 
@@ -281,4 +283,73 @@
 @keyframes marginTop {
     100% {margin-top: 0px}
     0% {margin-top: 30vh}
+}
+
+.home-anime{
+    animation: 0.7s normal running homeAnime;
+    transition: margin-top 1s;
+}
+@keyframes homeAnime{
+    0% {margin-top: -50px; opacity:0}
+    100% {margin-top: 0px; opacity:1}
+}
+
+.services-anime{
+    animation: 0.7s normal running servicesAnime;
+    transition: margin-top 1s;
+}
+@keyframes servicesAnime{
+    0% {margin-top: -50px; opacity:0}
+    14% {margin-top: -50px; opacity:0}
+    100% {margin-top: 0px; opacity:1}
+}
+
+.customers-anime{
+    animation: 0.7s normal running customersAnime;
+    transition: margin-top 1s;
+}
+@keyframes customersAnime{
+    0% {margin-top: -50px; opacity:0}
+    28% {margin-top: -50px; opacity:0}
+    100% {margin-top: 0px; opacity:1}
+}
+
+.team-anime{
+    animation: 0.7s normal running teamAnime;
+    transition: margin-top 1s;
+}
+@keyframes teamAnime{
+    0% {margin-top: -50px; opacity:0}
+    43% {margin-top: -50px; opacity:0}
+    100% {margin-top: 0px; opacity:1}
+}
+
+.awards-anime{
+    animation: 0.7s normal running awardsAnime;
+    transition: margin-top 1s;
+}
+@keyframes awardsAnime{
+    0% {margin-top: -50px; opacity:0}
+    57% {margin-top: -50px; opacity:0}
+    100% {margin-top: 0px; opacity:1}
+}
+
+.about-anime{
+    animation: 0.7s normal running aboutAnime;
+    transition: margin-top 1s;
+}
+@keyframes aboutAnime{
+    0% {margin-top: -50px; opacity:0}
+    72% {margin-top: -50px; opacity:0}
+    100% {margin-top: 0px; opacity:1}
+}
+
+.contact-anime{
+    animation: 0.7s normal running contactAnime;
+    transition: margin-top 1s;
+}
+@keyframes contactAnime{
+    0% {margin-top: -50px; opacity:0}
+    86% {margin-top: -50px; opacity:0}
+    100% {margin-top: 0px; opacity:1}
 }

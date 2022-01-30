@@ -9,16 +9,18 @@
     cursor: pointer;
     width: 100%;
 }
-.modal-container-fade{
-    opacity: 0;
-    transition: opacity 1.5s;
-}
 
 .first-modal-container{
     background-color: #373737;
     display: flex;
     align-items: center;
 }
+.modal-container-fade{
+    opacity: 0;
+    background-color: #ffffff;
+    transition: 2.5s all ease-in-out;
+}
+
 .first-modal-row{
     height: 100%;
 }
