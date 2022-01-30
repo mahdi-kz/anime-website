@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef} from 'react';
 import { Link } from 'react-router-dom';
 import { Container, Row, Col } from 'react-grid-system';
 import './Navbar.css';
@@ -14,7 +14,11 @@ function GreiNavbar(props){
 	const [menuHover, setMenuHover] = useState(false);
 	const [blogVisible, setBlogVisible] = useState(false);
 
-	const handleClick = ()=>setClick(!click);
+	const containerRef = useRef();
+
+	const handleClick = ()=>{
+	    setClick(!click);
+	}
 	const changingBlogVisible = ()=>setBlogVisible(!blogVisible);
 	const closeModalMenu = ()=>setClick(false);
 	const showLogo = props.showLogo!==undefined?props.showLogo:true;
@@ -56,7 +60,7 @@ function GreiNavbar(props){
 								<img alt="grei" src={click?w_logo:b_logo} className={props.logoFadeUp ? 'logo logo-fade-up' : 'logo'}/>
 							</div>
 						}
-						<div 
+						<div
 							className='menu-icon' 
 							onClick={handleClick}
 							onMouseEnter={()=>setMenuHover(true)} 
@@ -71,32 +75,31 @@ function GreiNavbar(props){
 							</svg>
 						</div>
 					</div>
-					
-					<Container fluid className={click?'menu':'menu menu-hide'}>
+					<div ref={containerRef} fluid className={click?'menu':'menu menu-hide'}>
                         <Row className='menu-row' style={{width:'102%'}}>
-                            <Col xs={12} sm={12} md={12} lg={1.5} xl={1} offset={{lg:0.75, xl:0.75}} className='nav-item'>
+                            <Col xs={12} sm={12} md={12} lg={1.5} xl={1} offset={{lg:0.75, xl:0.75}} className='nav-item home-anime'>
                                 <Link to="/" className='nav-link' onClick={closeModalMenu}>Home</Link>
                             </Col>
-                            <Col xs={12} sm={12} md={12} lg={1.75} xl={1.25} offset={{xl:0.5}} className='nav-item nav'>
+                            <Col xs={12} sm={12} md={12} lg={1.75} xl={1.25} offset={{xl:0.5}} className='nav-item nav services-anime'>
 								<ServicesButtonNav closeModalMenu={closeModalMenu} click={click} />
                             </Col>
-                            <Col xs={12} sm={12} md={12} lg={1.5} xl={1} offset={{lg:0,xl:0.5}}className='nav-item nav'>
+                            <Col xs={12} sm={12} md={12} lg={1.5} xl={1} offset={{lg:0,xl:0.5}}className='nav-item nav customers-anime'>
                                 <Link to="/customers" className='nav-link' onClick={closeModalMenu}>Customers</Link>
                             </Col>
-							<Col xs={12} sm={12} md={12} lg={1.5} xl={1} offset={{xl:0.5}} className='nav-item nav'>
+							<Col xs={12} sm={12} md={12} lg={1.5} xl={1} offset={{xl:0.5}} className='nav-item nav team-anime'>
                                 <Link to="/team" className='nav-link' onClick={closeModalMenu}>Team</Link>
                             </Col>
-                            <Col xs={12}sm={12}  md={12} lg={1.5} xl={1} offset={{xl:0.5}} className='nav-item nav'>
+                            <Col xs={12}sm={12}  md={12} lg={1.5} xl={1} offset={{xl:0.5}} className='nav-item nav awards-anime'>
                                 <Link to="/awards" className='nav-link' onClick={closeModalMenu}>Awards</Link>
                             </Col>
-							<Col xs={12} sm={12} md={12} lg={1.5} xl={1.25} offset={{xl:0.5}} className='nav-item nav'>
+							<Col xs={12} sm={12} md={12} lg={1.5} xl={1.25} offset={{xl:0.5}} className='nav-item nav about-anime'>
                                 <Link to="/about_us" className='nav-link' onClick={closeModalMenu}>About Us</Link>
 							</Col>
-							<Col xs={12} sm={12} md={12} lg={1.75} xl={1.5} offset={{xl:0.5}} className='nav-item nav'>
+							<Col xs={12} sm={12} md={12} lg={1.75} xl={1.5} offset={{xl:0.5}} className='nav-item nav contact-anime'>
                                 <Link to="/contact_us" className='nav-link' onClick={closeModalMenu}>Contact Us</Link>
                             </Col>
                         </Row>
-					</Container>
+					</div>
 				</div>
 			</nav>
 		</>
