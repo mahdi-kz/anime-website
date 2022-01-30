@@ -37,9 +37,8 @@ export default function Contact_Us(){
             <Navbar showLogo={showLogo}/>
             <div className="contact-container">
 				<div className="contact-box">
-					<div className="contact-header">How to become grei?</div>
-                    <div className="contact-box" style={{height:window.innerHeight-100}}>
-                        <Row className='contact-row'>
+                    <div className="contact-box">
+                        <Row className='contact-row' style={{height:window.innerHeight}}>
                             {window.innerWidth>5575 &&
                                 <Col
                                     xs={12} sm={6} md={5} xl={5}
@@ -53,6 +52,7 @@ export default function Contact_Us(){
                                 </Col>
                             }
                             <Col className="contact-box-info" xs={12} sm={6} md={7} xl={7} style={{marginTop: "3%"}}>
+                                <div className="contact-header">How to become grei?</div>
                                 <div className="contact-top-box">
                                     <div  className="contact-us-description">
                                         <span id="top-info">{config.description}</span>
