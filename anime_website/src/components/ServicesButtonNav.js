@@ -26,16 +26,16 @@ function ServicesButtonNav(props){
                     }	
                 </div>
                 <div className={arrowUP?`services-subsection-items ${classes}`:"hide"}>
-                    <div>
+                    <div className='product-anime'>
                         <Link to="/products" className='nav-link submenu-nav-link' onClick={props.closeModalMenu}>Production</Link>
                     </div>
-                    <div>
+                    <div className='media-anime'>
                         <Link to="/socialMedia" className='nav-link submenu-nav-link' onClick={props.closeModalMenu}>Digital Media </Link>
                     </div>
-                    <div>
+                    <div className='graphic-anime'>
                         <Link to="/graphicDesign" className='nav-link submenu-nav-link' onClick={props.closeModalMenu}>Graphic & Branding </Link>
                     </div>
-                    <div>
+                    <div className='training-anime'>
                         <Link to="/training" className='nav-link submenu-nav-link' onClick={props.closeModalMenu}>Training Services</Link>
                     </div>
                 </div>

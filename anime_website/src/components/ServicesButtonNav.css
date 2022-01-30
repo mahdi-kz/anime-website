@@ -38,3 +38,44 @@
         margin-left: 10vw;
     }
 }
+@media (min-width: 480px){
+    .submenu-nav-link{
+        margin-left: 1vw;
+    }
+}
+
+
+.product-anime{
+    animation: 0.7s normal running productAnime;
+}
+@keyframes productAnime{
+    0% {margin-top: -50px; opacity:0}
+    100% {margin-top: 0px; opacity:1}
+}
+
+.media-anime{
+    animation: 0.7s normal running mediaAnime;
+}
+@keyframes mediaAnime{
+    0% {margin-top: -50px; opacity:0}
+    25% {margin-top: -50px; opacity:0}
+    100% {margin-top: 0px; opacity:1}
+}
+
+.graphic-anime{
+    animation: 0.7s normal running graphicAnime;
+}
+@keyframes graphicAnime{
+    0% {margin-top: -50px; opacity:0}
+    50% {margin-top: -50px; opacity:0}
+    100% {margin-top: 0px; opacity:1}
+}
+
+.training-anime{
+    animation: 0.7s normal running trainingAnime;
+}
+@keyframes trainingAnime{
+    0% {margin-top: -50px; opacity:0}
+    75% {margin-top: -50px; opacity:0}
+    100% {margin-top: 0px; opacity:1}
+}
