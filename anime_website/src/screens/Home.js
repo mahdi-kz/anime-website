@@ -29,7 +29,7 @@ export default function Home(props) {
         rightHandRef.current.classList.remove('aos-animate')
         logoRef.current.classList.remove('aos-animate')
         modalRef.current.classList.add('modal-container-fade')
-        const closeTimeout = setTimeout(closeFirstModalFunc, 1000)
+        const closeTimeout = setTimeout(closeFirstModalFunc, 1300)
     }
 	function closeFirstModalFunc(){
 		setShowFirstModal(false);
