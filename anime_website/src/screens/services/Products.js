@@ -10,6 +10,8 @@ import image3 from '../../images/teams/pop1.webp';
 import image4 from '../../images/teams/pop1.webp';
 import gif1 from '../../images/teams/002-Fast.gif';
 import backgroundImage from '../../images/background/production-bg.webp'
+import backgroundImage1 from '../../images/background/production-bg-1.webp'
+import backgroundImage2 from '../../images/background/production-bg-2.webp'
 import { Container, Row, Col } from 'react-grid-system';
 import Employee from '../../components/Employee';
 import {get_service_videos, get_department_members} from '../../admin/call_api';
@@ -211,7 +213,7 @@ export default function Products(props){
 	return(
 		<div 
 			style={{
-				backgroundImage:`url(${backgroundImage})`, 
+				backgroundImage:`url(${backgroundImage})`,
                 backgroundPosition:'center',
                 height:'100%',
                 backgroundRepeat: 'no-repeat',
@@ -219,9 +221,12 @@ export default function Products(props){
 				backgroundAttachment: 'fixed'
 			}}
 		>
+		    <img src={backgroundImage1} data-aos={'fade-up'} style={{objectFit: 'cover', width: '100%', bottom:'0', position:'fixed', zIndex: '-1'}}/>
+		    <img src={backgroundImage2} data-aos={'fade-down'} style={{objectFit: 'cover', width: '100%', bottom: '0', position:'fixed', zIndex: '-1'}}/>
 			{!showTeamModal && !hideNavbar &&
 				<Navbar showLogo={showLogo} />
 			}
+
 			<div className="services-container">
 				<div className="services-box" >
 					<div className="services-header">Productions</div>
@@ -233,13 +238,13 @@ export default function Products(props){
 						</div>
 					</div>
 					<div id='top-video' ref={scrollToVideo}>
-						<GreiVideo 
+						<GreiVideo
 							hideNavbar={()=>setHideNavbar(true)}
 							showNavbar={()=>setHideNavbar(false)}
 							hasFullscreen={true}
 							with="79%"
 							height="auto"
-							url={videoUrl} 
+							url={videoUrl}
 							autoPlay={true}
 							style={{display: 'flex',justifyContent: 'center'}}
 							classPlayer="top-react-player"
@@ -302,7 +307,7 @@ export default function Products(props){
 						<div className={pageNumber>1?"page-numbers":"hide"}> {createPages()} </div>
 					</div>
 					<hr className="services-hr" />
-					<div className="services-section-title services-team-title">Production's Team</div> 
+					<div className="services-section-title services-team-title">Production's Team</div>
 					<div className="course-main-box">
                         <div className="training-column" >
                             <div className={showTeamModal?"hide":"training-arrow-left"}>
@@ -346,7 +351,7 @@ export default function Products(props){
                         </div>
 					</div>
 					<div style={{height:100}} />
-					<MembersModal 
+					<MembersModal
 						isShow={showTeamModal}
 						info={personInfo}
 						closeTeamModal={closeTeamModal}
