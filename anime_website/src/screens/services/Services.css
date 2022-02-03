@@ -651,7 +651,6 @@
         top: 0;
         right: 0;
         position: absolute;
-        objectPosition: center top;
     }
 }
 
@@ -661,7 +660,6 @@
         top: -25%;
         right: 0;
         position: absolute;
-        objectPosition: center top;
     }
 }
 
@@ -671,16 +669,14 @@
         bottom: 0;
         left: 15%;
         position: absolute;
-        objectPosition: center top;
     }
 }
 
 @media (orientation: portrait){
     .background-image-2{
-        width: 110%;
-        left: -5%;
-        bottom: 0;
+        width: 100%;
+        left: 0;
+        top: 35%;
         position: absolute;
-        objectPosition: center top;
     }
 }
