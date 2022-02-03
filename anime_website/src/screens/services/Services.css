@@ -651,6 +651,7 @@
         top: 0;
         right: 0;
         position: absolute;
+        z-index: -1;
     }
 }
 
@@ -660,6 +661,7 @@
         top: -25%;
         right: 0;
         position: absolute;
+        z-index: -2;
     }
 }
 
@@ -667,8 +669,8 @@
     .background-image-1{
         height: 100%;
         bottom: 0;
-
         position: absolute;
+        z-index: -1;
     }
 }
 
@@ -678,5 +680,6 @@
         left: -40%;
         top: -10%;
         position: absolute;
+        z-index: -2;
     }
 }
