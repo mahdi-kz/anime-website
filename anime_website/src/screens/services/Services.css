@@ -677,9 +677,9 @@
 
 @media (orientation: portrait){
     .background-image-2{
-        width: 100%;
+        width: 110%;
+        left: -5%;
         bottom: 0;
-        bottom: 10%;
         position: absolute;
         objectPosition: center top;
     }
