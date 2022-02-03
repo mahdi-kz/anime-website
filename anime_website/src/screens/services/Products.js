@@ -221,8 +221,11 @@ export default function Products(props){
 				backgroundAttachment: 'fixed'
 			}}
 		>
-		    <img src={backgroundImage1} data-aos={'fade-up'} style={{objectFit: 'cover', width: '100%', bottom:'0', position:'fixed', zIndex: '-1'}}/>
-		    <img src={backgroundImage2} data-aos={'fade-down'} style={{objectFit: 'cover', width: '100%', bottom: '0', position:'fixed', zIndex: '-1'}}/>
+		    <div className='background-elements'>
+		        <img src={backgroundImage1} data-aos={'fade-up'} className='background-image-1'/>
+                <img src={backgroundImage2} data-aos={'fade-down'} className='background-image-2'/>
+		    </div>
+
 			{!showTeamModal && !hideNavbar &&
 				<Navbar showLogo={showLogo} />
 			}
