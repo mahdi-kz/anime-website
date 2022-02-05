@@ -48,19 +48,36 @@ function HomeBox(){
     }
 
     useEffect(()=>{
-        image_address("home_production", setImage1).then(()=>{
-            image_address("home_media", setImage2).then(()=>{
-                image_address("home_graphics", setImage3).then(()=>{
-                    image_address("home_training", setImage4).then(()=>{
-                        setLoading(false);
+        if(window.innerWidth>480){
+            image_address("home_production", setImage1).then(()=>{
+                image_address("home_media", setImage2).then(()=>{
+                    image_address("home_graphics", setImage3).then(()=>{
+                        image_address("home_training", setImage4).then(()=>{
+                            setLoading(false);
+                        })
                     })
                 })
             })
-        })
-        video_address("home_production", setVideo1)
-        video_address("home_media", setVideo2)
-        video_address("home_graphics", setVideo3)
-        video_address("home_training", setVideo4)
+            video_address("home_production", setVideo1)
+            video_address("home_media", setVideo2)
+            video_address("home_graphics", setVideo3)
+            video_address("home_training", setVideo4)
+        }
+        else{
+            image_address("home_production_mobile", setImage1).then(()=>{
+                image_address("home_media_mobile", setImage2).then(()=>{
+                    image_address("home_graphics_mobile", setImage3).then(()=>{
+                        image_address("home_training_mobile", setImage4).then(()=>{
+                            setLoading(false);
+                        })
+                    })
+                })
+            })
+            video_address("home_production_mobile", setVideo1)
+            video_address("home_media_mobile", setVideo2)
+            video_address("home_graphics_mobile", setVideo3)
+            video_address("home_training_mobile", setVideo4)
+        }
     }, [])
 
     useEffect(()=>{
