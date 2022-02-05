@@ -136,7 +136,7 @@
   width: 15vw;
   height: 31vw;
   min-width: 150px;
-  min-height: 220px;
+  
 }
 .top-li:hover{
   width: 20vw;
@@ -148,7 +148,6 @@
   height: 31vw;
   padding-left: 0px;
   min-width: 150px;
-  min-height: 220px;
 }
 .down-li:hover{
   width: 20vw;
@@ -201,9 +200,10 @@
     }
 
     .top-li{
-        padding: 0px;
+        padding: 0px 0px;
         width: 80vw;
         height: 12vh;
+        object-fit: scale-down;
     }
     .top-li:hover{
         width: 80vw;
@@ -214,6 +214,7 @@
         width: 80vw;
         height: 12vh;
         padding-left: 0px;
+        object-fit: scale-down;
     }
     .down-li:hover{
         width: 80vw;
