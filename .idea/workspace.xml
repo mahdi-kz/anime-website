@@ -1,15 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="938e82aa-8abc-498a-b154-b128933bcbf9" name="Changes" comment="">
+    <list default="true" id="938e82aa-8abc-498a-b154-b128933bcbf9" name="Changes" comment="alternative home images and videos for mobile">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/anime_website/node_modules/.cache/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/anime_website/node_modules/.cache/.eslintcache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/anime_website/src/components/InfoBox.css" beforeDir="false" afterPath="$PROJECT_DIR$/anime_website/src/components/InfoBox.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/anime_website/src/components/InfoBox.js" beforeDir="false" afterPath="$PROJECT_DIR$/anime_website/src/components/InfoBox.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/anime_website/src/components/Navbar.css" beforeDir="false" afterPath="$PROJECT_DIR$/anime_website/src/components/Navbar.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/anime_website/src/screens/About_Us.js" beforeDir="false" afterPath="$PROJECT_DIR$/anime_website/src/screens/About_Us.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/anime_website/src/screens/Awards.css" beforeDir="false" afterPath="$PROJECT_DIR$/anime_website/src/screens/Awards.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/anime_website/src/screens/Contact_Us.js" beforeDir="false" afterPath="$PROJECT_DIR$/anime_website/src/screens/Contact_Us.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/anime_website/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/anime_website/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/anime_website/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/anime_website/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/anime_website/src/screens/Team.js" beforeDir="false" afterPath="$PROJECT_DIR$/anime_website/src/screens/Team.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,6 +15,14 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -31,6 +36,13 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/anime_website/src/images/background" />
+      <recent name="$PROJECT_DIR$/anime_website/src/screens" />
+    </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -41,6 +53,207 @@
       <option name="presentableId" value="Default" />
       <updated>1638801829611</updated>
     </task>
+    <task id="LOCAL-00001" summary="Add Award to admin panel">
+      <created>1642685247110</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1642685247110</updated>
+    </task>
+    <task id="LOCAL-00002" summary="change the first model logo&#10;Center _Enter_">
+      <created>1642685283339</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1642685283339</updated>
+    </task>
+    <task id="LOCAL-00003" summary="scroll team members by finger, at the bottom of service pages">
+      <created>1642687395746</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1642687395746</updated>
+    </task>
+    <task id="LOCAL-00004" summary="All videos on services pages are now played on the top frame not through a modal.&#10;The 5-video row at the top of _products_ page is removed.">
+      <created>1642769104296</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1642769104296</updated>
+    </task>
+    <task id="LOCAL-00005" summary="animate back the first modal and animate the bottons on the home page.">
+      <created>1642974706295</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1642974706295</updated>
+    </task>
+    <task id="LOCAL-00006" summary="make the first modal full screen">
+      <created>1643050633488</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1643050633488</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Home screen shows the main buttons in a column in mobile while the screen is portrait.">
+      <created>1643142625145</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1643142625145</updated>
+    </task>
+    <task id="LOCAL-00008" summary="menu opens in animation">
+      <created>1643299071591</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1643299071591</updated>
+    </task>
+    <task id="LOCAL-00009" summary="menu opens in animation">
+      <created>1643300398166</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1643300398166</updated>
+    </task>
+    <task id="LOCAL-00010" summary="menu is left-aligned in mobile portrait">
+      <created>1643301371090</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1643301371090</updated>
+    </task>
+    <task id="LOCAL-00011" summary="menu is left aligned in mobile and centered in desktop">
+      <created>1643482521253</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1643482521253</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Contact us screen is now left-aligned.">
+      <created>1643488666971</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1643488666971</updated>
+    </task>
+    <task id="LOCAL-00013" summary="make icons better aligned in the nav bar">
+      <created>1643491248428</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1643491248428</updated>
+    </task>
+    <task id="LOCAL-00014" summary="home animation made smoother">
+      <created>1643544938543</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1643544938543</updated>
+    </task>
+    <task id="LOCAL-00015" summary="make contact-us more organized">
+      <created>1643570935841</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1643570935841</updated>
+    </task>
+    <task id="LOCAL-00016" summary="nav bar is shown smoother each item settles after the previous one">
+      <created>1643570973733</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1643570973733</updated>
+    </task>
+    <task id="LOCAL-00017" summary="show submenus in animation">
+      <created>1643572465302</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1643572465303</updated>
+    </task>
+    <task id="LOCAL-00018" summary="production background animation">
+      <created>1643658032732</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1643658032732</updated>
+    </task>
+    <task id="LOCAL-00019" summary="production background animation">
+      <created>1643884821091</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1643884821091</updated>
+    </task>
+    <task id="LOCAL-00020" summary="production background animation">
+      <created>1643885299091</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1643885299091</updated>
+    </task>
+    <task id="LOCAL-00021" summary="production background animation">
+      <created>1643885695628</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1643885695628</updated>
+    </task>
+    <task id="LOCAL-00022" summary="production background animation">
+      <created>1643886400350</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1643886400350</updated>
+    </task>
+    <task id="LOCAL-00023" summary="production background animation">
+      <created>1643900776104</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1643900776104</updated>
+    </task>
+    <task id="LOCAL-00024" summary="alternative home images and videos for mobile">
+      <created>1644072262294</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1644072262294</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Add Award to admin panel" />
+    <MESSAGE value="change the first model logo&#10;Center _Enter_" />
+    <MESSAGE value="scroll team members by finger, at the bottom of service pages" />
+    <MESSAGE value="All videos on services pages are now played on the top frame not through a modal.&#10;The 5-video row at the top of _products_ page is removed." />
+    <MESSAGE value="animate back the first modal and animate the bottons on the home page." />
+    <MESSAGE value="make the first modal full screen" />
+    <MESSAGE value="Home screen shows the main buttons in a column in mobile while the screen is portrait." />
+    <MESSAGE value="menu opens in animation" />
+    <MESSAGE value="menu is left-aligned in mobile portrait" />
+    <MESSAGE value="menu is left aligned in mobile and centered in desktop" />
+    <MESSAGE value="Contact us screen is now left-aligned." />
+    <MESSAGE value="make icons better aligned in the nav bar" />
+    <MESSAGE value="home animation made smoother" />
+    <MESSAGE value="make contact-us more organized" />
+    <MESSAGE value="nav bar is shown smoother each item settles after the previous one" />
+    <MESSAGE value="show submenus in animation" />
+    <MESSAGE value="production background animation" />
+    <MESSAGE value="alternative home images and videos for mobile" />
+    <option name="LAST_COMMIT_MESSAGE" value="alternative home images and videos for mobile" />
   </component>
 </project>
