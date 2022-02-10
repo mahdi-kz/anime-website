@@ -262,7 +262,7 @@ export default function Products(props){
 					<hr className="services-hr" />
 					<div className="services-section-title services-team-title">Graphic's Team</div> 
 					<div className="course-main-box">
-						<div className="training-column" >
+						<div className="training-column">
                             <div className={showTeamModal?"hide":"training-arrow-left"}>
                                     <div className="selected-page-number"
                                         style={{
@@ -275,8 +275,8 @@ export default function Products(props){
                                     </div>
                             </div>
                         </div>
-                        <div className="training-column-second training-column" >
-                            <div className="training-employee-box" id="hscroll">
+                        <div className="training-column-second training-column">
+                            <div className="training-employee-box" id="hscroll" >
                                 {members.map((obj, index)=>{
                                     return (<Col>
                                         <Employee
