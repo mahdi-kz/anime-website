@@ -26,7 +26,7 @@
 .training-employee-box{
     display: flex;
     overflow: auto;
-    width :90%;
+    max-width: 90%;
     opacity: 1;
     cursor: pointer;
     scrollbar-width: none;
