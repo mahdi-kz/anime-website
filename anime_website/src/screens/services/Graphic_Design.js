@@ -93,7 +93,7 @@ export default function Products(props){
     }
 
 	const getMembers = ()=>{
-		setMembers([
+		/*setMembers([
 			{
                 description:"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
                 name:"julia robinson",
@@ -150,7 +150,8 @@ export default function Products(props){
 				job:"Lorem ipsum dolor",
 				gif:gif1
             }
-		])
+		])*/
+		getDepartmentMembers()
 	}
 
 	const openTeamModal = (info) => {
