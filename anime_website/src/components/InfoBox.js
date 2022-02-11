@@ -26,7 +26,7 @@ function InfoBox(props){
                         data-aos-once="true"
                         style={props.imageStatus==="right"?{paddingRight:'35px !important'}:{paddingLeft:'35px !important'}}
                     >
-                        <div style={props.imageStatus==="right"? {}:{marginLeft: '15px'}}>
+                        <div style={props.imageStatus==="right"? {marginLeft: '2.5%'}:{marginLeft: '2.5%'}}>
                             <p className="about-us-name">{props.info.section_name}</p>
                             <p className="about-us-title">{props.info.title}</p>
                             <span className="about-us-description">{props.info.description}</span>

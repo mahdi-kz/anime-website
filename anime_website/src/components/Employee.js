@@ -30,7 +30,7 @@ function Employee(props){
         <div 
             className="employee-container"
             style={props.style?props.style:props.imageStyle}
-            onClick={()=>props.openTeamModal(props.info)}
+            onClick={()=>{if(isHover){setIsHover(false); props.openTeamModal(props.info)} else{setIsHover(true)}}}
             onMouseEnter={()=>{setIsHover(true)}}
 		    onMouseLeave={()=>{setIsHover(false)}}
             
