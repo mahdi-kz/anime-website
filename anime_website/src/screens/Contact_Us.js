@@ -62,16 +62,16 @@ export default function Contact_Us(){
                                     }}>
                                         <div className="contact-us-info"
                                             onClick={()=>window.open(config.map_address, "_blank")}>
-                                            <i class="fa fa-map-marker fa-sm" aria-hidden="true"></i>
+                                            <i class="fa fa-map-marker fa-sm contact-icon" aria-hidden="true"></i>
                                             <span>{config.address}</span>
                                         </div>
                                         <div className="contact-us-info"
                                             onClick={()=>window.open(config.mail_address, "_blank")}>
-                                            <i class="fa fa-envelope fa-sm" aria-hidden="true"></i>
+                                            <i class="fa fa-envelope fa-sm contact-icon" aria-hidden="true"></i>
                                             <span>{config.email}</span>
                                         </div>
                                         <div className="contact-us-info">
-                                            <i class="fa fa-volume-control-phone fa-sm" aria-hidden="true"></i>
+                                            <i class="fa fa-volume-control-phone fa-sm contact-icon" aria-hidden="true"></i>
                                             <span>{config.phone}</span>
                                         </div>
                                     </div>
@@ -82,17 +82,17 @@ export default function Contact_Us(){
                                     }}>
                                     <div className="contact-us-info"
                                         onClick={()=>window.open(config.web_address, "_blank")}>
-                                        <i class="fa fa-globe fa-sm" aria-hidden="true"></i>
+                                        <i class="fa fa-globe fa-sm contact-icon" aria-hidden="true"></i>
                                         <span>{config.web}</span>
                                     </div>
                                     <div className="contact-us-info"
                                         onClick={()=>window.open(config.facebook_address, "_blank")}>
-                                        <i class="fa fa-facebook fa-sm" aria-hidden="true"></i>
+                                        <i class="fa fa-facebook fa-sm contact-icon" aria-hidden="true"></i>
                                         <span>{config.facebook}</span>
                                     </div>
                                     <div className="contact-us-info"
                                         onClick={()=>window.open(config.instagram_address   , "_blank")}>
-                                        <i class="fa fa-instagram fa-sm" aria-hidden="true"></i>
+                                        <i class="fa fa-instagram fa-sm contact-icon" aria-hidden="true"></i>
                                         <span>{config.instagram}</span>
                                     </div>
                                 </div>
