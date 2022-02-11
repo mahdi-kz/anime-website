@@ -52,7 +52,7 @@ export default function Awards(){
             <Navbar showLogo={showLogo} />
             <div className="customer-container">
                 <div className="customers-box">
-                    <div className="services-header customers-title">Who we turned geri?</div>
+                    <div className="services-header customers-title">Who we turned Grei?</div>
                     <div className="clients-title">International Clients</div>
                     <div className="international-container">
                         <Container fluid className="customer-logo-box">
