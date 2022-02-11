@@ -6,21 +6,23 @@ function Employee(props){
 
     useEffect(()=>{
         const getFontSize = (textLength) => {
-        const baseSize = 12
-        var fontSize;
-        if (textLength >= baseSize) {
-            fontSize = baseSize / textLength * 24;
-        }
-        else{
-            fontSize = 24;
-        }
-        return `${fontSize}px`
+            const baseSize = 14
+            var fontSize;
+            if (textLength >= baseSize) {
+                fontSize = baseSize / textLength;
+            }
+            else{
+                fontSize = 1;
+            }
+
+            return `${fontSize}vw`
         }
 
         const texts = document.querySelectorAll('.font-adjust')
 
         texts.forEach(text => {
             text.style.fontSize = getFontSize(text.textContent.length)
+            text.style.maxLineHeight = '60%;'
         })
     }, [])
 
