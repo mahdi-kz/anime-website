@@ -17,6 +17,7 @@ function GreiNavbar(props){
 	const containerRef = useRef();
 
 	const handleClick = ()=>{
+	    if (!click){setBlogVisible(false)}
 	    setClick(!click);
 	}
 	const changingBlogVisible = ()=>setBlogVisible(!blogVisible);
