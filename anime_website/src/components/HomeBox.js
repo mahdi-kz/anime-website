@@ -97,7 +97,8 @@ function HomeBox(){
 						    data-aos-duration="500"
 						    data-aos-delay="500"
 							onMouseEnter={()=>{changeTitle("PRODUCTION");setSelectedBox1(true);}}
-							onTouchStart={()=>{changeTitle("PRODUCTION");setSelectedBox1(true);}}
+							onTouchStart={()=>{changeTitle("PRODUCTION");setSelectedBox1(true); setSelectedBox2(false); setSelectedBox3(false); setSelectedBox4(false)}}
+							onTouchEnd={()=>{changeTitle('SERVICES');setSelectedBox1(false);}}
 							onMouseLeave={()=>{changeTitle('SERVICES');setSelectedBox1(false);}}
 						>
 							<Link to="/products" >
@@ -123,7 +124,8 @@ function HomeBox(){
 						    data-aos-duration="500"
 						    data-aos-delay="750"
 							onMouseEnter={()=>{changeTitle("DIGITAL MEDIA");setSelectedBox2(true)}}
-							onTouchStart={()=>{changeTitle("DIGITAL MEDIA");setSelectedBox2(true)}}
+							onTouchStart={()=>{changeTitle("DIGITAL MEDIA");setSelectedBox2(true); setSelectedBox1(false); setSelectedBox3(false); setSelectedBox4(false)}}
+							onTouchEnd={()=>{changeTitle('SERVICES');setSelectedBox2(false);}}
 							onMouseLeave={()=>{changeTitle('SERVICES');setSelectedBox2(false)}}
 						>
 							<Link to="/socialMedia" >
@@ -149,7 +151,8 @@ function HomeBox(){
 						    data-aos-duration="500"
 						    data-aos-delay="1000"
 							onMouseEnter={()=>{changeTitle("GRAPHIC & BRANDING");setSelectedBox3(true)}}
-							onTouchStart={()=>{changeTitle("GRAPHIC & BRANDING");setSelectedBox3(true)}}
+							onTouchStart={()=>{changeTitle("GRAPHIC & BRANDING");setSelectedBox3(true); setSelectedBox1(false); setSelectedBox2(false); setSelectedBox4(false)}}
+							onTouchEnd={()=>{changeTitle('SERVICES');setSelectedBox3(false);}}
 							onMouseLeave={()=>{changeTitle('SERVICES');setSelectedBox3(false)}}
 						>
 							<Link to="/graphicDesign" >
@@ -175,7 +178,8 @@ function HomeBox(){
 						    data-aos-duration="500"
 						    data-aos-delay="1250"
 							onMouseEnter={()=>{changeTitle("TRAINING SERVICES");setSelectedBox4(true)}}
-							onTouchStart={()=>{changeTitle("TRAINING SERVICES");setSelectedBox4(true)}}
+							onTouchStart={()=>{changeTitle("TRAINING SERVICES");setSelectedBox4(true); setSelectedBox1(false); setSelectedBox2(false); setSelectedBox3(false)}}
+							onTouchEnd={()=>{changeTitle('SERVICES');setSelectedBox4(false);}}
 							onMouseLeave={()=>{changeTitle('SERVICES');setSelectedBox4(false)}}
 						>
 							<Link to="/training" >
