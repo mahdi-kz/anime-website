@@ -1,6 +1,7 @@
 import React, {useState, useEffect, useRef} from 'react';
 import './Services.css'
 import './Training.css'
+import './social_media.css';
 import Navbar from '../../components/Navbar';
 import MembersModal from '../../components/MembersModal';
 import GreiVideo from '../../components/GreiVideo.js';
@@ -9,7 +10,13 @@ import image2 from '../../images/test/people1.png';
 import gif1 from '../../images/teams/002-Fast.gif';
 import { Container, Row, Col } from 'react-grid-system';
 import Employee from '../../components/Employee';
-import backgroundImage from '../../images/background/media-bg.webp';
+/*import backgroundImage from '../../images/background/media-bg.webp';*/
+import backgroundImage from '../../images/background/production-bg.webp';
+import backgroundImage1 from '../../images/background/digital-media-bg-1.webp';
+import backgroundImage2 from '../../images/background/digital-media-bg-2.webp';
+import backgroundImage3 from '../../images/background/digital-media-bg-3.webp';
+import backgroundImage4 from '../../images/background/digital-media-bg-4.webp';
+import backgroundImage5 from '../../images/background/digital-media-bg-5.webp';
 import {get_service_videos, get_department_members} from '../../admin/call_api';
 
 export default function Products(props){
@@ -199,6 +206,14 @@ export default function Products(props){
 			backgroundAttachment: 'fixed'
 			}}
 		>
+		    <div className='digital-background-elements'>
+		        <img src={backgroundImage1} data-aos={'fade-left'} className='digital-bg-1'/>
+                <img src={backgroundImage2} data-aos={'fade-right'} className='digital-bg-2'/>
+                <img src={backgroundImage3} data-aos={'fade-right'} className='digital-bg-3'/>
+                <img src={backgroundImage4} data-aos={'fade-down'} className='digital-bg-4'/>
+                <img src={backgroundImage5} data-aos={'fade-up'} className='digital-bg-5'/>
+		    </div>
+
 			{!showTeamModal && !hideNavbar &&
 				<Navbar showLogo={showLogo} />
 			}
