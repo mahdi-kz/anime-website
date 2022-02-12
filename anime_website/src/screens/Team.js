@@ -11,7 +11,10 @@ import { Container, Row, Col } from 'react-grid-system';
 import video1 from '../videos/big.mp4';
 import MembersModal from "../components/MembersModal";
 import TeamMembers from '../components/TeamMembers';
-import backgroundImage from '../images/background/team-bg.webp';
+import backgroundImage from '../images/background/production-bg.webp';
+import backgroundImage1 from '../images/background/team-bg-1.webp';
+import backgroundImage2 from '../images/background/team-bg-2.webp';
+import backgroundImage3 from '../images/background/team-bg-3.webp';
 import {get_members, get_service_videos} from '../admin/call_api';
 
 
@@ -105,6 +108,12 @@ export default function Teams(){
             backgroundAttachment: 'fixed'
             }}
         >
+            <div className='team-background-elements'>
+		        <img src={backgroundImage1} className='team-bg-1'/>
+                <img src={backgroundImage2} data-aos={'fade-up'} className='team-bg-2'/>
+                <img src={backgroundImage3} data-aos={'fade-down'} className='team-bg-3'/>
+		    </div>
+
             {!showTeamModal && !hideNavbar &&
                 <Navbar showLogo={showLogo}/>
             }
