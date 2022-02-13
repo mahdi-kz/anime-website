@@ -7,7 +7,12 @@ import logo from '../images/logo/white-logo-tagline.png';
 import handRightImage from '../images/modal/rightHand.webp';
 import handLeftImage from '../images/modal/leftHand.webp';
 import './Home.css';
-import backgroundImage from '../images/background/home-bg.webp';
+import backgroundImage from '../images/background/production-bg.webp';
+import backgroundImage1 from '../images/background/home-bg-1.webp';
+import backgroundImage2 from '../images/background/home-bg-2.webp';
+import backgroundImage3 from '../images/background/home-bg-3.webp';
+import backgroundImage4 from '../images/background/home-bg-4.webp';
+
 
 export default function Home(props) {
 	const [showFirstModal, setShowFirstModal] = useState(null);
@@ -49,6 +54,13 @@ export default function Home(props) {
 				backgroundAttachment: 'fixed',
 			}}
 		>
+		    <div className='home-background-elements'>
+		        <img src={backgroundImage1} data-aos={'fade-left'} className='home-bg-1'/>
+                <img src={backgroundImage2} data-aos={'fade-down'} className='home-bg-2'/>
+                <img src={backgroundImage3} data-aos={'fade-right'} className='home-bg-3'/>
+                <img src={backgroundImage4} data-aos={'fade-up'} className='home-bg-4'/>
+		    </div>
+
 			{firstModalClosed &&
 				<div>
 					<Navbar showLogo={true} logoFadeUp={true} classes={"navbar-fixed"}/>
