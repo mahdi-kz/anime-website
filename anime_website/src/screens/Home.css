@@ -101,3 +101,80 @@
 .left-hand-out{
     width: 50%;
 }
+
+.home-background-elements{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    text-align:center;
+    display: flex;
+    z-index: -1;
+}
+
+@media (orientation: landscape){
+    .home-bg-1{
+        height: 50%;
+        top: -5%;
+        right: 0;
+        position: absolute;
+        z-index: -1;
+    }
+
+    .home-bg-2{
+        width: 50%;
+        top: -20%;
+        left: 25%;
+        position: absolute;
+        z-index: -1;
+    }
+
+    .home-bg-3{
+        height: 50%;
+        top: 49%;
+        left: 0;
+        position: absolute;
+        z-index: -1;
+    }
+
+    .home-bg-4{
+        width: 50%;
+        top: 50%;
+        left: 25%;
+        position: absolute;
+        z-index: -1;
+    }
+}
+
+@media (orientation: portrait){
+    .home-bg-1{
+        width: 100%;
+        top: 0;
+        right: 0;
+        position: absolute;
+        z-index: -1;
+    }
+
+    .home-bg-2{
+        width: 100%;
+        top: 0;
+        left: 0;
+        position: absolute;
+        z-index: -1;
+    }
+
+    .home-bg-3{
+        height: 50%;
+        top: 49%;
+        left: 0;
+        position: absolute;
+        z-index: -1;
+    }
+
+    .home-bg-4{
+        width: 100%;
+        top: 70%;
+        left: 0;
+        position: absolute;
+        z-index: -1;
+    }
+}

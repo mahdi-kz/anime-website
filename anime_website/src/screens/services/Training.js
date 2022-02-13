@@ -9,7 +9,10 @@ import image2 from '../../images/test/course1.png';
 import servicesBg from '../../images/background/services-bg.webp'
 import { Container, Row, Col } from 'react-grid-system';
 import Course from '../../components/Course';
-import backgroundImage from '../../images/background/training-bg.webp';
+import backgroundImage from '../../images/background/production-bg.webp';
+import backgroundImage1 from '../../images/background/training-bg-1.webp';
+import backgroundImage2 from '../../images/background/training-bg-2.webp';
+import backgroundImage3 from '../../images/background/training-bg-3.webp';
 import {get_service_videos} from '../../admin/call_api';
 
 
@@ -181,6 +184,12 @@ export default function Products(props){
 			backgroundAttachment: 'fixed'
 			}}
 		>
+		    <div className='training-background-elements'>
+		        <img src={backgroundImage1} data-aos={'fade-down'} className='training-bg-1'/>
+                <img src={backgroundImage2} data-aos={'fade-left'} className='training-bg-2'/>
+                <img src={backgroundImage3} data-aos={'fade-right'} className='training-bg-3'/>
+		    </div>
+
 			{!showTeamModal && !hideNavbar &&
 				<Navbar showLogo={showLogo} />
 			}
