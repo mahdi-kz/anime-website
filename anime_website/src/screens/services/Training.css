@@ -59,3 +59,64 @@
         left: 2vw !important;
     }
 }
+
+.training-background-elements{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    text-align:center;
+    display: flex;
+    z-index: -1;
+}
+
+@media (orientation: landscape){
+    .training-bg-1{
+        width: 100%;
+        top: 0;
+        right: 0;
+        position: absolute;
+        z-index: -1;
+    }
+
+    .training-bg-2{
+        height: 100%;
+        top: 0;
+        right: -10%;
+        position: absolute;
+        z-index: -1;
+    }
+
+    .training-bg-3{
+        height: 50%;
+        top: -5%;
+        left: 5%;
+        position: absolute;
+        z-index: -1;
+    }
+}
+
+@media (orientation: portrait){
+    .training-bg-1{
+        height: 100%;
+        top: 0;
+        left: 0;
+        position: absolute;
+        z-index: -1;
+    }
+
+    .training-bg-2{
+        height: 100%;
+        top: 0;
+        left: -10%;
+        position: absolute;
+        z-index: -1;
+    }
+
+    .training-bg-3{
+        height: 50%;
+        top: -5%;
+        left: 5%;
+        position: absolute;
+        z-index: -1;
+    }
+}
