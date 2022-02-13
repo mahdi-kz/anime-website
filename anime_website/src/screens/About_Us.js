@@ -5,7 +5,8 @@ import InfoBox from '../components/InfoBox';
 import image1 from '../images/aboutUs/1.jpg';
 import image2 from '../images/aboutUs/2.jpg';
 import image3 from '../images/aboutUs/3.jpg';
-import backgroundImage from '../images/background/about-bg.webp';
+import backgroundImage from '../images/background/production-bg.webp';
+import backgroundImage1 from '../images/background/about-bg.webp';
 
 export default function About_Us(){
     const [info, setInfo] = useState([]);
@@ -52,6 +53,10 @@ export default function About_Us(){
             backgroundAttachment: 'fixed'
             }}
         >
+            <div className='about-background-elements'>
+		        <img src={backgroundImage1} data-aos={'fade-down'} className='about-bg-1'/>
+		    </div>
+
             <Navbar showLogo={showLogo}/>
             <div className="services-container"
 				style={{

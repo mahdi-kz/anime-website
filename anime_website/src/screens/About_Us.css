@@ -41,3 +41,33 @@
         margin-bottom: 5px;
     }
 }
+
+.about-background-elements{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    text-align:center;
+    display: flex;
+    z-index: -1;
+    opacity: 0.5;
+}
+
+@media (orientation: landscape){
+    .about-bg-1{
+        width: 100%;
+        top: 0;
+        left: 0;
+        position: absolute;
+        z-index: -1;
+    }
+}
+
+@media (orientation: portrait){
+    .about-bg-1{
+        height: 100%;
+        top: 0;
+        left: -40%;
+        position: absolute;
+        z-index: -1;
+    }
+}
