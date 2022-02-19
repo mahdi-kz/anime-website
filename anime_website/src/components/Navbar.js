@@ -78,25 +78,28 @@ function GreiNavbar(props){
 					</div>
 					<div ref={containerRef} fluid className={click?'menu':'menu menu-hide'}>
                         <Row className='menu-row' style={{width:'102%'}}>
-                            <Col xs={12} sm={12} md={12} lg={1.5} xl={1} offset={{lg:0.75, xl:0.75}} className='nav-item home-anime'>
+                            <Col xs={12} sm={12} md={12} lg={1.25} xl={0.75} offset={{lg:0.5, xl:0.5}} className='nav-item home-anime'>
                                 <Link to="/" className='nav-link' onClick={closeModalMenu}>Home</Link>
                             </Col>
-                            <Col xs={12} sm={12} md={12} lg={1.75} xl={1.25} offset={{xl:0.5}} className='nav-item nav services-anime'>
+                            <Col xs={12} sm={12} md={12} lg={1.5} xl={1} offset={{xl:0.5}} className='nav-item nav services-anime'>
 								<ServicesButtonNav closeModalMenu={closeModalMenu} click={click} />
                             </Col>
                             <Col xs={12} sm={12} md={12} lg={1.5} xl={1} offset={{lg:0,xl:0.5}}className='nav-item nav customers-anime'>
                                 <Link to="/customers" className='nav-link' onClick={closeModalMenu}>Customers</Link>
                             </Col>
-							<Col xs={12} sm={12} md={12} lg={1.5} xl={1} offset={{xl:0.5}} className='nav-item nav team-anime'>
+                            <Col xs={12} sm={12} md={12} lg={1.5} xl={1} offset={{lg:0,xl:0.5}}className='nav-item nav portfolio-anime'>
+                                <Link to="/portfolio" className='nav-link' onClick={closeModalMenu}>Portfolio</Link>
+                            </Col>
+							<Col xs={12} sm={12} md={12} lg={1.15} xl={0.75} offset={{xl:0.35}} className='nav-item nav team-anime'>
                                 <Link to="/team" className='nav-link' onClick={closeModalMenu}>Team</Link>
                             </Col>
-                            <Col xs={12}sm={12}  md={12} lg={1.5} xl={1} offset={{xl:0.5}} className='nav-item nav awards-anime'>
+                            <Col xs={12}sm={12}  md={12} lg={1.25} xl={1} offset={{xl:0.5}} className='nav-item nav awards-anime'>
                                 <Link to="/awards" className='nav-link' onClick={closeModalMenu}>Awards</Link>
                             </Col>
-							<Col xs={12} sm={12} md={12} lg={1.5} xl={1.25} offset={{xl:0.5}} className='nav-item nav about-anime'>
+							<Col xs={12} sm={12} md={12} lg={1.5} xl={1} offset={{xl:0.35}} className='nav-item nav about-anime'>
                                 <Link to="/about_us" className='nav-link' onClick={closeModalMenu}>About Us</Link>
 							</Col>
-							<Col xs={12} sm={12} md={12} lg={1.75} xl={1.5} offset={{xl:0.5}} className='nav-item nav contact-anime'>
+							<Col xs={12} sm={12} md={12} lg={1.5} xl={1.5} offset={{xl:0.5}} className='nav-item nav contact-anime'>
                                 <Link to="/contact_us" className='nav-link' onClick={closeModalMenu}>Contact Us</Link>
                             </Col>
                         </Row>

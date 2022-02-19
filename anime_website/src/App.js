@@ -11,6 +11,7 @@ import Awards from './screens/Awards';
 import ContactUs from './screens/Contact_Us';
 import AboutUs from './screens/About_Us';
 import Teams from './screens/Team';
+import Portfolio from './screens/Portfolio';
 import Admin from './admin/Admin'
 import './index.css';
 import Aos from "aos";
@@ -61,6 +62,9 @@ function App() {
 					</Route>
 					<Route path='/team' >
 						<Teams />
+					</Route>
+					<Route path='/portfolio'>
+					    <Portfolio />
 					</Route>
 					<Route path='/admin'>
 						<Admin />
