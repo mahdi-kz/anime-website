@@ -30,17 +30,17 @@ function Portfolio(){
                 <Container fluid className="">
                     <Row className='portfolio-rows'>
                         <Col xs={12} sm={12} md={3} xl={3} offset={{md: 1, xl: 1}} className="portfolio-cols">
-                            <img className='portfolio-img' src={portfolio1}/>
+                            <img className='portfolio-img' src={portfolio1} data-aos="fade-right"/>
                             <div className='portfolio-img-shadow'/>
                             <span className='portfolio-name'>Hollywood Smile Studio Networking Services</span>
                         </Col>
                         <Col xs={12} sm={12} md={3} xl={3} className="portfolio-cols">
-                            <img className='portfolio-img' src={portfolio2}/>
+                            <img className='portfolio-img' src={portfolio2} data-aos="fade-up"/>
                             <div className='portfolio-img-shadow'/>
                             <span className='portfolio-name'>Hollywood Smile Studio Networking Services</span>
                         </Col>
                         <Col xs={12} sm={12} md={4} xl={4} className="portfolio-cols">
-                            <img className='portfolio-img' src={portfolio3}/>
+                            <img className='portfolio-img' src={portfolio3} data-aos="fade-left"/>
                             <div className='portfolio-img-shadow'/>
                             <span className='portfolio-name'>Hollywood Smile Studio Networking Services</span>
                         </Col>
@@ -48,17 +48,17 @@ function Portfolio(){
 
                     <Row className='portfolio-rows'>
                         <Col xs={12} sm={12} md={4} xl={4} offset={{md: 1, xl: 1}} className="portfolio-cols">
-                            <img className='portfolio-img' src={portfolio1}/>
+                            <img className='portfolio-img' src={portfolio1} data-aos="fade-right"/>
                             <div className='portfolio-img-shadow'/>
                             <span className='portfolio-name'>Hollywood Smile Studio Networking Services</span>
                         </Col>
                         <Col xs={12} sm={12} md={3} xl={3} className="portfolio-cols">
-                            <img className='portfolio-img' src={portfolio2}/>
+                            <img className='portfolio-img' src={portfolio2} data-aos="fade-up"/>
                             <div className='portfolio-img-shadow'/>
                             <span className='portfolio-name'>Hollywood Smile Studio Networking Services</span>
                         </Col>
                         <Col xs={12} sm={12} md={3} xl={3} className="portfolio-cols">
-                            <img className='portfolio-img' src={portfolio3}/>
+                            <img className='portfolio-img' src={portfolio3} data-aos="fade-left"/>
                             <div className='portfolio-img-shadow'/>
                             <span className='portfolio-name'>Hollywood Smile Studio Networking Services</span>
                         </Col>
@@ -66,17 +66,17 @@ function Portfolio(){
 
                     <Row className='portfolio-rows'>
                         <Col xs={12} sm={12} md={3} xl={3} offset={{md: 1, xl: 1}} className="portfolio-cols">
-                            <img className='portfolio-img' src={portfolio1}/>
+                            <img className='portfolio-img' src={portfolio1} data-aos="fade-right"/>
                             <div className='portfolio-img-shadow'/>
                             <span className='portfolio-name'>Hollywood Smile Studio Networking Services</span>
                         </Col>
                         <Col xs={12} sm={12} md={4} xl={4} className="portfolio-cols">
-                            <img className='portfolio-img' src={portfolio2}/>
+                            <img className='portfolio-img' src={portfolio2} data-aos="fade-up"/>
                             <div className='portfolio-img-shadow'/>
                             <span className='portfolio-name'>Hollywood Smile Studio Networking Services</span>
                         </Col>
                         <Col xs={12} sm={12} md={3} xl={3} className="portfolio-cols">
-                            <img className='portfolio-img' src={portfolio3}/>
+                            <img className='portfolio-img' src={portfolio3} data-aos="fade-left"/>
                             <div className='portfolio-img-shadow'/>
                             <span className='portfolio-name'>Hollywood Smile Studio Networking Services</span>
                         </Col>
