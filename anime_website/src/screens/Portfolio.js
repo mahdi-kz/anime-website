@@ -105,7 +105,7 @@ function Portfolio(){
                         </Col>
                     </Row>
                     <Row className='portfolio-rows'>
-                        <Col xs={3} xl={3} offset={{xs:1, xl:1}} className='portfolio-cols portfolio-info'>
+                        <Col xs={10} xl={3} offset={{xs:1, xl:1}} className='portfolio-cols portfolio-info'>
                             <div className='portfolio-info-title-value-container'>
                                 <div className='portfolio-info-title'><b>Client</b></div>
                                 <div className='portfolio-info-value'>Hollywood Smile Studio</div>
