@@ -88,7 +88,7 @@
 
 .portfolio-info-title{
     width: 50%;
-    font-size: 0.8vw;
+    font-size: 0.9vmax;
     line-height: 4vw;
     overflow: hidden;
     white-space: wrap;
@@ -96,7 +96,7 @@
 
 .portfolio-info-value{
     width: 50%;
-    font-size: 0.65vw;
+    font-size: 0.7vmax;
     line-height: 4vw;
     overflow: hidden;
     white-space: wrap;
@@ -111,13 +111,13 @@
 }
 
 .portfolio-text{
-    font-size: 1vw;
-    line-height: 2vw;
-    padding-left: 30px;
+    font-size: 1vmax;
+    line-height: 2vmax;
+    padding-left: 0px;
 }
 
 .portfolio-pdf-container{
-    padding-left: 30px;
+    padding-left: 0px;
 }
 
 .portfolio-pdf{
