@@ -3,7 +3,8 @@ import Navbar from '../components/Navbar';
 import './Customers.css';
 import { Container, Row, Col } from 'react-grid-system';
 import {get_local_customers, get_global_customers} from '../admin/call_api'
-import backgroundImage from '../images/background/costumer-bg.webp';
+import backgroundImage from '../images/background/production-bg.webp';
+import backgroundImage1 from '../images/background/customers-bg-1.webp';
 
 export default function Awards(){
     const [internationalClients, setInternationalClients] = useState([]);
@@ -43,12 +44,16 @@ export default function Awards(){
 		<div style={{
             backgroundImage:`url(${backgroundImage})`, 
             backgroundPosition:'center',
-            height:'100%',
+            height:window.innerHeight,
             backgroundRepeat: 'no-repeat',
             backgroundSize:"cover",
             backgroundAttachment: 'fixed'
             }}
         >
+            <div className='customer-background-elements'>
+		        <img src={backgroundImage1} data-aos={'zoom-in'} className='customer-bg-1'/>
+		    </div>
+
             <Navbar showLogo={showLogo} />
             <div className="customer-container">
                 <div className="customers-box">
