@@ -46,10 +46,12 @@ function GreiVideo(props){
 		<>
             <div 
                 className={ props.classWrapper?`player-wrapper ${props.classWrapper}`:"player-wrapper" } 
-                onClick={props.hasFullscreen && openFullscreen} 
+                onClick={()=>{setPlay(false)}}
                 style={props.style}
                 onMouseEnter={()=>{setPlayVideo(true)}}
 			    onMouseLeave={()=>{setPlayVideo(false)}}
+			    onTouchStart={()=>{setPlayVideo(true)}}
+			    onTouchEnd={()=>{setPlayVideo(false)}}
             >
                 <ReactPlayer
                     ref={playerRef}
